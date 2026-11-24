@@ -2,419 +2,631 @@
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&display=swap">
 <style>
-/* Layout: PharmaLens corporate (sticky glass nav, navy hero band, white cards on cool grey), list -> detail with tabs */
+/* Layout: SaaS workspace. Fixed sidebar (wayfinding) + translucent top bar + content; sheets slide in from the right, command palette drops from top. */
 :root{
-  --bg:#FBFBFD; --band:#F1F3F8; --card:#FFFFFF; --ink:#0B1A3A; --ink2:#3A4256; --muted:#5E6472; --faint:#6B7180;
-  --line:#EEF0F5; --line2:#F1F3F8; --accent:#2457E6; --accent-h:#1B44B8; --accent-soft:#EAF0FF;
-  --navy:#0B1A3A; --navy2:#16306E; --on-navy:#F5F5F7; --on-navy2:#B8C2D9;
-  --off-bg:#E3F4E8; --off-fg:#1E6B37; --der-bg:#E6ECFD; --der-fg:#1F49C2; --gap-bg:#FCEBD9; --gap-fg:#8A4B10; --sec-bg:#EEF0F5; --sec-fg:#3A4256;
-  --shadow:0 1px 2px rgba(11,26,58,.06),0 12px 32px rgba(11,26,58,.06);
-  --nav-bg:rgba(251,251,253,.72); --input:#FFFFFF;
+  --bg:#F4F6FA; --side:#FFFFFF; --card:#FFFFFF; --ink:#0B1A3A; --ink2:#3A4256; --muted:#5E6472; --faint:#6B7180;
+  --line:#E6E9F0; --line2:#F0F2F7; --hover:#F1F4FB; --accent:#2457E6; --accent-h:#1B44B8; --accent-soft:#EAF0FF; --accent-ink:#1F49C2;
+  --navy:#0B1A3A; --navy2:#16306E; --logo:#0B1A3A;
+  --off-bg:#E3F4E8; --off-fg:#1E6B37; --der-bg:#E6ECFD; --der-fg:#1F49C2; --gap-bg:#FCEBD9; --gap-fg:#8A4B10; --neu-bg:#EEF0F5; --neu-fg:#3A4256;
+  --red-bg:#FDE7E7; --red-fg:#9B1C1C;
+  --shadow:0 1px 2px rgba(11,26,58,.05),0 8px 24px rgba(11,26,58,.06);
+  --shadow-lg:0 2px 6px rgba(11,26,58,.08),0 30px 80px rgba(11,26,58,.22);
+  --bar:rgba(244,246,250,.78); --input:#FFFFFF; --scrim:rgba(11,26,58,.32);
   --font:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#070F22; --band:#0B1630; --card:#101C38; --ink:#EEF2FB; --ink2:#C6CEE0; --muted:#A3ADC4; --faint:#8F9AB3;
-  --line:#1E2A47; --line2:#18233F; --accent:#7B9CFF; --accent-h:#A4BBFF; --accent-soft:#18284F;
-  --navy:#0B1A3A; --navy2:#16306E; --on-navy:#F5F5F7; --on-navy2:#B8C2D9;
-  --off-bg:#123A22; --off-fg:#8FE0A8; --der-bg:#1A2C5E; --der-fg:#A9C0FF; --gap-bg:#3D2610; --gap-fg:#F5B979; --sec-bg:#1E2A47; --sec-fg:#C6CEE0;
-  --shadow:0 1px 2px rgba(0,0,0,.4),0 12px 32px rgba(0,0,0,.35); --nav-bg:rgba(7,15,34,.72); --input:#0B1630; color-scheme:dark}}
+  --bg:#070E1F; --side:#0B1530; --card:#0F1B36; --ink:#EEF2FB; --ink2:#C9D1E3; --muted:#A3ADC4; --faint:#8F9AB3;
+  --line:#1D2946; --line2:#17223D; --hover:#15223F; --accent:#7B9CFF; --accent-h:#A4BBFF; --accent-soft:#17264B; --accent-ink:#A9C0FF;
+  --navy:#0B1A3A; --navy2:#16306E; --logo:#EEF2FB;
+  --off-bg:#123A22; --off-fg:#8FE0A8; --der-bg:#1A2C5E; --der-fg:#A9C0FF; --gap-bg:#3D2610; --gap-fg:#F5B979; --neu-bg:#1D2946; --neu-fg:#C9D1E3;
+  --red-bg:#3F1616; --red-fg:#F7A3A3;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.3); --shadow-lg:0 2px 6px rgba(0,0,0,.4),0 30px 80px rgba(0,0,0,.6);
+  --bar:rgba(7,14,31,.78); --input:#0B1530; --scrim:rgba(0,0,0,.55); color-scheme:dark}}
 :root[data-theme="dark"]{
-  --bg:#070F22; --band:#0B1630; --card:#101C38; --ink:#EEF2FB; --ink2:#C6CEE0; --muted:#A3ADC4; --faint:#8F9AB3;
-  --line:#1E2A47; --line2:#18233F; --accent:#7B9CFF; --accent-h:#A4BBFF; --accent-soft:#18284F;
-  --navy:#0B1A3A; --navy2:#16306E; --on-navy:#F5F5F7; --on-navy2:#B8C2D9;
-  --off-bg:#123A22; --off-fg:#8FE0A8; --der-bg:#1A2C5E; --der-fg:#A9C0FF; --gap-bg:#3D2610; --gap-fg:#F5B979; --sec-bg:#1E2A47; --sec-fg:#C6CEE0;
-  --shadow:0 1px 2px rgba(0,0,0,.4),0 12px 32px rgba(0,0,0,.35); --nav-bg:rgba(7,15,34,.72); --input:#0B1630; color-scheme:dark}
+  --bg:#070E1F; --side:#0B1530; --card:#0F1B36; --ink:#EEF2FB; --ink2:#C9D1E3; --muted:#A3ADC4; --faint:#8F9AB3;
+  --line:#1D2946; --line2:#17223D; --hover:#15223F; --accent:#7B9CFF; --accent-h:#A4BBFF; --accent-soft:#17264B; --accent-ink:#A9C0FF;
+  --navy:#0B1A3A; --navy2:#16306E; --logo:#EEF2FB;
+  --off-bg:#123A22; --off-fg:#8FE0A8; --der-bg:#1A2C5E; --der-fg:#A9C0FF; --gap-bg:#3D2610; --gap-fg:#F5B979; --neu-bg:#1D2946; --neu-fg:#C9D1E3;
+  --red-bg:#3F1616; --red-fg:#F7A3A3;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.3); --shadow-lg:0 2px 6px rgba(0,0,0,.4),0 30px 80px rgba(0,0,0,.6);
+  --bar:rgba(7,14,31,.78); --input:#0B1530; --scrim:rgba(0,0,0,.55); color-scheme:dark}
 *{box-sizing:border-box}
-body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased}
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bg)}
+html,body{height:100%}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased;transition:background-color 300ms ease,color 300ms ease}
 a{color:var(--accent);text-decoration:none}a:hover{color:var(--accent-h)}
-h1,h2,h3{text-wrap:balance;margin:0}
-p{text-wrap:pretty;margin:0}
-button{font-family:inherit}
+h1,h2,h3{margin:0;text-wrap:balance}p{margin:0;text-wrap:pretty}
+button{font-family:inherit;color:inherit}
 :focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:8px}
-.wrap{max-width:1200px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-@media (min-width:700px){.wrap{padding-left:max(32px,env(safe-area-inset-left,0px));padding-right:max(32px,env(safe-area-inset-right,0px))}}
 .num{font-variant-numeric:tabular-nums}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
-/* nav */
-.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--nav-bg);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border-bottom:1px solid var(--line)}
-.nav .wrap{display:flex;align-items:center;gap:16px;height:64px}
-.brand{display:flex;align-items:center;gap:10px;color:var(--ink);font-weight:700;font-size:19px;letter-spacing:-.02em}
-.brand:hover{color:var(--ink)}
-.brand small{font-weight:600;font-size:12px;color:var(--accent);background:var(--accent-soft);padding:3px 8px;border-radius:999px;letter-spacing:0}
-.search{flex:1;max-width:420px;margin-left:auto;position:relative}
-.search input{width:100%;min-height:40px;border-radius:999px;border:1px solid var(--line);background:var(--input);color:var(--ink);padding:0 16px 0 40px;font:inherit;font-size:15px}
-.search svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--faint)}
-.theme-btn{width:40px;height:40px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink2);display:flex;align-items:center;justify-content:center;cursor:pointer;flex:none}
-@media (max-width:560px){.brand small{display:none}}
+/* ---------- shell ---------- */
+.app{display:grid;grid-template-columns:256px minmax(0,1fr);min-height:100%}
+.side{position:sticky;top:0;height:100vh;height:100dvh;display:flex;flex-direction:column;gap:6px;padding:20px 14px calc(16px + env(safe-area-inset-bottom,0px)) max(14px,env(safe-area-inset-left,0px));background:var(--side);border-right:1px solid var(--line);overflow-y:auto}
+.logo{display:flex;align-items:center;gap:10px;padding:4px 10px 14px;color:var(--logo)}
+.logo:hover{color:var(--logo)}
+.logo .word{font-size:20px;font-weight:600;letter-spacing:-.025em}
+.logo .tag{font-size:11px;font-weight:700;letter-spacing:.04em;color:var(--accent-ink);background:var(--accent-soft);padding:2px 7px;border-radius:999px;margin-left:2px}
+.kbtn{display:flex;align-items:center;gap:10px;width:100%;min-height:40px;padding:0 10px 0 12px;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--muted);font-size:14px;cursor:pointer;margin-bottom:10px;transition:transform 100ms ease-out}
+.kbtn:active{transform:scale(.98)}
+.kbtn kbd,.kbd{margin-left:auto;font:600 11.5px var(--font);color:var(--faint);border:1px solid var(--line);border-radius:6px;padding:1px 6px;background:var(--card)}
+.navgroup{display:flex;flex-direction:column;gap:2px;margin-top:6px}
+.navlabel{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--faint);padding:10px 12px 6px}
+.navitem{display:flex;align-items:center;gap:12px;min-height:40px;padding:0 12px;border-radius:10px;color:var(--ink2);font-weight:550;font-size:14.5px;transition:background-color 120ms ease,transform 100ms ease-out}
+.navitem:hover{background:var(--hover);color:var(--ink)}
+.navitem:active{transform:scale(.98)}
+.navitem[aria-current="page"]{background:var(--accent-soft);color:var(--accent-ink);font-weight:650}
+.navitem svg{flex:none;opacity:.9}
+.navitem .count{margin-left:auto;font-size:12px;color:var(--faint);font-weight:600}
+.navitem[aria-current="page"] .count{color:var(--accent-ink)}
+.sidefoot{margin-top:auto;display:flex;flex-direction:column;gap:10px;padding-top:16px}
+.pilot{padding:14px;border-radius:14px;background:linear-gradient(135deg,var(--navy),var(--navy2));color:#F5F5F7}
+.pilot b{display:block;font-size:14px}.pilot span{font-size:12.5px;color:#B8C2D9}
+.themebtn{display:flex;align-items:center;gap:10px;min-height:40px;padding:0 12px;border-radius:10px;border:none;background:none;color:var(--ink2);font-size:14px;font-weight:550;cursor:pointer}
+.themebtn:hover{background:var(--hover)}
 
-/* buttons / chips */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 20px;border-radius:999px;font-size:15px;font-weight:600;border:none;cursor:pointer;transition:transform 100ms ease-out,background-color 200ms ease}
-.btn:active{transform:scale(.97)}
-.btn-primary{background:var(--accent);color:#fff}.btn-primary:hover{background:var(--accent-h);color:#fff}
-.btn-ghost{background:var(--card);color:var(--ink);border:1px solid var(--line)}
-.chip{display:inline-flex;align-items:center;gap:6px;padding:3px 10px;border-radius:999px;font-size:12.5px;font-weight:600;white-space:nowrap}
+.main{min-width:0;display:flex;flex-direction:column}
+.topbar{position:sticky;top:0;z-index:15;display:flex;align-items:center;gap:12px;min-height:64px;padding:10px max(16px,env(safe-area-inset-right,0px)) 10px max(16px,env(safe-area-inset-left,0px));background:var(--bar);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%)}
+.topbar::after{content:"";position:absolute;left:0;right:0;bottom:-12px;height:12px;background:linear-gradient(var(--bar),transparent);pointer-events:none}
+@media (min-width:900px){.topbar{padding-left:32px;padding-right:32px}}
+.menubtn{display:none;width:40px;height:40px;border-radius:12px;border:1px solid var(--line);background:var(--card);align-items:center;justify-content:center;cursor:pointer;flex:none}
+.crumbs{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--muted);min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.crumbs a{color:var(--muted)}.crumbs a:hover{color:var(--ink)}
+.crumbs b{color:var(--ink);font-weight:650;overflow:hidden;text-overflow:ellipsis;text-transform:none}
+.topsearch{margin-left:auto;position:relative;flex:0 1 340px;min-width:0}
+.topsearch input{width:100%;min-height:40px;border-radius:12px;border:1px solid var(--line);background:var(--input);color:var(--ink);padding:0 12px 0 38px;font:inherit;font-size:14.5px}
+.topsearch svg{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--faint)}
+.content{padding:8px max(16px,env(safe-area-inset-right,0px)) 48px max(16px,env(safe-area-inset-left,0px));max-width:1320px;width:100%}
+@media (min-width:900px){.content{padding:8px 32px 56px}}
+
+/* mobile: sidebar becomes a sheet from the left */
+@media (max-width:899px){
+  .app{grid-template-columns:1fr}
+  .side{position:fixed;z-index:40;left:0;top:0;width:min(300px,86vw);transform:translateX(-104%);transition:transform 380ms cubic-bezier(.2,.9,.25,1);box-shadow:var(--shadow-lg)}
+  .side.open{transform:none}
+  .menubtn{display:flex}
+  .topsearch{flex-basis:200px}
+}
+
+/* ---------- primitives ---------- */
+.page-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px;margin:12px 0 22px}
+.page-head h1{font-size:clamp(26px,3vw,34px);line-height:1.1;letter-spacing:-.03em;font-weight:700}
+.page-head p{margin-top:6px;color:var(--muted);font-size:15px;max-width:640px}
+.card{background:var(--card);border-radius:18px;box-shadow:var(--shadow);border:1px solid var(--line2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:40px;padding:0 16px;border-radius:999px;font-size:14px;font-weight:600;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;transition:transform 100ms ease-out,background-color 150ms ease}
+.btn:hover{background:var(--hover)}.btn:active{transform:scale(.97)}
+.btn-primary{background:var(--accent);border-color:var(--accent);color:#fff}.btn-primary:hover{background:var(--accent-h);color:#fff}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:2px 9px;border-radius:999px;font-size:12px;font-weight:650;white-space:nowrap;line-height:1.6}
 .c-official{background:var(--off-bg);color:var(--off-fg)}.c-derived{background:var(--der-bg);color:var(--der-fg)}
-.c-gap{background:var(--gap-bg);color:var(--gap-fg)}.c-secondary{background:var(--sec-bg);color:var(--sec-fg)}
-.c-neutral{background:var(--band);color:var(--ink2)}
-.dot{width:7px;height:7px;border-radius:50%;background:currentColor}
+.c-gap{background:var(--gap-bg);color:var(--gap-fg)}.c-neutral,.c-secondary{background:var(--neu-bg);color:var(--neu-fg)}
+.c-red{background:var(--red-bg);color:var(--red-fg)}
+.dot{width:6px;height:6px;border-radius:50%;background:currentColor;flex:none}
+.cc{display:inline-flex;align-items:center;justify-content:center;min-width:30px;height:22px;padding:0 6px;border-radius:6px;background:var(--neu-bg);color:var(--neu-fg);font-size:11.5px;font-weight:700;letter-spacing:.03em}
+.note{font-size:13px;color:var(--muted)}
+.seg{display:inline-flex;gap:2px;padding:3px;border-radius:12px;background:var(--neu-bg);flex-wrap:wrap}
+.seg button{min-height:34px;padding:0 12px;border:none;border-radius:9px;background:none;color:var(--ink2);font-size:13.5px;font-weight:600;cursor:pointer;transition:background-color 120ms ease}
+.seg button[aria-pressed="true"]{background:var(--card);color:var(--ink);box-shadow:0 1px 2px rgba(11,26,58,.12)}
+.toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:14px}
+.field{min-height:38px;border-radius:10px;border:1px solid var(--line);background:var(--input);color:var(--ink);padding:0 12px;font:inherit;font-size:14px}
+.toolbar input.field{flex:1 1 220px;min-width:0}
 
-/* hero */
-.hero{margin-top:24px;border-radius:28px;overflow:hidden;position:relative;color:var(--on-navy);padding:40px 32px;
-  background:radial-gradient(110% 90% at 88% 10%,#3B6BFF 0%,rgba(59,107,255,0) 55%),linear-gradient(135deg,var(--navy) 0%,var(--navy2) 60%,#2457E6 100%)}
-.hero svg.net{position:absolute;right:0;top:0;height:100%;width:60%;opacity:.5;pointer-events:none}
-.hero .eyebrow{color:#AFC4FF;font-weight:600;font-size:15px;margin-bottom:10px}
-.hero h1{font-size:clamp(30px,4.6vw,52px);line-height:1.05;letter-spacing:-.035em;font-weight:700;max-width:720px;position:relative}
-.hero p.lead{margin-top:14px;font-size:17px;color:var(--on-navy2);max-width:620px;position:relative}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:28px;position:relative}
-.stat{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:16px 18px;backdrop-filter:blur(12px)}
-.stat b{display:block;font-size:28px;letter-spacing:-.03em;color:#fff}
-.stat span{font-size:13px;color:var(--on-navy2)}
+/* KPI */
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
+.kpi{padding:16px 18px}
+.kpi span{display:block;font-size:13px;color:var(--muted);font-weight:550}
+.kpi b{display:block;font-size:28px;letter-spacing:-.03em;margin-top:4px;line-height:1.1}
+.kpi small{display:block;font-size:12.5px;color:var(--faint);margin-top:4px}
+.grid2{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:16px;margin-top:16px}
+@media (max-width:1100px){.grid2{grid-template-columns:1fr}}
+.panel{padding:20px}
+.panel-h{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:14px}
+.panel-h h2{font-size:17px;letter-spacing:-.01em}
+.panel-h a{font-size:13.5px;font-weight:600}
 
-/* section headers */
-.sec{margin-top:48px}
-.sec-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:20px}
-.eyebrow{font-size:14px;font-weight:600;color:var(--accent);margin-bottom:6px}
-.h2{font-size:clamp(26px,3.4vw,36px);letter-spacing:-.03em;font-weight:700;line-height:1.1}
-.filters{display:flex;flex-wrap:wrap;gap:8px}
-.fbtn{min-height:36px;padding:0 14px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink2);font-size:14px;font-weight:600;cursor:pointer}
-.fbtn[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+/* tables */
+.tbl{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:14px}
+.tbl table{min-width:760px}
+th{text-align:left;font-size:11.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--faint);padding:10px 14px;border-bottom:1px solid var(--line);white-space:nowrap}
+th button{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:4px}
+th button:focus-visible{outline:2px solid var(--accent);border-radius:4px}
+td{padding:11px 14px;border-bottom:1px solid var(--line2);vertical-align:top;color:var(--ink2)}
+tbody tr:last-child td{border-bottom:none}
+td.main{color:var(--ink);font-weight:600}
+tr.click{cursor:pointer;transition:background-color 100ms ease}
+tr.click:hover{background:var(--hover)}
+tr.click:active{background:var(--accent-soft)}
+.cap{text-transform:capitalize}
+.more{display:flex;justify-content:center;padding:14px;border-top:1px solid var(--line2)}
+.empty{padding:32px;text-align:center;color:var(--muted)}
 
-/* api cards */
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
-.card{background:var(--card);border-radius:22px;box-shadow:var(--shadow)}
-.api-card{display:flex;flex-direction:column;gap:14px;padding:22px;color:var(--ink);transition:transform 250ms cubic-bezier(.2,.8,.2,1),box-shadow 250ms ease}
-.api-card:hover{color:var(--ink);transform:translateY(-3px);box-shadow:0 2px 4px rgba(11,26,58,.06),0 20px 44px rgba(11,26,58,.10)}
-.api-card .top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
-.api-card h3{font-size:20px;letter-spacing:-.02em;text-transform:capitalize}
-.api-card .ids{font-size:12.5px;color:var(--faint);margin-top:2px}
-.kv{display:grid;grid-template-columns:repeat(2,1fr);gap:10px 12px}
-.kv div{display:flex;flex-direction:column}
-.kv b{font-size:19px;letter-spacing:-.02em}
-.kv span{font-size:12.5px;color:var(--muted)}
-.api-card .foot{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto}
+/* bars */
+.bars{display:flex;flex-direction:column;gap:10px}
+.bar{display:grid;grid-template-columns:120px minmax(0,1fr) 56px;gap:10px;align-items:center;font-size:13.5px}
+.bar .lbl{display:flex;gap:8px;align-items:center;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.track{height:8px;background:var(--neu-bg);border-radius:99px;overflow:hidden;display:flex}
+.fill{height:100%;background:var(--accent);border-radius:99px}
+.stack{display:flex;height:12px;border-radius:99px;overflow:hidden;background:var(--neu-bg)}
+.stack i{display:block;height:100%}
+.legend{display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:12px;font-size:13px;color:var(--muted)}
+.legend span{display:flex;align-items:center;gap:6px}
+.sw{width:10px;height:10px;border-radius:3px;display:inline-block}
 
 /* detail */
-.back{display:inline-flex;align-items:center;gap:6px;margin-top:24px;font-weight:600;font-size:15px}
-.dhead{margin-top:16px;padding:28px;display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between}
-.dhead h1{font-size:clamp(32px,4.4vw,48px);letter-spacing:-.035em;text-transform:capitalize;line-height:1.05}
-.dhead .ids{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:12px;font-size:14px;color:var(--muted)}
-.dhead .ids b{color:var(--ink2);font-weight:600}
-.dhead .summary{margin-top:16px;font-size:16px;color:var(--ink2);max-width:760px}
-.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-top:16px}
-.tile{padding:16px 18px}
-.tile b{display:block;font-size:26px;letter-spacing:-.03em}
-.tile span{font-size:13px;color:var(--muted)}
-.tabs{display:flex;gap:4px;overflow-x:auto;margin-top:28px;border-bottom:1px solid var(--line);scrollbar-width:thin}
-.tab{flex:none;min-height:44px;padding:0 14px;border:none;background:none;color:var(--muted);font-size:15px;font-weight:600;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;display:flex;align-items:center;gap:8px}
+.dhead{padding:24px;display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;align-items:flex-start}
+.dhead h1{font-size:clamp(30px,3.6vw,42px);letter-spacing:-.035em;line-height:1.05;text-transform:capitalize}
+.ids{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:10px;font-size:13.5px;color:var(--muted)}
+.ids b{color:var(--ink2);font-weight:650}
+.summary{margin-top:14px;font-size:15px;color:var(--ink2);max-width:780px;padding:12px 14px;border-radius:12px;background:var(--bg)}
+.tabs{display:flex;gap:2px;overflow-x:auto;margin:20px 0 16px;border-bottom:1px solid var(--line);scrollbar-width:none}
+.tab{flex:none;min-height:42px;padding:0 12px;border:none;background:none;color:var(--muted);font-size:14.5px;font-weight:600;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;display:flex;align-items:center;gap:8px}
+.tab:hover{color:var(--ink)}
 .tab[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--accent)}
-.tab .n{font-size:12px;background:var(--band);color:var(--muted);padding:1px 7px;border-radius:999px}
-.panel{margin-top:20px}
-.toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:14px}
-.toolbar input,.toolbar select{min-height:40px;border-radius:12px;border:1px solid var(--line);background:var(--input);color:var(--ink);padding:0 12px;font:inherit;font-size:14px}
-.toolbar input{flex:1 1 220px;min-width:0}
-.note{font-size:13.5px;color:var(--muted)}
-.tbl-wrap{overflow-x:auto;border-radius:18px;background:var(--card);box-shadow:var(--shadow)}
-table{width:100%;border-collapse:collapse;font-size:14px;min-width:720px}
-th{text-align:left;font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--faint);background:var(--band);padding:12px 14px;white-space:nowrap}
-td{padding:12px 14px;border-top:1px solid var(--line2);vertical-align:top;color:var(--ink2)}
-td.main{color:var(--ink);font-weight:600}
-.more{display:flex;justify-content:center;padding:14px}
-.empty{padding:28px;text-align:center;color:var(--muted)}
+.tab .n{font-size:11.5px;background:var(--neu-bg);color:var(--muted);padding:0 7px;border-radius:999px;line-height:1.7}
+.sites{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
+.site{all:unset;box-sizing:border-box;display:flex;flex-direction:column;gap:8px;padding:16px 18px;cursor:pointer;background:var(--card);border-radius:16px;border:1px solid var(--line2);box-shadow:var(--shadow);transition:transform 100ms ease-out,border-color 150ms ease}
+.site:hover{border-color:var(--accent)}
+.site:active{transform:scale(.98)}
+.site:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.site h3{font-size:15px;letter-spacing:-.01em;color:var(--ink)}
+.site .meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:12.5px;color:var(--muted)}
+.quote{padding:12px 14px;background:var(--bg);border-radius:12px;font-size:12.5px;white-space:pre-line;color:var(--ink2);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;border:1px solid var(--line2)}
+.split{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:16px;align-items:start}
+@media (max-width:1000px){.split{grid-template-columns:1fr}}
 
-/* sites */
-.sites{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
-.site{padding:18px 20px;display:flex;flex-direction:column;gap:10px}
-.site h3{font-size:16px;letter-spacing:-.01em}
-.site .meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:13px;color:var(--muted)}
-.cc{display:inline-flex;align-items:center;justify-content:center;min-width:30px;height:22px;padding:0 6px;border-radius:6px;background:var(--band);color:var(--ink2);font-size:12px;font-weight:700;letter-spacing:.03em}
-details summary{cursor:pointer;font-size:13.5px;font-weight:600;color:var(--accent);list-style:none}
-details summary::-webkit-details-marker{display:none}
-.quote{margin-top:8px;padding:12px 14px;background:var(--band);border-radius:12px;font-size:13px;white-space:pre-line;color:var(--ink2);font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
-.bars{display:flex;flex-direction:column;gap:8px}
-.bar{display:grid;grid-template-columns:44px 1fr 48px;gap:10px;align-items:center;font-size:13px}
-.bar .track{height:10px;background:var(--band);border-radius:99px;overflow:hidden}
-.bar .fill{height:100%;background:var(--accent);border-radius:99px}
-.two{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:16px;align-items:start}
-@media (max-width:900px){.two{grid-template-columns:1fr}}
-.legend{display:flex;flex-wrap:wrap;gap:14px;margin-top:20px;font-size:13.5px;color:var(--muted)}
-.legend span{display:flex;align-items:center;gap:8px}
-footer{margin:64px 0 32px;padding-top:24px;border-top:1px solid var(--line);font-size:13.5px;color:var(--faint);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
-.skeleton{height:120px;border-radius:22px;background:linear-gradient(90deg,var(--band),var(--line),var(--band));background-size:200% 100%;animation:sh 1.2s linear infinite}
+/* sheet (right) + palette */
+.scrim{position:fixed;inset:0;z-index:50;background:var(--scrim);opacity:0;pointer-events:none;transition:opacity 260ms ease}
+.scrim.on{opacity:1;pointer-events:auto}
+.sheet{position:fixed;z-index:60;top:0;right:0;bottom:0;width:min(560px,100vw);background:var(--card);box-shadow:var(--shadow-lg);transform:translateX(104%);transition:transform 380ms cubic-bezier(.2,.9,.25,1);display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);padding-right:env(safe-area-inset-right,0px)}
+.sheet.on{transform:none}
+.sheet-h{display:flex;align-items:flex-start;gap:12px;padding:20px 20px 14px;border-bottom:1px solid var(--line)}
+.sheet-h h2{font-size:20px;letter-spacing:-.02em}
+.sheet-b{padding:18px 20px 28px;overflow-y:auto;display:flex;flex-direction:column;gap:16px}
+.iconbtn{width:36px;height:36px;border-radius:10px;border:1px solid var(--line);background:var(--card);display:flex;align-items:center;justify-content:center;cursor:pointer;flex:none;margin-left:auto;transition:transform 100ms ease-out}
+.iconbtn:active{transform:scale(.94)}
+.dl{display:grid;grid-template-columns:120px minmax(0,1fr);gap:8px 14px;font-size:14px}
+.dl dt{color:var(--muted)}.dl dd{margin:0;color:var(--ink)}
+.palette{position:fixed;z-index:70;left:50%;top:12vh;width:min(640px,calc(100vw - 32px));transform:translateX(-50%) translateY(-8px) scale(.98);opacity:0;pointer-events:none;transition:transform 260ms cubic-bezier(.2,.9,.25,1),opacity 180ms ease;background:var(--card);border-radius:18px;box-shadow:var(--shadow-lg);border:1px solid var(--line);overflow:hidden;transform-origin:top center}
+.palette.on{opacity:1;pointer-events:auto;transform:translateX(-50%)}
+.palette .pin{display:flex;align-items:center;gap:10px;padding:0 16px;border-bottom:1px solid var(--line)}
+.palette input{flex:1;min-height:56px;border:none;background:none;color:var(--ink);font:inherit;font-size:17px;outline:none}
+.plist{max-height:min(420px,60vh);overflow-y:auto;padding:8px}
+.pgroup{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--faint);padding:10px 10px 4px}
+.pitem{display:flex;align-items:center;gap:12px;width:100%;min-height:44px;padding:6px 10px;border:none;background:none;border-radius:10px;text-align:left;cursor:pointer;font-size:14.5px;color:var(--ink)}
+.pitem small{color:var(--muted);font-size:12.5px;margin-left:auto;white-space:nowrap}
+.pitem[aria-selected="true"]{background:var(--accent-soft);color:var(--accent-ink)}
+.picon{width:28px;height:28px;border-radius:8px;background:var(--neu-bg);display:flex;align-items:center;justify-content:center;flex:none;color:var(--ink2)}
+.pfoot{display:flex;gap:16px;padding:10px 16px;border-top:1px solid var(--line);font-size:12px;color:var(--faint)}
+
+.skeleton{border-radius:18px;background:linear-gradient(90deg,var(--neu-bg),var(--line2),var(--neu-bg));background-size:200% 100%;animation:sh 1.2s linear infinite}
 @keyframes sh{to{background-position:-200% 0}}
-@media (prefers-reduced-motion:reduce){.skeleton{animation:none}.api-card{transition:none}}
+.fade{animation:fadein 240ms ease both}
+@keyframes fadein{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){
+  .side,.sheet,.palette{transition:opacity 180ms ease}
+  .sheet{transform:none;opacity:0;pointer-events:none}.sheet.on{opacity:1;pointer-events:auto}
+  .side{transform:none;opacity:0;pointer-events:none}@media (max-width:899px){.side.open{opacity:1;pointer-events:auto}}
+  .fade,.skeleton{animation:none}
+}
+@media (prefers-reduced-transparency:reduce){.topbar{background:var(--bg);backdrop-filter:none;-webkit-backdrop-filter:none}}
+@media (min-width:900px) and (prefers-reduced-motion:reduce){.side{opacity:1;pointer-events:auto}}
 </style>
 
-<header class="nav">
-  <div class="wrap">
-    <a class="brand" href="#" aria-label="PharmaLens Startseite">
-      <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><circle cx="12" cy="12" r="8.5" fill="none" stroke="#2457E6" stroke-width="2.6"/><line x1="18.2" y1="18.2" x2="25" y2="25" stroke="#2457E6" stroke-width="3" stroke-linecap="round"/><circle cx="9.5" cy="10" r="1.8" fill="#2457E6"/><circle cx="14.5" cy="13.5" r="1.8" fill="#2457E6"/><line x1="9.5" y1="10" x2="14.5" y2="13.5" stroke="#2457E6" stroke-width="1.4"/></svg>
-      PharmaLens <small>Pilot</small>
-    </a>
-    <div class="search">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
-      <label for="q" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Wirkstoff suchen</label>
-      <input id="q" type="search" placeholder="Wirkstoff, UNII, CAS oder ATC suchen" autocomplete="off">
-    </div>
-    <button class="theme-btn" id="themeBtn" type="button" aria-label="Hell- oder Dunkelmodus umschalten">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
-    </button>
-  </div>
-</header>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <mask id="pmask" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="112">
+      <rect width="100" height="112" fill="#fff"/>
+      <line x1="30" y1="63" x2="66" y2="32" stroke="#000" stroke-width="8" stroke-linecap="round"/>
+      <circle cx="30" cy="63" r="12" fill="#000"/><circle cx="66" cy="32" r="12" fill="#000"/>
+    </mask>
+  </defs>
+</svg>
 
-<main class="wrap" id="app">
-  <div class="skeleton" style="margin-top:24px;height:260px"></div>
-</main>
+<div class="app">
+  <aside class="side" id="side" aria-label="Navigation">
+    <a class="logo" href="#overview" aria-label="PharmaLens Übersicht">
+      <svg width="24" height="27" viewBox="0 0 100 112" aria-hidden="true"><path d="M0 0H58a42 42 0 0 1 0 84H40v28H0Z" fill="currentColor" mask="url(#pmask)"/></svg>
+      <span class="word">PharmaLens</span><span class="tag">PILOT</span>
+    </a>
+    <button class="kbtn" type="button" id="openPalette" aria-label="Alles durchsuchen">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      Suchen …<kbd id="kbdHint">⌘K</kbd>
+    </button>
+    <nav class="navgroup" aria-label="Arbeitsbereich">
+      <div class="navlabel">Arbeitsbereich</div>
+      <a class="navitem" href="#overview" data-nav="overview"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>Übersicht</a>
+      <a class="navitem" href="#apis" data-nav="apis"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3h4v6l5 9a2 2 0 0 1-2 3H7a2 2 0 0 1-2-3l5-9z"/><path d="M8 15h8"/></svg>Wirkstoffe<span class="count num" id="nApis"></span></a>
+      <a class="navitem" href="#companies" data-nav="companies"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V10l6 4V10l6 4V6l6 4v11z"/></svg>Hersteller<span class="count num" id="nComp"></span></a>
+      <a class="navitem" href="#markets" data-nav="markets"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>Märkte<span class="count num" id="nMk"></span></a>
+    </nav>
+    <nav class="navgroup" aria-label="Datenqualität">
+      <div class="navlabel">Datenqualität</div>
+      <a class="navitem" href="#gaps" data-nav="gaps"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9L2.4 18a2 2 0 0 0 1.7 3h15.8a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>Lücken<span class="count num" id="nGaps"></span></a>
+      <a class="navitem" href="#sources" data-nav="sources"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg>Quellen<span class="count num" id="nSrc"></span></a>
+    </nav>
+    <div class="sidefoot">
+      <div class="pilot"><b>Pilot · 20 Wirkstoffe</b><span id="stand">Datenstand –</span></div>
+      <button class="themebtn" type="button" id="themeBtn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><span id="themeLbl">Dunkelmodus</span></button>
+    </div>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <button class="menubtn" type="button" id="menuBtn" aria-label="Navigation öffnen" aria-controls="side" aria-expanded="false"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      <nav class="crumbs" id="crumbs" aria-label="Pfad"></nav>
+      <div class="topsearch">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <label for="pageq" class="sr">Auf dieser Seite filtern</label>
+        <input id="pageq" type="search" placeholder="Auf dieser Seite filtern" autocomplete="off">
+      </div>
+    </header>
+    <main class="content" id="view" tabindex="-1"><div class="skeleton" style="height:160px;margin-top:16px"></div></main>
+  </div>
+</div>
+
+<div class="scrim" id="scrim"></div>
+<aside class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+  <div class="sheet-h"><div style="min-width:0"><p class="note" id="sheetEyebrow"></p><h2 id="sheetTitle"></h2></div>
+    <button class="iconbtn" type="button" id="sheetClose" aria-label="Schliessen"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+  <div class="sheet-b" id="sheetBody"></div>
+</aside>
+<div class="palette" id="palette" role="dialog" aria-modal="true" aria-label="Suche">
+  <div class="pin"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" style="color:var(--faint)"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+    <label for="pq" class="sr">Wirkstoffe, Hersteller und Märkte durchsuchen</label>
+    <input id="pq" type="text" placeholder="Wirkstoff, Hersteller, Land …" autocomplete="off" role="combobox" aria-expanded="true" aria-controls="plist">
+    <span class="kbd">esc</span></div>
+  <div class="plist" id="plist" role="listbox"></div>
+  <div class="pfoot"><span>↑↓ auswählen</span><span>↵ öffnen</span><span>esc schliessen</span></div>
+</div>
 
 <script>
 (function(){
   const $ = (s, el=document) => el.querySelector(s);
   const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const fmt = n => n == null ? '–' : Number(n).toLocaleString('de-CH');
-  const GROUP = {blockbuster:'Blockbuster', niche:'Nischen-Generikum', veterinary:'Tierarzneimittel', patent:'Patent / SPC'};
+  const pct = (a, b) => b ? Math.round(a / b * 100) : 0;
+  const store = { get(k){ try { return localStorage.getItem(k) } catch(e){ return null } }, set(k,v){ try { localStorage.setItem(k,v) } catch(e){} } };
+  const GROUP = {blockbuster:'Blockbuster', niche:'Nische', veterinary:'Tierarzneimittel', patent:'Patent / SPC'};
   const STATUS = {official:'Offiziell', secondary:'Sekundär', derived:'Abgeleitet', gap:'Lücke'};
   const chip = st => `<span class="chip c-${esc(st)}"><span class="dot"></span>${esc(STATUS[st] || st)}</span>`;
-  const src = (url, label) => url && /^https?:/.test(url) ? `<a href="${esc(url)}" target="_blank" rel="noopener">${esc(label || 'Quelle')} ↗</a>` : `<span class="note">${esc(label || 'intern')}</span>`;
-  const store = { get(k){ try { return localStorage.getItem(k) } catch(e){ return null } }, set(k,v){ try { localStorage.setItem(k,v) } catch(e){} } };
+  const link = (url, label) => url && /^https?:/.test(url) ? `<a href="${esc(url)}" target="_blank" rel="noopener">${esc(label || 'Quelle')} ↗</a>` : `<span class="note">${esc(label || 'intern')}</span>`;
+  const has = (o, q) => !q || Object.values(o).some(v => String(v ?? '').toLowerCase().includes(q.toLowerCase()));
+  const shortSrc = s => String(s || '').replace(/ (Listen|REST|Open Data|Geneesmiddeleninformatiebank|Arzneispezialitätenregister|Medicine data download|Article-57-Datenbank)$/,'').replace('EMA Article-57','EMA Art. 57');
 
-  // theme toggle (explicit choice wins over system)
-  const applyTheme = t => { if (t) document.documentElement.setAttribute('data-theme', t); };
-  applyTheme(store.get('pl-theme'));
-  $('#themeBtn').addEventListener('click', () => {
-    const cur = document.documentElement.getAttribute('data-theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-    const next = cur === 'dark' ? 'light' : 'dark'; applyTheme(next); store.set('pl-theme', next);
+  // ---------- data ----------
+  const D = {}; const API = {};
+  const j = async p => (await fetch(p)).json();
+  async function data(){ if (!D.index) { const [i,c,m,s,g] = await Promise.all([j('apis.json'), j('companies.json'), j('markets.json'), j('sources.json'), j('gaps.json')]);
+      Object.assign(D, {index:i, companies:c, markets:m, sources:s, gaps:g}); } return D; }
+  async function api(slug){ if (!API[slug]) API[slug] = await j(`api/${slug}.json`); return API[slug]; }
+
+  // ---------- theme ----------
+  const isDark = () => (document.documentElement.getAttribute('data-theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')) === 'dark';
+  const setThemeLbl = () => $('#themeLbl').textContent = isDark() ? 'Hellmodus' : 'Dunkelmodus';
+  const saved = store.get('pl-theme'); if (saved) document.documentElement.setAttribute('data-theme', saved); setThemeLbl();
+  $('#themeBtn').addEventListener('click', () => { const t = isDark() ? 'light' : 'dark'; document.documentElement.setAttribute('data-theme', t); store.set('pl-theme', t); setThemeLbl(); });
+
+  // ---------- shell: mobile nav, sheet, palette ----------
+  const side = $('#side'), scrim = $('#scrim'), sheet = $('#sheet'), pal = $('#palette');
+  let layer = null;
+  function openLayer(name){ layer = name; scrim.classList.add('on'); if (name==='nav') { side.classList.add('open'); $('#menuBtn').setAttribute('aria-expanded','true'); } if (name==='sheet') sheet.classList.add('on'); if (name==='pal') pal.classList.add('on'); }
+  function closeLayer(){ scrim.classList.remove('on'); side.classList.remove('open'); sheet.classList.remove('on'); pal.classList.remove('on'); $('#menuBtn').setAttribute('aria-expanded','false'); const was = layer; layer = null; return was; }
+  scrim.addEventListener('click', closeLayer);
+  $('#menuBtn').addEventListener('click', () => openLayer('nav'));
+  side.addEventListener('click', e => { if (e.target.closest('a.navitem,a.logo') && layer === 'nav') closeLayer(); });
+  $('#sheetClose').addEventListener('click', closeLayer);
+  function showSheet(eyebrow, title, body){ $('#sheetEyebrow').textContent = eyebrow; $('#sheetTitle').textContent = title; $('#sheetBody').innerHTML = body; $('#sheetBody').scrollTop = 0; openLayer('sheet'); setTimeout(() => $('#sheetClose').focus(), 50); }
+
+  const mac = /Mac|iPhone|iPad/.test(navigator.platform || navigator.userAgent); $('#kbdHint').textContent = mac ? '⌘K' : 'Ctrl K';
+  let pItems = [], pSel = 0;
+  function openPalette(){ closeLayer(); openLayer('pal'); $('#pq').value = ''; renderPalette(); setTimeout(() => $('#pq').focus(), 30); }
+  $('#openPalette').addEventListener('click', openPalette);
+  document.addEventListener('keydown', e => {
+    if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); layer === 'pal' ? closeLayer() : openPalette(); }
+    else if (e.key === 'Escape' && layer) { closeLayer(); }
+    else if (e.key === '/' && !layer && !/input|textarea|select/i.test(document.activeElement.tagName)) { e.preventDefault(); openPalette(); }
   });
-
-  let INDEX = null; const CACHE = {};
-  let state = { group: 'all', q: '' };
-  const app = $('#app');
-
-  async function loadIndex(){ if (!INDEX) INDEX = await (await fetch('apis.json')).json(); return INDEX; }
-  async function loadApi(slug){ if (!CACHE[slug]) CACHE[slug] = await (await fetch(`api/${slug}.json`)).json(); return CACHE[slug]; }
-
-  function matches(a, q){
-    if (!q) return true; q = q.toLowerCase();
-    return [a.inn, a.unii, a.cas, a.atc].some(x => (x || '').toLowerCase().includes(q));
+  async function renderPalette(){
+    const d = await data(); const q = $('#pq').value.trim().toLowerCase();
+    const pages = [['overview','Übersicht'],['apis','Wirkstoffe'],['companies','Hersteller'],['markets','Märkte'],['gaps','Lücken'],['sources','Quellen']];
+    const g = [];
+    const A = d.index.apis.filter(a => !q || [a.inn,a.unii,a.cas,a.atc].some(x => (x||'').toLowerCase().includes(q))).slice(0, 6)
+      .map(a => ({icon:'API', label:a.inn, cap:true, sub:`${a.countries} Länder · ${fmt(a.products)} Produkte`, go:'#api-'+a.slug}));
+    const C = q ? d.companies.filter(c => c.name.toLowerCase().includes(q)).slice(0, 6).map(c => ({icon:(c.cc[0]||'–'), label:c.name, sub:`${c.apis.length} Wirkstoffe · ${fmt(c.products)} Produkte`, company:c.id})) : [];
+    const M = q ? d.markets.filter(m => m.name.toLowerCase().includes(q) || m.cc.toLowerCase() === q).slice(0, 4).map(m => ({icon:m.cc, label:m.name, sub:`${fmt(m.products)} Produkte`, go:'#markets', market:m.cc})) : [];
+    const P = pages.filter(([,l]) => !q || l.toLowerCase().includes(q)).map(([k,l]) => ({icon:'→', label:l, sub:'Seite', go:'#'+k}));
+    if (A.length) g.push(['Wirkstoffe', A]); if (C.length) g.push(['Hersteller', C]); if (M.length) g.push(['Märkte', M]); if (P.length) g.push(['Seiten', P]);
+    pItems = g.flatMap(x => x[1]); pSel = 0;
+    let i = 0;
+    $('#plist').innerHTML = pItems.length ? g.map(([name, items]) => `<div class="pgroup">${name}</div>` + items.map(it => `<button class="pitem" type="button" role="option" data-i="${i++}" aria-selected="false">
+        <span class="picon" style="font-size:${it.icon.length>2?10:11}px;font-weight:700">${esc(it.icon)}</span><span class="${it.cap?'cap':''}">${esc(it.label)}</span><small>${esc(it.sub)}</small></button>`).join('')).join('')
+      : `<div class="empty">Kein Treffer für «${esc(q)}». Im Pilot sind 20 Wirkstoffe, ${fmt(d.companies.length)} Hersteller und ${d.markets.length} Märkte.</div>`;
+    markSel();
   }
+  function markSel(){ document.querySelectorAll('.pitem').forEach(b => b.setAttribute('aria-selected', +b.dataset.i === pSel)); const s = document.querySelector(`.pitem[data-i="${pSel}"]`); if (s) s.scrollIntoView({block:'nearest'}); }
+  function pick(i){ const it = pItems[i]; if (!it) return; closeLayer(); if (it.company) { setTimeout(() => companySheet(it.company), 120); } else { if (it.market) state.marketQ = it.market; location.hash = it.go.slice(1); if (location.hash === it.go) route(); } }
+  $('#pq').addEventListener('input', renderPalette);
+  $('#pq').addEventListener('keydown', e => {
+    if (e.key === 'ArrowDown') { e.preventDefault(); pSel = Math.min(pItems.length-1, pSel+1); markSel(); }
+    if (e.key === 'ArrowUp') { e.preventDefault(); pSel = Math.max(0, pSel-1); markSel(); }
+    if (e.key === 'Enter') { e.preventDefault(); pick(pSel); }
+  });
+  $('#plist').addEventListener('pointerdown', e => { const b = e.target.closest('.pitem'); if (b) { pSel = +b.dataset.i; markSel(); } });
+  $('#plist').addEventListener('click', e => { const b = e.target.closest('.pitem'); if (b) pick(+b.dataset.i); });
 
-  // ---------- home ----------
-  async function renderHome(){
-    const d = await loadIndex(); const t = d.totals;
-    const list = d.apis.filter(a => (state.group === 'all' || a.group === state.group) && matches(a, state.q));
-    app.innerHTML = `
-      <section class="hero">
-        <svg class="net" viewBox="0 0 600 400" preserveAspectRatio="xMaxYMid slice" aria-hidden="true">
-          <g stroke="#fff" stroke-opacity=".25" stroke-width="1.5"><line x1="200" y1="80" x2="340" y2="150"/><line x1="340" y1="150" x2="520" y2="70"/><line x1="340" y1="150" x2="420" y2="300"/><line x1="200" y1="80" x2="240" y2="280"/><line x1="240" y1="280" x2="420" y2="300"/><line x1="420" y1="300" x2="570" y2="260"/><line x1="520" y1="70" x2="570" y2="260"/></g>
-          <g fill="#fff" fill-opacity=".85"><circle cx="200" cy="80" r="5"/><circle cx="520" cy="70" r="6"/><circle cx="240" cy="280" r="5"/><circle cx="570" cy="260" r="6"/><circle cx="340" cy="150" r="9"/><circle cx="420" cy="300" r="8"/></g>
-        </svg>
-        <p class="eyebrow">Pilot · ${d.apis.length} Wirkstoffe · Stand ${esc(d.generated)}</p>
-        <h1>Wer stellt was her, wo, und für welchen Markt.</h1>
-        <p class="lead">Jeder Wert mit Quelle und Status. Fehlende Daten bleiben als Lücke sichtbar, nichts wird geraten.</p>
-        <div class="stats">
-          <div class="stat"><b class="num">${fmt(t.products)}</b><span>Fertigprodukte in 34 Ländern</span></div>
-          <div class="stat"><b class="num">${fmt(t.sites)}</b><span>Batch-Release-Angaben aus Leaflets</span></div>
-          <div class="stat"><b class="num">${fmt(t.dmf)}</b><span>API-Zertifikate (US-DMF)</span></div>
-          <div class="stat"><b class="num">${fmt(t.sources)}</b><span>nutzbare Primärquellen</span></div>
-          <div class="stat"><b class="num">${fmt(t.gaps)}</b><span>dokumentierte Lücken</span></div>
-        </div>
-      </section>
-      <section class="sec">
-        <div class="sec-head">
-          <div><p class="eyebrow">Wirkstoffe</p><h2 class="h2">${list.length === d.apis.length ? 'Alle Pilot-Wirkstoffe' : `${list.length} von ${d.apis.length} Wirkstoffen`}</h2></div>
-          <div class="filters" role="group" aria-label="Nach Gruppe filtern">
-            ${[['all','Alle'],['blockbuster','Blockbuster'],['niche','Nische'],['veterinary','Tierarzneimittel'],['patent','Patent / SPC']].map(([k,l]) =>
-              `<button class="fbtn" type="button" data-group="${k}" aria-pressed="${state.group===k}">${l}</button>`).join('')}
-          </div>
-        </div>
-        ${list.length ? `<div class="grid">${list.map(card).join('')}</div>` : `<div class="card empty">Kein Wirkstoff passt zu «${esc(state.q)}». Im Pilot sind 20 Wirkstoffe enthalten.</div>`}
-        <div class="legend">
-          <span>${chip('official')} aus einer Behörde oder einem Register</span>
-          <span>${chip('derived')} von PharmaLens abgeleitet, mit Begründung</span>
-          <span>${chip('gap')} nicht gefunden, mit Grund</span>
-        </div>
-      </section>
-      <footer><span>PharmaLens · Pilot-Explorer</span><span>Daten aus EMA, BDPM, AEMPS, CBG, BASG, DKMA, Swissmedic, AIFA, FDA, GSRS, TED, GLEIF</span></footer>`;
-    app.querySelectorAll('[data-group]').forEach(b => b.addEventListener('click', () => { state.group = b.dataset.group; renderHome(); }));
-  }
+  // ---------- page state ----------
+  const state = { q:'', group:'all', sort:['products', -1], compRole:'all', compCc:'', srcLight:'all', limit:60, tab:'sites', cc:'', marketQ:'' };
+  const view = $('#view');
+  const pageq = $('#pageq');
+  pageq.addEventListener('input', () => { state.q = pageq.value; state.limit = 60; renderCurrent(true); });
+  function crumbs(parts){ $('#crumbs').innerHTML = parts.map((p, i) => i < parts.length - 1 ? `<a href="${p[1]}">${esc(p[0])}</a><span aria-hidden="true">/</span>` : `<b class="${p[2]||''}">${esc(p[0])}</b>`).join(''); }
+  function setNav(k){ document.querySelectorAll('[data-nav]').forEach(a => a.dataset.nav === k ? a.setAttribute('aria-current','page') : a.removeAttribute('aria-current')); }
+  function moreBtn(shown, total){ return total > shown ? `<div class="more"><button class="btn" type="button" data-more>Weitere ${fmt(Math.min(60, total-shown))} anzeigen <span class="note">(${fmt(total-shown)} übrig)</span></button></div>` : ''; }
+  view.addEventListener('click', e => {
+    if (e.target.closest('[data-more]')) { state.limit += 60; renderCurrent(); return; }
+    const sortB = e.target.closest('[data-sort]'); if (sortB) { const k = sortB.dataset.sort; state.sort = [k, state.sort[0] === k ? -state.sort[1] : -1]; renderCurrent(); return; }
+    const row = e.target.closest('[data-href]'); if (row && !e.target.closest('a,button')) { location.hash = row.dataset.href; return; }
+    const comp = e.target.closest('[data-company]'); if (comp && !e.target.closest('a')) { companySheet(+comp.dataset.company); return; }
+    const seg = e.target.closest('[data-seg]'); if (seg) { state[seg.dataset.seg] = seg.dataset.val; state.limit = 60; renderCurrent(); return; }
+    const tab = e.target.closest('[data-tab]'); if (tab) { state.tab = tab.dataset.tab; state.cc = ''; state.limit = 60; renderCurrent(); return; }
+    const site = e.target.closest('[data-site]'); if (site) { siteSheet(site.dataset.site); return; }
+  });
+  view.addEventListener('keydown', e => { const row = e.target.closest('[data-href],[data-company]'); if (row && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); row.click(); } });
+  view.addEventListener('change', e => { if (e.target.dataset.fld) { state[e.target.dataset.fld] = e.target.value; state.limit = 60; renderCurrent(); } });
 
-  function card(a){
-    return `<a class="card api-card" href="#api-${esc(a.slug)}">
-      <div class="top"><div><h3>${esc(a.inn)}</h3><p class="ids">${esc(a.atc || '–')} · UNII ${esc(a.unii || '–')}</p></div>
-        <span class="chip c-neutral">${esc(GROUP[a.group] || '')}</span></div>
-      <div class="kv">
-        <div><b class="num">${fmt(a.countries)}</b><span>Länder${a.central ? ' + EU-zentral' : ''}</span></div>
-        <div><b class="num">${fmt(a.products)}</b><span>Produkte</span></div>
-        <div><b class="num">${fmt(a.sites)}</b><span>Batch-Release-Firmen</span></div>
-        <div><b class="num">${fmt(a.dmf_active)}</b><span>API-Hersteller (US-DMF aktiv)</span></div>
+  // ---------- pages ----------
+  let current = () => {};
+  function renderCurrent(keep){ current(keep); }
+
+  async function pOverview(){
+    const d = await data(); const t = d.totals; const A = d.index.apis;
+    crumbs([['Übersicht']]); setNav('overview');
+    const leaflet = d.markets.filter(m => m.leaflet_products > 0).map(m => ({...m, cov: pct(m.with_mfr, m.products)})).sort((a,b) => b.cov - a.cov);
+    const linkTot = t.confirmed + t.derived;
+    const topGaps = d.gaps.slice(0, 5);
+    const q = state.q.toLowerCase();
+    const rows = A.filter(a => !q || a.inn.includes(q)).sort((a,b) => b.products - a.products).slice(0, 8);
+    view.innerHTML = `<div class="fade">
+      <div class="page-head"><div><h1>Übersicht</h1><p>Stand ${esc(d.index.generated)}. Jeder Wert ist mit seiner Quelle verknüpft; was fehlt, steht unter Lücken.</p></div>
+        <button class="btn btn-primary" type="button" id="ovSearch"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>Wirkstoff suchen</button></div>
+      <div class="kpis">
+        <div class="card kpi"><span>Fertigprodukte</span><b class="num">${fmt(t.products)}</b><small>in ${t.countries} Ländern plus EU-zentral</small></div>
+        <div class="card kpi"><span>Herstellerangaben aus Leaflets</span><b class="num">${fmt(t.sites)}</b><small>Batch-Release, mit Zitat</small></div>
+        <div class="card kpi"><span>Hersteller</span><b class="num">${fmt(t.companies)}</b><small>Werke und API-Hersteller</small></div>
+        <div class="card kpi"><span>API-Zertifikate</span><b class="num">${fmt(t.dmf)}</b><small>US-DMF; CEP folgt</small></div>
+        <div class="card kpi"><span>Offene Lücken</span><b class="num">${fmt(t.gaps)}</b><small>jede mit Grund</small></div>
       </div>
-      <div class="foot">
-        ${a.shortages ? `<span class="chip c-gap">${a.shortages} Engpass${a.shortages>1?'meldungen':'meldung'}</span>` : ''}
-        ${a.us_patent ? `<span class="chip c-secondary">US-Patent bis ${esc(a.us_patent.slice(0,4))}</span>` : ''}
-        ${a.vet ? '<span class="chip c-neutral">Veterinär</span>' : ''}
-      </div></a>`;
+      <div class="grid2">
+        <section class="card panel"><div class="panel-h"><h2>Wirkstoffe nach Produktzahl</h2><a href="#apis">Alle ${A.length} anzeigen</a></div>
+          <div class="tbl" style="margin:0 -20px -20px"><table><thead><tr><th>Wirkstoff</th><th>Gruppe</th><th>Länder</th><th>Produkte</th><th>Werke</th><th>Engpässe</th></tr></thead><tbody>
+          ${rows.map(a => `<tr class="click" data-href="api-${a.slug}" tabindex="0"><td class="main cap">${esc(a.inn)}</td><td><span class="chip c-neutral">${esc(GROUP[a.group]||'')}</span></td>
+            <td class="num">${a.countries}</td><td class="num">${fmt(a.products)}</td><td class="num">${fmt(a.sites)}</td><td>${a.shortages ? `<span class="chip c-gap">${a.shortages} offen</span>` : '<span class="note">–</span>'}</td></tr>`).join('')}
+          </tbody></table></div></section>
+        <div style="display:flex;flex-direction:column;gap:16px">
+          <section class="card panel"><div class="panel-h"><h2>Lieferkette</h2><span class="note num">${fmt(linkTot)} Verbindungen</span></div>
+            <div class="stack" role="img" aria-label="${fmt(t.confirmed)} bestätigt, ${fmt(t.derived)} abgeleitet"><i style="width:${pct(t.confirmed,linkTot)}%;background:var(--off-fg)"></i><i style="width:${pct(t.derived,linkTot)}%;background:var(--accent)"></i></div>
+            <div class="legend"><span><i class="sw" style="background:var(--off-fg)"></i>Bestätigt <b class="num">${fmt(t.confirmed)}</b></span><span><i class="sw" style="background:var(--accent)"></i>Abgeleitet <b class="num">${fmt(t.derived)}</b></span></div>
+            <p class="note" style="margin-top:10px">Werk → Produkt aus Leaflets. API-Lieferanten chemischer Generika sind meist nicht öffentlich und bleiben offen.</p></section>
+          <section class="card panel"><div class="panel-h"><h2>Hersteller-Abdeckung</h2><a href="#markets">Alle Märkte</a></div>
+            <div class="bars">${leaflet.map(m => `<div class="bar"><span class="lbl"><span class="cc">${esc(m.cc)}</span>${esc(m.name)}</span><div class="track"><div class="fill" style="width:${m.cov}%"></div></div><span class="num" style="text-align:right">${m.cov} %</span></div>`).join('')}</div>
+            <p class="note" style="margin-top:10px">Anteil Produkte mit Batch-Release-Werk aus dem Leaflet.</p></section>
+        </div>
+      </div>
+      <section class="card panel" style="margin-top:16px"><div class="panel-h"><h2>Grösste Lücken</h2><a href="#gaps">Alle Lücken</a></div>
+        <div class="tbl" style="margin:0 -20px -20px"><table><thead><tr><th>Bereich</th><th>Grund</th><th>Anzahl</th></tr></thead><tbody>
+        ${topGaps.map(g => `<tr><td><span class="chip c-gap">${esc(AREA[g.area]||g.area)}</span></td><td class="main" style="font-weight:550">${esc(g.reason)}</td><td class="num">${fmt(g.n)}</td></tr>`).join('')}</tbody></table></div></section>
+    </div>`;
+    $('#ovSearch').addEventListener('click', openPalette);
+  }
+  const AREA = {manufacturer:'Hersteller', certificate:'Zertifikat', patent:'Patent', supply_chain:'Lieferkette', product:'Zulassung', company_structure:'Konzern', source:'Quelle'};
+
+  function sortHead(key, label){ const [k, dir] = state.sort; return `<th><button type="button" data-sort="${key}" aria-label="Nach ${label} sortieren">${label}${k===key ? (dir<0?' ↓':' ↑') : ''}</button></th>`; }
+  function sortBy(arr){ const [k, dir] = state.sort; return [...arr].sort((a,b) => { const x = a[k], y = b[k]; return (typeof x === 'string' ? String(x||'').localeCompare(String(y||'')) : (x||0) - (y||0)) * dir; }); }
+
+  async function pApis(keep){
+    const d = await data(); crumbs([['Wirkstoffe']]); setNav('apis');
+    const q = state.q.toLowerCase();
+    let A = d.index.apis.filter(a => (state.group === 'all' || a.group === state.group) && (!q || [a.inn,a.unii,a.cas,a.atc].some(x => (x||'').toLowerCase().includes(q))));
+    A = sortBy(A);
+    view.innerHTML = `<div class="${keep?'':'fade'}">
+      <div class="page-head"><div><h1>Wirkstoffe</h1><p>${A.length} von ${d.index.apis.length} Pilot-Wirkstoffen. Zeile anklicken für Hersteller, Zulassungen, Patente und Lücken.</p></div>
+        <div class="seg" role="group" aria-label="Gruppe">${[['all','Alle'],['blockbuster','Blockbuster'],['niche','Nische'],['veterinary','Tierarzneimittel'],['patent','Patent / SPC']].map(([k,l]) => `<button type="button" data-seg="group" data-val="${k}" aria-pressed="${state.group===k}">${l}</button>`).join('')}</div></div>
+      <section class="card tbl">${A.length ? `<table><thead><tr>${sortHead('inn','Wirkstoff')}<th>Gruppe</th><th>ATC</th>${sortHead('countries','Länder')}${sortHead('products','Produkte')}${sortHead('sites','Werke')}${sortHead('dmf_active','API-Hersteller')}${sortHead('us_patent','US-Patent')}${sortHead('shortages','Engpässe')}${sortHead('gaps','Lücken')}</tr></thead><tbody>
+        ${A.map(a => `<tr class="click" data-href="api-${a.slug}" tabindex="0"><td class="main cap">${esc(a.inn)}</td><td><span class="chip c-neutral">${esc(GROUP[a.group]||'')}</span></td><td class="num">${esc(a.atc||'–')}</td>
+          <td class="num">${a.countries}${a.central?' <span class="note">+EU</span>':''}</td><td class="num">${fmt(a.products)}</td><td class="num">${fmt(a.sites)}</td><td class="num">${fmt(a.dmf_active)}</td>
+          <td class="num">${a.us_patent ? esc(a.us_patent) : '<span class="note">–</span>'}</td><td>${a.shortages ? `<span class="chip c-gap">${a.shortages}</span>` : '<span class="note">–</span>'}</td><td class="num">${fmt(a.gaps)}</td></tr>`).join('')}
+        </tbody></table>` : `<div class="empty">Kein Wirkstoff passt zu «${esc(state.q)}».</div>`}</section></div>`;
   }
 
-  // ---------- detail ----------
-  const TABS = [
-    ['makers','API-Hersteller'], ['sites','Fertigprodukt-Hersteller'], ['products','Zulassungen'],
-    ['patents','Patente'], ['shortages','Engpässe'], ['tenders','Tender'], ['gaps','Lücken']];
-  let detailState = { tab: 'sites', q: '', cc: '', limit: 100 };
-
-  async function renderDetail(slug){
-    app.innerHTML = `<a class="back" href="#">← Alle Wirkstoffe</a><div class="skeleton" style="margin-top:16px;height:220px"></div>`;
-    let a; try { a = await loadApi(slug); } catch(e) { app.innerHTML = `<a class="back" href="#">← Alle Wirkstoffe</a><div class="card empty" style="margin-top:16px">Dieser Wirkstoff ist im Pilot nicht enthalten.</div>`; return; }
-    const idx = (await loadIndex()).apis.find(x => x.slug === slug) || {};
-    const counts = { makers: a.certificates.length + a.manufacturers.filter(m => m.role === 'api_manufacturer').length,
-      sites: new Set(a.manufacturers.filter(m => m.role === 'batch_release').map(m => m.company + '|' + m.site_cc)).size,
+  const TABS = [['sites','Fertigprodukt-Hersteller'],['makers','API-Hersteller'],['products','Zulassungen'],['patents','Patente'],['shortages','Engpässe'],['tenders','Tender'],['gaps','Lücken']];
+  async function pApi(slug, keep){
+    setNav('apis');
+    if (!keep) view.innerHTML = `<div class="skeleton" style="height:180px;margin-top:16px"></div>`;
+    let a; try { a = await api(slug); } catch(e) { crumbs([['Wirkstoffe','#apis'],['Nicht gefunden']]); view.innerHTML = `<div class="card empty" style="margin-top:16px">Dieser Wirkstoff ist im Pilot nicht enthalten. <a href="#apis">Zur Liste</a></div>`; return; }
+    const d = await data(); const idx = d.index.apis.find(x => x.slug === slug) || {};
+    crumbs([['Wirkstoffe','#apis'],[a.inn,'','cap']]);
+    const bio = a.manufacturers.filter(m => m.role === 'api_manufacturer');
+    const counts = { sites: new Set(a.manufacturers.filter(m => m.role==='batch_release').map(m => m.company+'|'+m.site_cc)).size, makers: a.certificates.length + bio.length,
       products: a.products.length, patents: a.patents.length, shortages: a.shortages.length, tenders: a.tenders.length, gaps: a.gaps.length };
-    app.innerHTML = `
-      <a class="back" href="#">← Alle Wirkstoffe</a>
-      <section class="card dhead">
-        <div style="min-width:0;flex:1 1 480px">
-          <p class="eyebrow">${esc(GROUP[idx.group] || 'Wirkstoff')}</p>
-          <h1>${esc(a.inn)}</h1>
-          <div class="ids">
-            <span><b>UNII</b> ${src(a.src, a.unii)}</span><span><b>CAS</b> ${esc(a.cas || '–')}</span>
-            <span><b>ATC</b> ${esc((a.atc || []).slice(0,4).join(', ') || '–')}${(a.atc||[]).length>4?' …':''}</span>
-            <span><b>Salzformen</b> ${a.salts.length ? esc(a.salts.slice(0,4).join(', ')) + (a.salts.length>4?' …':'') : '–'}</span>
-          </div>
-          ${a.summary ? `<p class="summary">${esc(a.summary)}</p>` : ''}
-        </div>
-      </section>
-      <div class="tiles">
-        <div class="card tile"><b class="num">${fmt(idx.countries)}</b><span>Länder mit Zulassung</span></div>
-        <div class="card tile"><b class="num">${fmt(a.products.length)}</b><span>Fertigprodukte</span></div>
-        <div class="card tile"><b class="num">${fmt(counts.sites)}</b><span>Batch-Release-Standorte</span></div>
-        <div class="card tile"><b class="num">${fmt(idx.dmf_active)}</b><span>API-Hersteller mit aktivem US-DMF</span></div>
-        <div class="card tile"><b class="num">${fmt(idx.shortages)}</b><span>offene Engpassmeldungen</span></div>
+    view.innerHTML = `<div class="${keep?'':'fade'}">
+      <section class="card dhead" style="margin-top:12px"><div style="min-width:0;flex:1 1 520px">
+        <p class="note" style="font-weight:600;color:var(--accent-ink)">${esc(GROUP[a.group]||'Wirkstoff')}</p><h1>${esc(a.inn)}</h1>
+        <div class="ids"><span><b>UNII</b> ${link(a.src, a.unii)}</span><span><b>CAS</b> ${esc(a.cas||'–')}</span><span><b>ATC</b> ${esc((a.atc||[]).slice(0,3).join(', ')||'–')}${(a.atc||[]).length>3?' …':''}</span><span><b>Salzformen</b> ${a.salts.length}</span></div>
+        ${a.summary ? `<p class="summary">${esc(a.summary)}</p>` : ''}</div></section>
+      <div class="kpis" style="margin-top:12px">
+        <div class="card kpi"><span>Länder</span><b class="num">${fmt(idx.countries)}</b><small>${idx.central?'plus EU-zentral':'national'}</small></div>
+        <div class="card kpi"><span>Fertigprodukte</span><b class="num">${fmt(a.products.length)}</b><small>${fmt(idx.mahs)} Zulassungsinhaber</small></div>
+        <div class="card kpi"><span>Batch-Release-Werke</span><b class="num">${fmt(counts.sites)}</b><small>aus ${fmt(idx.leaflets)} Leaflets</small></div>
+        <div class="card kpi"><span>API-Hersteller</span><b class="num">${fmt(idx.dmf_active)}</b><small>mit aktivem US-DMF</small></div>
+        <div class="card kpi"><span>Engpässe</span><b class="num">${fmt(idx.shortages)}</b><small>offen (EU zentral, ES)</small></div>
       </div>
-      <div class="tabs" role="tablist" aria-label="Bereiche">
-        ${TABS.map(([k,l]) => `<button class="tab" role="tab" type="button" data-tab="${k}" aria-selected="${detailState.tab===k}">${l}<span class="n num">${fmt(counts[k])}</span></button>`).join('')}
-      </div>
-      <div class="panel" id="panel"></div>`;
-    app.querySelectorAll('[data-tab]').forEach(b => b.addEventListener('click', () => {
-      detailState = { ...detailState, tab: b.dataset.tab, q: '', cc: '', limit: 100 };
-      app.querySelectorAll('[data-tab]').forEach(x => x.setAttribute('aria-selected', x === b)); renderPanel(a);
-    }));
-    renderPanel(a);
+      <div class="tabs" role="tablist" aria-label="Bereiche">${TABS.map(([k,l]) => `<button class="tab" role="tab" type="button" data-tab="${k}" aria-selected="${state.tab===k}">${l}<span class="n num">${fmt(counts[k])}</span></button>`).join('')}</div>
+      <div id="tabpanel"></div></div>`;
+    renderTab(a);
   }
 
-  function table(head, rows, total){
-    if (!rows.length) return `<div class="card empty">Keine Einträge.</div>`;
-    return `<div class="tbl-wrap"><table><thead><tr>${head.map(h => `<th>${h}</th>`).join('')}</tr></thead><tbody>${rows.join('')}</tbody></table>
-      ${total > rows.length ? `<div class="more"><button class="btn btn-ghost" type="button" id="moreBtn">Weitere ${fmt(Math.min(100, total - rows.length))} von ${fmt(total - rows.length)} anzeigen</button></div>` : ''}</div>`;
+  function siteGroups(a){
+    const q = state.q, cc = state.cc;
+    const rows = a.manufacturers.filter(m => m.role === 'batch_release' && (!cc || m.cc === cc) && has({c:m.company,s:m.site_cc,p:m.product}, q));
+    const by = new Map();
+    rows.forEach(m => { const k = m.company + '|' + (m.site_cc||''); if (!by.has(k)) by.set(k, {key:k, m, prods:new Map(), status:new Set()}); const g = by.get(k); g.prods.set(m.pid, m); g.status.add(m.status); });
+    return [...by.values()].sort((x,y) => y.prods.size - x.prods.size);
   }
-  function toolbar(a, opts){
-    const ccs = opts.countries ? [...new Set(opts.countries)].sort() : null;
-    return `<div class="toolbar">
-      <label for="fq" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Filtern</label>
-      <input id="fq" type="search" placeholder="${esc(opts.placeholder)}" value="${esc(detailState.q)}">
-      ${ccs ? `<label for="fcc" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Land</label>
-        <select id="fcc"><option value="">Alle Länder</option>${ccs.map(c => `<option value="${esc(c)}" ${detailState.cc===c?'selected':''}>${esc(c)}</option>`).join('')}</select>` : ''}
-      <span class="note">${esc(opts.note || '')}</span></div>`;
-  }
-  function bindToolbar(a){
-    const fq = $('#fq'), fcc = $('#fcc');
-    if (fq) fq.addEventListener('input', () => { detailState.q = fq.value; detailState.limit = 100; renderPanel(a, true); });
-    if (fcc) fcc.addEventListener('change', () => { detailState.cc = fcc.value; detailState.limit = 100; renderPanel(a); });
-    const mb = $('#moreBtn'); if (mb) mb.addEventListener('click', () => { detailState.limit += 100; renderPanel(a); });
-  }
-  const has = (obj, q) => !q || Object.values(obj).some(v => String(v ?? '').toLowerCase().includes(q.toLowerCase()));
-
-  function renderPanel(a, keepFocus){
-    const p = $('#panel'); const t = detailState.tab; const q = detailState.q, cc = detailState.cc;
-    let html = '';
+  let currentApi = null;
+  function renderTab(a){
+    currentApi = a; const p = $('#tabpanel'); const t = state.tab, q = state.q, cc = state.cc, L = state.limit;
+    const ccSel = list => `<label for="fcc" class="sr">Markt</label><select id="fcc" class="field" data-fld="cc"><option value="">Alle Märkte</option>${[...new Set(list)].sort().map(c => `<option ${state.cc===c?'selected':''}>${esc(c)}</option>`).join('')}</select>`;
+    let h = '';
+    if (t === 'sites') {
+      const groups = siteGroups(a);
+      const ccCount = {}; groups.forEach(g => { const c = g.m.site_cc || '?'; ccCount[c] = (ccCount[c]||0) + g.prods.size; });
+      const ccs = Object.entries(ccCount).sort((x,y) => y[1]-x[1]).slice(0, 12); const max = ccs[0] ? ccs[0][1] : 1;
+      h = `<div class="toolbar">${ccSel(a.manufacturers.filter(m=>m.role==='batch_release').map(m=>m.cc))}<span class="note">${fmt(groups.length)} Werke · Filter oben rechts durchsucht Firma und Produkt</span></div>
+        <div class="split"><div>${groups.length ? `<div class="sites">${groups.slice(0, L).map(g => `<button class="site" type="button" data-site="${esc(g.key)}">
+            <h3>${esc(g.m.company)}</h3><div class="meta"><span class="cc" title="Land des Werks">${esc(g.m.site_cc||'–')}</span>${[...g.status].map(chip).join('')}<span class="num">${fmt(g.prods.size)} Produkt${g.prods.size>1?'e':''}</span></div>
+            ${g.m.addr ? `<p class="note" style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(g.m.addr)}</p>` : ''}</button>`).join('')}</div>${moreBtn(Math.min(L, groups.length), groups.length)}`
+          : `<div class="card empty">Keine Batch-Release-Werke für diese Auswahl.</div>`}</div>
+          <section class="card panel"><div class="panel-h"><h2>Werke nach Land</h2></div><div class="bars">${ccs.map(([c,n]) => `<div class="bar" style="grid-template-columns:44px minmax(0,1fr) 44px"><span class="cc">${esc(c)}</span><div class="track"><div class="fill" style="width:${Math.max(4, n/max*100)}%"></div></div><span class="num" style="text-align:right">${fmt(n)}</span></div>`).join('') || '<p class="note">–</p>'}</div><p class="note" style="margin-top:10px">Produkte je Werksland</p></section></div>`;
+    }
     if (t === 'makers') {
       const bio = a.manufacturers.filter(m => m.role === 'api_manufacturer');
       const certs = a.certificates.filter(c => has(c, q));
-      html = `${toolbar(a, {placeholder:'Halter oder Nummer filtern', note:'CEP und Written Confirmations: Quelle gesperrt, Lizenzanfrage offen'})}
-        ${bio.length ? `<h3 style="font-size:17px;margin:4px 0 12px">Bestätigt aus EMA Annex IIA (Wirkstoffhersteller)</h3>
-          <div class="sites" style="margin-bottom:24px">${bio.map(m => `<div class="card site"><h3>${esc(m.company)}</h3>
-            <div class="meta"><span class="cc">${esc(m.site_cc || '–')}</span>${chip(m.status)}<span>${esc(m.product)}</span></div>
-            <details><summary>Zitat aus der Quelle</summary><div class="quote">${esc(m.quote)}</div></details>${src(m.url,'Produktinformation')}</div>`).join('')}</div>` : ''}
-        ${table(['Typ','Nummer','Halter','Status','Eingereicht','Gegenstand','Daten','Quelle'],
-          certs.slice(0, detailState.limit).map(c => `<tr><td>${esc(c.type.replace('_',' '))}</td><td class="num">${esc(c.no)}</td><td class="main">${esc(c.holder)}</td>
-            <td>${c.cs==='active'?'<span class="chip c-official">aktiv</span>':'<span class="chip c-neutral">inaktiv</span>'}</td><td class="num">${esc(c.date || '–')}</td>
-            <td>${esc(c.subject)}</td><td>${chip(c.status)}</td><td>${src(c.url,'FDA')}</td></tr>`), certs.length)}`;
-    }
-    if (t === 'sites') {
-      const rows = a.manufacturers.filter(m => m.role === 'batch_release' && (!cc || m.cc === cc) && has({c:m.company,s:m.site_cc,p:m.product}, q));
-      const by = new Map();
-      rows.forEach(m => { const k = m.company + '|' + (m.site_cc||''); if (!by.has(k)) by.set(k, {m, prods:new Map(), status:new Set()}); const g = by.get(k); g.prods.set(m.pid, m); g.status.add(m.status); });
-      const groups = [...by.values()].sort((x,y) => y.prods.size - x.prods.size);
-      const ccCount = {}; groups.forEach(g => { const c = g.m.site_cc || '?'; ccCount[c] = (ccCount[c]||0) + g.prods.size; });
-      const ccs = Object.entries(ccCount).sort((x,y) => y[1]-x[1]).slice(0, 12); const max = ccs[0] ? ccs[0][1] : 1;
-      html = `${toolbar(a, {placeholder:'Firma oder Produkt filtern', countries:a.manufacturers.filter(m=>m.role==='batch_release').map(m=>m.cc), note:'Land oben = Markt des Produkts'})}
-        <div class="two">
-          <div>${groups.length ? `<div class="sites">${groups.slice(0, detailState.limit).map(g => {
-            const ex = [...g.prods.values()][0];
-            return `<div class="card site"><h3>${esc(g.m.company)}</h3>
-              <div class="meta"><span class="cc" title="Land des Werks">${esc(g.m.site_cc || '–')}</span>${[...g.status].map(chip).join('')}<span class="num">${fmt(g.prods.size)} Produkt${g.prods.size>1?'e':''}</span></div>
-              ${g.m.addr ? `<p class="note">${esc(g.m.addr)}</p>` : ''}
-              <details><summary>Produkte und Zitat</summary>
-                <p class="note" style="margin-top:8px">${[...g.prods.values()].slice(0,8).map(x => `${esc(x.cc)} · ${esc(x.product)}`).join('<br>')}${g.prods.size>8?`<br>… und ${g.prods.size-8} weitere`:''}</p>
-                <div class="quote">${esc(ex.quote)}</div><p style="margin-top:8px">${src(ex.url,'Leaflet ' + ex.cc)}</p></details></div>`; }).join('')}</div>
-            ${groups.length > detailState.limit ? `<div class="more"><button class="btn btn-ghost" type="button" id="moreBtn">Weitere Standorte anzeigen</button></div>` : ''}`
-            : `<div class="card empty">Keine Batch-Release-Standorte für diese Auswahl.</div>`}</div>
-          <div class="card" style="padding:20px"><h3 style="font-size:16px;margin-bottom:4px">Standorte nach Land</h3><p class="note" style="margin-bottom:14px">Zahl der Produkte je Werksland</p>
-            <div class="bars">${ccs.map(([c,n]) => `<div class="bar"><span class="cc">${esc(c)}</span><div class="track"><div class="fill" style="width:${Math.max(4, n/max*100)}%"></div></div><span class="num" style="text-align:right">${fmt(n)}</span></div>`).join('') || '<p class="note">–</p>'}</div></div>
-        </div>`;
+      h = `<div class="toolbar"><span class="note">US-DMF aus der FDA-Liste. CEP und Written Confirmations folgen nach Lizenz bzw. Freigabe.</span></div>
+        ${bio.length ? `<section class="card panel" style="margin-bottom:16px"><div class="panel-h"><h2>Bestätigt aus EMA Annex IIA</h2><span class="note">${bio.length} Wirkstoffhersteller</span></div><div class="sites">${bio.map(m => `<div class="card" style="padding:14px 16px;box-shadow:none"><h3 style="font-size:15px">${esc(m.company)}</h3><div class="meta" style="display:flex;gap:6px;margin-top:6px;align-items:center"><span class="cc">${esc(m.site_cc||'–')}</span>${chip(m.status)}<span class="note">${esc(m.product)}</span></div></div>`).join('')}</div></section>` : ''}
+        <section class="card tbl">${certs.length ? `<table><thead><tr><th>Typ</th><th>Nummer</th><th>Halter</th><th>Status</th><th>Eingereicht</th><th>Gegenstand</th><th>Daten</th><th>Quelle</th></tr></thead><tbody>
+          ${certs.slice(0, L).map(c => `<tr><td>${esc(c.type.replace('_',' '))}</td><td class="num">${esc(c.no)}</td><td class="main">${esc(c.holder)}</td><td>${c.cs==='active'?'<span class="chip c-official">aktiv</span>':'<span class="chip c-neutral">inaktiv</span>'}</td><td class="num">${esc(c.date||'–')}</td><td>${esc(c.subject)}</td><td>${chip(c.status)}</td><td>${link(c.url,'FDA')}</td></tr>`).join('')}</tbody></table>${moreBtn(Math.min(L,certs.length), certs.length)}` : '<div class="empty">Keine API-Zertifikate gefunden.</div>'}</section>`;
     }
     if (t === 'products') {
       const rows = a.products.filter(x => (!cc || x.cc === cc) && has({n:x.name,m:x.mah,no:x.no}, q));
-      html = `${toolbar(a, {placeholder:'Produkt, MAH oder Zulassungsnummer filtern', countries:a.products.map(x=>x.cc), note:`${fmt(rows.length)} Produkte`})}
-        ${table(['Land','Produkt','Zulassungsinhaber','Nummer','Verfahren','Status','Daten','Quelle'],
-          rows.slice(0, detailState.limit).map(x => `<tr><td><span class="cc">${esc(x.cc)}</span></td><td class="main">${esc(x.name)}${x.str?`<br><span class="note">${esc(x.str)}</span>`:''}</td>
-            <td>${esc(x.mah || '–')}</td><td class="num">${esc(x.no || '–')}</td><td>${esc(x.proc || '–')}</td><td>${esc(x.st || '–')}</td><td>${chip(x.status)}</td>
-            <td>${src(x.url, x.src.replace(/ (Listen|REST|Open Data|Geneesmiddeleninformatiebank|Arzneispezialitätenregister|Medicine data download)$/,''))}${x.pil?`<br>${src(x.pil,'Leaflet')}`:''}</td></tr>`), rows.length)}`;
+      h = `<div class="toolbar">${ccSel(a.products.map(x=>x.cc))}<span class="note">${fmt(rows.length)} Produkte</span></div>
+        <section class="card tbl">${rows.length ? `<table><thead><tr><th>Markt</th><th>Produkt</th><th>Zulassungsinhaber</th><th>Nummer</th><th>Verfahren</th><th>Status</th><th>Daten</th><th>Quelle</th></tr></thead><tbody>
+          ${rows.slice(0, L).map(x => `<tr><td><span class="cc">${esc(x.cc)}</span></td><td class="main">${esc(x.name)}${x.str?`<br><span class="note">${esc(x.str)}</span>`:''}</td><td>${esc(x.mah||'–')}</td><td class="num">${esc(x.no||'–')}</td><td>${esc(x.proc||'–')}</td><td>${esc(x.st||'–')}</td><td>${chip(x.status)}</td><td>${link(x.url, shortSrc(x.src))}${x.pil?`<br>${link(x.pil,'Leaflet')}`:''}</td></tr>`).join('')}</tbody></table>${moreBtn(Math.min(L,rows.length), rows.length)}` : '<div class="empty">Keine Produkte für diese Auswahl.</div>'}</section>`;
     }
     if (t === 'patents') {
-      const rows = a.patents.filter(x => has(x, q));
       const TYPE = {substance:'Wirkstoff', formulation:'Formulierung', use:'Verwendung', substance_on_combination:'Wirkstoff (Kombi)', formulation_on_combination:'Formulierung (Kombi)', use_on_combination:'Verwendung (Kombi)'};
-      const today = new Date().toISOString().slice(0,10);
-      html = `${toolbar(a, {placeholder:'Patentnummer filtern', note:'EU, CH, UK und SPC folgen nach EPO-Freigabe'})}
-        ${table(['Nummer','Land','Art','Ablauf','Status','Daten','Quelle'],
-          rows.slice(0, detailState.limit).map(x => `<tr><td class="main num">${esc(x.no)}</td><td><span class="cc">${esc(x.jur)}</span></td><td>${esc(TYPE[x.type] || x.type)}</td>
-            <td class="num">${esc(x.exp)}${x.exp && x.exp < today ? ' <span class="chip c-neutral">abgelaufen</span>' : ''}</td><td>${esc(x.ps)}</td><td>${chip(x.status)}</td><td>${src(x.url,'Orange Book')}</td></tr>`), rows.length)}`;
+      const today = new Date().toISOString().slice(0,10); const rows = a.patents.filter(x => has(x, q));
+      h = `<div class="toolbar"><span class="note">Nur USA (Orange Book). EP-Patente und SPC pro Land folgen nach EPO-Freigabe.</span></div>
+        <section class="card tbl">${rows.length ? `<table><thead><tr><th>Nummer</th><th>Land</th><th>Art</th><th>Ablauf</th><th>Status</th><th>Daten</th><th>Quelle</th></tr></thead><tbody>
+          ${rows.slice(0, L).map(x => `<tr><td class="main num">${esc(x.no)}</td><td><span class="cc">${esc(x.jur)}</span></td><td>${esc(TYPE[x.type]||x.type)}</td><td class="num">${esc(x.exp)}${x.exp && x.exp < today ? ' <span class="chip c-neutral">abgelaufen</span>' : ''}</td><td>${esc(x.ps)}</td><td>${chip(x.status)}</td><td>${link(x.url,'Orange Book')}</td></tr>`).join('')}</tbody></table>${moreBtn(Math.min(L,rows.length), rows.length)}` : '<div class="empty">Kein US-Patent im Orange Book.</div>'}</section>`;
     }
     if (t === 'shortages') {
       const rows = a.shortages.filter(x => has(x, q));
-      html = `${toolbar(a, {placeholder:'Produkt filtern', note:'EMA (zentral) und AEMPS; weitere Länder folgen'})}
-        ${table(['Seit','Land','Produkt','Lage','Erwartet','Daten','Quelle'],
-          rows.map(x => `<tr><td class="num">${esc(x.date || '–')}</td><td><span class="cc">${esc(x.country)}</span></td><td class="main">${esc(x.product)}</td>
-            <td>${x.active === false || x.state === 'Resolved' ? '<span class="chip c-neutral">beendet</span>' : '<span class="chip c-gap">offen</span>'} ${esc(x.state || '')}</td>
-            <td class="num">${esc(x.expected_resolution && x.expected_resolution !== 'NaT' ? String(x.expected_resolution).slice(0,10) : '–')}</td><td>${chip(x.status)}</td><td>${src(x.url,'Meldung')}</td></tr>`), rows.length)}`;
+      h = `<div class="toolbar"><span class="note">EMA (zentral) und AEMPS. BfArM, ANSM und BWL folgen.</span></div>
+        <section class="card tbl">${rows.length ? `<table><thead><tr><th>Seit</th><th>Markt</th><th>Produkt</th><th>Lage</th><th>Daten</th><th>Quelle</th></tr></thead><tbody>
+          ${rows.map(x => `<tr><td class="num">${esc(x.date||'–')}</td><td><span class="cc">${esc(x.country)}</span></td><td class="main">${esc(x.product)}</td><td>${x.active === false || x.state === 'Resolved' ? '<span class="chip c-neutral">beendet</span>' : '<span class="chip c-gap">offen</span>'}</td><td>${chip(x.status)}</td><td>${link(x.url,'Meldung')}</td></tr>`).join('')}</tbody></table>` : '<div class="empty">Keine Engpassmeldung in den angebundenen Quellen.</div>'}</section>`;
     }
     if (t === 'tenders') {
       const rows = a.tenders.filter(x => has(x, q));
-      html = `${toolbar(a, {placeholder:'Auftraggeber oder Gewinner filtern', note:'Bekanntmachungen, die den Wirkstoff erwähnen; Gewinner nicht losgenau zugeordnet'})}
-        ${table(['Datum','Auftraggeber','Gewinner (Rohtext)','Wert','Quelle'],
-          rows.slice(0, detailState.limit).map(x => `<tr><td class="num">${esc(x.date || '–')}</td><td class="main">${esc(x.buyer)}</td><td>${esc(x.winner || '–')}</td>
-            <td class="num">${x.value != null ? fmt(Math.round(x.value)) + ' ' + esc(x.cur || '') : '–'}</td><td>${src(x.url,'TED ' + x.id)}</td></tr>`), rows.length)}`;
+      h = `<div class="toolbar"><span class="note">TED-Vergaben, die den Wirkstoff erwähnen (max. 100). Gewinner noch nicht losgenau zugeordnet.</span></div>
+        <section class="card tbl">${rows.length ? `<table><thead><tr><th>Datum</th><th>Auftraggeber</th><th>Gewinner (Rohtext)</th><th>Wert</th><th>Quelle</th></tr></thead><tbody>
+          ${rows.slice(0, L).map(x => `<tr><td class="num">${esc(x.date||'–')}</td><td class="main">${esc(x.buyer)}</td><td>${esc(x.winner||'–')}</td><td class="num">${x.value!=null ? fmt(Math.round(x.value))+' '+esc(x.cur||'') : '–'}</td><td>${link(x.url,'TED '+x.id)}</td></tr>`).join('')}</tbody></table>${moreBtn(Math.min(L,rows.length), rows.length)}` : '<div class="empty">Keine Vergaben gefunden.</div>'}</section>`;
     }
     if (t === 'gaps') {
-      const rows = a.gaps.filter(x => has(x, q));
-      const AREA = {manufacturer:'Hersteller', certificate:'Zertifikat', patent:'Patent', supply_chain:'Lieferkette', product:'Zulassung', company_structure:'Konzern'};
-      html = `${toolbar(a, {placeholder:'Grund filtern', note:'Jede Lücke hat einen Grund und, wo bekannt, eine Bezugsquelle'})}
-        ${table(['Bereich','Grund','Wo erhältlich'],
-          rows.map(x => `<tr><td><span class="chip c-gap">${esc(AREA[x.area] || x.area)}</span></td><td class="main">${esc(x.reason)}</td><td>${/^https?:/.test(x.where||'') ? src(x.where,'Dokument') : esc(x.where || '–')}</td></tr>`), rows.length)}`;
+      const agg = {}; a.gaps.filter(x => has(x, q)).forEach(g => { const k = g.area+'|'+g.reason; agg[k] = agg[k] || {...g, n:0}; agg[k].n++; });
+      const rows = Object.values(agg).sort((x,y) => y.n - x.n);
+      h = `<div class="toolbar"><span class="note">Nichts wird geraten. Jede Lücke hat einen Grund und, wo bekannt, eine Bezugsquelle.</span></div>
+        <section class="card tbl">${rows.length ? `<table><thead><tr><th>Bereich</th><th>Grund</th><th>Fälle</th><th>Wo erhältlich</th></tr></thead><tbody>
+          ${rows.map(x => `<tr><td><span class="chip c-gap">${esc(AREA[x.area]||x.area)}</span></td><td class="main" style="font-weight:550">${esc(x.reason)}</td><td class="num">${fmt(x.n)}</td><td>${/^https?:/.test(x.where||'') ? link(x.where,'Beispiel') : esc(x.where||'–')}</td></tr>`).join('')}</tbody></table>` : '<div class="empty">Keine offenen Lücken.</div>'}</section>`;
     }
-    p.innerHTML = html; bindToolbar(a);
-    if (keepFocus) { const f = $('#fq'); if (f) { f.focus(); f.setSelectionRange(f.value.length, f.value.length); } }
+    p.innerHTML = h;
+  }
+
+  function siteSheet(key){
+    const a = currentApi; if (!a) return;
+    const g = siteGroups({...a}).find(x => x.key === key) || (() => { const s = state.q; state.q = ''; const r = siteGroups(a).find(x => x.key === key); state.q = s; return r; })();
+    if (!g) return; const prods = [...g.prods.values()]; const ex = prods[0];
+    showSheet(`Batch-Release-Werk · ${a.inn}`, g.m.company, `
+      <dl class="dl"><dt>Werksland</dt><dd><span class="cc">${esc(g.m.site_cc||'–')}</span></dd><dt>Adresse</dt><dd>${esc(g.m.addr||'–')}</dd><dt>Status</dt><dd>${[...g.status].map(chip).join(' ')}</dd><dt>Produkte</dt><dd class="num">${fmt(prods.length)}</dd></dl>
+      <div><h3 style="font-size:15px;margin-bottom:8px">Wörtlich aus der Quelle</h3><div class="quote">${esc(ex.quote)}</div><p style="margin-top:8px">${link(ex.url, 'Leaflet öffnen (' + ex.cc + ')')}</p></div>
+      <div><h3 style="font-size:15px;margin-bottom:8px">Produkte mit diesem Werk</h3><div class="card" style="box-shadow:none"><table><tbody>${prods.map(x => `<tr><td style="width:52px"><span class="cc">${esc(x.cc)}</span></td><td class="main" style="font-weight:550">${esc(x.product)}</td><td>${chip(x.status)}</td></tr>`).join('')}</tbody></table></div></div>`);
+  }
+
+  async function pCompanies(keep){
+    const d = await data(); crumbs([['Hersteller']]); setNav('companies');
+    const q = state.q.toLowerCase();
+    const ccs = [...new Set(d.companies.flatMap(c => c.cc))].sort();
+    let C = d.companies.filter(c => (!q || c.name.toLowerCase().includes(q) || c.apis.some(x => x.includes(q)) || (c.group||'').toLowerCase().includes(q))
+      && (state.compRole === 'all' || (state.compRole === 'fdf' ? c.roles.includes('Batch-Release') : c.roles.some(r => r.startsWith('API'))))
+      && (!state.compCc || c.cc.includes(state.compCc)));
+    const L = state.limit;
+    view.innerHTML = `<div class="${keep?'':'fade'}">
+      <div class="page-head"><div><h1>Hersteller</h1><p>${fmt(C.length)} von ${fmt(d.companies.length)} Firmen. Werke aus Leaflets und API-Hersteller aus Zertifikaten, nie aus Importeur-Angaben.</p></div>
+        <div style="display:flex;flex-wrap:wrap;gap:10px"><div class="seg" role="group" aria-label="Rolle">${[['all','Alle'],['fdf','Batch-Release'],['api','API-Hersteller']].map(([k,l]) => `<button type="button" data-seg="compRole" data-val="${k}" aria-pressed="${state.compRole===k}">${l}</button>`).join('')}</div>
+          <label for="ccomp" class="sr">Land</label><select id="ccomp" class="field" data-fld="compCc"><option value="">Alle Länder</option>${ccs.map(c => `<option ${state.compCc===c?'selected':''}>${esc(c)}</option>`).join('')}</select></div></div>
+      <section class="card tbl">${C.length ? `<table><thead><tr><th>Firma</th><th>Land</th><th>Rolle</th><th>Wirkstoffe</th><th>Produkte</th><th>Märkte</th><th>Konzern</th></tr></thead><tbody>
+        ${C.slice(0, L).map(c => `<tr class="click" data-company="${c.id}" tabindex="0"><td class="main">${esc(c.name)}</td><td>${c.cc.map(x => `<span class="cc">${esc(x)}</span>`).join(' ') || '<span class="note">–</span>'}</td>
+          <td>${c.roles.map(r => `<span class="chip ${r.startsWith('API')?'c-derived':'c-neutral'}" style="margin:1px">${esc(r)}</span>`).join('')}</td>
+          <td class="cap">${esc(c.apis.slice(0,3).join(', '))}${c.apis.length>3?` <span class="note">+${c.apis.length-3}</span>`:''}</td><td class="num">${fmt(c.products)}</td><td class="num">${fmt(c.markets.length)}</td>
+          <td>${c.parent ? `${esc(c.parent)} <span class="chip c-official">GLEIF</span>` : c.group ? `${esc(c.group)} <span class="chip c-derived">nicht bestätigt</span>` : '<span class="note">–</span>'}</td></tr>`).join('')}
+      </tbody></table>${moreBtn(Math.min(L, C.length), C.length)}` : `<div class="empty">Keine Firma passt zur Auswahl.</div>`}</section></div>`;
+  }
+  async function companySheet(id){
+    const d = await data(); const c = d.companies.find(x => x.id === id); if (!c) return;
+    showSheet(c.roles.join(' · '), c.name, `
+      <dl class="dl"><dt>Land</dt><dd>${c.cc.map(x => `<span class="cc">${esc(x)}</span>`).join(' ') || '–'}</dd><dt>LEI</dt><dd class="num">${esc(c.lei||'–')}</dd>
+        <dt>Konzern</dt><dd>${c.parent ? `${esc(c.parent)} ${chip('official')} <span class="note">GLEIF</span>` : c.group ? `Markengruppe ${esc(c.group)} ${chip('derived')}<br><span class="note">Gleicher Markenstamm, nicht durch Register bestätigt</span>` : '–'}</dd>
+        <dt>Produkte</dt><dd class="num">${fmt(c.products)}</dd><dt>US-DMF</dt><dd class="num">${fmt(c.dmf)}</dd><dt>Märkte</dt><dd>${c.markets.map(x => `<span class="cc" style="margin:1px">${esc(x)}</span>`).join(' ') || '–'}</dd></dl>
+      <div><h3 style="font-size:15px;margin-bottom:8px">Wirkstoffe</h3><div style="display:flex;flex-wrap:wrap;gap:8px">${c.apis.map(x => `<a class="btn cap" href="#api-${esc(x.replace(/[^a-z0-9]+/g,'-'))}">${esc(x)}</a>`).join('')}</div></div>`);
+    $('#sheetBody').addEventListener('click', e => { if (e.target.closest('a[href^="#api-"]')) closeLayer(); }, {once:true});
+  }
+
+  async function pMarkets(keep){
+    const d = await data(); crumbs([['Märkte']]); setNav('markets');
+    if (state.marketQ) { state.q = state.marketQ; pageq.value = state.marketQ; state.marketQ = ''; }
+    const q = state.q.toLowerCase();
+    const M = d.markets.filter(m => !q || m.name.toLowerCase().includes(q) || m.cc.toLowerCase() === q);
+    view.innerHTML = `<div class="${keep?'':'fade'}">
+      <div class="page-head"><div><h1>Märkte</h1><p>Zulassungen der Pilot-Wirkstoffe je Land. Hersteller pro Produkt gibt es dort, wo ein Leaflet-Register angebunden ist.</p></div></div>
+      <section class="card tbl"><table><thead><tr><th>Markt</th><th>Produkte</th><th>Zulassungsinhaber</th><th>Wirkstoffe</th><th style="min-width:220px">Hersteller pro Produkt</th><th>Quellen</th></tr></thead><tbody>
+      ${M.map(m => { const cov = pct(m.with_mfr, m.products); return `<tr><td class="main"><span class="cc">${esc(m.cc)}</span> ${esc(m.name)}</td><td class="num">${fmt(m.products)}${m.vet?` <span class="note">(${m.vet} vet)</span>`:''}</td><td class="num">${fmt(m.mahs)}</td><td class="num">${m.apis}</td>
+        <td>${m.with_mfr ? `<div style="display:flex;align-items:center;gap:10px"><div class="track" style="flex:1"><div class="fill" style="width:${cov}%"></div></div><span class="num" style="width:44px;text-align:right">${cov} %</span></div>` : '<span class="chip c-gap">nur Register</span>'}</td>
+        <td class="note">${m.sources.map(shortSrc).join(', ')}</td></tr>`; }).join('')}
+      </tbody></table></section></div>`;
+  }
+
+  async function pGaps(keep){
+    const d = await data(); crumbs([['Lücken']]); setNav('gaps');
+    const q = state.q;
+    const G = d.gaps.filter(g => has(g, q)); const byArea = {}; G.forEach(g => byArea[g.area] = (byArea[g.area]||0) + g.n);
+    view.innerHTML = `<div class="${keep?'':'fade'}">
+      <div class="page-head"><div><h1>Lücken</h1><p>Was fehlt und warum. Lücken werden nie mit geschätzten Werten gefüllt.</p></div></div>
+      <div class="kpis">${Object.entries(byArea).sort((a,b) => b[1]-a[1]).map(([k,n]) => `<div class="card kpi"><span>${esc(AREA[k]||k)}</span><b class="num">${fmt(n)}</b></div>`).join('')}</div>
+      <section class="card tbl" style="margin-top:16px"><table><thead><tr><th>Bereich</th><th>Grund</th><th>Fälle</th><th>Wo erhältlich</th></tr></thead><tbody>
+      ${G.map(g => `<tr><td><span class="chip c-gap">${esc(AREA[g.area]||g.area)}</span></td><td class="main" style="font-weight:550">${esc(g.reason)}</td><td class="num">${fmt(g.n)}</td><td>${/^https?:/.test(g.where||'') ? link(g.where,'Beispiel') : esc(g.where||'–')}</td></tr>`).join('')}
+      </tbody></table></section></div>`;
+  }
+
+  async function pSources(keep){
+    const d = await data(); crumbs([['Quellen']]); setNav('sources');
+    const q = state.q; const LIGHT = {green:['Download / API','c-official'], yellow:['HTML erlaubt','c-gap'], red:['Nicht nutzbar','c-red']};
+    const cnt = {green:0,yellow:0,red:0}; d.sources.forEach(s => cnt[s.light]++);
+    const S = d.sources.filter(s => (state.srcLight === 'all' || s.light === state.srcLight) && has({n:s.name,j:s.jur,r:s.reason,c:s.cat}, q));
+    view.innerHTML = `<div class="${keep?'':'fade'}">
+      <div class="page-head"><div><h1>Quellen</h1><p>Jede Quelle mit Zugriffsart, robots.txt-Prüfung und Nutzungsbedingungen. Gesperrte Quellen werden nicht umgangen.</p></div>
+        <div class="seg" role="group" aria-label="Ampel">${[['all',`Alle ${d.sources.length}`],['green',`Grün ${cnt.green}`],['yellow',`Gelb ${cnt.yellow}`],['red',`Rot ${cnt.red}`]].map(([k,l]) => `<button type="button" data-seg="srcLight" data-val="${k}" aria-pressed="${state.srcLight===k}">${l}</button>`).join('')}</div></div>
+      <section class="card tbl"><table><thead><tr><th>Ampel</th><th>Quelle</th><th>Land</th><th>Zugriff</th><th>Befund</th><th>Rhythmus</th></tr></thead><tbody>
+      ${S.map(s => `<tr><td><span class="chip ${LIGHT[s.light][1]}"><span class="dot"></span>${LIGHT[s.light][0]}</span></td><td class="main">${link(s.url, s.name.replace(/^ALT /,''))}${s.name.startsWith('ALT ')?' <span class="chip c-neutral">Ersatzweg</span>':''}</td><td><span class="cc">${esc(s.jur||'–')}</span></td><td>${esc(s.access||'–')}</td><td class="note" style="min-width:260px">${esc(s.reason)}</td><td>${esc(s.freq||'–')}</td></tr>`).join('')}
+      </tbody></table></section></div>`;
   }
 
   // ---------- routing ----------
-  function route(){
-    const h = location.hash.replace('#','');
-    if (h.startsWith('api-')) { detailState = { tab:'sites', q:'', cc:'', limit:100 }; renderDetail(h.slice(4)); }
-    else renderHome();
+  async function route(){
+    closeLayer();
+    const h = location.hash.replace('#','') || 'overview';
+    const prevPage = route.page; let page = h.startsWith('api-') ? 'api' : h;
+    if (page !== prevPage || page === 'api') { state.q = ''; pageq.value = ''; state.limit = 60; state.sort = ['products', -1]; }
+    if (page === 'api' && prevPage !== 'api') { state.tab = 'sites'; state.cc = ''; }
+    route.page = page;
+    const map = { overview:pOverview, apis:pApis, companies:pCompanies, markets:pMarkets, gaps:pGaps, sources:pSources };
+    pageq.placeholder = { overview:'Wirkstoff filtern', apis:'Wirkstoff, UNII, CAS, ATC', companies:'Firma oder Wirkstoff', markets:'Land', gaps:'Grund', sources:'Quelle oder Land', api:'Firma, Produkt, Nummer' }[page] || 'Auf dieser Seite filtern';
+    if (page === 'api') current = keep => pApi(h.slice(4), keep);
+    else current = map[page] || pOverview;
+    await current();
     window.scrollTo(0, 0);
   }
-  const q = $('#q');
-  q.addEventListener('input', () => { state.q = q.value; if (location.hash.startsWith('#api-')) location.hash = ''; else renderHome(); });
-  q.addEventListener('keydown', async e => {
-    if (e.key !== 'Enter') return; const d = await loadIndex(); const hit = d.apis.filter(a => matches(a, q.value));
-    if (hit.length === 1) location.hash = 'api-' + hit[0].slug;
+  data().then(d => {
+    $('#nApis').textContent = d.index.apis.length; $('#nComp').textContent = fmt(d.companies.length); $('#nMk').textContent = d.markets.length;
+    $('#nGaps').textContent = fmt(d.index.totals.gaps); $('#nSrc').textContent = d.sources.length; $('#stand').textContent = 'Datenstand ' + d.index.generated;
   });
   window.addEventListener('hashchange', route);
   route();
