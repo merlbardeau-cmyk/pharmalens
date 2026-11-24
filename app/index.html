@@ -1,0 +1,422 @@
+<title>PharmaLens Explorer</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&display=swap">
+<style>
+/* Layout: PharmaLens corporate (sticky glass nav, navy hero band, white cards on cool grey), list -> detail with tabs */
+:root{
+  --bg:#FBFBFD; --band:#F1F3F8; --card:#FFFFFF; --ink:#0B1A3A; --ink2:#3A4256; --muted:#5E6472; --faint:#6B7180;
+  --line:#EEF0F5; --line2:#F1F3F8; --accent:#2457E6; --accent-h:#1B44B8; --accent-soft:#EAF0FF;
+  --navy:#0B1A3A; --navy2:#16306E; --on-navy:#F5F5F7; --on-navy2:#B8C2D9;
+  --off-bg:#E3F4E8; --off-fg:#1E6B37; --der-bg:#E6ECFD; --der-fg:#1F49C2; --gap-bg:#FCEBD9; --gap-fg:#8A4B10; --sec-bg:#EEF0F5; --sec-fg:#3A4256;
+  --shadow:0 1px 2px rgba(11,26,58,.06),0 12px 32px rgba(11,26,58,.06);
+  --nav-bg:rgba(251,251,253,.72); --input:#FFFFFF;
+  --font:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#070F22; --band:#0B1630; --card:#101C38; --ink:#EEF2FB; --ink2:#C6CEE0; --muted:#A3ADC4; --faint:#8F9AB3;
+  --line:#1E2A47; --line2:#18233F; --accent:#7B9CFF; --accent-h:#A4BBFF; --accent-soft:#18284F;
+  --navy:#0B1A3A; --navy2:#16306E; --on-navy:#F5F5F7; --on-navy2:#B8C2D9;
+  --off-bg:#123A22; --off-fg:#8FE0A8; --der-bg:#1A2C5E; --der-fg:#A9C0FF; --gap-bg:#3D2610; --gap-fg:#F5B979; --sec-bg:#1E2A47; --sec-fg:#C6CEE0;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 12px 32px rgba(0,0,0,.35); --nav-bg:rgba(7,15,34,.72); --input:#0B1630; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#070F22; --band:#0B1630; --card:#101C38; --ink:#EEF2FB; --ink2:#C6CEE0; --muted:#A3ADC4; --faint:#8F9AB3;
+  --line:#1E2A47; --line2:#18233F; --accent:#7B9CFF; --accent-h:#A4BBFF; --accent-soft:#18284F;
+  --navy:#0B1A3A; --navy2:#16306E; --on-navy:#F5F5F7; --on-navy2:#B8C2D9;
+  --off-bg:#123A22; --off-fg:#8FE0A8; --der-bg:#1A2C5E; --der-fg:#A9C0FF; --gap-bg:#3D2610; --gap-fg:#F5B979; --sec-bg:#1E2A47; --sec-fg:#C6CEE0;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 12px 32px rgba(0,0,0,.35); --nav-bg:rgba(7,15,34,.72); --input:#0B1630; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bg)}
+a{color:var(--accent);text-decoration:none}a:hover{color:var(--accent-h)}
+h1,h2,h3{text-wrap:balance;margin:0}
+p{text-wrap:pretty;margin:0}
+button{font-family:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:8px}
+.wrap{max-width:1200px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+@media (min-width:700px){.wrap{padding-left:max(32px,env(safe-area-inset-left,0px));padding-right:max(32px,env(safe-area-inset-right,0px))}}
+.num{font-variant-numeric:tabular-nums}
+
+/* nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--nav-bg);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:16px;height:64px}
+.brand{display:flex;align-items:center;gap:10px;color:var(--ink);font-weight:700;font-size:19px;letter-spacing:-.02em}
+.brand:hover{color:var(--ink)}
+.brand small{font-weight:600;font-size:12px;color:var(--accent);background:var(--accent-soft);padding:3px 8px;border-radius:999px;letter-spacing:0}
+.search{flex:1;max-width:420px;margin-left:auto;position:relative}
+.search input{width:100%;min-height:40px;border-radius:999px;border:1px solid var(--line);background:var(--input);color:var(--ink);padding:0 16px 0 40px;font:inherit;font-size:15px}
+.search svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--faint)}
+.theme-btn{width:40px;height:40px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink2);display:flex;align-items:center;justify-content:center;cursor:pointer;flex:none}
+@media (max-width:560px){.brand small{display:none}}
+
+/* buttons / chips */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 20px;border-radius:999px;font-size:15px;font-weight:600;border:none;cursor:pointer;transition:transform 100ms ease-out,background-color 200ms ease}
+.btn:active{transform:scale(.97)}
+.btn-primary{background:var(--accent);color:#fff}.btn-primary:hover{background:var(--accent-h);color:#fff}
+.btn-ghost{background:var(--card);color:var(--ink);border:1px solid var(--line)}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:3px 10px;border-radius:999px;font-size:12.5px;font-weight:600;white-space:nowrap}
+.c-official{background:var(--off-bg);color:var(--off-fg)}.c-derived{background:var(--der-bg);color:var(--der-fg)}
+.c-gap{background:var(--gap-bg);color:var(--gap-fg)}.c-secondary{background:var(--sec-bg);color:var(--sec-fg)}
+.c-neutral{background:var(--band);color:var(--ink2)}
+.dot{width:7px;height:7px;border-radius:50%;background:currentColor}
+
+/* hero */
+.hero{margin-top:24px;border-radius:28px;overflow:hidden;position:relative;color:var(--on-navy);padding:40px 32px;
+  background:radial-gradient(110% 90% at 88% 10%,#3B6BFF 0%,rgba(59,107,255,0) 55%),linear-gradient(135deg,var(--navy) 0%,var(--navy2) 60%,#2457E6 100%)}
+.hero svg.net{position:absolute;right:0;top:0;height:100%;width:60%;opacity:.5;pointer-events:none}
+.hero .eyebrow{color:#AFC4FF;font-weight:600;font-size:15px;margin-bottom:10px}
+.hero h1{font-size:clamp(30px,4.6vw,52px);line-height:1.05;letter-spacing:-.035em;font-weight:700;max-width:720px;position:relative}
+.hero p.lead{margin-top:14px;font-size:17px;color:var(--on-navy2);max-width:620px;position:relative}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:28px;position:relative}
+.stat{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:16px 18px;backdrop-filter:blur(12px)}
+.stat b{display:block;font-size:28px;letter-spacing:-.03em;color:#fff}
+.stat span{font-size:13px;color:var(--on-navy2)}
+
+/* section headers */
+.sec{margin-top:48px}
+.sec-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:20px}
+.eyebrow{font-size:14px;font-weight:600;color:var(--accent);margin-bottom:6px}
+.h2{font-size:clamp(26px,3.4vw,36px);letter-spacing:-.03em;font-weight:700;line-height:1.1}
+.filters{display:flex;flex-wrap:wrap;gap:8px}
+.fbtn{min-height:36px;padding:0 14px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink2);font-size:14px;font-weight:600;cursor:pointer}
+.fbtn[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+
+/* api cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+.card{background:var(--card);border-radius:22px;box-shadow:var(--shadow)}
+.api-card{display:flex;flex-direction:column;gap:14px;padding:22px;color:var(--ink);transition:transform 250ms cubic-bezier(.2,.8,.2,1),box-shadow 250ms ease}
+.api-card:hover{color:var(--ink);transform:translateY(-3px);box-shadow:0 2px 4px rgba(11,26,58,.06),0 20px 44px rgba(11,26,58,.10)}
+.api-card .top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
+.api-card h3{font-size:20px;letter-spacing:-.02em;text-transform:capitalize}
+.api-card .ids{font-size:12.5px;color:var(--faint);margin-top:2px}
+.kv{display:grid;grid-template-columns:repeat(2,1fr);gap:10px 12px}
+.kv div{display:flex;flex-direction:column}
+.kv b{font-size:19px;letter-spacing:-.02em}
+.kv span{font-size:12.5px;color:var(--muted)}
+.api-card .foot{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto}
+
+/* detail */
+.back{display:inline-flex;align-items:center;gap:6px;margin-top:24px;font-weight:600;font-size:15px}
+.dhead{margin-top:16px;padding:28px;display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between}
+.dhead h1{font-size:clamp(32px,4.4vw,48px);letter-spacing:-.035em;text-transform:capitalize;line-height:1.05}
+.dhead .ids{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:12px;font-size:14px;color:var(--muted)}
+.dhead .ids b{color:var(--ink2);font-weight:600}
+.dhead .summary{margin-top:16px;font-size:16px;color:var(--ink2);max-width:760px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-top:16px}
+.tile{padding:16px 18px}
+.tile b{display:block;font-size:26px;letter-spacing:-.03em}
+.tile span{font-size:13px;color:var(--muted)}
+.tabs{display:flex;gap:4px;overflow-x:auto;margin-top:28px;border-bottom:1px solid var(--line);scrollbar-width:thin}
+.tab{flex:none;min-height:44px;padding:0 14px;border:none;background:none;color:var(--muted);font-size:15px;font-weight:600;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;display:flex;align-items:center;gap:8px}
+.tab[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--accent)}
+.tab .n{font-size:12px;background:var(--band);color:var(--muted);padding:1px 7px;border-radius:999px}
+.panel{margin-top:20px}
+.toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:14px}
+.toolbar input,.toolbar select{min-height:40px;border-radius:12px;border:1px solid var(--line);background:var(--input);color:var(--ink);padding:0 12px;font:inherit;font-size:14px}
+.toolbar input{flex:1 1 220px;min-width:0}
+.note{font-size:13.5px;color:var(--muted)}
+.tbl-wrap{overflow-x:auto;border-radius:18px;background:var(--card);box-shadow:var(--shadow)}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:720px}
+th{text-align:left;font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--faint);background:var(--band);padding:12px 14px;white-space:nowrap}
+td{padding:12px 14px;border-top:1px solid var(--line2);vertical-align:top;color:var(--ink2)}
+td.main{color:var(--ink);font-weight:600}
+.more{display:flex;justify-content:center;padding:14px}
+.empty{padding:28px;text-align:center;color:var(--muted)}
+
+/* sites */
+.sites{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.site{padding:18px 20px;display:flex;flex-direction:column;gap:10px}
+.site h3{font-size:16px;letter-spacing:-.01em}
+.site .meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:13px;color:var(--muted)}
+.cc{display:inline-flex;align-items:center;justify-content:center;min-width:30px;height:22px;padding:0 6px;border-radius:6px;background:var(--band);color:var(--ink2);font-size:12px;font-weight:700;letter-spacing:.03em}
+details summary{cursor:pointer;font-size:13.5px;font-weight:600;color:var(--accent);list-style:none}
+details summary::-webkit-details-marker{display:none}
+.quote{margin-top:8px;padding:12px 14px;background:var(--band);border-radius:12px;font-size:13px;white-space:pre-line;color:var(--ink2);font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+.bars{display:flex;flex-direction:column;gap:8px}
+.bar{display:grid;grid-template-columns:44px 1fr 48px;gap:10px;align-items:center;font-size:13px}
+.bar .track{height:10px;background:var(--band);border-radius:99px;overflow:hidden}
+.bar .fill{height:100%;background:var(--accent);border-radius:99px}
+.two{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:16px;align-items:start}
+@media (max-width:900px){.two{grid-template-columns:1fr}}
+.legend{display:flex;flex-wrap:wrap;gap:14px;margin-top:20px;font-size:13.5px;color:var(--muted)}
+.legend span{display:flex;align-items:center;gap:8px}
+footer{margin:64px 0 32px;padding-top:24px;border-top:1px solid var(--line);font-size:13.5px;color:var(--faint);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+.skeleton{height:120px;border-radius:22px;background:linear-gradient(90deg,var(--band),var(--line),var(--band));background-size:200% 100%;animation:sh 1.2s linear infinite}
+@keyframes sh{to{background-position:-200% 0}}
+@media (prefers-reduced-motion:reduce){.skeleton{animation:none}.api-card{transition:none}}
+</style>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#" aria-label="PharmaLens Startseite">
+      <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><circle cx="12" cy="12" r="8.5" fill="none" stroke="#2457E6" stroke-width="2.6"/><line x1="18.2" y1="18.2" x2="25" y2="25" stroke="#2457E6" stroke-width="3" stroke-linecap="round"/><circle cx="9.5" cy="10" r="1.8" fill="#2457E6"/><circle cx="14.5" cy="13.5" r="1.8" fill="#2457E6"/><line x1="9.5" y1="10" x2="14.5" y2="13.5" stroke="#2457E6" stroke-width="1.4"/></svg>
+      PharmaLens <small>Pilot</small>
+    </a>
+    <div class="search">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <label for="q" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Wirkstoff suchen</label>
+      <input id="q" type="search" placeholder="Wirkstoff, UNII, CAS oder ATC suchen" autocomplete="off">
+    </div>
+    <button class="theme-btn" id="themeBtn" type="button" aria-label="Hell- oder Dunkelmodus umschalten">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+  </div>
+</header>
+
+<main class="wrap" id="app">
+  <div class="skeleton" style="margin-top:24px;height:260px"></div>
+</main>
+
+<script>
+(function(){
+  const $ = (s, el=document) => el.querySelector(s);
+  const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const fmt = n => n == null ? '–' : Number(n).toLocaleString('de-CH');
+  const GROUP = {blockbuster:'Blockbuster', niche:'Nischen-Generikum', veterinary:'Tierarzneimittel', patent:'Patent / SPC'};
+  const STATUS = {official:'Offiziell', secondary:'Sekundär', derived:'Abgeleitet', gap:'Lücke'};
+  const chip = st => `<span class="chip c-${esc(st)}"><span class="dot"></span>${esc(STATUS[st] || st)}</span>`;
+  const src = (url, label) => url && /^https?:/.test(url) ? `<a href="${esc(url)}" target="_blank" rel="noopener">${esc(label || 'Quelle')} ↗</a>` : `<span class="note">${esc(label || 'intern')}</span>`;
+  const store = { get(k){ try { return localStorage.getItem(k) } catch(e){ return null } }, set(k,v){ try { localStorage.setItem(k,v) } catch(e){} } };
+
+  // theme toggle (explicit choice wins over system)
+  const applyTheme = t => { if (t) document.documentElement.setAttribute('data-theme', t); };
+  applyTheme(store.get('pl-theme'));
+  $('#themeBtn').addEventListener('click', () => {
+    const cur = document.documentElement.getAttribute('data-theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    const next = cur === 'dark' ? 'light' : 'dark'; applyTheme(next); store.set('pl-theme', next);
+  });
+
+  let INDEX = null; const CACHE = {};
+  let state = { group: 'all', q: '' };
+  const app = $('#app');
+
+  async function loadIndex(){ if (!INDEX) INDEX = await (await fetch('apis.json')).json(); return INDEX; }
+  async function loadApi(slug){ if (!CACHE[slug]) CACHE[slug] = await (await fetch(`api/${slug}.json`)).json(); return CACHE[slug]; }
+
+  function matches(a, q){
+    if (!q) return true; q = q.toLowerCase();
+    return [a.inn, a.unii, a.cas, a.atc].some(x => (x || '').toLowerCase().includes(q));
+  }
+
+  // ---------- home ----------
+  async function renderHome(){
+    const d = await loadIndex(); const t = d.totals;
+    const list = d.apis.filter(a => (state.group === 'all' || a.group === state.group) && matches(a, state.q));
+    app.innerHTML = `
+      <section class="hero">
+        <svg class="net" viewBox="0 0 600 400" preserveAspectRatio="xMaxYMid slice" aria-hidden="true">
+          <g stroke="#fff" stroke-opacity=".25" stroke-width="1.5"><line x1="200" y1="80" x2="340" y2="150"/><line x1="340" y1="150" x2="520" y2="70"/><line x1="340" y1="150" x2="420" y2="300"/><line x1="200" y1="80" x2="240" y2="280"/><line x1="240" y1="280" x2="420" y2="300"/><line x1="420" y1="300" x2="570" y2="260"/><line x1="520" y1="70" x2="570" y2="260"/></g>
+          <g fill="#fff" fill-opacity=".85"><circle cx="200" cy="80" r="5"/><circle cx="520" cy="70" r="6"/><circle cx="240" cy="280" r="5"/><circle cx="570" cy="260" r="6"/><circle cx="340" cy="150" r="9"/><circle cx="420" cy="300" r="8"/></g>
+        </svg>
+        <p class="eyebrow">Pilot · ${d.apis.length} Wirkstoffe · Stand ${esc(d.generated)}</p>
+        <h1>Wer stellt was her, wo, und für welchen Markt.</h1>
+        <p class="lead">Jeder Wert mit Quelle und Status. Fehlende Daten bleiben als Lücke sichtbar, nichts wird geraten.</p>
+        <div class="stats">
+          <div class="stat"><b class="num">${fmt(t.products)}</b><span>Fertigprodukte in 34 Ländern</span></div>
+          <div class="stat"><b class="num">${fmt(t.sites)}</b><span>Batch-Release-Angaben aus Leaflets</span></div>
+          <div class="stat"><b class="num">${fmt(t.dmf)}</b><span>API-Zertifikate (US-DMF)</span></div>
+          <div class="stat"><b class="num">${fmt(t.sources)}</b><span>nutzbare Primärquellen</span></div>
+          <div class="stat"><b class="num">${fmt(t.gaps)}</b><span>dokumentierte Lücken</span></div>
+        </div>
+      </section>
+      <section class="sec">
+        <div class="sec-head">
+          <div><p class="eyebrow">Wirkstoffe</p><h2 class="h2">${list.length === d.apis.length ? 'Alle Pilot-Wirkstoffe' : `${list.length} von ${d.apis.length} Wirkstoffen`}</h2></div>
+          <div class="filters" role="group" aria-label="Nach Gruppe filtern">
+            ${[['all','Alle'],['blockbuster','Blockbuster'],['niche','Nische'],['veterinary','Tierarzneimittel'],['patent','Patent / SPC']].map(([k,l]) =>
+              `<button class="fbtn" type="button" data-group="${k}" aria-pressed="${state.group===k}">${l}</button>`).join('')}
+          </div>
+        </div>
+        ${list.length ? `<div class="grid">${list.map(card).join('')}</div>` : `<div class="card empty">Kein Wirkstoff passt zu «${esc(state.q)}». Im Pilot sind 20 Wirkstoffe enthalten.</div>`}
+        <div class="legend">
+          <span>${chip('official')} aus einer Behörde oder einem Register</span>
+          <span>${chip('derived')} von PharmaLens abgeleitet, mit Begründung</span>
+          <span>${chip('gap')} nicht gefunden, mit Grund</span>
+        </div>
+      </section>
+      <footer><span>PharmaLens · Pilot-Explorer</span><span>Daten aus EMA, BDPM, AEMPS, CBG, BASG, DKMA, Swissmedic, AIFA, FDA, GSRS, TED, GLEIF</span></footer>`;
+    app.querySelectorAll('[data-group]').forEach(b => b.addEventListener('click', () => { state.group = b.dataset.group; renderHome(); }));
+  }
+
+  function card(a){
+    return `<a class="card api-card" href="#api-${esc(a.slug)}">
+      <div class="top"><div><h3>${esc(a.inn)}</h3><p class="ids">${esc(a.atc || '–')} · UNII ${esc(a.unii || '–')}</p></div>
+        <span class="chip c-neutral">${esc(GROUP[a.group] || '')}</span></div>
+      <div class="kv">
+        <div><b class="num">${fmt(a.countries)}</b><span>Länder${a.central ? ' + EU-zentral' : ''}</span></div>
+        <div><b class="num">${fmt(a.products)}</b><span>Produkte</span></div>
+        <div><b class="num">${fmt(a.sites)}</b><span>Batch-Release-Firmen</span></div>
+        <div><b class="num">${fmt(a.dmf_active)}</b><span>API-Hersteller (US-DMF aktiv)</span></div>
+      </div>
+      <div class="foot">
+        ${a.shortages ? `<span class="chip c-gap">${a.shortages} Engpass${a.shortages>1?'meldungen':'meldung'}</span>` : ''}
+        ${a.us_patent ? `<span class="chip c-secondary">US-Patent bis ${esc(a.us_patent.slice(0,4))}</span>` : ''}
+        ${a.vet ? '<span class="chip c-neutral">Veterinär</span>' : ''}
+      </div></a>`;
+  }
+
+  // ---------- detail ----------
+  const TABS = [
+    ['makers','API-Hersteller'], ['sites','Fertigprodukt-Hersteller'], ['products','Zulassungen'],
+    ['patents','Patente'], ['shortages','Engpässe'], ['tenders','Tender'], ['gaps','Lücken']];
+  let detailState = { tab: 'sites', q: '', cc: '', limit: 100 };
+
+  async function renderDetail(slug){
+    app.innerHTML = `<a class="back" href="#">← Alle Wirkstoffe</a><div class="skeleton" style="margin-top:16px;height:220px"></div>`;
+    let a; try { a = await loadApi(slug); } catch(e) { app.innerHTML = `<a class="back" href="#">← Alle Wirkstoffe</a><div class="card empty" style="margin-top:16px">Dieser Wirkstoff ist im Pilot nicht enthalten.</div>`; return; }
+    const idx = (await loadIndex()).apis.find(x => x.slug === slug) || {};
+    const counts = { makers: a.certificates.length + a.manufacturers.filter(m => m.role === 'api_manufacturer').length,
+      sites: new Set(a.manufacturers.filter(m => m.role === 'batch_release').map(m => m.company + '|' + m.site_cc)).size,
+      products: a.products.length, patents: a.patents.length, shortages: a.shortages.length, tenders: a.tenders.length, gaps: a.gaps.length };
+    app.innerHTML = `
+      <a class="back" href="#">← Alle Wirkstoffe</a>
+      <section class="card dhead">
+        <div style="min-width:0;flex:1 1 480px">
+          <p class="eyebrow">${esc(GROUP[idx.group] || 'Wirkstoff')}</p>
+          <h1>${esc(a.inn)}</h1>
+          <div class="ids">
+            <span><b>UNII</b> ${src(a.src, a.unii)}</span><span><b>CAS</b> ${esc(a.cas || '–')}</span>
+            <span><b>ATC</b> ${esc((a.atc || []).slice(0,4).join(', ') || '–')}${(a.atc||[]).length>4?' …':''}</span>
+            <span><b>Salzformen</b> ${a.salts.length ? esc(a.salts.slice(0,4).join(', ')) + (a.salts.length>4?' …':'') : '–'}</span>
+          </div>
+          ${a.summary ? `<p class="summary">${esc(a.summary)}</p>` : ''}
+        </div>
+      </section>
+      <div class="tiles">
+        <div class="card tile"><b class="num">${fmt(idx.countries)}</b><span>Länder mit Zulassung</span></div>
+        <div class="card tile"><b class="num">${fmt(a.products.length)}</b><span>Fertigprodukte</span></div>
+        <div class="card tile"><b class="num">${fmt(counts.sites)}</b><span>Batch-Release-Standorte</span></div>
+        <div class="card tile"><b class="num">${fmt(idx.dmf_active)}</b><span>API-Hersteller mit aktivem US-DMF</span></div>
+        <div class="card tile"><b class="num">${fmt(idx.shortages)}</b><span>offene Engpassmeldungen</span></div>
+      </div>
+      <div class="tabs" role="tablist" aria-label="Bereiche">
+        ${TABS.map(([k,l]) => `<button class="tab" role="tab" type="button" data-tab="${k}" aria-selected="${detailState.tab===k}">${l}<span class="n num">${fmt(counts[k])}</span></button>`).join('')}
+      </div>
+      <div class="panel" id="panel"></div>`;
+    app.querySelectorAll('[data-tab]').forEach(b => b.addEventListener('click', () => {
+      detailState = { ...detailState, tab: b.dataset.tab, q: '', cc: '', limit: 100 };
+      app.querySelectorAll('[data-tab]').forEach(x => x.setAttribute('aria-selected', x === b)); renderPanel(a);
+    }));
+    renderPanel(a);
+  }
+
+  function table(head, rows, total){
+    if (!rows.length) return `<div class="card empty">Keine Einträge.</div>`;
+    return `<div class="tbl-wrap"><table><thead><tr>${head.map(h => `<th>${h}</th>`).join('')}</tr></thead><tbody>${rows.join('')}</tbody></table>
+      ${total > rows.length ? `<div class="more"><button class="btn btn-ghost" type="button" id="moreBtn">Weitere ${fmt(Math.min(100, total - rows.length))} von ${fmt(total - rows.length)} anzeigen</button></div>` : ''}</div>`;
+  }
+  function toolbar(a, opts){
+    const ccs = opts.countries ? [...new Set(opts.countries)].sort() : null;
+    return `<div class="toolbar">
+      <label for="fq" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Filtern</label>
+      <input id="fq" type="search" placeholder="${esc(opts.placeholder)}" value="${esc(detailState.q)}">
+      ${ccs ? `<label for="fcc" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Land</label>
+        <select id="fcc"><option value="">Alle Länder</option>${ccs.map(c => `<option value="${esc(c)}" ${detailState.cc===c?'selected':''}>${esc(c)}</option>`).join('')}</select>` : ''}
+      <span class="note">${esc(opts.note || '')}</span></div>`;
+  }
+  function bindToolbar(a){
+    const fq = $('#fq'), fcc = $('#fcc');
+    if (fq) fq.addEventListener('input', () => { detailState.q = fq.value; detailState.limit = 100; renderPanel(a, true); });
+    if (fcc) fcc.addEventListener('change', () => { detailState.cc = fcc.value; detailState.limit = 100; renderPanel(a); });
+    const mb = $('#moreBtn'); if (mb) mb.addEventListener('click', () => { detailState.limit += 100; renderPanel(a); });
+  }
+  const has = (obj, q) => !q || Object.values(obj).some(v => String(v ?? '').toLowerCase().includes(q.toLowerCase()));
+
+  function renderPanel(a, keepFocus){
+    const p = $('#panel'); const t = detailState.tab; const q = detailState.q, cc = detailState.cc;
+    let html = '';
+    if (t === 'makers') {
+      const bio = a.manufacturers.filter(m => m.role === 'api_manufacturer');
+      const certs = a.certificates.filter(c => has(c, q));
+      html = `${toolbar(a, {placeholder:'Halter oder Nummer filtern', note:'CEP und Written Confirmations: Quelle gesperrt, Lizenzanfrage offen'})}
+        ${bio.length ? `<h3 style="font-size:17px;margin:4px 0 12px">Bestätigt aus EMA Annex IIA (Wirkstoffhersteller)</h3>
+          <div class="sites" style="margin-bottom:24px">${bio.map(m => `<div class="card site"><h3>${esc(m.company)}</h3>
+            <div class="meta"><span class="cc">${esc(m.site_cc || '–')}</span>${chip(m.status)}<span>${esc(m.product)}</span></div>
+            <details><summary>Zitat aus der Quelle</summary><div class="quote">${esc(m.quote)}</div></details>${src(m.url,'Produktinformation')}</div>`).join('')}</div>` : ''}
+        ${table(['Typ','Nummer','Halter','Status','Eingereicht','Gegenstand','Daten','Quelle'],
+          certs.slice(0, detailState.limit).map(c => `<tr><td>${esc(c.type.replace('_',' '))}</td><td class="num">${esc(c.no)}</td><td class="main">${esc(c.holder)}</td>
+            <td>${c.cs==='active'?'<span class="chip c-official">aktiv</span>':'<span class="chip c-neutral">inaktiv</span>'}</td><td class="num">${esc(c.date || '–')}</td>
+            <td>${esc(c.subject)}</td><td>${chip(c.status)}</td><td>${src(c.url,'FDA')}</td></tr>`), certs.length)}`;
+    }
+    if (t === 'sites') {
+      const rows = a.manufacturers.filter(m => m.role === 'batch_release' && (!cc || m.cc === cc) && has({c:m.company,s:m.site_cc,p:m.product}, q));
+      const by = new Map();
+      rows.forEach(m => { const k = m.company + '|' + (m.site_cc||''); if (!by.has(k)) by.set(k, {m, prods:new Map(), status:new Set()}); const g = by.get(k); g.prods.set(m.pid, m); g.status.add(m.status); });
+      const groups = [...by.values()].sort((x,y) => y.prods.size - x.prods.size);
+      const ccCount = {}; groups.forEach(g => { const c = g.m.site_cc || '?'; ccCount[c] = (ccCount[c]||0) + g.prods.size; });
+      const ccs = Object.entries(ccCount).sort((x,y) => y[1]-x[1]).slice(0, 12); const max = ccs[0] ? ccs[0][1] : 1;
+      html = `${toolbar(a, {placeholder:'Firma oder Produkt filtern', countries:a.manufacturers.filter(m=>m.role==='batch_release').map(m=>m.cc), note:'Land oben = Markt des Produkts'})}
+        <div class="two">
+          <div>${groups.length ? `<div class="sites">${groups.slice(0, detailState.limit).map(g => {
+            const ex = [...g.prods.values()][0];
+            return `<div class="card site"><h3>${esc(g.m.company)}</h3>
+              <div class="meta"><span class="cc" title="Land des Werks">${esc(g.m.site_cc || '–')}</span>${[...g.status].map(chip).join('')}<span class="num">${fmt(g.prods.size)} Produkt${g.prods.size>1?'e':''}</span></div>
+              ${g.m.addr ? `<p class="note">${esc(g.m.addr)}</p>` : ''}
+              <details><summary>Produkte und Zitat</summary>
+                <p class="note" style="margin-top:8px">${[...g.prods.values()].slice(0,8).map(x => `${esc(x.cc)} · ${esc(x.product)}`).join('<br>')}${g.prods.size>8?`<br>… und ${g.prods.size-8} weitere`:''}</p>
+                <div class="quote">${esc(ex.quote)}</div><p style="margin-top:8px">${src(ex.url,'Leaflet ' + ex.cc)}</p></details></div>`; }).join('')}</div>
+            ${groups.length > detailState.limit ? `<div class="more"><button class="btn btn-ghost" type="button" id="moreBtn">Weitere Standorte anzeigen</button></div>` : ''}`
+            : `<div class="card empty">Keine Batch-Release-Standorte für diese Auswahl.</div>`}</div>
+          <div class="card" style="padding:20px"><h3 style="font-size:16px;margin-bottom:4px">Standorte nach Land</h3><p class="note" style="margin-bottom:14px">Zahl der Produkte je Werksland</p>
+            <div class="bars">${ccs.map(([c,n]) => `<div class="bar"><span class="cc">${esc(c)}</span><div class="track"><div class="fill" style="width:${Math.max(4, n/max*100)}%"></div></div><span class="num" style="text-align:right">${fmt(n)}</span></div>`).join('') || '<p class="note">–</p>'}</div></div>
+        </div>`;
+    }
+    if (t === 'products') {
+      const rows = a.products.filter(x => (!cc || x.cc === cc) && has({n:x.name,m:x.mah,no:x.no}, q));
+      html = `${toolbar(a, {placeholder:'Produkt, MAH oder Zulassungsnummer filtern', countries:a.products.map(x=>x.cc), note:`${fmt(rows.length)} Produkte`})}
+        ${table(['Land','Produkt','Zulassungsinhaber','Nummer','Verfahren','Status','Daten','Quelle'],
+          rows.slice(0, detailState.limit).map(x => `<tr><td><span class="cc">${esc(x.cc)}</span></td><td class="main">${esc(x.name)}${x.str?`<br><span class="note">${esc(x.str)}</span>`:''}</td>
+            <td>${esc(x.mah || '–')}</td><td class="num">${esc(x.no || '–')}</td><td>${esc(x.proc || '–')}</td><td>${esc(x.st || '–')}</td><td>${chip(x.status)}</td>
+            <td>${src(x.url, x.src.replace(/ (Listen|REST|Open Data|Geneesmiddeleninformatiebank|Arzneispezialitätenregister|Medicine data download)$/,''))}${x.pil?`<br>${src(x.pil,'Leaflet')}`:''}</td></tr>`), rows.length)}`;
+    }
+    if (t === 'patents') {
+      const rows = a.patents.filter(x => has(x, q));
+      const TYPE = {substance:'Wirkstoff', formulation:'Formulierung', use:'Verwendung', substance_on_combination:'Wirkstoff (Kombi)', formulation_on_combination:'Formulierung (Kombi)', use_on_combination:'Verwendung (Kombi)'};
+      const today = new Date().toISOString().slice(0,10);
+      html = `${toolbar(a, {placeholder:'Patentnummer filtern', note:'EU, CH, UK und SPC folgen nach EPO-Freigabe'})}
+        ${table(['Nummer','Land','Art','Ablauf','Status','Daten','Quelle'],
+          rows.slice(0, detailState.limit).map(x => `<tr><td class="main num">${esc(x.no)}</td><td><span class="cc">${esc(x.jur)}</span></td><td>${esc(TYPE[x.type] || x.type)}</td>
+            <td class="num">${esc(x.exp)}${x.exp && x.exp < today ? ' <span class="chip c-neutral">abgelaufen</span>' : ''}</td><td>${esc(x.ps)}</td><td>${chip(x.status)}</td><td>${src(x.url,'Orange Book')}</td></tr>`), rows.length)}`;
+    }
+    if (t === 'shortages') {
+      const rows = a.shortages.filter(x => has(x, q));
+      html = `${toolbar(a, {placeholder:'Produkt filtern', note:'EMA (zentral) und AEMPS; weitere Länder folgen'})}
+        ${table(['Seit','Land','Produkt','Lage','Erwartet','Daten','Quelle'],
+          rows.map(x => `<tr><td class="num">${esc(x.date || '–')}</td><td><span class="cc">${esc(x.country)}</span></td><td class="main">${esc(x.product)}</td>
+            <td>${x.active === false || x.state === 'Resolved' ? '<span class="chip c-neutral">beendet</span>' : '<span class="chip c-gap">offen</span>'} ${esc(x.state || '')}</td>
+            <td class="num">${esc(x.expected_resolution && x.expected_resolution !== 'NaT' ? String(x.expected_resolution).slice(0,10) : '–')}</td><td>${chip(x.status)}</td><td>${src(x.url,'Meldung')}</td></tr>`), rows.length)}`;
+    }
+    if (t === 'tenders') {
+      const rows = a.tenders.filter(x => has(x, q));
+      html = `${toolbar(a, {placeholder:'Auftraggeber oder Gewinner filtern', note:'Bekanntmachungen, die den Wirkstoff erwähnen; Gewinner nicht losgenau zugeordnet'})}
+        ${table(['Datum','Auftraggeber','Gewinner (Rohtext)','Wert','Quelle'],
+          rows.slice(0, detailState.limit).map(x => `<tr><td class="num">${esc(x.date || '–')}</td><td class="main">${esc(x.buyer)}</td><td>${esc(x.winner || '–')}</td>
+            <td class="num">${x.value != null ? fmt(Math.round(x.value)) + ' ' + esc(x.cur || '') : '–'}</td><td>${src(x.url,'TED ' + x.id)}</td></tr>`), rows.length)}`;
+    }
+    if (t === 'gaps') {
+      const rows = a.gaps.filter(x => has(x, q));
+      const AREA = {manufacturer:'Hersteller', certificate:'Zertifikat', patent:'Patent', supply_chain:'Lieferkette', product:'Zulassung', company_structure:'Konzern'};
+      html = `${toolbar(a, {placeholder:'Grund filtern', note:'Jede Lücke hat einen Grund und, wo bekannt, eine Bezugsquelle'})}
+        ${table(['Bereich','Grund','Wo erhältlich'],
+          rows.map(x => `<tr><td><span class="chip c-gap">${esc(AREA[x.area] || x.area)}</span></td><td class="main">${esc(x.reason)}</td><td>${/^https?:/.test(x.where||'') ? src(x.where,'Dokument') : esc(x.where || '–')}</td></tr>`), rows.length)}`;
+    }
+    p.innerHTML = html; bindToolbar(a);
+    if (keepFocus) { const f = $('#fq'); if (f) { f.focus(); f.setSelectionRange(f.value.length, f.value.length); } }
+  }
+
+  // ---------- routing ----------
+  function route(){
+    const h = location.hash.replace('#','');
+    if (h.startsWith('api-')) { detailState = { tab:'sites', q:'', cc:'', limit:100 }; renderDetail(h.slice(4)); }
+    else renderHome();
+    window.scrollTo(0, 0);
+  }
+  const q = $('#q');
+  q.addEventListener('input', () => { state.q = q.value; if (location.hash.startsWith('#api-')) location.hash = ''; else renderHome(); });
+  q.addEventListener('keydown', async e => {
+    if (e.key !== 'Enter') return; const d = await loadIndex(); const hit = d.apis.filter(a => matches(a, q.value));
+    if (hit.length === 1) location.hash = 'api-' + hit[0].slug;
+  });
+  window.addEventListener('hashchange', route);
+  route();
+})();
+</script>
