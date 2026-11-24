@@ -8,7 +8,7 @@
   {
     "rule": "provenance:company",
     "violations": 0,
-    "total": 3044,
+    "total": 3045,
     "description": "Zeile ohne source_url/source_name/retrieved_at/status"
   },
   {
@@ -60,8 +60,44 @@
     "description": "Zeile ohne source_url/source_name/retrieved_at/status"
   },
   {
+    "rule": "provenance:api_synonym",
+    "violations": 0,
+    "total": 724,
+    "description": "Zeile ohne source_url/source_name/retrieved_at/status"
+  },
+  {
+    "rule": "provenance:company_alias",
+    "violations": 0,
+    "total": 2384,
+    "description": "Zeile ohne source_url/source_name/retrieved_at/status"
+  },
+  {
+    "rule": "provenance:company_role",
+    "violations": 0,
+    "total": 2104,
+    "description": "Zeile ohne source_url/source_name/retrieved_at/status"
+  },
+  {
+    "rule": "cdmo_role_derived_with_evidence",
+    "violations": 0,
+    "total": 144,
+    "description": "CDMO-Rolle muss derived sein, mit Begründung und Belegen"
+  },
+  {
+    "rule": "auth_date_plausible",
+    "violations": 0,
+    "total": 5648,
+    "description": "Zulassungsdatum vor 1900 oder in der Zukunft"
+  },
+  {
+    "rule": "register_spelling_is_derived",
+    "violations": 0,
+    "total": 683,
+    "description": "beobachtete Schreibweisen sind abgeleitet"
+  },
+  {
     "rule": "company_without_country",
-    "violations": 1301,
+    "violations": 1300,
     "total": 1813,
     "description": "Firma ohne Land (nicht erfunden -> gap)"
   },

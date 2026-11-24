@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict vK4vBJsyhKs9aDMnQEDHQcrlFacUK0mMBQggamEKVDkRhPnYqSSt1hGFRHxVncY
+\restrict CbZyLHsmSYik6nzfn6edWLyajLaDJlpPdcM1kWOHmdkiOmSqdivS7QGOzyn1bEf
 
 -- Dumped from database version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
 -- Dumped by pg_dump version 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)
@@ -152,6 +152,46 @@ ALTER SEQUENCE public.api_row_id_seq OWNED BY public.api.row_id;
 
 
 --
+-- Name: api_synonym; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.api_synonym (
+    syn_id bigint NOT NULL,
+    api_id bigint NOT NULL,
+    synonym text NOT NULL,
+    synonym_norm text NOT NULL,
+    lang text,
+    kind text NOT NULL,
+    n_observed integer,
+    source_url text NOT NULL,
+    source_name text NOT NULL,
+    retrieved_at timestamp with time zone NOT NULL,
+    status public.data_status NOT NULL,
+    valid_from timestamp with time zone DEFAULT now() NOT NULL,
+    valid_to timestamp with time zone
+);
+
+
+--
+-- Name: api_synonym_syn_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.api_synonym_syn_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: api_synonym_syn_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.api_synonym_syn_id_seq OWNED BY public.api_synonym.syn_id;
+
+
+--
 -- Name: company; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -174,6 +214,46 @@ CREATE TABLE public.company (
     valid_from timestamp with time zone DEFAULT now() NOT NULL,
     valid_to timestamp with time zone
 );
+
+
+--
+-- Name: company_alias; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.company_alias (
+    alias_id bigint NOT NULL,
+    company_id bigint NOT NULL,
+    alias text NOT NULL,
+    alias_norm text NOT NULL,
+    kind text NOT NULL,
+    n_observed integer,
+    seen_in text[],
+    source_url text NOT NULL,
+    source_name text NOT NULL,
+    retrieved_at timestamp with time zone NOT NULL,
+    status public.data_status NOT NULL,
+    valid_from timestamp with time zone DEFAULT now() NOT NULL,
+    valid_to timestamp with time zone
+);
+
+
+--
+-- Name: company_alias_alias_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.company_alias_alias_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: company_alias_alias_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.company_alias_alias_id_seq OWNED BY public.company_alias.alias_id;
 
 
 --
@@ -214,6 +294,47 @@ CREATE SEQUENCE public.company_relation_row_id_seq
 --
 
 ALTER SEQUENCE public.company_relation_row_id_seq OWNED BY public.company_relation.row_id;
+
+
+--
+-- Name: company_role; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.company_role (
+    role_id bigint NOT NULL,
+    company_id bigint NOT NULL,
+    role text NOT NULL,
+    n_products integer,
+    n_apis integer,
+    n_markets integer,
+    rationale text,
+    evidence_ids bigint[],
+    source_url text NOT NULL,
+    source_name text NOT NULL,
+    retrieved_at timestamp with time zone NOT NULL,
+    status public.data_status NOT NULL,
+    valid_from timestamp with time zone DEFAULT now() NOT NULL,
+    valid_to timestamp with time zone
+);
+
+
+--
+-- Name: company_role_role_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.company_role_role_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: company_role_role_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.company_role_role_id_seq OWNED BY public.company_role.role_id;
 
 
 --
@@ -522,6 +643,96 @@ ALTER SEQUENCE public.patent_row_id_seq OWNED BY public.patent.row_id;
 
 
 --
+-- Name: potential_customer; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.potential_customer (
+    pc_id bigint NOT NULL,
+    api_id bigint NOT NULL,
+    company_id bigint NOT NULL,
+    score numeric NOT NULL,
+    reasons text[] NOT NULL,
+    evidence_ids bigint[],
+    n_products integer,
+    n_countries integer,
+    source_url text NOT NULL,
+    source_name text NOT NULL,
+    retrieved_at timestamp with time zone NOT NULL,
+    status public.data_status DEFAULT 'derived'::public.data_status NOT NULL,
+    valid_from timestamp with time zone DEFAULT now() NOT NULL,
+    valid_to timestamp with time zone,
+    CONSTRAINT potential_customer_status_check CHECK ((status = 'derived'::public.data_status))
+);
+
+
+--
+-- Name: potential_customer_pc_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.potential_customer_pc_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: potential_customer_pc_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.potential_customer_pc_id_seq OWNED BY public.potential_customer.pc_id;
+
+
+--
+-- Name: price; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.price (
+    price_id bigint NOT NULL,
+    level text NOT NULL,
+    api_id bigint,
+    product_id bigint,
+    country character(2),
+    pack_text text,
+    value numeric NOT NULL,
+    currency character(3) NOT NULL,
+    price_type text,
+    units_per_pack numeric,
+    unit text,
+    normalized_value numeric,
+    plausible boolean,
+    price_date date,
+    source_url text NOT NULL,
+    source_name text NOT NULL,
+    retrieved_at timestamp with time zone NOT NULL,
+    status public.data_status NOT NULL,
+    valid_from timestamp with time zone DEFAULT now() NOT NULL,
+    valid_to timestamp with time zone,
+    CONSTRAINT price_level_check CHECK ((level = ANY (ARRAY['api'::text, 'fdf_list'::text, 'tender'::text])))
+);
+
+
+--
+-- Name: price_price_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.price_price_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: price_price_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.price_price_id_seq OWNED BY public.price.price_id;
+
+
+--
 -- Name: product; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -548,7 +759,9 @@ CREATE TABLE public.product (
     valid_from timestamp with time zone DEFAULT now() NOT NULL,
     valid_to timestamp with time zone,
     natural_key text,
-    atc text
+    atc text,
+    auth_date date,
+    auth_date_source text
 );
 
 
@@ -664,6 +877,49 @@ ALTER SEQUENCE public.raw_object_raw_id_seq OWNED BY public.raw_object.raw_id;
 
 
 --
+-- Name: signal; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.signal (
+    signal_id bigint NOT NULL,
+    signal_type text NOT NULL,
+    signal_date date NOT NULL,
+    api_id bigint,
+    company_id bigint,
+    product_id bigint,
+    country character(2),
+    title text NOT NULL,
+    detail jsonb,
+    evidence_ids bigint[],
+    source_url text NOT NULL,
+    source_name text NOT NULL,
+    retrieved_at timestamp with time zone NOT NULL,
+    status public.data_status NOT NULL,
+    valid_from timestamp with time zone DEFAULT now() NOT NULL,
+    valid_to timestamp with time zone
+);
+
+
+--
+-- Name: signal_signal_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.signal_signal_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: signal_signal_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.signal_signal_id_seq OWNED BY public.signal.signal_id;
+
+
+--
 -- Name: site; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -687,6 +943,49 @@ CREATE TABLE public.site (
     valid_from timestamp with time zone DEFAULT now() NOT NULL,
     valid_to timestamp with time zone
 );
+
+
+--
+-- Name: site_certificate; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.site_certificate (
+    cert_id bigint NOT NULL,
+    site_id bigint,
+    company_id bigint,
+    cert_type text NOT NULL,
+    number text,
+    issuing_authority text,
+    issued date,
+    valid_until date,
+    scope text,
+    checked_at timestamp with time zone,
+    source_url text NOT NULL,
+    source_name text NOT NULL,
+    retrieved_at timestamp with time zone NOT NULL,
+    status public.data_status NOT NULL,
+    valid_from timestamp with time zone DEFAULT now() NOT NULL,
+    valid_to timestamp with time zone
+);
+
+
+--
+-- Name: site_certificate_cert_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.site_certificate_cert_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: site_certificate_cert_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.site_certificate_cert_id_seq OWNED BY public.site_certificate.cert_id;
 
 
 --
@@ -857,6 +1156,13 @@ ALTER TABLE ONLY public.api_certificate ALTER COLUMN row_id SET DEFAULT nextval(
 
 
 --
+-- Name: api_synonym syn_id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.api_synonym ALTER COLUMN syn_id SET DEFAULT nextval('public.api_synonym_syn_id_seq'::regclass);
+
+
+--
 -- Name: company row_id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -864,10 +1170,24 @@ ALTER TABLE ONLY public.company ALTER COLUMN row_id SET DEFAULT nextval('public.
 
 
 --
+-- Name: company_alias alias_id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.company_alias ALTER COLUMN alias_id SET DEFAULT nextval('public.company_alias_alias_id_seq'::regclass);
+
+
+--
 -- Name: company_relation row_id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.company_relation ALTER COLUMN row_id SET DEFAULT nextval('public.company_relation_row_id_seq'::regclass);
+
+
+--
+-- Name: company_role role_id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.company_role ALTER COLUMN role_id SET DEFAULT nextval('public.company_role_role_id_seq'::regclass);
 
 
 --
@@ -920,6 +1240,20 @@ ALTER TABLE ONLY public.patent ALTER COLUMN row_id SET DEFAULT nextval('public.p
 
 
 --
+-- Name: potential_customer pc_id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.potential_customer ALTER COLUMN pc_id SET DEFAULT nextval('public.potential_customer_pc_id_seq'::regclass);
+
+
+--
+-- Name: price price_id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.price ALTER COLUMN price_id SET DEFAULT nextval('public.price_price_id_seq'::regclass);
+
+
+--
 -- Name: product row_id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -941,10 +1275,24 @@ ALTER TABLE ONLY public.raw_object ALTER COLUMN raw_id SET DEFAULT nextval('publ
 
 
 --
+-- Name: signal signal_id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.signal ALTER COLUMN signal_id SET DEFAULT nextval('public.signal_signal_id_seq'::regclass);
+
+
+--
 -- Name: site row_id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.site ALTER COLUMN row_id SET DEFAULT nextval('public.site_row_id_seq'::regclass);
+
+
+--
+-- Name: site_certificate cert_id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.site_certificate ALTER COLUMN cert_id SET DEFAULT nextval('public.site_certificate_cert_id_seq'::regclass);
 
 
 --
@@ -985,6 +1333,22 @@ ALTER TABLE ONLY public.api
 
 
 --
+-- Name: api_synonym api_synonym_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.api_synonym
+    ADD CONSTRAINT api_synonym_pkey PRIMARY KEY (syn_id);
+
+
+--
+-- Name: company_alias company_alias_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.company_alias
+    ADD CONSTRAINT company_alias_pkey PRIMARY KEY (alias_id);
+
+
+--
 -- Name: company company_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -998,6 +1362,14 @@ ALTER TABLE ONLY public.company
 
 ALTER TABLE ONLY public.company_relation
     ADD CONSTRAINT company_relation_pkey PRIMARY KEY (row_id);
+
+
+--
+-- Name: company_role company_role_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.company_role
+    ADD CONSTRAINT company_role_pkey PRIMARY KEY (role_id);
 
 
 --
@@ -1057,6 +1429,22 @@ ALTER TABLE ONLY public.patent
 
 
 --
+-- Name: potential_customer potential_customer_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.potential_customer
+    ADD CONSTRAINT potential_customer_pkey PRIMARY KEY (pc_id);
+
+
+--
+-- Name: price price_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.price
+    ADD CONSTRAINT price_pkey PRIMARY KEY (price_id);
+
+
+--
 -- Name: product_api product_api_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -1094,6 +1482,22 @@ ALTER TABLE ONLY public.raw_object
 
 ALTER TABLE ONLY public.raw_object
     ADD CONSTRAINT raw_object_url_sha256_key UNIQUE (url, sha256);
+
+
+--
+-- Name: signal signal_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.signal
+    ADD CONSTRAINT signal_pkey PRIMARY KEY (signal_id);
+
+
+--
+-- Name: site_certificate site_certificate_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.site_certificate
+    ADD CONSTRAINT site_certificate_pkey PRIMARY KEY (cert_id);
 
 
 --
@@ -1151,10 +1555,38 @@ CREATE INDEX api_inn_trgm ON public.api USING gin (inn public.gin_trgm_ops);
 
 
 --
+-- Name: api_synonym_cur; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE UNIQUE INDEX api_synonym_cur ON public.api_synonym USING btree (api_id, synonym_norm, kind) WHERE (valid_to IS NULL);
+
+
+--
+-- Name: api_synonym_trgm; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX api_synonym_trgm ON public.api_synonym USING gin (synonym_norm public.gin_trgm_ops);
+
+
+--
 -- Name: cert_nk_current; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE UNIQUE INDEX cert_nk_current ON public.api_certificate USING btree (natural_key) WHERE (valid_to IS NULL);
+
+
+--
+-- Name: company_alias_cur; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE UNIQUE INDEX company_alias_cur ON public.company_alias USING btree (company_id, alias_norm, kind) WHERE (valid_to IS NULL);
+
+
+--
+-- Name: company_alias_trgm; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX company_alias_trgm ON public.company_alias USING gin (alias_norm public.gin_trgm_ops);
 
 
 --
@@ -1172,6 +1604,13 @@ CREATE INDEX company_name_trgm ON public.company USING gin (name_normalized publ
 
 
 --
+-- Name: company_role_cur; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE UNIQUE INDEX company_role_cur ON public.company_role USING btree (company_id, role) WHERE (valid_to IS NULL);
+
+
+--
 -- Name: product_current; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -1183,6 +1622,13 @@ CREATE UNIQUE INDEX product_current ON public.product USING btree (product_id) W
 --
 
 CREATE UNIQUE INDEX product_nk_current ON public.product USING btree (natural_key) WHERE (valid_to IS NULL);
+
+
+--
+-- Name: signal_date_idx; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX signal_date_idx ON public.signal USING btree (signal_date DESC);
 
 
 --
@@ -1300,5 +1746,5 @@ ALTER TABLE ONLY public.tender
 -- PostgreSQL database dump complete
 --
 
-\unrestrict vK4vBJsyhKs9aDMnQEDHQcrlFacUK0mMBQggamEKVDkRhPnYqSSt1hGFRHxVncY
+\unrestrict CbZyLHsmSYik6nzfn6edWLyajLaDJlpPdcM1kWOHmdkiOmSqdivS7QGOzyn1bEf
 
