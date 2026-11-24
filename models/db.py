@@ -14,7 +14,15 @@ PROV = ("source_url", "source_name", "retrieved_at", "status", "raw_id")
 
 
 def connect() -> psycopg.Connection:
-    conn = psycopg.connect(DSN, autocommit=True)
+    try:
+        conn = psycopg.connect(DSN, autocommit=True)
+    except psycopg.OperationalError:
+        # local dev container: the DB service does not survive session restarts -> start it once and retry
+        import subprocess
+        import time
+        subprocess.run(["service", "postgresql", "start"], capture_output=True)
+        time.sleep(3)
+        conn = psycopg.connect(DSN, autocommit=True)
     conn.execute("CREATE SEQUENCE IF NOT EXISTS entity_seq")
     return conn
 
