@@ -55,7 +55,14 @@ def statements(sql: str):
 
 
 def main(step: str):
-    if step == "check":
+    if step == "reset":
+        tables = [r["tablename"] for r in q("select tablename from pg_tables where schemaname='public'")]
+        if tables:
+            q("\n".join(f'DROP TABLE IF EXISTS public."{t}" CASCADE;' for t in tables))
+        q("DROP SEQUENCE IF EXISTS public.entity_seq CASCADE; DROP TYPE IF EXISTS public.data_status CASCADE; "
+          "DROP TYPE IF EXISTS public.link_confidence CASCADE;")
+        print("dropped", len(tables), "tables")
+    elif step == "check":
         print(q("select count(*) n from information_schema.tables where table_schema='public'"))
     elif step == "schema":
         sql = clean((ROOT / "db" / "schema_dump.sql").read_text()).replace("public.gin_trgm_ops", "extensions.gin_trgm_ops")
