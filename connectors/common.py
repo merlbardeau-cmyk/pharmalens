@@ -7,6 +7,7 @@ Rules implemented here:
 from __future__ import annotations
 
 import hashlib
+import re
 import mimetypes
 import os
 import time
@@ -90,3 +91,31 @@ def store_raw(source: str, url: str, body: bytes, content_type: str | None, http
             (source_id, url, sha, rel, content_type, len(body), http_status),
         )
     return sha, rel
+
+
+def source_id(conn, name: str) -> int:
+    row = conn.execute("SELECT source_id FROM source WHERE name=%s", (name,)).fetchone()
+    if row is None:
+        raise KeyError(f"source not registered: {name}")
+    return row[0]
+
+
+class Fetcher:
+    """GET/POST with throttle + robots check + raw storage. Returns (response, raw_id)."""
+
+    def __init__(self, conn, source_name: str, raw_dir: str | None = None, check_robots: bool = True):
+        self.conn, self.source_name = conn, source_name
+        self.sid = source_id(conn, source_name)
+        self.raw_dir = raw_dir or re.sub(r"\W+", "_", source_name).strip("_").lower()
+        self.c = client()
+        self.check_robots = check_robots
+
+    def get(self, url: str, method: str = "GET", **kw):
+        if self.check_robots and robots_status(self.c, url) == "disallowed":
+            raise PermissionError(f"robots.txt disallows {url}")
+        throttle(url)
+        r = self.c.request(method, url, **kw)
+        full = str(r.request.url)
+        sha, _ = store_raw(self.raw_dir, full, r.content, r.headers.get("content-type"), r.status_code, self.conn, self.sid)
+        raw_id = self.conn.execute("SELECT raw_id FROM raw_object WHERE url=%s AND sha256=%s", (full, sha)).fetchone()[0]
+        return r, raw_id
