@@ -15,12 +15,12 @@ certificate,api,florfenicol,CEP nicht abrufbar (EDQM robots.txt/WAF) – Lizenza
 certificate,api,florfenicol,Written Confirmations nicht abrufbar (CDSCO blockiert),Handbeschaffung cdsco.gov.in,CDSCO Written Confirmations
 certificate,api,fludrocortisone,CEP nicht abrufbar (EDQM robots.txt/WAF) – Lizenzanfrage offen,EDQM Lizenz / manuelle Abfrage,EDQM CEP-Datenbank
 certificate,api,fludrocortisone,Written Confirmations nicht abrufbar (CDSCO blockiert),Handbeschaffung cdsco.gov.in,CDSCO Written Confirmations
-certificate,api,hydroxycarbamide,CEP nicht abrufbar (EDQM robots.txt/WAF) – Lizenzanfrage offen,EDQM Lizenz / manuelle Abfrage,EDQM CEP-Datenbank
 certificate,api,hydroxycarbamide,Written Confirmations nicht abrufbar (CDSCO blockiert),Handbeschaffung cdsco.gov.in,CDSCO Written Confirmations
-certificate,api,levothyroxine,Written Confirmations nicht abrufbar (CDSCO blockiert),Handbeschaffung cdsco.gov.in,CDSCO Written Confirmations
+certificate,api,hydroxycarbamide,CEP nicht abrufbar (EDQM robots.txt/WAF) – Lizenzanfrage offen,EDQM Lizenz / manuelle Abfrage,EDQM CEP-Datenbank
 certificate,api,levothyroxine,CEP nicht abrufbar (EDQM robots.txt/WAF) – Lizenzanfrage offen,EDQM Lizenz / manuelle Abfrage,EDQM CEP-Datenbank
-certificate,api,marbofloxacin,CEP nicht abrufbar (EDQM robots.txt/WAF) – Lizenzanfrage offen,EDQM Lizenz / manuelle Abfrage,EDQM CEP-Datenbank
+certificate,api,levothyroxine,Written Confirmations nicht abrufbar (CDSCO blockiert),Handbeschaffung cdsco.gov.in,CDSCO Written Confirmations
 certificate,api,marbofloxacin,Written Confirmations nicht abrufbar (CDSCO blockiert),Handbeschaffung cdsco.gov.in,CDSCO Written Confirmations
+certificate,api,marbofloxacin,CEP nicht abrufbar (EDQM robots.txt/WAF) – Lizenzanfrage offen,EDQM Lizenz / manuelle Abfrage,EDQM CEP-Datenbank
 certificate,api,metformin,Written Confirmations nicht abrufbar (CDSCO blockiert),Handbeschaffung cdsco.gov.in,CDSCO Written Confirmations
 certificate,api,metformin,CEP nicht abrufbar (EDQM robots.txt/WAF) – Lizenzanfrage offen,EDQM Lizenz / manuelle Abfrage,EDQM CEP-Datenbank
 certificate,api,mexiletine,CEP nicht abrufbar (EDQM robots.txt/WAF) – Lizenzanfrage offen,EDQM Lizenz / manuelle Abfrage,EDQM CEP-Datenbank
@@ -31,8 +31,8 @@ certificate,api,pimobendan,CEP nicht abrufbar (EDQM robots.txt/WAF) – Lizenzan
 certificate,api,pimobendan,Written Confirmations nicht abrufbar (CDSCO blockiert),Handbeschaffung cdsco.gov.in,CDSCO Written Confirmations
 certificate,api,pyridostigmine,Written Confirmations nicht abrufbar (CDSCO blockiert),Handbeschaffung cdsco.gov.in,CDSCO Written Confirmations
 certificate,api,pyridostigmine,CEP nicht abrufbar (EDQM robots.txt/WAF) – Lizenzanfrage offen,EDQM Lizenz / manuelle Abfrage,EDQM CEP-Datenbank
-certificate,api,sacubitril,CEP nicht abrufbar (EDQM robots.txt/WAF) – Lizenzanfrage offen,EDQM Lizenz / manuelle Abfrage,EDQM CEP-Datenbank
 certificate,api,sacubitril,Written Confirmations nicht abrufbar (CDSCO blockiert),Handbeschaffung cdsco.gov.in,CDSCO Written Confirmations
+certificate,api,sacubitril,CEP nicht abrufbar (EDQM robots.txt/WAF) – Lizenzanfrage offen,EDQM Lizenz / manuelle Abfrage,EDQM CEP-Datenbank
 certificate,api,semaglutide,Written Confirmations nicht abrufbar (CDSCO blockiert),Handbeschaffung cdsco.gov.in,CDSCO Written Confirmations
 certificate,api,semaglutide,CEP nicht abrufbar (EDQM robots.txt/WAF) – Lizenzanfrage offen,EDQM Lizenz / manuelle Abfrage,EDQM CEP-Datenbank
 certificate,api,toltrazuril,Written Confirmations nicht abrufbar (CDSCO blockiert),Handbeschaffung cdsco.gov.in,CDSCO Written Confirmations
@@ -41,12 +41,12 @@ certificate,api,tulathromycin,CEP nicht abrufbar (EDQM robots.txt/WAF) – Lizen
 certificate,api,tulathromycin,Written Confirmations nicht abrufbar (CDSCO blockiert),Handbeschaffung cdsco.gov.in,CDSCO Written Confirmations
 company_structure,company,18425,"GLEIF ultimate-parent: Beziehung LAPSED/ACTIVE, letzte Aktualisierung 2021-12-30 – nicht übernommen (möglicherweise veraltet)",Handelsregister / Geschäftsbericht / SEC,GLEIF LEI API
 company_structure,company,18425,"GLEIF direct-parent: Beziehung LAPSED/ACTIVE, letzte Aktualisierung 2021-12-30 – nicht übernommen (möglicherweise veraltet)",Handelsregister / Geschäftsbericht / SEC,GLEIF LEI API
-company_structure,company,18748,"GLEIF direct-parent: Beziehung LAPSED/ACTIVE, letzte Aktualisierung 2025-01-30 – nicht übernommen (möglicherweise veraltet)",Handelsregister / Geschäftsbericht / SEC,GLEIF LEI API
 company_structure,company,18748,"GLEIF ultimate-parent: Beziehung LAPSED/ACTIVE, letzte Aktualisierung 2025-01-30 – nicht übernommen (möglicherweise veraltet)",Handelsregister / Geschäftsbericht / SEC,GLEIF LEI API
-company_structure,company,18802,"GLEIF ultimate-parent: Beziehung LAPSED/ACTIVE, letzte Aktualisierung 2021-12-30 – nicht übernommen (möglicherweise veraltet)",Handelsregister / Geschäftsbericht / SEC,GLEIF LEI API
+company_structure,company,18748,"GLEIF direct-parent: Beziehung LAPSED/ACTIVE, letzte Aktualisierung 2025-01-30 – nicht übernommen (möglicherweise veraltet)",Handelsregister / Geschäftsbericht / SEC,GLEIF LEI API
 company_structure,company,18802,"GLEIF direct-parent: Beziehung LAPSED/ACTIVE, letzte Aktualisierung 2021-12-30 – nicht übernommen (möglicherweise veraltet)",Handelsregister / Geschäftsbericht / SEC,GLEIF LEI API
-company_structure,company,19490,"GLEIF ultimate-parent: Beziehung LAPSED/ACTIVE, letzte Aktualisierung 2023-08-08 – nicht übernommen (möglicherweise veraltet)",Handelsregister / Geschäftsbericht / SEC,GLEIF LEI API
+company_structure,company,18802,"GLEIF ultimate-parent: Beziehung LAPSED/ACTIVE, letzte Aktualisierung 2021-12-30 – nicht übernommen (möglicherweise veraltet)",Handelsregister / Geschäftsbericht / SEC,GLEIF LEI API
 company_structure,company,19490,"GLEIF direct-parent: Beziehung LAPSED/ACTIVE, letzte Aktualisierung 2023-08-08 – nicht übernommen (möglicherweise veraltet)",Handelsregister / Geschäftsbericht / SEC,GLEIF LEI API
+company_structure,company,19490,"GLEIF ultimate-parent: Beziehung LAPSED/ACTIVE, letzte Aktualisierung 2023-08-08 – nicht übernommen (möglicherweise veraltet)",Handelsregister / Geschäftsbericht / SEC,GLEIF LEI API
 company_structure,company,19854,"GLEIF direct-parent: Beziehung LAPSED/ACTIVE, letzte Aktualisierung 2025-09-10 – nicht übernommen (möglicherweise veraltet)",Handelsregister / Geschäftsbericht / SEC,GLEIF LEI API
 company_structure,company,19854,"GLEIF ultimate-parent: Beziehung LAPSED/ACTIVE, letzte Aktualisierung 2025-09-10 – nicht übernommen (möglicherweise veraltet)",Handelsregister / Geschäftsbericht / SEC,GLEIF LEI API
 company_structure,company,19878,"GLEIF ultimate-parent: Beziehung LAPSED/ACTIVE, letzte Aktualisierung 2023-07-31 – nicht übernommen (möglicherweise veraltet)",Handelsregister / Geschäftsbericht / SEC,GLEIF LEI API
@@ -93,7 +93,6 @@ manufacturer,product,16362,Hersteller-Sektion nach Parser-Korrektur ohne gültig
 manufacturer,product,16384,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/dochtml/p/85621/P_85621.html,ES AEMPS CIMA REST
 manufacturer,product,16385,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/dochtml/p/86791/P_86791.html,ES AEMPS CIMA REST
 manufacturer,product,16386,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/dochtml/p/86792/P_86792.html,ES AEMPS CIMA REST
-manufacturer,product,16407,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/dochtml/p/06354005/P_06354005.html,ES AEMPS CIMA REST
 manufacturer,product,16412,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/90577/P_90577.html,ES AEMPS CIMA REST
 manufacturer,product,16413,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/90578/P_90578.html,ES AEMPS CIMA REST
 manufacturer,product,16419,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/91355/P_91355.html,ES AEMPS CIMA REST
@@ -110,65 +109,6 @@ manufacturer,product,16597,ES: Hersteller-Sektion im Prospekt nicht gefunden (HT
 manufacturer,product,16598,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/27191IP1/P_27191IP1.pdf,ES AEMPS CIMA REST
 manufacturer,product,16599,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/27190/P_27190.pdf,ES AEMPS CIMA REST
 manufacturer,product,16600,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/27190IP/P_27190IP.pdf,ES AEMPS CIMA REST
-manufacturer,product,16601,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/06354005IP1/P_06354005IP1.pdf,ES AEMPS CIMA REST
-manufacturer,product,16602,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/06354005IP/P_06354005IP.pdf,ES AEMPS CIMA REST
-manufacturer,product,16603,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/08457010IP/P_08457010IP.pdf,ES AEMPS CIMA REST
-manufacturer,product,16604,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/08457010IP1/P_08457010IP1.pdf,ES AEMPS CIMA REST
-manufacturer,product,16605,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/07425009IP/P_07425009IP.pdf,ES AEMPS CIMA REST
-manufacturer,product,16606,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/07425009IP2/P_07425009IP2.pdf,ES AEMPS CIMA REST
-manufacturer,product,16607,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/07425009IP3/P_07425009IP3.pdf,ES AEMPS CIMA REST
-manufacturer,product,16608,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/07425009IP4/P_07425009IP4.pdf,ES AEMPS CIMA REST
-manufacturer,product,16609,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/07425048IP/P_07425048IP.pdf,ES AEMPS CIMA REST
-manufacturer,product,16610,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/07425009IP1/P_07425009IP1.pdf,ES AEMPS CIMA REST
-manufacturer,product,16611,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/07425027IP/P_07425027IP.pdf,ES AEMPS CIMA REST
-manufacturer,product,16612,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/07425027IP1/P_07425027IP1.pdf,ES AEMPS CIMA REST
-manufacturer,product,16613,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/07425048/P_07425048.pdf,ES AEMPS CIMA REST
-manufacturer,product,16614,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/07425003IP/P_07425003IP.pdf,ES AEMPS CIMA REST
-manufacturer,product,16615,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/07425003IP2/P_07425003IP2.pdf,ES AEMPS CIMA REST
-manufacturer,product,16616,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/07425021IP/P_07425021IP.pdf,ES AEMPS CIMA REST
-manufacturer,product,16617,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/07425021IP1/P_07425021IP1.pdf,ES AEMPS CIMA REST
-manufacturer,product,16618,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/07425039IP/P_07425039IP.pdf,ES AEMPS CIMA REST
-manufacturer,product,16619,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/07425003IP1/P_07425003IP1.pdf,ES AEMPS CIMA REST
-manufacturer,product,16620,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/07425003IP3/P_07425003IP3.pdf,ES AEMPS CIMA REST
-manufacturer,product,16621,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/08484009IP/P_08484009IP.pdf,ES AEMPS CIMA REST
-manufacturer,product,16622,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/08455010IP1/P_08455010IP1.pdf,ES AEMPS CIMA REST
-manufacturer,product,16623,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/08455010IP2/P_08455010IP2.pdf,ES AEMPS CIMA REST
-manufacturer,product,16624,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/08455010IP3/P_08455010IP3.pdf,ES AEMPS CIMA REST
-manufacturer,product,16625,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/08455010IP4/P_08455010IP4.pdf,ES AEMPS CIMA REST
-manufacturer,product,16626,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/08455010IP5/P_08455010IP5.pdf,ES AEMPS CIMA REST
-manufacturer,product,16627,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/08455010IP/P_08455010IP.pdf,ES AEMPS CIMA REST
-manufacturer,product,16628,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/12780020IP1/P_12780020IP1.pdf,ES AEMPS CIMA REST
-manufacturer,product,16629,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/12780020IP2/P_12780020IP2.pdf,ES AEMPS CIMA REST
-manufacturer,product,16630,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/12780020IP3/P_12780020IP3.pdf,ES AEMPS CIMA REST
-manufacturer,product,16631,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/12780020IP4/P_12780020IP4.pdf,ES AEMPS CIMA REST
-manufacturer,product,16632,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/12780020IP/P_12780020IP.pdf,ES AEMPS CIMA REST
-manufacturer,product,16633,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/12780006IP/P_12780006IP.pdf,ES AEMPS CIMA REST
-manufacturer,product,16634,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/12780006IP1/P_12780006IP1.pdf,ES AEMPS CIMA REST
-manufacturer,product,16635,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/12780006IP2/P_12780006IP2.pdf,ES AEMPS CIMA REST
-manufacturer,product,16636,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/12780006IP3/P_12780006IP3.pdf,ES AEMPS CIMA REST
-manufacturer,product,16637,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/12780006IP4/P_12780006IP4.pdf,ES AEMPS CIMA REST
-manufacturer,product,16638,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/11731008IP/P_11731008IP.pdf,ES AEMPS CIMA REST
-manufacturer,product,16639,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/11731002IP/P_11731002IP.pdf,ES AEMPS CIMA REST
-manufacturer,product,16640,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/10620011IP/P_10620011IP.pdf,ES AEMPS CIMA REST
-manufacturer,product,16641,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/10620011IP2/P_10620011IP2.pdf,ES AEMPS CIMA REST
-manufacturer,product,16642,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/10620011IP1/P_10620011IP1.pdf,ES AEMPS CIMA REST
-manufacturer,product,16643,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/08456010IP1/P_08456010IP1.pdf,ES AEMPS CIMA REST
-manufacturer,product,16644,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/08456010IP3/P_08456010IP3.pdf,ES AEMPS CIMA REST
-manufacturer,product,16645,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/08456010IP5/P_08456010IP5.pdf,ES AEMPS CIMA REST
-manufacturer,product,16646,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/08456010IP/P_08456010IP.pdf,ES AEMPS CIMA REST
-manufacturer,product,16647,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/08456010IP2/P_08456010IP2.pdf,ES AEMPS CIMA REST
-manufacturer,product,16648,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/08456010IP4/P_08456010IP4.pdf,ES AEMPS CIMA REST
-manufacturer,product,16649,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/113843017IP/P_113843017IP.pdf,ES AEMPS CIMA REST
-manufacturer,product,16650,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/113843005IP/P_113843005IP.pdf,ES AEMPS CIMA REST
-manufacturer,product,16651,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/13900009IP/P_13900009IP.pdf,ES AEMPS CIMA REST
-manufacturer,product,16652,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/13900009IP1/P_13900009IP1.pdf,ES AEMPS CIMA REST
-manufacturer,product,16653,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/13900003IP/P_13900003IP.pdf,ES AEMPS CIMA REST
-manufacturer,product,16654,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/13900003IP1/P_13900003IP1.pdf,ES AEMPS CIMA REST
-manufacturer,product,16655,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/08483009IP/P_08483009IP.pdf,ES AEMPS CIMA REST
-manufacturer,product,16656,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/08483009IP1/P_08483009IP1.pdf,ES AEMPS CIMA REST
-manufacturer,product,16657,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/08483009IP2/P_08483009IP2.pdf,ES AEMPS CIMA REST
-manufacturer,product,16658,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/08483009IP3/P_08483009IP3.pdf,ES AEMPS CIMA REST
-manufacturer,product,16659,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/08483003IP/P_08483003IP.pdf,ES AEMPS CIMA REST
 manufacturer,product,16671,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/73176/P_73176.html,ES AEMPS CIMA REST
 manufacturer,product,16672,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/73177/P_73177.html,ES AEMPS CIMA REST
 manufacturer,product,16756,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/dochtml/p/78033/P_78033.html,ES AEMPS CIMA REST
@@ -358,8 +298,6 @@ manufacturer,product,17621,ES: Hersteller-Sektion im Prospekt nicht gefunden (HT
 manufacturer,product,17622,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/rest/docSegmentado/contenido/2?nregistro=BE387502&seccion=6,ES AEMPS CIMA REST
 manufacturer,product,17623,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/rest/docSegmentado/contenido/2?nregistro=038983247IP&seccion=6,ES AEMPS CIMA REST
 manufacturer,product,17624,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/rest/docSegmentado/contenido/2?nregistro=038983161IP1&seccion=6,ES AEMPS CIMA REST
-manufacturer,product,17625,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/10648023IP/P_10648023IP.pdf,ES AEMPS CIMA REST
-manufacturer,product,17626,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/10648016IP/P_10648016IP.pdf,ES AEMPS CIMA REST
 manufacturer,product,17627,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/rest/docSegmentado/contenido/2?nregistro=OGYIT2057205IP2&seccion=6,ES AEMPS CIMA REST
 manufacturer,product,17628,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/rest/docSegmentado/contenido/2?nregistro=15-0092-01&seccion=6,ES AEMPS CIMA REST
 manufacturer,product,17629,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/rest/docSegmentado/contenido/2?nregistro=22474&seccion=6,ES AEMPS CIMA REST
@@ -378,8 +316,6 @@ manufacturer,product,17735,ES: Hersteller-Sektion im Prospekt nicht gefunden (HT
 manufacturer,product,17737,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/dochtml/p/58466/P_58466.html,ES AEMPS CIMA REST
 manufacturer,product,17744,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/65687/P_65687.pdf,ES AEMPS CIMA REST
 manufacturer,product,17811,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/rest/docSegmentado/contenido/2?nregistro=15201&seccion=6,ES AEMPS CIMA REST
-manufacturer,product,17816,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/1181325012/P_1181325012.pdf,ES AEMPS CIMA REST
-manufacturer,product,17817,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/1181325007/P_1181325007.pdf,ES AEMPS CIMA REST
 manufacturer,product,17819,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/89193/P_89193.html,ES AEMPS CIMA REST
 manufacturer,product,17836,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/dochtml/p/90219/P_90219.html,ES AEMPS CIMA REST
 manufacturer,product,17838,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/90741/P_90741.html,ES AEMPS CIMA REST
@@ -395,42 +331,6 @@ manufacturer,product,17900,ES: Hersteller-Sektion im Prospekt nicht gefunden (HT
 manufacturer,product,17901,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/dochtml/p/86191/P_86191.html,ES AEMPS CIMA REST
 manufacturer,product,17903,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/91224/P_91224.html,ES AEMPS CIMA REST
 manufacturer,product,17904,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/91225/P_91225.html,ES AEMPS CIMA REST
-manufacturer,product,17931,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/11691003IP/P_11691003IP.pdf,ES AEMPS CIMA REST
-manufacturer,product,17991,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/151058001IP/P_151058001IP.pdf,ES AEMPS CIMA REST
-manufacturer,product,17992,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/151058001IP2/P_151058001IP2.pdf,ES AEMPS CIMA REST
-manufacturer,product,17993,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/151058001IP3/P_151058001IP3.pdf,ES AEMPS CIMA REST
-manufacturer,product,17994,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/151058001IP4/P_151058001IP4.pdf,ES AEMPS CIMA REST
-manufacturer,product,17995,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/151058001IP1/P_151058001IP1.pdf,ES AEMPS CIMA REST
-manufacturer,product,17996,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/151058003IP/P_151058003IP.pdf,ES AEMPS CIMA REST
-manufacturer,product,17997,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/151058003IP2/P_151058003IP2.pdf,ES AEMPS CIMA REST
-manufacturer,product,17998,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/151058003IP3/P_151058003IP3.pdf,ES AEMPS CIMA REST
-manufacturer,product,17999,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/151058003IP4/P_151058003IP4.pdf,ES AEMPS CIMA REST
-manufacturer,product,18000,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/151058003IP1/P_151058003IP1.pdf,ES AEMPS CIMA REST
-manufacturer,product,18001,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/151058006IP/P_151058006IP.pdf,ES AEMPS CIMA REST
-manufacturer,product,18002,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/151058006IP1/P_151058006IP1.pdf,ES AEMPS CIMA REST
-manufacturer,product,18003,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/151058006IP2/P_151058006IP2.pdf,ES AEMPS CIMA REST
-manufacturer,product,18004,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/151058006IP3/P_151058006IP3.pdf,ES AEMPS CIMA REST
-manufacturer,product,18005,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/161103001IP/P_161103001IP.pdf,ES AEMPS CIMA REST
-manufacturer,product,18006,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/161103003IP/P_161103003IP.pdf,ES AEMPS CIMA REST
-manufacturer,product,18007,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/161103006IP/P_161103006IP.pdf,ES AEMPS CIMA REST
-manufacturer,product,18068,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/1171251002IP/P_1171251002IP.pdf,ES AEMPS CIMA REST
-manufacturer,product,18069,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/1171251002IP1/P_1171251002IP1.pdf,ES AEMPS CIMA REST
-manufacturer,product,18070,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/1171251002IP2/P_1171251002IP2.pdf,ES AEMPS CIMA REST
-manufacturer,product,18071,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/1171251003IP/P_1171251003IP.pdf,ES AEMPS CIMA REST
-manufacturer,product,18072,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/1171251003IP1/P_1171251003IP1.pdf,ES AEMPS CIMA REST
-manufacturer,product,18073,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/1171251003IP2/P_1171251003IP2.pdf,ES AEMPS CIMA REST
-manufacturer,product,18074,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/1171251003IP3/P_1171251003IP3.pdf,ES AEMPS CIMA REST
-manufacturer,product,18075,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/1171251005IP/P_1171251005IP.pdf,ES AEMPS CIMA REST
-manufacturer,product,18076,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/1171251005IP1/P_1171251005IP1.pdf,ES AEMPS CIMA REST
-manufacturer,product,18077,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/1171251005IP2/P_1171251005IP2.pdf,ES AEMPS CIMA REST
-manufacturer,product,18078,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/1171251005IP3/P_1171251005IP3.pdf,ES AEMPS CIMA REST
-manufacturer,product,18079,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/1211608006IP/P_1211608006IP.pdf,ES AEMPS CIMA REST
-manufacturer,product,18080,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/1211608006IP1/P_1211608006IP1.pdf,ES AEMPS CIMA REST
-manufacturer,product,18081,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/1211608007IP/P_1211608007IP.pdf,ES AEMPS CIMA REST
-manufacturer,product,18082,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/1211608008IP/P_1211608008IP.pdf,ES AEMPS CIMA REST
-manufacturer,product,18083,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/1211608009IP/P_1211608009IP.pdf,ES AEMPS CIMA REST
-manufacturer,product,18084,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/1211608010IP/P_1211608010IP.pdf,ES AEMPS CIMA REST
-manufacturer,product,18085,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/1211608010IP1/P_1211608010IP1.pdf,ES AEMPS CIMA REST
 manufacturer,product,21047,NL Parallelimport: Bijsluiter nennt Importeur/Umpacker – bewusst nicht als Hersteller übernommen,https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h123079.pdf,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,21048,NL Parallelimport: Bijsluiter nennt Importeur/Umpacker – bewusst nicht als Hersteller übernommen,https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h123080.pdf,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,21049,NL Parallelimport: Bijsluiter nennt Importeur/Umpacker – bewusst nicht als Hersteller übernommen,https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h132895.pdf,NL CBG Geneesmiddeleninformatiebank
@@ -448,28 +348,10 @@ manufacturer,product,21112,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (H
 manufacturer,product,21113,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h25876.pdf,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,21116,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h31877.pdf,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,21118,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h50721.pdf,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21119,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp108097,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21123,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp135808,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21125,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp113578,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,21126,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp73392,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21133,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp100120,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21134,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp105217,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21138,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp100690,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21140,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp104688,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21144,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp115750,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,21150,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h131660_piluk.pdf,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21153,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp73026,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21154,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp117678,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21158,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp127832,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21159,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp120629,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,21160,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h133563_piluk.pdf,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21164,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp132024,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21166,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp135810,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21170,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp73143,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,21171,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h131658_piluk.pdf,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21172,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp105221,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21174,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp100118,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21175,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp118765,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,21176,NL Parallelimport: Bijsluiter nennt Importeur/Umpacker – bewusst nicht als Hersteller übernommen,https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h136383.pdf,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,21177,NL Parallelimport: Bijsluiter nennt Importeur/Umpacker – bewusst nicht als Hersteller übernommen,https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h136384.pdf,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,21178,NL Parallelimport: Bijsluiter nennt Importeur/Umpacker – bewusst nicht als Hersteller übernommen,https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h129270.pdf,NL CBG Geneesmiddeleninformatiebank
@@ -482,31 +364,7 @@ manufacturer,product,21226,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (H
 manufacturer,product,21227,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h129922.pdf,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,21229,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h131963.pdf,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,21232,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h132619.pdf,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21244,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp132025,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21245,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp124951,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21247,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp116659,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21248,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp132018,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21250,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp130415,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21253,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp73394,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21255,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp73396,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21256,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp103654,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21257,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp127810,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21260,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp106154,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21262,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp73395,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21263,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp113585,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21265,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp130149,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21266,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp112165,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21268,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp134229,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21273,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp121562,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21275,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp130413,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21278,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp105223,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21283,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp117159,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21284,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp115748,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21289,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp132023,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21291,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp107212,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,21292,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp73390,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21293,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp130412,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21295,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp134981,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,21307,NL Parallelimport: Bijsluiter nennt Importeur/Umpacker – bewusst nicht als Hersteller übernommen,https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h135811.pdf,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,21317,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h106854.pdf,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,21318,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h106856.pdf,NL CBG Geneesmiddeleninformatiebank
@@ -524,20 +382,7 @@ manufacturer,product,21373,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (H
 manufacturer,product,21374,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h132651.pdf,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,21389,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h21685.pdf,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,21395,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h52476.pdf,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21398,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp105219,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21399,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp113278,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21414,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp118771,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21419,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp130148,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21423,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp106155,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21425,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp106156,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21430,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp134983,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21433,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp103304,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,21440,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp128291,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21441,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp119855,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21443,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp113584,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21446,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp129665,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21450,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp73398,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21451,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp116657,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,21456,NL Parallelimport: Bijsluiter nennt Importeur/Umpacker – bewusst nicht als Hersteller übernommen,https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h120454.pdf,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,21457,NL Parallelimport: Bijsluiter nennt Importeur/Umpacker – bewusst nicht als Hersteller übernommen,https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h123082.pdf,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,21458,NL Parallelimport: Bijsluiter nennt Importeur/Umpacker – bewusst nicht als Hersteller übernommen,https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h126072.pdf,NL CBG Geneesmiddeleninformatiebank
@@ -557,20 +402,11 @@ manufacturer,product,21524,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (H
 manufacturer,product,21527,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h133415.pdf,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,21537,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h31466.pdf,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,21541,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h31876.pdf,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21544,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp123477,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21546,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp115145,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,21552,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h133658_piluk.pdf,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21559,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp117158,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21563,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp127808,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,21565,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h131657_piluk.pdf,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,21573,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h128069_piluk.pdf,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21575,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp103296,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,21577,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp73391,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21583,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp106153,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21586,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp123479,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21589,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp105220,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,21593,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h128068_piluk.pdf,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21594,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp127807,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,21595,NL Parallelimport: Bijsluiter nennt Importeur/Umpacker – bewusst nicht als Hersteller übernommen,https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h129359.pdf,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,216,EMA: Annex IIA nicht parsebar,https://www.ema.europa.eu/en/documents/product-information/tulinovet-epar-product-information_en.pdf,EMA Medicine data download
 manufacturer,product,21610,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h106857.pdf,NL CBG Geneesmiddeleninformatiebank
@@ -586,26 +422,10 @@ manufacturer,product,21655,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (H
 manufacturer,product,21661,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h133490.pdf,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,21670,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h31467.pdf,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,21671,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h31469.pdf,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21675,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp113279,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21677,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp103652,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21679,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp105222,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,21680,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h131659_piluk.pdf,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21682,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp103656,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21689,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp110712,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21698,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp120626,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21699,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp127589,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,217,EMA: Annex IIA nicht parsebar,https://www.ema.europa.eu/en/documents/product-information/tulaven-epar-product-information_en.pdf,EMA Medicine data download
-manufacturer,product,21708,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp122659,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21709,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp114607,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21713,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp134982,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21717,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp110227,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21720,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp106200,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,21723,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp128290,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21726,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp115749,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21728,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp110226,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,21732,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h133562_piluk.pdf,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21735,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp132396,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21739,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp135809,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,21740,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h133661_piluk.pdf,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,21741,NL Parallelimport: Bijsluiter nennt Importeur/Umpacker – bewusst nicht als Hersteller übernommen,https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h129014.pdf,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,21754,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h106851.pdf,NL CBG Geneesmiddeleninformatiebank
@@ -617,29 +437,6 @@ manufacturer,product,21785,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (H
 manufacturer,product,21792,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h132647.pdf,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,21797,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h133397.pdf,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,218,EMA: Annex IIA nicht parsebar,https://www.ema.europa.eu/en/documents/product-information/rexxolide-epar-product-information_en.pdf,EMA Medicine data download
-manufacturer,product,21813,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp108095,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21820,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp113583,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21824,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp100121,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21828,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp135807,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21829,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp107071,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21830,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp106202,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21835,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp120630,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21836,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp100688,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21837,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp132399,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21838,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp127811,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21840,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp132397,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21845,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp115146,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21847,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp135946,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21848,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp73144,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21849,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp73393,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21852,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp118201,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21853,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp125138,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21855,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp104689,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21858,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp130155,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21859,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp124952,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21861,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp123478,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21863,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp73397,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21867,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp119856,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,21868,NL Parallelimport: Bijsluiter nennt Importeur/Umpacker – bewusst nicht als Hersteller übernommen,https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h123077.pdf,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,21869,NL Parallelimport: Bijsluiter nennt Importeur/Umpacker – bewusst nicht als Hersteller übernommen,https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h133240.pdf,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,21870,NL Parallelimport: Bijsluiter nennt Importeur/Umpacker – bewusst nicht als Hersteller übernommen,https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h123115.pdf,NL CBG Geneesmiddeleninformatiebank
@@ -654,24 +451,6 @@ manufacturer,product,21914,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (H
 manufacturer,product,21916,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h125832.pdf,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,21929,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h131962.pdf,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,21945,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h31468.pdf,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21946,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp117679,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21948,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp117157,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21958,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp115747,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21960,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp130414,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21971,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp134980,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21972,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp73142,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21973,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp130154,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21975,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp113473,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21977,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp129664,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21983,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp130411,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21986,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp127583,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21988,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp73694,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21989,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp127584,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21990,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp119857,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21993,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp132395,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21994,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp105224,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21995,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp116658,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,21996,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp100119,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,21997,NL Parallelimport: Bijsluiter nennt Importeur/Umpacker – bewusst nicht als Hersteller übernommen,https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h133241.pdf,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,21998,NL Parallelimport: Bijsluiter nennt Importeur/Umpacker – bewusst nicht als Hersteller übernommen,https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h129428.pdf,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,21999,NL Parallelimport: Bijsluiter nennt Importeur/Umpacker – bewusst nicht als Hersteller übernommen,https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h128733.pdf,NL CBG Geneesmiddeleninformatiebank
@@ -686,28 +465,10 @@ manufacturer,product,22062,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (H
 manufacturer,product,22067,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h133698.pdf,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,22078,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h21683.pdf,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,22081,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h31875.pdf,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,22084,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp103655,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,22087,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp118200,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,22089,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp124953,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,22090,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp120631,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,22093,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp103653,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,22094,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp105218,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,221,EMA: Annex IIA nicht parsebar,https://www.ema.europa.eu/en/documents/product-information/lydaxx-epar-product-information_en.pdf,EMA Medicine data download
-manufacturer,product,22100,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp127590,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,22102,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp118770,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,22107,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h133572_piluk.pdf,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,22109,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp125139,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,22111,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp72905,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,22112,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp112166,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,22116,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp132400,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,22122,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp134984,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,22131,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp73693,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,22132,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp127809,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,22139,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp105216,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,22140,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp105215,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,22142,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h133570_piluk.pdf,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,22152,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h133663_piluk.pdf,NL CBG Geneesmiddeleninformatiebank
-manufacturer,product,22154,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp115144,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,222,EMA: Annex IIA nicht parsebar,https://www.ema.europa.eu/en/documents/product-information/neptra-epar-product-information_en.pdf,EMA Medicine data download
 manufacturer,product,223,EMA: Annex IIA nicht parsebar,https://www.ema.europa.eu/en/documents/product-information/fortekor-plus-epar-product-information_en.pdf,EMA Medicine data download
 manufacturer,product,22389,AT: Hersteller-Abschnitt in Gebrauchsinformation nicht gefunden (HTTP 200),https://medikamente.basg.gv.at/documents/1-24850__DMTC_GEBR_INFO_BF.pdf,AT BASG Arzneispezialitätenregister
@@ -930,6 +691,7 @@ source,source,DE BfArM Engpass-Datenbank,Host nicht freigegeben,anwendungen.phar
 source,source,DE Unternehmensregister,Host nicht freigegeben,www.unternehmensregister.de,DE Unternehmensregister
 source,source,EDQM CEP-Datenbank,"HTTP 200, robots.txt verbietet den Pfad",https://extranet.edqm.eu/publications/recherches_CEP.shtml,EDQM CEP-Datenbank
 source,source,EDQM Knowledge Database,"HTTP 200, robots.txt verbietet den Pfad",https://extranet.edqm.eu/4DLink1/4DCGI/Web_View/mono/1,EDQM Knowledge Database
+source,source,EudraGMDP GMP-Zertifikate,"Suchformular wird abgeschickt, liefert in dieser Umgebung aber keine Ergebnisse (auch exakter Name/Platzhalter); keine Wirkstoffsuche vorhanden",eudragmdp.ema.europa.eu – Suche nach Land/Datum testen oder EMA um Datenexport bitten,EudraGMDP
 source,source,European Patent Register,"HTTP 403, CAPTCHA/Bot-Challenge erkannt – wird nicht umgangen",https://register.epo.org/application?number=EP00916888&tab=main,European Patent Register
 source,source,FDA Data Dashboard,HTTP 403: Zugriff verweigert,https://datadashboard.fda.gov/oii/cd/inspections.htm,FDA Data Dashboard
 source,source,FR Infogreffe / RNE,Host nicht freigegeben,data.inpi.fr / www.infogreffe.fr,FR Infogreffe / RNE

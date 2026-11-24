@@ -1,11 +1,11 @@
 [
   {
     "inn": "amlodipine",
-    "summary": "Amlodipine: 22 API-Hersteller mit aktivem US-DMF (38 gesamt), CEP: keine Daten; zugelassen in 33 Ländern plus EU-zentral (3639 Produkte, 497 MAHs); 176 Batch-Release-Firmen aus 969 Leaflets; US-Patente (Formulierung/Verwendung) bis 2041-02-24 (Patente auf Kombinationspräparaten bis 2038-06-14, separat geführt), EU-Patent/SPC: keine Daten; 14 offene Engpassmeldungen (EU zentral + ES); EU-DMF-Hinweis: noch keine Datengrundlage."
+    "summary": "Amlodipine: 22 API-Hersteller mit aktivem US-DMF (38 gesamt), CEP: keine Daten; zugelassen in 33 Ländern plus EU-zentral (3639 Produkte, 497 MAHs); 176 Batch-Release-Firmen aus 1033 Leaflets; US-Patente (Formulierung/Verwendung) bis 2041-02-24 (Patente auf Kombinationspräparaten bis 2038-06-14, separat geführt), EU-Patent/SPC: keine Daten; 14 offene Engpassmeldungen (EU zentral + ES); EU-DMF-Hinweis: noch keine Datengrundlage."
   },
   {
     "inn": "apixaban",
-    "summary": "Apixaban: 53 API-Hersteller mit aktivem US-DMF (58 gesamt), CEP: keine Daten; zugelassen in 33 Ländern plus EU-zentral (1024 Produkte, 320 MAHs); 81 Batch-Release-Firmen aus 197 Leaflets; US-Substanzpatent bis 2026-11-21 (abgelaufen), EU-Patent/SPC: keine Daten; 0 offene Engpassmeldungen (EU zentral + ES); EU-DMF-Hinweis: noch keine Datengrundlage."
+    "summary": "Apixaban: 53 API-Hersteller mit aktivem US-DMF (58 gesamt), CEP: keine Daten; zugelassen in 33 Ländern plus EU-zentral (1024 Produkte, 320 MAHs); 81 Batch-Release-Firmen aus 214 Leaflets; US-Substanzpatent bis 2026-11-21 (abgelaufen), EU-Patent/SPC: keine Daten; 0 offene Engpassmeldungen (EU zentral + ES); EU-DMF-Hinweis: noch keine Datengrundlage."
   },
   {
     "inn": "atorvastatin",
@@ -17,11 +17,11 @@
   },
   {
     "inn": "edoxaban",
-    "summary": "Edoxaban: 24 API-Hersteller mit aktivem US-DMF (24 gesamt), CEP: keine Daten; zugelassen in 32 Ländern plus EU-zentral (425 Produkte, 119 MAHs); 37 Batch-Release-Firmen aus 123 Leaflets; US-Substanzpatent bis 2027-04-18, EU-Patent/SPC: keine Daten; 0 offene Engpassmeldungen (EU zentral + ES); EU-DMF-Hinweis: noch keine Datengrundlage."
+    "summary": "Edoxaban: 24 API-Hersteller mit aktivem US-DMF (24 gesamt), CEP: keine Daten; zugelassen in 32 Ländern plus EU-zentral (425 Produkte, 119 MAHs); 37 Batch-Release-Firmen aus 135 Leaflets; US-Substanzpatent bis 2027-04-18, EU-Patent/SPC: keine Daten; 0 offene Engpassmeldungen (EU zentral + ES); EU-DMF-Hinweis: noch keine Datengrundlage."
   },
   {
     "inn": "empagliflozin",
-    "summary": "Empagliflozin: 45 API-Hersteller mit aktivem US-DMF (45 gesamt), CEP: keine Daten; zugelassen in 33 Ländern plus EU-zentral (327 Produkte, 67 MAHs); 31 Batch-Release-Firmen aus 53 Leaflets; US-Substanzpatent bis 2028-08-01 (Patente auf Kombinationspräparaten bis 2037-12-08, separat geführt), EU-Patent/SPC: keine Daten; 0 offene Engpassmeldungen (EU zentral + ES); EU-DMF-Hinweis: noch keine Datengrundlage."
+    "summary": "Empagliflozin: 45 API-Hersteller mit aktivem US-DMF (45 gesamt), CEP: keine Daten; zugelassen in 33 Ländern plus EU-zentral (327 Produkte, 67 MAHs); 31 Batch-Release-Firmen aus 69 Leaflets; US-Substanzpatent bis 2028-08-01 (Patente auf Kombinationspräparaten bis 2037-12-08, separat geführt), EU-Patent/SPC: keine Daten; 0 offene Engpassmeldungen (EU zentral + ES); EU-DMF-Hinweis: noch keine Datengrundlage."
   },
   {
     "inn": "florfenicol",
@@ -33,7 +33,7 @@
   },
   {
     "inn": "hydroxycarbamide",
-    "summary": "Hydroxycarbamide: 3 API-Hersteller mit aktivem US-DMF (10 gesamt), CEP: keine Daten; zugelassen in 33 Ländern plus EU-zentral (129 Produkte, 45 MAHs); 11 Batch-Release-Firmen aus 16 Leaflets; US-Patente (Formulierung/Verwendung) bis 2041-12-23, EU-Patent/SPC: keine Daten; 0 offene Engpassmeldungen (EU zentral + ES); EU-DMF-Hinweis: noch keine Datengrundlage."
+    "summary": "Hydroxycarbamide: 3 API-Hersteller mit aktivem US-DMF (10 gesamt), CEP: keine Daten; zugelassen in 33 Ländern plus EU-zentral (129 Produkte, 45 MAHs); 11 Batch-Release-Firmen aus 22 Leaflets; US-Patente (Formulierung/Verwendung) bis 2041-12-23, EU-Patent/SPC: keine Daten; 0 offene Engpassmeldungen (EU zentral + ES); EU-DMF-Hinweis: noch keine Datengrundlage."
   },
   {
     "inn": "levothyroxine",
@@ -45,11 +45,11 @@
   },
   {
     "inn": "metformin",
-    "summary": "Metformin: 24 API-Hersteller mit aktivem US-DMF (38 gesamt), CEP: keine Daten; zugelassen in 33 Ländern plus EU-zentral (2990 Produkte, 516 MAHs); 147 Batch-Release-Firmen aus 528 Leaflets; US-Patente (Formulierung/Verwendung) bis 2035-05-01 (Patente auf Kombinationspräparaten bis 2037-12-08, separat geführt), EU-Patent/SPC: keine Daten; 5 offene Engpassmeldungen (EU zentral + ES); EU-DMF-Hinweis: noch keine Datengrundlage."
+    "summary": "Metformin: 24 API-Hersteller mit aktivem US-DMF (38 gesamt), CEP: keine Daten; zugelassen in 33 Ländern plus EU-zentral (2990 Produkte, 516 MAHs); 147 Batch-Release-Firmen aus 674 Leaflets; US-Patente (Formulierung/Verwendung) bis 2035-05-01 (Patente auf Kombinationspräparaten bis 2037-12-08, separat geführt), EU-Patent/SPC: keine Daten; 5 offene Engpassmeldungen (EU zentral + ES); EU-DMF-Hinweis: noch keine Datengrundlage."
   },
   {
     "inn": "mexiletine",
-    "summary": "Mexiletine: 7 API-Hersteller mit aktivem US-DMF (10 gesamt), CEP: keine Daten; zugelassen in 12 Ländern plus EU-zentral (61 Produkte, 20 MAHs); 3 Batch-Release-Firmen aus 6 Leaflets; kein US-Patent auf Monopräparaten im Orange Book, EU-Patent/SPC: keine Daten; 0 offene Engpassmeldungen (EU zentral + ES); EU-DMF-Hinweis: noch keine Datengrundlage."
+    "summary": "Mexiletine: 7 API-Hersteller mit aktivem US-DMF (10 gesamt), CEP: keine Daten; zugelassen in 12 Ländern plus EU-zentral (61 Produkte, 20 MAHs); 3 Batch-Release-Firmen aus 10 Leaflets; kein US-Patent auf Monopräparaten im Orange Book, EU-Patent/SPC: keine Daten; 0 offene Engpassmeldungen (EU zentral + ES); EU-DMF-Hinweis: noch keine Datengrundlage."
   },
   {
     "inn": "omeprazole",
@@ -65,11 +65,11 @@
   },
   {
     "inn": "sacubitril",
-    "summary": "Sacubitril: 30 API-Hersteller mit aktivem US-DMF (31 gesamt), CEP: keine Daten; zugelassen in 33 Ländern plus EU-zentral (516 Produkte, 106 MAHs); 28 Batch-Release-Firmen aus 166 Leaflets; kein US-Patent auf Monopräparaten im Orange Book (Patente auf Kombinationspräparaten bis 2037-02-02, separat geführt), EU-Patent/SPC: keine Daten; 0 offene Engpassmeldungen (EU zentral + ES); EU-DMF-Hinweis: noch keine Datengrundlage."
+    "summary": "Sacubitril: 30 API-Hersteller mit aktivem US-DMF (31 gesamt), CEP: keine Daten; zugelassen in 33 Ländern plus EU-zentral (516 Produkte, 106 MAHs); 28 Batch-Release-Firmen aus 201 Leaflets; kein US-Patent auf Monopräparaten im Orange Book (Patente auf Kombinationspräparaten bis 2037-02-02, separat geführt), EU-Patent/SPC: keine Daten; 0 offene Engpassmeldungen (EU zentral + ES); EU-DMF-Hinweis: noch keine Datengrundlage."
   },
   {
     "inn": "semaglutide",
-    "summary": "Semaglutide: 63 API-Hersteller mit aktivem US-DMF (63 gesamt), 3 bestätigte API-Hersteller aus EMA Annex IIA, CEP: keine Daten; zugelassen in 9 Ländern plus EU-zentral (195 Produkte, 7 MAHs); 2 Batch-Release-Firmen aus 38 Leaflets; US-Substanzpatent bis 2034-05-02, EU-Patent/SPC: keine Daten; 2 offene Engpassmeldungen (EU zentral + ES); EU-DMF-Hinweis: noch keine Datengrundlage."
+    "summary": "Semaglutide: 63 API-Hersteller mit aktivem US-DMF (63 gesamt), 3 bestätigte API-Hersteller aus EMA Annex IIA, CEP: keine Daten; zugelassen in 9 Ländern plus EU-zentral (195 Produkte, 7 MAHs); 2 Batch-Release-Firmen aus 127 Leaflets; US-Substanzpatent bis 2034-05-02, EU-Patent/SPC: keine Daten; 2 offene Engpassmeldungen (EU zentral + ES); EU-DMF-Hinweis: noch keine Datengrundlage."
   },
   {
     "inn": "toltrazuril",

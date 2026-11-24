@@ -20,19 +20,22 @@ def run():
     with connect() as conn:
         conn.execute("DELETE FROM supply_link WHERE status='official'")
         conn.execute("DELETE FROM evidence WHERE kind='leaflet_manufacturer'")
+        conn.execute("DELETE FROM supply_link WHERE status='derived' AND link_type IN ('fdf_site_to_product','api_manufacturer_to_product')")
         rows = conn.execute("""SELECT pm.row_id, pm.product_id, pm.company_id, pm.role, pm.evidence_quote, pm.source_url,
-                                      pm.source_name, pm.retrieved_at, pm.raw_id
+                                      pm.source_name, pm.retrieved_at, pm.raw_id, pm.status
                                FROM product_manufacturer pm WHERE pm.valid_to IS NULL AND pm.company_id IS NOT NULL""").fetchall()
         n = {"api_manufacturer": 0, "batch_release": 0}
-        for rid, pid, cid, role, quote, url, src, ts, raw in rows:
+        for rid, pid, cid, role, quote, url, src, ts, raw, pm_status in rows:
             ev = conn.execute("""INSERT INTO evidence (kind, entity_type, entity_ref, evidence_quote, source_url, source_name,
                                  retrieved_at, status, raw_id) VALUES ('leaflet_manufacturer','product_manufacturer',%s,%s,%s,%s,%s,
                                  'official',%s) RETURNING evidence_id""", (rid, quote, url, src, ts, raw)).fetchone()[0]
             ltype = "api_manufacturer_to_product" if role == "api_manufacturer" else "fdf_site_to_product"
             conn.execute("""INSERT INTO supply_link (from_type, from_id, to_type, to_id, link_type, confidence, rationale,
                             evidence_ids, source_url, source_name, retrieved_at, status)
-                            VALUES ('company',%s,'product',%s,%s,'confirmed',%s,%s,%s,%s,%s,'official')""",
-                         (cid, pid, ltype, "Hersteller und Produkt im selben Primärdokument genannt", [ev], url, src, now()))
+                            VALUES ('company',%s,'product',%s,%s,%s,%s,%s,%s,%s,%s,%s)""",
+                         (cid, pid, ltype, "confirmed" if pm_status == "official" else "derived",
+                          "Hersteller und Produkt im selben Primärdokument genannt" if pm_status == "official"
+                          else f"abgeleitet: {src}", [ev], url, src, now(), "official" if pm_status == "official" else "derived"))
             n[role] = n.get(role, 0) + 1
         # open API -> FDF links (chemical APIs without primary evidence)
         for aid, inn in conn.execute("""SELECT a.api_id, a.inn FROM api a WHERE a.parent_api_id IS NULL AND a.valid_to IS NULL

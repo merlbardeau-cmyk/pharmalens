@@ -31,6 +31,7 @@ def run():
     with connect() as conn:
         groups = conn.execute("""SELECT pm.product_id, pm.role, pm.source_name, pm.source_url, pm.leaflet_url, max(pm.raw_id)
                                  FROM product_manufacturer pm WHERE pm.valid_to IS NULL
+                                   AND pm.source_name NOT LIKE 'EMA Annex IIA via %%' 
                                  GROUP BY 1,2,3,4,5""").fetchall()
         for pid, role, src, url, leaflet, raw_id in groups:
             path = conn.execute("SELECT path FROM raw_object WHERE raw_id=%s", (raw_id,)).fetchone()[0]
