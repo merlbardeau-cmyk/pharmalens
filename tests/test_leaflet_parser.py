@@ -70,3 +70,17 @@ def test_es_contact_lines_and_split_stop_heading():
 def test_inline_country_variants():
     assert country_of(["LABORATORIOS NORMON, S.A.", "Ronda de Valdecarrizo, 6 – 28760 Tres Cantos – Madrid (ESPAÑA)"])[0] == "ES"
     assert country_of(["ALKALOID-INT D.O.O.", "1231 LJUBLJANA", "republique de slovenie"])[0] == "SI"
+
+
+def test_junk_blocks_rejected():
+    assert parse(["Fabricant", "N", "A,", "E", "S", "P", "A", "G", "N", "E"]) == []
+    assert parse(["Responsable de la fabricación", "Este medicamento", "está autorizado en los estados miembros"]) == []
+
+
+def test_line_ending_with_country_closes_site_but_not_company_line():
+    lines = ["Responsable de la fabricación", "LABORATORI FUNDACIÓ DAU", "C/ C, 12-14 Pol. Ind. Zona Franca, Barcelona,",
+             "08040 Barcelona, España", "Synoptis Industrial Sp. z o.o.", "ul. Rabowicka 15", "62-020 Swarzedz", "Polonia",
+             "Boehringer Ingelheim France", "100-104 avenue de France", "75013 Paris", "Francia"]
+    s = parse(lines)
+    assert [(x["company"], x["country"]) for x in s] == [
+        ("LABORATORI FUNDACIÓ DAU", "ES"), ("Synoptis Industrial Sp. z o.o.", "PL"), ("Boehringer Ingelheim France", "FR")]

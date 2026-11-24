@@ -21,7 +21,7 @@ START = [
 COMBINED = re.compile(r"^Titular de la autorizaci[oó]n de comercializaci[oó]n y responsable de la fabricaci[oó]n\s*:?$", re.I)
 STOP = re.compile(
     r"^(Pueden solicitar|Representante local|Fecha de la [uú]ltima revisi[oó]n|Este medicamento est[aá] autorizado|"
-    r"La informaci[oó]n detallada|Otras fuentes|Puede solicitar|Fecha de la|Este prospecto|Fecha de [uú]ltima|"
+    r"La informaci[oó]n detallada|Otras fuentes|Puede solicitar|Fecha de la|Este prospecto|Este medicamento|Otras presentaciones|Fecha de [uú]ltima|"
     r"Noms du m[ée]dicament|Ce m[ée]dicament est autoris|La derni[eè]re date|Date d.approbation|Autres sources|"
     r"Repr[ée]sentant|Pour toute information|Conformément à la réglementation|"
     r"B\.$|C\.$|B\. CONDITIONS|B\.\s+CONDITIONS|CONDITIONS OR RESTRICTIONS|The printed package leaflet|Name and address of the manufacturer.* biological|C\. OTHER CONDITIONS|"
@@ -33,6 +33,22 @@ FORM_HEADER = re.compile(r"^(film-coated |prolonged-release |gastro-resistant |h
 CONTACT = re.compile(r"@|\b(tel|t[eé]l[eé]phone|tfno|phone|fax|e-?mail|correo)\b\.?\s*:?|https?://|www\.", re.I)
 SEP = re.compile(r"^(o|ó|ou|or|oder|y|et|and)(\s*\(.{0,80}\))?\s*:?$", re.I)
 MAX_LINES = 120
+
+
+STREET = re.compile(r"\b(avenue|av\.|avda|avd\.|rue|calle|c/|via|viale|street|st\.|road|rd\.|strasse|str\.|stra[sß]e|ul\.|ulica|"
+                    r"boulevard|bd|plaza|place|camino|carretera|ctra|pol[ií]gono|route|chemin|allee|weg)\b", re.I)
+
+
+def closes_site(ln: str) -> bool:
+    """line ends a site address: '..., España' / '... (ESPAÑA)' / '62-020 Swarzedz Polonia' - not 'avenue de France'."""
+    t = norm_text(ln).strip(" .;:")
+    m = re.search(r"[,–\-(]\s*([a-z .'-]+?)\)?$", t)
+    if m and m.group(1).strip() in NAME_TO_ISO:
+        return True
+    if re.search(r"\b\d{4,5}\b|\b\d{2}-\d{3}\b", t) and not STREET.search(t):
+        words = t.split()
+        return any(len(words) > k and " ".join(words[-k:]) in NAME_TO_ISO and len(" ".join(words[-k:])) > 3 for k in (1, 2, 3))
+    return False
 
 
 def html_to_lines(text: str) -> list[str]:
@@ -81,7 +97,8 @@ def parse(lines: list[str], home_country: str | None = None) -> list[dict]:
         cur = []
         for ln in b:
             cur.append(ln)
-            if norm_text(ln).strip(" .,;:()") in NAME_TO_ISO:
+            ends_with_country = norm_text(ln).strip(" .,;:()") in NAME_TO_ISO or (len(cur) >= 2 and closes_site(ln))
+            if ends_with_country:
                 split.append(cur)
                 cur = []
         if cur:
@@ -92,7 +109,7 @@ def parse(lines: list[str], home_country: str | None = None) -> list[dict]:
         b = [x for x in b if not re.match(r"^\(?(s[oó]lo|only|uniquement|nur)\b.*\)?$", x, re.I)]
         while b and FORM_HEADER.match(b[0]):  # dosage-form sub-headings in Annex IIA are not companies
             b = b[1:]
-        if not b or len(b) < 2 or not re.match(r"^[\w\"“(]", b[0]) or b[0][:1].islower():
+        if not b or len(b) < 2 or len(b[0]) < 3 or not re.match(r"^[\w\"“(]", b[0]) or b[0][:1].islower():
             continue  # a site needs a company line plus at least one address line
         if not b:
             continue

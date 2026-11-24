@@ -1,0 +1,20 @@
+{
+  "product_manufacturer": {
+    "sampled": 50,
+    "confirmed": 50,
+    "error_rate": 0.0,
+    "failures": []
+  },
+  "product": {
+    "sampled": 50,
+    "confirmed": 50,
+    "error_rate": 0.0,
+    "failures": []
+  },
+  "api_certificate": {
+    "sampled": 50,
+    "confirmed": 50,
+    "error_rate": 0.0,
+    "failures": []
+  }
+}

@@ -57,18 +57,26 @@ def summaries(conn):
                FROM product p JOIN product_api pa USING (product_id) WHERE p.valid_to IS NULL GROUP BY 1),
       site AS (SELECT pa.api_id, count(DISTINCT pm.company_id) n, count(DISTINCT pm.product_id) prods
                FROM product_manufacturer pm JOIN product_api pa USING (product_id) WHERE pm.role='batch_release' AND pm.valid_to IS NULL GROUP BY 1),
-      pat AS (SELECT api_id, max(expiry) FILTER (WHERE patent_type='substance') sub, max(expiry) FILTER (WHERE patent_type NOT LIKE '%%combination%%') anyp
+      pat AS (SELECT api_id, max(expiry) FILTER (WHERE patent_type='substance') sub, max(expiry) FILTER (WHERE patent_type NOT LIKE '%%combination%%') anyp,
+              max(expiry) FILTER (WHERE patent_type LIKE '%%combination%%') combo
               FROM patent WHERE jurisdiction='US' AND valid_to IS NULL GROUP BY 1),
       sh AS (SELECT entity_ref api_id, count(*) n FROM event WHERE event_type='shortage' AND valid_to IS NULL
              AND coalesce(detail->>'active','true') <> 'false' AND coalesce(detail->>'state','') <> 'Resolved' GROUP BY 1)
       SELECT a.inn, coalesce(cert.dmf_act,0), coalesce(cert.dmf_all,0), coalesce(cert.who,0), coalesce(bio.n,0), coalesce(prod.n,0),
              coalesce(prod.c,0), coalesce(prod.mah,0), coalesce(prod.central,false), coalesce(site.n,0), coalesce(site.prods,0),
-             pat.sub, pat.anyp, coalesce(sh.n,0)
+             pat.sub, pat.anyp, pat.combo, coalesce(sh.n,0)
       FROM a LEFT JOIN cert USING (api_id) LEFT JOIN bio USING (api_id) LEFT JOIN prod USING (api_id) LEFT JOIN site USING (api_id)
       LEFT JOIN pat USING (api_id) LEFT JOIN sh USING (api_id) ORDER BY a.inn""").fetchall()
     out = []
-    for inn, dmf_act, dmf_all, who, bio, n, c, mah, central, sites, sprods, sub, anyp, sh in rows:
-        us_pat = f"US-Substanzpatent bis {sub}" if sub else (f"US-Patente (Formulierung/Verwendung) bis {anyp}" if anyp else "kein US-Patent im Orange Book")
+    import datetime as _dt
+    today = _dt.date.today()
+
+    def d(x):
+        return f"{x} (abgelaufen)" if x and x < today else str(x)
+    for inn, dmf_act, dmf_all, who, bio, n, c, mah, central, sites, sprods, sub, anyp, combo, sh in rows:
+        us_pat = f"US-Substanzpatent bis {d(sub)}" if sub else (f"US-Patente (Formulierung/Verwendung) bis {d(anyp)}" if anyp else "kein US-Patent auf Monopräparaten im Orange Book")
+        if combo:
+            us_pat += f" (Patente auf Kombinationspräparaten bis {d(combo)}, separat geführt)"
         s = (f"{inn.capitalize()}: {dmf_act} API-Hersteller mit aktivem US-DMF ({dmf_all} gesamt)"
              f"{f', {who} WHO-PQ' if who else ''}{f', {bio} bestätigte API-Hersteller aus EMA Annex IIA' if bio else ''}, CEP: keine Daten; "
              f"zugelassen in {c} Ländern{' plus EU-zentral' if central else ''} ({n} Produkte, {mah} MAHs); "

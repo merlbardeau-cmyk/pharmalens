@@ -1,0 +1,610 @@
+inn,cert_type,number,cert_status,issue_date,holder_raw,holder_country,country_basis,substance_raw,status,source_url
+amlodipine,US_DMF,15127,inactive,2000-11-02,ESTEVE QUIMICA SA,ES,GLEIF legal address,AMLODIPINE BESILATE,official,https://www.fda.gov/media/192069/download?attachment
+amlodipine,US_DMF,15746,inactive,2001-12-03,DR REDDYS LABORATORIES LTD,,,AMLODIPINE MALEATE,official,https://www.fda.gov/media/192069/download?attachment
+amlodipine,US_DMF,15777,active,2001-12-21,TAPI NL BV,,,AMLODIPINE BESYLATE,official,https://www.fda.gov/media/192069/download?attachment
+amlodipine,US_DMF,16473,active,2003-03-19,DR REDDYS LABORATORIES LTD,,,AMLODIPINE BESILATE USP,official,https://www.fda.gov/media/192069/download?attachment
+amlodipine,US_DMF,16478,inactive,2003-03-18,HETERO DRUGS LTD,,,AMLODIPINE BESILATE,official,https://www.fda.gov/media/192069/download?attachment
+amlodipine,US_DMF,16509,active,2003-04-01,UNICHEM LABORATORIES LTD,,,AMLODIPINE BESILATE USP,official,https://www.fda.gov/media/192069/download?attachment
+amlodipine,US_DMF,16552,inactive,2003-04-28,MATRIX LABORATORIES LTD,,,AMLODIPINE MESYLATE,official,https://www.fda.gov/media/192069/download?attachment
+amlodipine,US_DMF,16596,inactive,2003-05-19,MATRIX LABORATORIES LTD,,,AMLODIPINE,official,https://www.fda.gov/media/192069/download?attachment
+amlodipine,US_DMF,16887,inactive,2003-10-02,LEK PHARMACEUTICALS DD,SI,derived: alle Leaflet-Standorte dieser Firma in einem Land,AMLODIPINE BESYLATE,official,https://www.fda.gov/media/192069/download?attachment
+amlodipine,US_DMF,16911,active,2003-09-13,CADILA PHARMACEUTICALS LTD,,,AMLODIPINE BESYLATE USP,official,https://www.fda.gov/media/192069/download?attachment
+amlodipine,US_DMF,17032,active,2003-12-17,CIPLA LTD,,,AMLODIPINE BESYLATE USP,official,https://www.fda.gov/media/192069/download?attachment
+amlodipine,US_DMF,17070,active,2003-12-29,MOEHS IBERICA SL,ES,GLEIF legal address,AMLODIPINE BESILATE ,official,https://www.fda.gov/media/192069/download?attachment
+amlodipine,US_DMF,17105,inactive,2004-01-14,MOEHS IBERICA SL,ES,GLEIF legal address,AMLODIPINE BASE,official,https://www.fda.gov/media/192069/download?attachment
+amlodipine,US_DMF,17107,inactive,2004-01-21,CIPLA LTD,,,AMLODIPINE MESYLATE MONOHYDRATE,official,https://www.fda.gov/media/192069/download?attachment
+amlodipine,US_DMF,17130,inactive,2004-01-23,XIAN LIBANG PHARMACEUTICAL CO LTD,,,AMLODIPINE MALEATE AND BESYLATE (NON-STERILE BULK DRUG SUBSTANCE),official,https://www.fda.gov/media/192069/download?attachment
+amlodipine,US_DMF,17211,inactive,2004-03-04,MYLAN LABORATORIES LTD,,,AMLODIPINE BESYLATE USP (ADP),official,https://www.fda.gov/media/192069/download?attachment
+amlodipine,US_DMF,17584,inactive,2004-08-02,GEDEON RICHTER LTD,,,AMLODIPINE BESYLATE,official,https://www.fda.gov/media/192069/download?attachment
+amlodipine,US_DMF,18503,inactive,2005-07-12,MYLAN LABORATORIES LTD,,,AMLODIPINE BESILATE USP (AYP),official,https://www.fda.gov/media/192069/download?attachment
+amlodipine,US_DMF,18787,active,2005-09-19,HETERO DRUGS LTD,,,AMLODIPINE BESYLATE,official,https://www.fda.gov/media/192069/download?attachment
+amlodipine,US_DMF,18827,active,2005-09-30,ZYDUS LIFESCIENCES LTD,,,AMLODIPINE BESILATE USP,official,https://www.fda.gov/media/192069/download?attachment
+amlodipine,US_DMF,18839,active,2005-10-05,LUPIN LTD,,,AMLODIPINE BESILATE USP,official,https://www.fda.gov/media/192069/download?attachment
+amlodipine,US_DMF,18872,inactive,2005-10-11,SYNTHON BV,NL,GLEIF legal address,AMLODIPINE BESYLATE MONOHYDRATE,official,https://www.fda.gov/media/192069/download?attachment
+amlodipine,US_DMF,18965,active,2005-11-09,APITORIA PHARMA PRIVATE LTD,,,AMLODIPINE BESYLATE USP,official,https://www.fda.gov/media/192069/download?attachment
+amlodipine,US_DMF,19043,inactive,2005-12-01,SECOND PHARMA CO LTD,,,AMLODIPINE BESILATE ,official,https://www.fda.gov/media/192069/download?attachment
+amlodipine,US_DMF,19582,active,2006-07-07,ORBION PHARMACEUTICALS PRIVATE LTD,,,AMLODIPINE BESYLATE,official,https://www.fda.gov/media/192069/download?attachment
+amlodipine,US_DMF,19591,active,2006-07-11,GLOCHEM INDUSTRIES PRIVATE LTD,,,AMLODIPINE BESYLATE ,official,https://www.fda.gov/media/192069/download?attachment
+amlodipine,US_DMF,20112,active,2007-01-03,MATRIX PHARMACORP PRIVATE LTD,,,AMLODIPINE BESYLATE USP,official,https://www.fda.gov/media/192069/download?attachment
+amlodipine,US_DMF,20277,inactive,2007-02-09,EOS ECZACIBASI OZGUN KIMYASAL URUNLER SANAYI VE TICARET AS,,,AMLODIPINE BESYLATE,official,https://www.fda.gov/media/192069/download?attachment
+amlodipine,US_DMF,20916,inactive,2007-10-01,SMRUTHI ORGANICS LTD,IN,GLEIF legal address,AMLODIPINE BESILATE USP,official,https://www.fda.gov/media/192069/download?attachment
+amlodipine,US_DMF,21256,inactive,2008-01-16,CHANGZHOU RUIMING PHARMACEUTICAL CO LTD,,,AMLODIPINE BESYLATE (NON-STERILE DRUG SUBSTANCE),official,https://www.fda.gov/media/192069/download?attachment
+amlodipine,US_DMF,21951,inactive,2008-09-01,ALP PHARM BEIJING CO LTD,,,"AMLODIPINE BESYLATE (DRUG SUBSTANCE, NON-STERILE)",official,https://www.fda.gov/media/192069/download?attachment
+amlodipine,US_DMF,22342,inactive,2008-12-17,ESTEVE QUIMICA SA,ES,GLEIF legal address,AMLODIPINE BESYLATE,official,https://www.fda.gov/media/192069/download?attachment
+amlodipine,US_DMF,22622,active,2009-03-13,SRINI PHARMACEUTICALS PRIVATE LTD,,,AMLODIPINE BESYLATE USP,official,https://www.fda.gov/media/192069/download?attachment
+amlodipine,US_DMF,22930,active,2009-07-08,ZYDUS LIFESCIENCES LTD,,,AMLODIPINE BESYLATE USP,official,https://www.fda.gov/media/192069/download?attachment
+amlodipine,US_DMF,22964,active,2009-07-21,NOVARTIS PHARMACEUTICALS CORP,,,AMLODIPINE BESYLATE (PROCESS 2),official,https://www.fda.gov/media/192069/download?attachment
+amlodipine,US_DMF,23589,active,2010-07-30,IPCA LABORATORIES LTD,,,AMLODIPINE BESYLATE USP,official,https://www.fda.gov/media/192069/download?attachment
+amlodipine,US_DMF,23632,active,2010-05-21,ARCH PHARMALABS LTD,,,AMLODIPINE BESYLATE USP,official,https://www.fda.gov/media/192069/download?attachment
+amlodipine,US_DMF,24174,inactive,2010-08-07,SMRUTHI ORGANICS LTD,IN,GLEIF legal address,S (-) AMLODIPINE BESILATE USP,official,https://www.fda.gov/media/192069/download?attachment
+amlodipine,US_DMF,24942,inactive,2011-05-17,GLOCHEM INDUSTRIES LTD,,,AMLODIPINE BESILATE,official,https://www.fda.gov/media/192069/download?attachment
+amlodipine,US_DMF,26132,inactive,2012-05-25,SHANDONG XINHUA PHARMACEUTICAL CO LTD,,,AMLODIPINE BESYLATE,official,https://www.fda.gov/media/192069/download?attachment
+amlodipine,US_DMF,26543,active,2012-10-11,GLOCHEM INDUSTRIES PRIVATE LTD,,,PHTHALIMIDO AMLODIPINE,official,https://www.fda.gov/media/192069/download?attachment
+amlodipine,US_DMF,27726,active,2014-01-31,CADILA PHARMACEUTICALS LTD,,,PHTHALOYL AMLODIPINE,official,https://www.fda.gov/media/192069/download?attachment
+amlodipine,US_DMF,27810,active,2013-12-16,GLOCHEM INDUSTRIES PRIVATE LTD,,,AMLODIPINE BESYLATE (PROCESS 1) ,official,https://www.fda.gov/media/192069/download?attachment
+amlodipine,US_DMF,27964,inactive,2014-01-31,EGIS PHARMACEUTICALS PRIVATE LTD CO,,,AMLODIPINE BESYLATE API,official,https://www.fda.gov/media/192069/download?attachment
+amlodipine,US_DMF,28351,inactive,2014-06-02,TEVA PHARMACEUTICAL INDUSTRIES LTD,IL,GLEIF legal address,AMLODIPINE BESYLATE (PROCESS II),official,https://www.fda.gov/media/192069/download?attachment
+amlodipine,US_DMF,28599,active,2014-09-17,ZYDUS LIFESCIENCES LTD,,,PHTHALOYL AMLODIPINE,official,https://www.fda.gov/media/192069/download?attachment
+amlodipine,US_DMF,28886,active,2015-02-16,ZHEJIANG HUAHAI PHARMACEUTICAL CO LTD,,,AMLODIPINE BESYLATE USP,official,https://www.fda.gov/media/192069/download?attachment
+amlodipine,US_DMF,29703,active,2015-09-28,ALKEM LABORATORIES LTD,,,AMLODIPINE BESYLATE USP,official,https://www.fda.gov/media/192069/download?attachment
+amlodipine,US_DMF,30717,inactive,2016-07-16,HETERO DRUGS LTD,,,AMLODIPINE BESYLATE (PROCESS-II),official,https://www.fda.gov/media/192069/download?attachment
+amlodipine,US_DMF,31674,active,2017-04-24,ARENE LIFE SCIENCES PRIVATE LTD,,,PHTHALOYL AMLODIPINE,official,https://www.fda.gov/media/192069/download?attachment
+amlodipine,US_DMF,33873,inactive,2019-05-23,ARENE LIFE SCIENCES PRIVATE LTD,,,AMLODIPINE BESYLATE USP,official,https://www.fda.gov/media/192069/download?attachment
+amlodipine,US_DMF,34065,active,2019-08-14,ARENE LIFE SCIENCES PRIVATE LTD,,,PHTHALOYL AMLODIPINE (PROCESS-I),official,https://www.fda.gov/media/192069/download?attachment
+amlodipine,US_DMF,34318,active,2019-11-22,AURORE LIFE SCIENCES PRIVATE LTD,,,AMLODIPINE BESYLATE USP,official,https://www.fda.gov/media/192069/download?attachment
+amlodipine,US_DMF,35610,active,2021-03-31,ALKEM LABORATORIES LTD,,,AMLODIPINE BENZOATE,official,https://www.fda.gov/media/192069/download?attachment
+amlodipine,US_DMF,35997,active,2021-06-24,ARENE LIFE SCIENCES PRIVATE LTD,,,AMLODIPINE BESYLATE USP (PROCESS-I),official,https://www.fda.gov/media/192069/download?attachment
+amlodipine,US_DMF,40438,active,2024-08-29,UNICHEM LABORATORIES LTD,,,AMLODIPINE BESYLATE (ADP PROCESS) USP,official,https://www.fda.gov/media/192069/download?attachment
+amlodipine,US_DMF,43701,active,2026-02-20,LEE PHARMA LTD,,,AMLODIPINE BESYLATE,official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,28009,active,2014-02-26,MSN LABORATORIES PRIVATE LTD,,,"APIXABAN [ROUTE CODE ""AX""]",official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,29660,active,2015-09-30,ALEMBIC PHARMACEUTICALS LTD,,,APIXABAN,official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,29667,active,2015-09-02,ZHEJIANG HUAHAI PHARMACEUTICAL CO LTD,,,APIXABAN,official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,29707,active,2015-09-22,DR REDDYS LABORATORIES LTD,,,APIXABAN,official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,30060,active,2015-12-31,ALIVUS LIFE SCIENCES LTD,,,APIXABAN,official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,30336,active,2016-03-14,DELMAR CHEMICALS INC,CA,GLEIF legal address,APIXABAN,official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,30440,inactive,2016-04-01,SCINOPHARM TAIWAN LTD,,,APIXABAN,official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,30461,active,2016-05-18,HONOUR LAB LTD,,,APIXABAN,official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,30479,active,2016-06-22,TAPI NL BV,,,APIXABAN,official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,30499,inactive,2016-06-20,APOTEX PHARMACHEM INDIA PVT LTD,,,APIXABAN,official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,30613,active,2016-07-20,INDOCO REMEDIES LTD,,,APIXABAN,official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,30619,active,2016-08-12,MICRO LABS LTD,,,APIXABAN,official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,30630,active,2016-07-06,ZYDUS LIFESCIENCES LTD,,,APIXABAN,official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,30635,inactive,2016-07-29,WATSON PHARMA PRIVATE LTD,,,APIXABAN,official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,30646,active,2016-06-30,MEDICHEM MANUFACTURING (MALTA) LTD,,,APIXABAN,official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,30653,inactive,2016-06-28,SINTENOVO SA DE CV,,,APIXABAN,official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,30704,active,2016-07-12,APITORIA PHARMA PRIVATE LTD,,,APIXABAN,official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,30774,active,2016-08-10,SIGMAPHARM LABORATORIES LLC,,,APIXABAN AMORPHOUS (6.58%),official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,30788,active,2016-09-23,SUN PHARMACEUTICAL INDUSTRIES LTD,,,APIXABAN ,official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,30845,active,2016-09-30,NATCO PHARMA LTD,,,APIXABAN,official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,30874,active,2016-08-31,RUYUAN HEC PHARM CO LTD,,,APIXABAN NON-STERILE BULK DRUG SUBSTANCE,official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,30929,active,2016-09-16,UNICHEM LABORATORIES LTD,,,APIXABAN,official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,31089,active,2016-10-31,MSN LABORATORIES PRIVATE LTD,,,APIXABAN,official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,31166,active,2016-11-16,ZAKLADY FARMACEUTYCZNE POLPHARMA SA,PL,derived: alle Leaflet-Standorte dieser Firma in einem Land,APIXABAN,official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,32071,active,2017-11-30,JUBILANT BIOSYS LTD,,,APIXABAN,official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,32364,active,2017-12-29,HIKAL LTD,,,APIXABAN ,official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,32422,active,2018-01-31,NEULAND LABORATORIES LTD,,,APIXABAN,official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,32781,active,2018-04-21,JIANGXI SYNERGY PHARMACEUTICAL CO LTD,,,APIXABAN,official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,33298,inactive,2018-10-30,ZHEJIANG HISUN PHARMACEUTICAL CO LTD,,,APIXABAN,official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,33449,active,2018-12-19,MATRIX PHARMACORP PRIVATE LTD,,,APIXABAN,official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,33520,active,2019-01-31,SMS PHARMACEUTICALS LTD,,,APIXABAN,official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,34071,active,2019-09-30,ZHEJIANG LIAOYUAN PHARMACEUTICAL CO LTD,,,APIXABAN,official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,34954,active,2020-06-17,ALP PHARM BEIJING CO LTD,,,APIXABAN,official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,34988,active,2020-07-02,COHANCE LIFESCIENCES LTD,,,APIXABAN,official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,35250,active,2020-10-08,SRINI PHARMACEUTICALS PRIVATE LTD,,,APIXABAN,official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,35388,active,2020-12-31,BIOCON LTD,,,APIXABAN,official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,35518,active,2020-12-30,METROCHEM API PRIVATE LTD,,,APIXABAN,official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,35799,active,2021-03-27,MOREPEN LABORATORIES LTD,,,APIXABAN,official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,35900,active,2021-05-03,MOREPEN LABORATORIES LTD,,,APIXABAN FORM H3,official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,35969,active,2021-07-01,AARTI PHARMALABS LTD,,,APIXABAN,official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,36641,active,2021-12-27,MOREPEN LABORATORIES LTD,,,APIXABAN AMORPHOUS,official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,36651,active,2022-03-31,OPTIMUS DRUGS PRIVATE LTD,,,APIXABAN,official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,37040,active,2022-08-25,LEE PHARMA LTD,,,APIXABAN,official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,37669,active,2022-12-30,SCINOPHARM TAIWAN LTD,,, APIXABAN ,official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,37770,active,2022-12-04,ZHEJIANG SUPOR PHARMACEUTICALS CO LTD,,,APIXABAN,official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,37883,active,2022-12-27,CHANGZHOU PHARMACEUTICAL FACTORY,,,APIXABAN,official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,38168,active,2023-04-10,MACLEODS PHARMACEUTICALS LTD,IN,GLEIF legal address,APIXABAN ,official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,38530,inactive,2023-08-14,SICHUAN QINGMU PHARMACEUTICAL CO LTD,,,APIXABAN UREA,official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,38900,active,2023-09-23,AMOLI ORGANICS (A DIVISION OF UMEDICA LABORATORIES PVT LTD),,,APIXABAN,official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,39338,active,2024-04-02,VIYASH SCIENTIFIC LTD,,,APIXABAN,official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,39444,active,2024-01-31,NEULAND LABORATORIES LTD,,,APIXABAN (PROCESS-II),official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,39604,active,2024-03-04,LINHAI TIANYU PHARMACEUTICAL CO LTD,,,APIXABAN,official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,40249,active,2024-07-20,ZHEJIANG GUOBANG PHARMACEUTICAL CO LTD,,,APIXABAN,official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,40691,active,2024-10-18,CTX LIFESCIENCES PVT LTD,,,APIXABAN (ROUTE-I) ,official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,40833,active,2025-01-05,MEGAFINE PHARMA (P) LTD,,,"APIXABAN (NON-STERILE DRUG SUBSTANCE)
+
+",official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,40964,active,2024-12-30,CIPLA LTD,,,APIXABAN,official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,41163,active,2025-01-02,SHAOXING JINGXIN PHARMACEUTICALS CO LTD,,,APIXABAN,official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,41705,active,2025-04-01,EMNAR PHARMA PRIVATE LTD,,,APIXABAN,official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,41743,active,2025-05-26,RAKSHIT DRUGS PRIVATE LTD,,,APIXABAN,official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,41922,active,2025-06-17,TAPI NL BV,,,"APIXABAN P
+
+",official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,42365,active,2025-08-27,APISYN HEALTHCARE PRIVATE LTD,,,APIXABAN,official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,42920,active,2025-12-08,GOLD PHARMA PRIVATE LIMITED,IN,GLEIF legal address,APIXABAN,official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,43954,active,2026-03-29,MAITHRI LABORATORIES PRIVATE LTD,,,APIXABAN USP,official,https://www.fda.gov/media/192069/download?attachment
+apixaban,US_DMF,44895,active,2026-09-29,GLOBELA INDUSTRIES PRIVATE LTD,,,APIXABAN USP,official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,16098,inactive,2002-08-19,RANBAXY LABORATORIES LTD,,,ATORVASTATIN CALCIUM(AMORPHOUS),official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,17484,inactive,2004-06-21,RANBAXY LABORATORIES LTD,,,ATORVASTATIN MAGNESIUM,official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,18082,active,2005-02-01,LEK PHARMACEUTICALS DD,SI,derived: alle Leaflet-Standorte dieser Firma in einem Land,ATORVASTATIN CALCIUM,official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,18122,inactive,2005-02-23,MOREPEN LABORATORIES LTD,,,ATORVASTATIN CALCIUM,official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,18402,inactive,2005-06-06,MOREPEN LABORATORIES LTD,,,"ATORVASTATIN CALCIUM AMORPHOUS, BULK SUBSTANCE",official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,18468,active,2005-06-29,DR REDDYS LABORATORIES LTD,,,ATORVASTATIN CALCIUM (AMORPHOUS),official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,18822,active,2005-09-30,ZYDUS LIFESCIENCES LTD,,,ATORVASTATIN PROTECTED DIOL,official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,18835,active,2005-10-04,ZHEJIANG LEPU PHARMACEUTICAL CO LTD,,,ATORVASTATIN ATV44 (L1),official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,19880,inactive,2006-10-17,TEVA PHARMACEUTICAL INDUSTRIES LTD,IL,GLEIF legal address,ATORVASTATIN CALCIUM,official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,19997,active,2006-11-27,DR REDDYS LABORATORIES LTD,,,"ATORVASTATIN CALCIUM (FORM P) USP, SEMICRYSTALLINE",official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,20069,inactive,2006-12-20,TEVA PHARMACEUTICAL INDUSTRIES LTD,IL,GLEIF legal address,ATORVASTATIN CALCIUM,official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,20117,inactive,2006-12-15,APOTEX PHARMACHEM INC,,,ATORVASTATIN CALCIUM GRANULATION,official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,20207,inactive,2007-01-16,BIOCON LTD,,,ATORVASTATIN MAGNESIUM,official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,20535,active,2007-05-06,ZHEJIANG NEO DANKONG PHARMACEUTICAL CO LTD,,,ATORVASTATIN SODIUM NON-STERILE BULK DRUG SUBSTANCE,official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,21376,active,2008-08-01,JUBILANT BIOSYS LTD,,,ATORVASTATIN CALCIUM (AMORPHOUS),official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,21477,active,2008-03-25,MATRIX PHARMACORP PRIVATE LTD,,,ATORVASTATIN CALCIUM USP,official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,21574,active,2008-04-29,APOTEX INC,CA,GLEIF legal address,ATORVASTATIN CALCIUM PROPYLENE GLYCOL SOLVATE USP,official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,21850,inactive,2008-08-01,TEVA PHARMACEUTICAL INDUSTRIES LTD,IL,GLEIF legal address,ATORVASTATIN CALCIUM,official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,21858,inactive,2008-07-29,BIOCON LTD,,,ATORVASTATIN CALCIUM AMORPHOUS,official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,21892,active,2008-08-18,MSN PHARMACHEM PRIVATE LTD,,,ATORVASTATIN CALCIUM USP (FORM-I) [ROUTE CODE - AC1],official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,21960,inactive,2008-08-26,CADILA PHARMACEUTICALS LTD,,,ATORVASTATIN CALCIUM,official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,21985,inactive,2008-09-15,VITALIFE LABORATORIES (A DIV ARCH PHARMALABS LTD),,,ATORVASTATIN CALCIUM CRYSTALLINE,official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,22310,active,2008-12-10,SYNTHIMED LABS PRIVATE LTD,,,ATORVASTATIN CALCIUM USP,official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,22585,active,2009-02-26,TORRENT PHARMACEUTICALS LTD,IN,GLEIF legal address,ATORVASTATIN CALCIUM ,official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,22728,inactive,2009-04-15,LUPIN LTD,,,ATORVASTATIN,official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,22785,active,2009-05-18,MSN PHARMACHEM PRIVATE LTD,,,"ATORVASTATIN CALCIUM USP (AMORPHOUS) [ROUTE CODE - ""ACA""]",official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,23001,inactive,2009-07-31,CADILA HEALTHCARE LTD,,,ATORVASTATIN CALCIUM (CRYSTALLINE FORM I),official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,23052,inactive,2009-08-19,DSM SINOCHEM PHARMACEUTICALS NETHERLANDS BV,,,ATORVASTATIN CALCIUM CRYSTALLINE AND MICRONIZED,official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,23264,inactive,2009-11-11,CADILA HEALTHCARE LTD,,,ATORVASTATIN CALCIUM (CRYSTALLINE),official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,23664,active,2010-03-30,DR REDDYS LABORATORIES LTD,,,"ATORVASTATIN CALCIUM TRIHYDRATE (FORM I), USP",official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,24116,active,2010-09-27,APITORIA PHARMA PRIVATE LTD,,,ATORVASTATIN CALCIUM USP,official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,24139,active,2010-09-07,SUN PHARMACEUTICAL INDUSTRIES LTD,,,ATORVASTATIN CALCIUM TRIHYDRATE USP,official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,24312,active,2010-12-01,ARCH PHARMALABS LTD,,,ATORVASTATIN CALCIUM CRYSTALLINE USP (ATVR),official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,24325,inactive,2010-10-25,ZHEJIANG HISUN PHARMACEUTICAL CO LTD,,,ATORVASTATIN CALCIUM,official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,24452,active,2010-12-15,MACLEODS PHARMACEUTICALS LTD,IN,GLEIF legal address,ATORVASTATIN CALCIUM (AMORPHOUS),official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,24532,active,2011-01-06,PH HEALTH LTD,,,ATORVASTATIN CALCIUM AMORPHOUS (NON-STERILE BULK DRUG SUBSTANCE),official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,24896,inactive,2011-08-16,EPHAR BIOLOGICAL AND CHEMICAL CO LTD,,,ATORVASTATIN CALCIUM (API),official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,25247,active,2011-08-26,BIOCON LTD,,,ATORVASTATIN CALCIUM (USP) CRYSTALLINE,official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,25346,active,2011-11-04,AMOLI ORGANICS PVT LTD,,,ATORVASTATIN CALCIUM USP,official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,25657,inactive,2012-02-20,SUN PHARMACEUTICAL INDUSTRIES LTD,,,ATORVASTATIN CALCIUM (AMORPHOUS),official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,26022,active,2012-04-28,ZHEJIANG LEPU PHARMACEUTICAL CO LTD,,,"ATORVASTATIN CALCIUM, NON-STERILE BULK DRUG SUBSTANCES",official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,26084,active,2012-05-22,RAKS PHARMA PVT LTD,,,ATORVASTATIN CALCIUM STABILIZED,official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,26122,active,2012-06-04,HETERO LABS LTD,,,ATORVASTATIN CALCIUM TRIHYDRATE (FORM I),official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,26214,inactive,2012-11-09,LUPIN LTD,,,ATORVASTATIN CALCIUM AMORPHOUS USP,official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,26215,inactive,2013-02-06,LUPIN MANUFACTURING SOLUTIONS LTD,,,ATORVASTATIN CALCIUM TRIHYDRATE USP,official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,26351,active,2012-08-23,MOREPEN LABORATORIES LTD,,,ATORVASTATIN CALCIUM TRIHYDRATE,official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,26571,active,2012-11-29,TAPI NL BV,,,ATORVASTATIN CALCIUM ,official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,26751,inactive,2012-12-20,HETERO LABS LTD,,,ATORVASTATIN CALCIUM AMORPHOUS,official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,27525,inactive,2014-04-27,TEVA PHARMACEUTICAL INDUSTRIES LTD,IL,GLEIF legal address,ATORVASTATIN CALCIUM,official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,27664,active,2013-10-25,HEC PHARM CO LTD,,,ATORVASTATIN CALCIUM NON-STERILE BULK DRUG SUBSTANCE,official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,27697,active,2013-12-18,ZYDUS LIFESCIENCES LTD,,,ATORVASTATIN CALCIUM USP ,official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,27902,inactive,2014-01-10,ASYMCHEM LIFE SCIENCE TIANJIN CO LTD,,,ATORVASTATIN CALCIUM ,official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,28122,active,2014-04-16,CADILA PHARMACEUTICALS LTD,,,ATORVASTATIN CALCIUM USP FORM-I ,official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,28765,active,2015-03-19,MACLEODS PHARMACEUTICALS LTD,IN,GLEIF legal address,ATORVASTATIN CALCIUM TRIHYDRATE,official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,29057,active,2015-02-03,CHANGZHOU PHARMACEUTICAL FACTORY,,,ATORVASTATIN CALCIUM (TRIHYDRATE),official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,29520,active,2015-08-03,CENTRIENT PHARMACEUTICALS NETHERLANDS BV,NL,GLEIF legal address,ATORVASTATIN CALCIUM,official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,31764,active,2017-04-18,ZHEJIANG JIANGBEI PHARMACEUTICAL CO LTD,,,ATORVASTATIN CALCIUM ,official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,32214,active,2018-07-18,LAURUS LABS LTD,,,ATORVASTATIN CALCIUM TRIHYDRATE USP,official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,33584,active,2019-03-05,CHROMO LABORATORIES INDIA PRIVATE LTD,,,ATORVASTATIN CALCIUM TRIHYDRATE USP,official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,33905,active,2019-06-29,MSN LIFE SCIENCES PRIVATE LTD,,,ATORVASTATIN CALCIUM USP,official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,34423,active,2019-12-31,DR REDDYS LABORATORIES LTD,,,"ATORVASTATIN CALCIUM TRIHYDRATE [FORM-I] [ATN PROCESS]
+ 
+
+",official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,34844,active,2020-06-05,MANKIND PHARMA LTD,,,ATORVASTATIN CALCIUM USP,official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,36365,active,2021-09-30,MANKIND PHARMA LTD,,,ATORVASTATIN CALCIUM USP (PROCESS II) ,official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,36416,active,2021-10-28,ZHEJIANG HAISEN PHARMACEUTICAL CO LTD,,,ATORVASTATIN CALCIUM,official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,39445,active,2024-01-26,JIANGSU ALPHA GROUP FURUI PHARMACEUTICAL (SUQIAN) CO LTD,,,ATORVASTATIN CALCIUM TRIHYDRATE,official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,39833,active,2025-12-30,DR REDDYS LABORATORIES LTD,,,ATORVASTATIN CALCIUM TRIHYDRATE [FORM-I] USP [AFP PROCESS],official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,43174,active,2025-12-31,GENSYNTH LABORATORIES PRIVATE LTD,,,"ATORVASTATIN ACETONIDE TERT-BUTYL ESTER [TERT-BUTYL 2-((4R,6R)-6-(2-(2-(4-FLUOROPHENYL)-5-ISOPROPLY-3-PHENYL-4-(PHENYLCARBAMOYL)-1H-PYRROL-1-YL)ETHYL)-2,2-DIMETHYL-1,3-DIOXAN-4-YL) ACETATE]",official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,43765,active,2026-05-23,ZHEJIANG HISOAR CHUANNAN PHARMACEUTICAL CO LTD,,,ATORVASTATIN CALCIUM,official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,44590,active,2026-08-13,LEE PHARMA LTD,,,ATORVASTATIN CALCIUM,official,https://www.fda.gov/media/192069/download?attachment
+atorvastatin,US_DMF,44666,active,2026-09-10,ZHEJIANG JIANGBEI NANHAI PHARMACEUTICAL CO LTD,,,ATORVASTATIN CALCIUM,official,https://www.fda.gov/media/192069/download?attachment
+dapsone,US_DMF,15065,active,2000-09-29,LUNDBECK PHARMACEUTICALS ITALY SPA,,,DAPSONE,official,https://www.fda.gov/media/192069/download?attachment
+dapsone,US_DMF,17781,active,2004-10-28,ATUL LTD,,,DAPSONE USP,official,https://www.fda.gov/media/192069/download?attachment
+dapsone,US_DMF,25089,inactive,2011-06-29,REGIS TECHNOLOGIES INC,,,"DAPSONE, USP",official,https://www.fda.gov/media/192069/download?attachment
+dapsone,US_DMF,27678,active,2013-12-13,NOVITIUM PHARMA LLC,,,DAPSONE USP,official,https://www.fda.gov/media/192069/download?attachment
+dapsone,US_DMF,27701,active,2013-11-06,SAI LIFE SCIENCES LTD,,,DAPSONE USP,official,https://www.fda.gov/media/192069/download?attachment
+dapsone,US_DMF,29999,active,2016-03-31,TARO PHARMACEUTICAL INDUSTRIES LTD,IL,GLEIF legal address,DAPSONE USP,official,https://www.fda.gov/media/192069/download?attachment
+dapsone,US_DMF,31521,active,2017-06-22,DIPHARMA FRANCIS SRL,,,DAPSONE,official,https://www.fda.gov/media/192069/download?attachment
+dapsone,US_DMF,33228,active,2019-01-16,MACLEODS PHARMACEUTICALS LTD,IN,GLEIF legal address,DAPSONE,official,https://www.fda.gov/media/192069/download?attachment
+dapsone,US_DMF,33630,active,2019-03-09,EXTROVIS AG,CH,GLEIF legal address,DAPSONE,official,https://www.fda.gov/media/192069/download?attachment
+dapsone,US_DMF,35244,active,2021-12-29,MACLEODS PHARMACEUTICALS LTD,IN,GLEIF legal address,DAPSONE USP,official,https://www.fda.gov/media/192069/download?attachment
+dapsone,US_DMF,35342,active,2020-10-30,COHANCE LIFESCIENCES LTD,,,DAPSONE USP,official,https://www.fda.gov/media/192069/download?attachment
+dapsone,US_DMF,35786,inactive,2022-02-19,MEDILUX LABORATORIES PVT LTD,IN,GLEIF legal address,DAPSONE USP,official,https://www.fda.gov/media/192069/download?attachment
+dapsone,US_DMF,38378,active,2023-06-05,MEDILUX LABORATORIES PVT LTD,IN,GLEIF legal address,DAPSONE USP,official,https://www.fda.gov/media/192069/download?attachment
+dapsone,US_DMF,38483,active,2023-07-13,CHONGQING HUAPONT PHARMACEUTICAL CO LTD,,,DAPSONE ,official,https://www.fda.gov/media/192069/download?attachment
+dapsone,US_DMF,7413,inactive,1988-03-31,JACOBUS PHARMACEUTICAL CO,,,DAPSONE (FINAL DOSAGE FORMS),official,https://www.fda.gov/media/192069/download?attachment
+edoxaban,US_DMF,32330,active,2017-12-30,MSN LIFE SCIENCES PRIVATE LTD,,,EDOXABAN TOSYLATE (MONOHYDRATE),official,https://www.fda.gov/media/192069/download?attachment
+edoxaban,US_DMF,32401,active,2018-02-06,HONOUR LAB LTD,,,EDOXABAN TOSYLATE MONOHYDRATE,official,https://www.fda.gov/media/192069/download?attachment
+edoxaban,US_DMF,32963,active,2018-07-09,ZHEJIANG SUPOR PHARMACEUTICALS CO LTD,,,EDOXABAN TOSYLATE ,official,https://www.fda.gov/media/192069/download?attachment
+edoxaban,US_DMF,33133,active,2018-09-27,ZYDUS LIFESCIENCES LTD,,,EDOXABAN TOSYLATE MONOHYDRATE,official,https://www.fda.gov/media/192069/download?attachment
+edoxaban,US_DMF,36062,active,2021-07-09,SHANGHAI DESANO CHEMICAL PHARMACEUTICAL CO LTD,,,EDOXABAN TOSYLATE MONOHYDRATE,official,https://www.fda.gov/media/192069/download?attachment
+edoxaban,US_DMF,36084,active,2021-07-02,MOREPEN LABORATORIES LTD,,,EDOXABAN TOSYLATE,official,https://www.fda.gov/media/192069/download?attachment
+edoxaban,US_DMF,37896,active,2022-12-23,METROCHEM API PRIVATE LTD,,,EDOXABAN TOSYLATE MONOHYDRATE,official,https://www.fda.gov/media/192069/download?attachment
+edoxaban,US_DMF,38201,active,2023-03-24,AMI LIFESCIENCES PRIVATE LTD,,,EDOXABAN TOSYLATE MONOHYDRATE,official,https://www.fda.gov/media/192069/download?attachment
+edoxaban,US_DMF,38513,active,2023-09-20,JIANGXI SYNERGY PHARMACEUTICAL CO LTD,,,EDOXABAN TOSILATE ,official,https://www.fda.gov/media/192069/download?attachment
+edoxaban,US_DMF,39074,active,2023-10-31,ZHEJIANG HUAHAI PHARMACEUTICAL CO LTD,,,EDOXABAN TOSYLATE MONOHYDRATE,official,https://www.fda.gov/media/192069/download?attachment
+edoxaban,US_DMF,40040,active,2024-05-29,ZHEJIANG GUOBANG PHARMACEUTICAL CO LTD,,,EDOXABAN (TOSYLATE MONOHYDRATE),official,https://www.fda.gov/media/192069/download?attachment
+edoxaban,US_DMF,40529,active,2024-09-30,HIKAL LTD,,,EDOXABAN TOSYLATE MONOHYDRATE,official,https://www.fda.gov/media/192069/download?attachment
+edoxaban,US_DMF,40611,active,2024-12-30,ZHEJIANG TIANYU PHARMACEUTICAL CO LTD,,,EDOXABAN TOSILATE,official,https://www.fda.gov/media/192069/download?attachment
+edoxaban,US_DMF,40695,active,2024-12-13,SAPTAGIR LABORATORIES PRIVATE LTD,,,EDOXABAN TOSYLATE MONOHYDRATE ,official,https://www.fda.gov/media/192069/download?attachment
+edoxaban,US_DMF,40832,active,2024-11-27,MEGAFINE PHARMA (P) LTD,,,EDOXABAN TOSYLATE MONOHYDRATE (NON-STERILE DRUG SUBSTANCE),official,https://www.fda.gov/media/192069/download?attachment
+edoxaban,US_DMF,41288,active,2025-03-29,OPTIMUS DRUGS PRIVATE LTD,,,EDOXABAN TOSYLATE MONOHYDRATE,official,https://www.fda.gov/media/192069/download?attachment
+edoxaban,US_DMF,41360,active,2026-01-06,VIYASH SCIENTIFIC LTD,,,EDOXABAN TOSYLATE MONOHYDRATE,official,https://www.fda.gov/media/192069/download?attachment
+edoxaban,US_DMF,41521,active,2025-03-30,PIRAMAL PHARMA LTD,,,EDOXABAN TOSYLATE MONOHYDRATE,official,https://www.fda.gov/media/192069/download?attachment
+edoxaban,US_DMF,42061,active,2025-07-29,DR REDDYS LABORATORIES LTD,,,EDOXABAN TOSYLATE MONOHYDRATE,official,https://www.fda.gov/media/192069/download?attachment
+edoxaban,US_DMF,42199,active,2025-07-01,BIOPHORE INDIA PHARMACEUTICALS PVT LTD,,,EDOXABAN TOSYLATE,official,https://www.fda.gov/media/192069/download?attachment
+edoxaban,US_DMF,42281,active,2025-07-29,AMOLI ORGANICS (A DIVISION OF UMEDICA LABORATORIES PVT LTD),,,EDOXABAN TOSYLATE MONOHYDRATE,official,https://www.fda.gov/media/192069/download?attachment
+edoxaban,US_DMF,43481,active,2026-01-28,BIOCON LTD,,,EDOXABAN TOSYLATE MONOHYDRATE ,official,https://www.fda.gov/media/192069/download?attachment
+edoxaban,US_DMF,43905,active,2026-03-30,NEULAND LABORATORIES LTD,,,"
+EDOXABAN TOSYLATE MONOHYDRATE",official,https://www.fda.gov/media/192069/download?attachment
+edoxaban,US_DMF,44838,active,2026-09-22,YANGTZE RIVER PHARMACEUTICAL GROUP JIANGSU HAICI BIOLOGICAL PHARMACEUTICAL CO LTD,,,EDOXABAN TOSILATE NON-STERLIE DRUG SUBSTANCE,official,https://www.fda.gov/media/192069/download?attachment
+empagliflozin,US_DMF,29796,active,2015-09-23,ALP PHARM BEIJING CO LTD,,,EMPAGLIFLOZIN,official,https://www.fda.gov/media/192069/download?attachment
+empagliflozin,US_DMF,29801,active,2015-10-23,BEIJING HUIKANG BOYUAN CHEMICAL TECH CO LTD,,,EMPAGLIFLOZIN,official,https://www.fda.gov/media/192069/download?attachment
+empagliflozin,US_DMF,31087,active,2016-10-28,MATRIX PHARMACORP PRIVATE LTD,,,EMPAGLIFLOZIN,official,https://www.fda.gov/media/192069/download?attachment
+empagliflozin,US_DMF,31501,active,2017-04-13,LUPIN MANUFACTURING SOLUTIONS LTD,,,EMPAGLIFLOZIN,official,https://www.fda.gov/media/192069/download?attachment
+empagliflozin,US_DMF,31523,active,2017-06-02,HONOUR LAB LTD,,,EMPAGLIFLOZIN,official,https://www.fda.gov/media/192069/download?attachment
+empagliflozin,US_DMF,32161,active,2017-10-31,MSN LIFE SCIENCES PRIVATE LTD,,,EMPAGLIFLOZIN,official,https://www.fda.gov/media/192069/download?attachment
+empagliflozin,US_DMF,32211,active,2017-11-30,ALEMBIC PHARMACEUTICALS LTD,,,EMPAGLIFLOZIN,official,https://www.fda.gov/media/192069/download?attachment
+empagliflozin,US_DMF,32349,active,2018-01-02,DR REDDYS LABORATORIES LTD,,,EMPAGLIFLOZIN,official,https://www.fda.gov/media/192069/download?attachment
+empagliflozin,US_DMF,32378,active,2017-12-31,ZYDUS LIFESCIENCES LTD,,,EMPAGLIFLOZIN,official,https://www.fda.gov/media/192069/download?attachment
+empagliflozin,US_DMF,32385,active,2017-12-29,ZHEJIANG HUAHAI PHARMACEUTICAL CO LTD,,,EMPAGLIFLOZIN,official,https://www.fda.gov/media/192069/download?attachment
+empagliflozin,US_DMF,32392,active,2018-01-29,MACLEODS PHARMACEUTICALS LTD,IN,GLEIF legal address,EMPAGLIFLOZIN,official,https://www.fda.gov/media/192069/download?attachment
+empagliflozin,US_DMF,32421,active,2018-09-17,TAPI NL BV,,,EMPAGLIFLOZIN,official,https://www.fda.gov/media/192069/download?attachment
+empagliflozin,US_DMF,32433,active,2018-03-30,CIPLA LTD,,,EMPAGLIFLOZIN,official,https://www.fda.gov/media/192069/download?attachment
+empagliflozin,US_DMF,32454,active,2018-01-24,APITORIA PHARMA PRIVATE LTD,,,EMPAGLIFLOZIN,official,https://www.fda.gov/media/192069/download?attachment
+empagliflozin,US_DMF,32477,active,2018-03-29,DR REDDYS LABORATORIES LTD,,,EMPAGLIFLOZIN (AMORPHOUS),official,https://www.fda.gov/media/192069/download?attachment
+empagliflozin,US_DMF,32534,active,2018-04-02,HONOUR LAB LTD,,,EMPAGLIFLOZIN (AMORPHOUS),official,https://www.fda.gov/media/192069/download?attachment
+empagliflozin,US_DMF,32570,active,2018-09-12,HIKAL LTD,,,EMPAGLIFLOZIN,official,https://www.fda.gov/media/192069/download?attachment
+empagliflozin,US_DMF,32601,active,2018-05-18,SUN PHARMACEUTICAL INDUSTRIES LTD,,,EMPAGLIFLOZIN,official,https://www.fda.gov/media/192069/download?attachment
+empagliflozin,US_DMF,32662,active,2018-05-02,MSN LIFE SCIENCES PRIVATE LTD,,,EMPAGLIFLOZIN (AMORPHOUS),official,https://www.fda.gov/media/192069/download?attachment
+empagliflozin,US_DMF,32881,active,2018-06-26,LAURUS LABS LTD,,,EMPAGLIFLOZIN,official,https://www.fda.gov/media/192069/download?attachment
+empagliflozin,US_DMF,33100,active,2018-09-12,FUXIN LONG RUI PHARMACEUTICAL CO LTD,,,EMPAGLIFLOZIN,official,https://www.fda.gov/media/192069/download?attachment
+empagliflozin,US_DMF,33180,active,2018-09-27,ZAKLADY FARMACEUTYCZNE POLPHARMA SA,PL,derived: alle Leaflet-Standorte dieser Firma in einem Land,EMPAGLIFLOZIN,official,https://www.fda.gov/media/192069/download?attachment
+empagliflozin,US_DMF,33545,active,2019-03-25,PIRAMAL PHARMA LTD,,,EMPAGLIFLOZIN,official,https://www.fda.gov/media/192069/download?attachment
+empagliflozin,US_DMF,33931,active,2019-07-06,MOREPEN LABORATORIES LTD,,,EMPAGLIFLOZIN,official,https://www.fda.gov/media/192069/download?attachment
+empagliflozin,US_DMF,35345,active,2020-10-31,METROCHEM API PRIVATE LTD,,,EMPAGLIFLOZIN,official,https://www.fda.gov/media/192069/download?attachment
+empagliflozin,US_DMF,36162,active,2022-08-16,LEE PHARMA LTD,,," 
+
+EMPAGLIFLOZIN",official,https://www.fda.gov/media/192069/download?attachment
+empagliflozin,US_DMF,36477,active,2021-11-30,BIOCON LTD,,,EMPAGLIFLOZIN,official,https://www.fda.gov/media/192069/download?attachment
+empagliflozin,US_DMF,36541,active,2021-12-02,ZHEJIANG LANGHUA PHARMACEUTICAL CO LTD,,,EMPAGLIFLOZIN (NON-STERILE A PHARMACEUTICAL INGREDIENT),official,https://www.fda.gov/media/192069/download?attachment
+empagliflozin,US_DMF,36742,active,2022-02-17,EMNAR PHARMA PRIVATE LTD,,,EMPAGLIFLOZIN,official,https://www.fda.gov/media/192069/download?attachment
+empagliflozin,US_DMF,36928,active,2022-03-31,DR REDDYS LABORATORIES LTD,,,EMPAGLIFLOZIN (PRODUCT CODE: EGF8),official,https://www.fda.gov/media/192069/download?attachment
+empagliflozin,US_DMF,36944,active,2022-07-12,COHANCE LIFESCIENCES LTD,,,EMPAGLIFLOZIN,official,https://www.fda.gov/media/192069/download?attachment
+empagliflozin,US_DMF,37622,active,2022-11-02,JIANGXI SYNERGY PHARMACEUTICAL CO LTD,,,EMPAGLIFLOZIN,official,https://www.fda.gov/media/192069/download?attachment
+empagliflozin,US_DMF,37755,active,2022-12-08,ZHEJIANG HUAYI PHARMACEUTICAL CO LTD,,,EMPAGLIFLOZIN,official,https://www.fda.gov/media/192069/download?attachment
+empagliflozin,US_DMF,37867,active,2022-12-23,ZHEJIANG HUAHAI PHARMACEUTICAL CO LTD,,,EMPAGLIFLOZIN (PROCESS II),official,https://www.fda.gov/media/192069/download?attachment
+empagliflozin,US_DMF,37900,active,2022-12-29,DR REDDYS LABORATORIES LTD,,,EMPAGLIFLOZIN AMORPHOUS (PRODUCT CODE: EGF9),official,https://www.fda.gov/media/192069/download?attachment
+empagliflozin,US_DMF,38200,active,2023-03-29,AMI LIFESCIENCES PRIVATE LTD,,,EMPAGLIFLOZIN,official,https://www.fda.gov/media/192069/download?attachment
+empagliflozin,US_DMF,39157,active,2023-11-30,CHEMO SMS ENTERPRISE SL,,,EMPAGLIFLOZIN,official,https://www.fda.gov/media/192069/download?attachment
+empagliflozin,US_DMF,39318,active,2023-12-30,USV PRIVATE LTD,,,EMPAGLIFLOZIN ,official,https://www.fda.gov/media/192069/download?attachment
+empagliflozin,US_DMF,39521,active,2024-03-29,GRANULES INDIA LTD,,,EMPAGLIFLOZIN ,official,https://www.fda.gov/media/192069/download?attachment
+empagliflozin,US_DMF,39603,active,2024-03-25,ZHEJIANG JINGSHENG PHARMACEUTICAL CO LTD,,,EMPAGLIFLOZIN,official,https://www.fda.gov/media/192069/download?attachment
+empagliflozin,US_DMF,39776,active,2024-03-28,OPTIMUS DRUGS PRIVATE LTD,,,EMPAGLIFLOZIN,official,https://www.fda.gov/media/192069/download?attachment
+empagliflozin,US_DMF,40167,active,2024-07-01,JIANGSU ALPHA GROUP FURUI PHARMACEUTICAL (SUQIAN) CO LTD,,,ACETOXY EMPAGLIFLOZIN,official,https://www.fda.gov/media/192069/download?attachment
+empagliflozin,US_DMF,40332,active,2024-10-07,HONOUR LAB LTD,,,EMPAGLIFLOZIN (PROCESS-II),official,https://www.fda.gov/media/192069/download?attachment
+empagliflozin,US_DMF,40416,active,2024-09-06,SICHUAN KELUN PHARMACEUTICAL CO LTD,,,EMPAGLIFLOZIN,official,https://www.fda.gov/media/192069/download?attachment
+empagliflozin,US_DMF,40742,active,2024-12-19,AZICO BIOPHORE INDIA PRIVATE LTD,,,EMPAGLIFLOZIN,official,https://www.fda.gov/media/192069/download?attachment
+empagliflozin,US_DMF,40847,active,2025-09-30,MANKIND PHARMA LTD,,,EMPAGLIFLOZIN,official,https://www.fda.gov/media/192069/download?attachment
+empagliflozin,US_DMF,41025,active,2024-12-23,AMOLI ORGANICS (A DIVISION OF UMEDICA LABORATORIES PVT LTD),,,EMPAGLIFLOZIN,official,https://www.fda.gov/media/192069/download?attachment
+empagliflozin,US_DMF,41197,active,2025-01-30,NEULAND LABORATORIES LTD,,,EMPAGLIFLOZIN ,official,https://www.fda.gov/media/192069/download?attachment
+empagliflozin,US_DMF,41237,active,2025-01-21,EMNAR PHARMA PRIVATE LTD,,,EMPAGLIFLOZIN (PRODUCT CODE: EFG),official,https://www.fda.gov/media/192069/download?attachment
+empagliflozin,US_DMF,41404,active,2025-02-27,MANKIND PHARMA LTD,,,EMPAGLIFLOZIN (PROCESS II),official,https://www.fda.gov/media/192069/download?attachment
+empagliflozin,US_DMF,41748,active,2025-04-10,YANGTZE RIVER PHARMACEUTICAL GROUP JIANGSU HAICI BIOLOGICAL PHARMACEUTICAL CO LTD,,,EMPAGLIFLOZIN NON-STERILE DRUG SUBSTANCE ,official,https://www.fda.gov/media/192069/download?attachment
+empagliflozin,US_DMF,42317,active,2026-06-02,SYMBIO GENERRICS INDIA PRIVATE LTD,,,EMPAGLIFLOZIN,official,https://www.fda.gov/media/192069/download?attachment
+empagliflozin,US_DMF,42587,active,2025-09-30,AARTI PHARMALABS LTD,,,EMPAGLIFLOZIN,official,https://www.fda.gov/media/192069/download?attachment
+empagliflozin,US_DMF,42918,active,2025-12-18,CTX LIFESCIENCES PVT LTD,,,EMPAGLIFLOZIN,official,https://www.fda.gov/media/192069/download?attachment
+empagliflozin,US_DMF,43731,active,2026-03-20,DR REDDYS LABORATORIES LTD,,,EMPAGLIFLOZIN (EFG),official,https://www.fda.gov/media/192069/download?attachment
+empagliflozin,US_DMF,43815,active,2026-03-31,ZYDUS LIFESCIENCES LTD,,,EMPAGLIFLOZIN,official,https://www.fda.gov/media/192069/download?attachment
+fludrocortisone,US_DMF,14136,active,1999-05-12,FARMABIOS SPA,,,FLUDROCORTISONE ACETATE,official,https://www.fda.gov/media/192069/download?attachment
+fludrocortisone,US_DMF,14703,active,1999-12-20,TAPI NL BV,,,FLUDROCORTISONE ACETATE,official,https://www.fda.gov/media/192069/download?attachment
+fludrocortisone,US_DMF,21054,active,2007-11-20,CURIA SPAIN SAU,,,FLUDROCORTISONE ACETATE USP,official,https://www.fda.gov/media/192069/download?attachment
+fludrocortisone,US_DMF,22994,inactive,2009-07-27,MYLAN LABORATORIES LTD,,,FLUDROCORTISONE ACETATE USP,official,https://www.fda.gov/media/192069/download?attachment
+fludrocortisone,US_DMF,34923,active,2020-06-09,NOVITIUM PHARMA LLC,,,FLUDROCORTISONE ACETATE USP,official,https://www.fda.gov/media/192069/download?attachment
+fludrocortisone,US_DMF,36367,active,2021-11-11,HENAN LIHUA PHARMACEUTICAL CO LTD,,,FLUDROCORTISONE ACETATE,official,https://www.fda.gov/media/192069/download?attachment
+hydroxycarbamide,US_DMF,1077,inactive,1967-08-25,ER SQUIBB AND SONS INC,,,MANUFACTURE OF HYDROXYUREA,official,https://www.fda.gov/media/192069/download?attachment
+hydroxycarbamide,US_DMF,11899,active,1996-03-25,OLON SPA,,,HYDROXYUREA,official,https://www.fda.gov/media/192069/download?attachment
+hydroxycarbamide,US_DMF,12754,active,1997-11-14,ARCHIMICA SPA,,,HYDROXYUREA,official,https://www.fda.gov/media/192069/download?attachment
+hydroxycarbamide,US_DMF,16458,inactive,2003-02-21,CHEMSPEC,,,HYDROXYUREA,official,https://www.fda.gov/media/192069/download?attachment
+hydroxycarbamide,US_DMF,20615,active,2007-06-15,SHANDONG ANXIN PHARMACEUTICAL CO LTD,,,HYDROXYUREA USP (NON-STERILE BULK),official,https://www.fda.gov/media/192069/download?attachment
+hydroxycarbamide,US_DMF,2258,inactive,1974-04-09,FERMENTA FRANCE SA,,,"HYDROXYUREA BY OLMACO OF EMPERNON,FRANCE (FORMERLY HELD BY OLMACO)",official,https://www.fda.gov/media/192069/download?attachment
+hydroxycarbamide,US_DMF,2259,inactive,1974-04-11,SQUIBB,,,HYDROXYUREA                                                           ,official,https://www.fda.gov/media/192069/download?attachment
+hydroxycarbamide,US_DMF,37146,active,2022-06-09,OLON SPA,,,HYDROXYUREA,official,https://www.fda.gov/media/192069/download?attachment
+hydroxycarbamide,US_DMF,8361,inactive,1989-12-27,SQUIBB MARK DIV ER SQUIBB AND SONS INC,,,HYDROXYUREA LYOPHILIZED POWDER,official,https://www.fda.gov/media/192069/download?attachment
+hydroxycarbamide,US_DMF,9241,inactive,1991-07-15,MEDEA RESEARCH LABORATORIES INC,,,HYDROXYUREA,official,https://www.fda.gov/media/192069/download?attachment
+hydroxycarbamide,US_DMF,9850,inactive,1992-09-04,DSM PHARMA CHEMICALS SOUTH HAVEN INC,,,HYDROXYUREA,official,https://www.fda.gov/media/192069/download?attachment
+levothyroxine,US_DMF,14256,inactive,1999-06-29,RHODIA INDUSTRIE CHIMIQUE MULHOUSE DORNACH,,,LEVOTHYROXINE SODIUM USP,official,https://www.fda.gov/media/192069/download?attachment
+levothyroxine,US_DMF,14715,active,2000-02-01,PEPTIDO GMBH,,,LEVOTHYROXINE SODIUM,official,https://www.fda.gov/media/192069/download?attachment
+levothyroxine,US_DMF,24402,active,2011-10-20,EXCELLA GMBH AND CO KG,,,LEVOTHYROXINE SODIUM,official,https://www.fda.gov/media/192069/download?attachment
+levothyroxine,US_DMF,25818,inactive,2012-02-20,APOTEX PHARMACHEM INDIA PVT LTD,,,LEVOTHYROXINE SODIUM USP,official,https://www.fda.gov/media/192069/download?attachment
+levothyroxine,US_DMF,29098,active,2015-03-14,AZICO BIOPHORE INDIA PVT LTD,,,LEVOTHYROXINE SODIUM,official,https://www.fda.gov/media/192069/download?attachment
+levothyroxine,US_DMF,29550,active,2015-07-27,GLAND PHARMA LTD,IN,GLEIF legal address,LEVOTHYROXINE SODIUM USP,official,https://www.fda.gov/media/192069/download?attachment
+levothyroxine,US_DMF,30113,inactive,2016-03-01,APOTEX PHARMACHEM INDIA PVT LTD,,,LEVOTHYROXINE SODIUM USP,official,https://www.fda.gov/media/192069/download?attachment
+levothyroxine,US_DMF,30376,active,2016-03-22,LUPIN LTD,,,LEVOTHYROXINE SODIUM USP,official,https://www.fda.gov/media/192069/download?attachment
+levothyroxine,US_DMF,31203,active,2017-01-31,MACLEODS PHARMACEUTICALS LTD,IN,GLEIF legal address,LEVOTHYROXINE SODIUM USP,official,https://www.fda.gov/media/192069/download?attachment
+levothyroxine,US_DMF,34044,active,2019-08-05,AURORE LIFE SCIENCES PRIVATE LTD,,,LEVOTHYROXINE SODIUM USP,official,https://www.fda.gov/media/192069/download?attachment
+levothyroxine,US_DMF,38129,active,2023-05-06,VALARY LAB PRIVATE LTD,,,LEVOTHYROXINE SODIUM,official,https://www.fda.gov/media/192069/download?attachment
+levothyroxine,US_DMF,38710,active,2023-09-29,MSN LABORATORIES PRIVATE LTD,,,"""LEVOTHYROXINE SODIUM USP""  ",official,https://www.fda.gov/media/192069/download?attachment
+levothyroxine,US_DMF,42781,active,2025-12-31,SUN PHARMACEUTICAL INDUSTRIES LTD,,,LEVOTHYROXINE SODIUM USP ,official,https://www.fda.gov/media/192069/download?attachment
+levothyroxine,US_DMF,44377,active,2026-09-23,INTAS PHARMACEUTICALS LTD,,,LEVOTHYROXINE SODIUM USP,official,https://www.fda.gov/media/192069/download?attachment
+levothyroxine,US_DMF,4789,active,1983-01-06,SANDOZ GMBH,AT,GLEIF legal address,LEVOTHYROXINE SODIUM,official,https://www.fda.gov/media/192069/download?attachment
+marbofloxacin,US_DMF,35484,active,2020-12-31,AURORE LIFE SCIENCES PRIVATE LTD,,,MARBOFLOXACIN,official,https://www.fda.gov/media/192069/download?attachment
+marbofloxacin,US_DMF,43162,active,2025-12-04,AUTHENTERRA HEALTHCARE LLP,,, MARBOFLOXACIN IP/BP/EP,official,https://www.fda.gov/media/192069/download?attachment
+metformin,US_DMF,11924,inactive,1996-04-17,GROUPE LIPHA,,,METFORMIN HYDROCHLORIDE,official,https://www.fda.gov/media/192069/download?attachment
+metformin,US_DMF,12647,active,1997-09-08,USV PRIVATE LTD,,,METFORMIN HCL USP,official,https://www.fda.gov/media/192069/download?attachment
+metformin,US_DMF,12670,active,1997-09-30,MERCK SANTE SAS,FR,derived: alle Leaflet-Standorte dieser Firma in einem Land,METFORMIN HYDROCHLORIDE DRUG SUBTANCE ,official,https://www.fda.gov/media/192069/download?attachment
+metformin,US_DMF,13827,inactive,1998-11-09,TAPI PUERTO RICO INC,,,METFORMIN HYDROCHLORIDE DRUG SUBSTANCE,official,https://www.fda.gov/media/192069/download?attachment
+metformin,US_DMF,13869,active,1998-11-24,FARMHISPANIA SA,ES,GLEIF legal address,METFORMIN HYDROCHLORIDE,official,https://www.fda.gov/media/192069/download?attachment
+metformin,US_DMF,14055,active,1999-03-19,WANBURY LTD,,,METFORMIN HYDROCHLORIDE,official,https://www.fda.gov/media/192069/download?attachment
+metformin,US_DMF,14776,active,2000-03-14,SHANGHAI MEDICINAL LTD,,,METFORMIN HYDROCHLORIDE,official,https://www.fda.gov/media/192069/download?attachment
+metformin,US_DMF,15143,inactive,2000-11-20,VIBRANTIS SA DE CV,,,METFORMIN HYDROCHLORIDE,official,https://www.fda.gov/media/192069/download?attachment
+metformin,US_DMF,15148,active,2000-11-16,OLON SPA,,,METFORMIN HYDROCHLORIDE,official,https://www.fda.gov/media/192069/download?attachment
+metformin,US_DMF,15217,active,2001-01-02,HARMAN FINOCHEM LTD,,,METFORMIN HYDROCHLORIDE ,official,https://www.fda.gov/media/192069/download?attachment
+metformin,US_DMF,15612,active,2001-08-25,SUN PHARMACEUTICAL INDUSTRIES LTD,,,METFORMIN HYDROCHLORIDE USP ,official,https://www.fda.gov/media/192069/download?attachment
+metformin,US_DMF,16047,active,2002-07-11,HOLIDAY LABS MEXICO SA DE CV,,,METFORMIN HYDROCHLORIDE,official,https://www.fda.gov/media/192069/download?attachment
+metformin,US_DMF,16272,inactive,2002-11-25,KUNSHAN DOUBLE CRANE PHARMACEUTICAL CO LTD,,,METFORMIN HYDROCHLORIDE,official,https://www.fda.gov/media/192069/download?attachment
+metformin,US_DMF,16474,inactive,2003-03-18,WOCKHARDT LTD,,,METFORMIN HYDROCHLORIDE,official,https://www.fda.gov/media/192069/download?attachment
+metformin,US_DMF,16625,active,2003-06-06,GRANULES INDIA LTD,,,METFORMIN HYDROCHLORIDE USP,official,https://www.fda.gov/media/192069/download?attachment
+metformin,US_DMF,16827,inactive,2003-09-08,NOVUS FINE CHEMICALS LLC,,,METFORMIN HYDROCHLORIDE,official,https://www.fda.gov/media/192069/download?attachment
+metformin,US_DMF,16993,active,2003-12-01,APITORIA PHARMA PRIVATE LTD,,,METFORMIN HYDROCHLORIDE USP,official,https://www.fda.gov/media/192069/download?attachment
+metformin,US_DMF,17744,active,2004-10-14,USV PRIVATE LTD,,,METFORMIN HYDROCHLORIDE USP (COARSE),official,https://www.fda.gov/media/192069/download?attachment
+metformin,US_DMF,18150,active,2005-03-02,WANBURY LTD,,,METFORMIN HYDROCHLORIDE,official,https://www.fda.gov/media/192069/download?attachment
+metformin,US_DMF,18323,inactive,2005-05-26,IPCA LABORATORIES LTD,,,METFORMIN HYDROCHLORIDE USP,official,https://www.fda.gov/media/192069/download?attachment
+metformin,US_DMF,18330,inactive,2005-05-05,SMRUTHI ORGANICS LTD,IN,GLEIF legal address,METFORMIN HYDROCHLORIDE USP,official,https://www.fda.gov/media/192069/download?attachment
+metformin,US_DMF,18887,active,2005-10-14,WANBURY LTD,,,METFORMIN HYDROCHLORIDE DC GRADE - 90% ,official,https://www.fda.gov/media/192069/download?attachment
+metformin,US_DMF,18888,active,2005-10-14,WANBURY LTD,,,METFORMIN HYDROCHLORIDE DC GRADE - 95% ,official,https://www.fda.gov/media/192069/download?attachment
+metformin,US_DMF,19190,active,2006-02-17,VISTIN PHARMA AS,NO,GLEIF legal address,METFORMIN HYDROCHLORIDE,official,https://www.fda.gov/media/192069/download?attachment
+metformin,US_DMF,19228,inactive,2006-02-25,IONS PHARMA,,,METFORMIN HYDROCHLORIDE USP,official,https://www.fda.gov/media/192069/download?attachment
+metformin,US_DMF,19910,inactive,2006-10-28,AURO LABORATORIES LTD,,,METFORMIN HYDROCHLORIDE,official,https://www.fda.gov/media/192069/download?attachment
+metformin,US_DMF,19925,active,2006-11-20,IPCA LABORATORIES LTD,,,METFORMIN HYDROCHLORIDE USP (PROCESS-II),official,https://www.fda.gov/media/192069/download?attachment
+metformin,US_DMF,19985,inactive,2006-10-19,MS MARKSANS PHARMA LTD,,,METFORMIN HYDROCHLORIDE USP,official,https://www.fda.gov/media/192069/download?attachment
+metformin,US_DMF,20573,active,2007-05-29,WANBURY LTD,,,METFORMIN SR GRADE 70%,official,https://www.fda.gov/media/192069/download?attachment
+metformin,US_DMF,21097,inactive,2007-12-05,INDOCO REMEDIES LTD,,,"Metformin Hydrochloride USP, as maufactured in Raigad District, INDIA",official,https://www.fda.gov/media/192069/download?attachment
+metformin,US_DMF,21294,inactive,2008-02-01,AARTI DRUGS LTD,,,METFORMIN HYDROCHLORIDE USP,official,https://www.fda.gov/media/192069/download?attachment
+metformin,US_DMF,21695,active,2008-04-09,SOHAN HEALTHCARE PRIVATE LTD,,,METFORMIN HYDROCHLORIDE USP,official,https://www.fda.gov/media/192069/download?attachment
+metformin,US_DMF,21891,inactive,2008-08-12,TIANJIN PACIFIC CHEMICAL AND PHARMACEUTICAL CO LTD,,,"METFORMIN HYDROCHLORIDE, NON-STERILE, BULK DRUG SUBSTANCE",official,https://www.fda.gov/media/192069/download?attachment
+metformin,US_DMF,23273,active,2009-10-27,SHOUGUANG FUKANG PHARMACEUTICAL CO LTD,,,METFORMIN HYDROCHLORIDE,official,https://www.fda.gov/media/192069/download?attachment
+metformin,US_DMF,24604,inactive,2011-01-17,SHANDONG KEYUAN PHARMACEUTICAL CO LTD,,,METFORMIN HYDROCHLORIDE,official,https://www.fda.gov/media/192069/download?attachment
+metformin,US_DMF,25467,active,2011-11-03,EXEMED PHARMACEUTICALS,,,METFORMIN HYDROCHLORIDE USP,official,https://www.fda.gov/media/192069/download?attachment
+metformin,US_DMF,25564,active,2011-11-24,KOTHARI PHYTOCHEMICALS INTERNATIONAL,,,METFORMIN HYDROCHLORIDE USP,official,https://www.fda.gov/media/192069/download?attachment
+metformin,US_DMF,27139,active,2013-05-06,IOL CHEMICALS AND PHARMACEUTICALS LTD,,,METFORMIN HYDROCHLORIDE,official,https://www.fda.gov/media/192069/download?attachment
+metformin,US_DMF,30114,active,2016-05-04,LAURUS LABS LTD,,,METFORMIN HYDROCHLORIDE USP,official,https://www.fda.gov/media/192069/download?attachment
+metformin,US_DMF,31510,inactive,2017-04-14,LUPIN LTD,,,METFORMIN HYDROCHLORIDE USP,official,https://www.fda.gov/media/192069/download?attachment
+metformin,US_DMF,33198,active,2018-09-29,MACLEODS PHARMACEUTICALS LTD,IN,GLEIF legal address,METFORMIN HYDROCHLORIDE,official,https://www.fda.gov/media/192069/download?attachment
+metformin,US_DMF,33876,active,2019-05-16,SHANDONG KEYUAN PHARMACEUTICAL CO LTD,,,METFORMIN HYDROCHLORIDE,official,https://www.fda.gov/media/192069/download?attachment
+metformin,US_DMF,35265,active,2020-10-03,IOL CHEMICALS AND PHARMACEUTICALS LTD,,,METFORMIN HYDROCHLORIDE USP (PROCESS II),official,https://www.fda.gov/media/192069/download?attachment
+metformin,US_DMF,37408,active,2022-11-08,FARMHISPANIA SA,ES,GLEIF legal address,METFORMIN HYDROCHLORIDE + 0.5% MAGNESIUM STEARATE,official,https://www.fda.gov/media/192069/download?attachment
+metformin,US_DMF,37959,active,2023-03-24,NINGXIA HENGKANG TECHNOLOGY CO LTD,,,METFORMIN HYDROCHLORIDE  USP,official,https://www.fda.gov/media/192069/download?attachment
+metformin,US_DMF,39624,active,2024-03-26,NINGXIA HENGKANG TECHNOLOGY CO LTD,,,METFORMIN HYDROCHLORIDE (2ND LINE),official,https://www.fda.gov/media/192069/download?attachment
+metformin,US_DMF,40516,active,2024-09-29,MSN LIFE SCIENCES PRIVATE LTD,,,METFORMIN HYDROCHLORIDE USP,official,https://www.fda.gov/media/192069/download?attachment
+metformin,US_DMF,41088,active,2024-12-31,SHANDONG LURUI PHARMACEUTICAL CO LTD,,,"
+METFORMIN HYDROCHLORIDE",official,https://www.fda.gov/media/192069/download?attachment
+metformin,US_DMF,41221,active,2025-01-31,SUN PHARMACEUTICAL INDUSTRIES LTD,,,METFORMIN HYDROCHLORIDE USP (LDMA PROCESS),official,https://www.fda.gov/media/192069/download?attachment
+metformin,US_DMF,5951,active,1985-08-09,MERCK SANTE SAS,FR,derived: alle Leaflet-Standorte dieser Firma in einem Land,METFORMIN HYDROCHLORIDE ,official,https://www.fda.gov/media/192069/download?attachment
+mexiletine,US_DMF,10376,inactive,1993-07-26,ICN HUNGARY COMPANY LTD,,,MEXILETINE HYDROCHLORIDE USP BULK,official,https://www.fda.gov/media/192069/download?attachment
+mexiletine,US_DMF,14442,inactive,1999-10-07,SLOVAKOFARMA AS,,,MEXILETINE HYDROCHLORIDE,official,https://www.fda.gov/media/192069/download?attachment
+mexiletine,US_DMF,24714,active,2011-03-09,ALEMBIC PHARMACEUTICALS LTD,,,MEXILETINE HYDROCHLORIDE USP,official,https://www.fda.gov/media/192069/download?attachment
+mexiletine,US_DMF,34668,active,2020-03-06,BIOPHORE INDIA PHARMACEUTICALS PVT LTD,,,MEXILETINE HYDROCHLORIDE,official,https://www.fda.gov/media/192069/download?attachment
+mexiletine,US_DMF,34958,active,2020-06-19,COHANCE LIFESCIENCES LTD,,,MEXILETINE HYDROCHLORIDE USP,official,https://www.fda.gov/media/192069/download?attachment
+mexiletine,US_DMF,35146,active,2020-09-23,KALINTIS HEALTHCARE PVT LTD,,,MEXILETINE HYDROCHLORIDE USP,official,https://www.fda.gov/media/192069/download?attachment
+mexiletine,US_DMF,35983,active,2021-06-04,HETERO DRUGS LTD,,,MEXILETINE HYDROCHLORIDE,official,https://www.fda.gov/media/192069/download?attachment
+mexiletine,US_DMF,36097,active,2021-10-28,MACLEODS PHARMACEUTICALS LTD,IN,GLEIF legal address,MEXILETINE HYDROCHLORIDE USP,official,https://www.fda.gov/media/192069/download?attachment
+mexiletine,US_DMF,9257,active,1991-07-26,MEDICHEM SA,ES,GLEIF legal address,MEXILETINE HYDROCHLORIDE,official,https://www.fda.gov/media/192069/download?attachment
+mexiletine,US_DMF,9786,inactive,1992-06-30,FINE CHEMICALS CORP,,,MEXILETINE HYDROCHLORIDE,official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,11017,inactive,1994-08-02,ESTEVE QUIMICA SA,ES,GLEIF legal address,OMEPRAZOLE,official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,11551,inactive,1995-06-09,UNION QUIMICO FARMACEUTICA SA (UQUIFA SA),,,OMEPRAZOLE,official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,11794,active,1995-12-21,ESTEVE QUIMICA SA,ES,GLEIF legal address,OMEPRAZOLE,official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,12605,active,1997-07-23,QUIMICA SINTETICA SA,,,OMEPRAZOLE,official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,12726,active,1997-10-31,ASTRAZENECA AB,SE,GLEIF legal address,OMEPRAZOLE MAGNESIUM DRUG SUBSTANCE,official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,12827,active,1998-01-21,CIPLA LTD,,,OMEPRAZOLE USP,official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,12917,active,1998-03-25,DR REDDYS LABORATORIES LTD,,,"OMEPRAZOLE, USP",official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,14286,inactive,1999-07-07,WOCKHARDT LTD,,,OMEPRAZOLE,official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,14649,inactive,1999-12-30,MERCK AND CO INC,,,OMEPRAZOLE MAGNESIUM,official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,14969,inactive,2000-07-31,SANYO FINE CO LTD,,,OMEPRAZOLE,official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,15024,active,2000-08-25,HETERO DRUGS LTD,,,OMEPRAZOLE,official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,15804,inactive,2002-01-09,UNION QUIMICO FARMACEUTICA SA (UQUIFA SA),,,OMEPRAZOLE (SIEVED) ,official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,15947,inactive,2002-04-22,LEK PHARMACEUTICAL AND CHEMICAL CO DD,,,OMEPRAZOLE A DRUG SUBSTANCE,official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,15949,inactive,2002-04-08,SCINOPHARM TAIWAN LTD,,,OMEPRAZOLE USP,official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,17126,inactive,2004-01-12,SANDOZ SYNTEK ILAC HAMMADDELERI SANAYI VE TICARET AS,,,OMEPRAZOLE,official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,17255,active,2004-03-23,UNION QUIMICO FARMACEUTICA SA (UQUIFA SA),,,OMEPRAZOLE ,official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,17392,inactive,2004-05-18,SCINOPHARM TAIWAN LTD,,,OMEPRAZOLE ,official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,17706,active,2004-09-24,DR REDDYS LABORATORIES LTD,,,OMEPRAZOLE MAGNESIUM,official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,18501,inactive,2005-07-11,CADILA HEALTHCARE LTD,,,OMEPRAZOLE,official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,19367,inactive,2006-04-14,MYLAN LABORATORIES LTD,,,OMEPRAZOLE MAGNESIUM USP,official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,19713,active,2006-08-28,DR REDDYS LABORATORIES LTD,,,OMEPRAZOLE (FORM B) USP,official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,20169,inactive,2007-01-17,CIPLA LTD,,,OMEPRAZOLE SODIUM,official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,21100,inactive,2007-12-03,SUN PHARMACEUTICAL INDUSTRIES LTD,,,OMEPRAZOLE MAGNESIUM USP,official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,21223,active,2007-12-31,APITORIA PHARMA PRIVATE LTD,,,OMEPRAZOLE USP (NON-STERILE DRUG SUBSTANCE) ,official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,21310,active,2008-02-05,NATCO PHARMA LTD,,,OMEPRAZOLE,official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,21498,active,2008-03-31,LUPIN LTD,,,OMEPRAZOLE USP,official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,21521,inactive,2008-03-31,LUPIN LTD,,,OMEPRAZOLE MAGNESIUM,official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,21793,active,2008-07-14,ZYDUS LIFESCIENCES LTD,,,OMEPRAZOLE USP (FORM-B),official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,22471,active,2009-01-30,SRINI PHARMACEUTICALS PRIVATE LTD,,,OMEPRAZOLE USP,official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,22897,active,2009-06-19,SHOUGUANG FUKANG PHARMACEUTICAL CO LTD,,,OMEPRAZOLE,official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,22970,active,2009-07-18,APITORIA PHARMA PRIVATE LTD,,,OMEPRAZOLE MAGNESIUM USP (NON STERILE DRUG SUBSTANCE),official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,23219,inactive,2009-10-20,DISHMAN CARBOGEN AMCIS LTD,,,OMEPRAZOLE,official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,24118,active,2010-09-01,ZHEJIANG JINHUA CONBA BIO-PHARM CO LTD,,,OMEPRAZOLE,official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,24640,active,2011-02-16,DR REDDYS LABORATORIES LTD,,,OMEPRAZOLE [PROCESS-II],official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,24923,active,2011-05-02,SHOUGUANG FUKANG PHARMACEUTICAL CO LTD,,,OMEPRAZOLE ,official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,24982,active,2011-05-25,HETERO DRUGS LTD,,,OMEPRAZOLE MAGNESIUM,official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,25227,active,2011-08-18,WAVELENGTH ENTERPRISES LTD,IL,GLEIF legal address,OMEPRAZOLE MAGNESIUM,official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,25621,active,2011-12-22,TAPI NL BV,,,OMEPRAZOLE,official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,25712,active,2012-01-18,HETERO DRUGS LTD,,,OMEPRAZOLE USP (FORM B),official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,26262,inactive,2012-07-25,IOL CHEMICALS AND PHARMACEUTICALS LTD,,,OMEPRAZOLE,official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,26796,active,2013-03-14,SUN PHARMACEUTICAL INDUSTRIES LTD,,,OMEPRAZOLE USP,official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,27190,active,2013-09-02,RAKS PHARMA PVT LTD,,,"OMEPRAZOLE MAGNESIUM, USP",official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,27734,active,2013-11-13,SHOUGUANG FUKANG PHARMACEUTICAL CO LTD,,,OMEPRAZOLE MAGNESIUM,official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,27928,inactive,2014-01-17,METROCHEM API PRIVATE LTD,,,OMEPRAZOLE,official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,28310,active,2014-07-04,YUNG SHIN PHARMACEUTICAL INDUSTRIAL CO LTD,,,"OMEPRAZOLE, USP",official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,29005,active,2015-01-22,EVEREST ORGANICS LTD,,,OMEPRAZOLE CHLORO COMPOUND,official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,29402,active,2015-06-22,RAKS PHARMA PVT LTD,,,"OMEPRAZOLE, USP",official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,29633,active,2015-10-21,ALIVUS LIFE SCIENCES LTD,,,OMEPRAZOLE USP,official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,29981,active,2016-11-28,STERILE INDIA PVT LTD,,,OMEPRAZOLE SODIUM (STERILE),official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,30335,active,2016-11-23,SUN PHARMACEUTICAL INDUSTRIES LTD,,,OMEPRAZOLE MAGNESIUM USP,official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,31829,active,2017-08-31,GRANULES INDIA LTD,,,OMEPRAZOLE MAGNESIUM USP,official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,33402,active,2018-12-02,JINZHOU JIUTAI PHARMACEUTICAL CO LTD,,,OMEPRAZOLE SODIUM,official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,34759,active,2020-06-03,METROCHEM API PRIVATE LTD,,,OMEPRAZOLE USP,official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,35390,active,2020-11-20,METROCHEM API PRIVATE LTD,,,OMEPRAZOLE  MAGNESIUM ,official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,37155,active,2022-05-30,EVEREST ORGANICS LTD,,,OMEPRAZOLE USP,official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,37449,active,2022-09-29,GRANULES INDIA LTD,,,OMEPRAZOLE USP,official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,37921,active,2023-05-25,LEE PHARMA LTD,,,OMEPRAZOLE ,official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,38585,active,2024-04-26,CHROMO LABORATORIES INDIA PRIVATE LTD,,,OMEPRAZOLE MAGNESIUM USP,official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,38586,active,2024-04-22,CHROMO LABORATORIES INDIA PRIVATE LTD,,,OMEPRAZOLE,official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,38588,active,2023-08-16,EVEREST ORGANICS LTD,,,OMEPRAZOLE SULPHIDE ,official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,38882,active,2023-09-29,DR REDDYS LABORATORIES LTD,,,OMEPRAZOLE MAGNESIUM (CRYSTALLINE) ,official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,39812,active,2024-06-19,EVEREST ORGANICS LTD,,,OMEPRAZOLE MAGNESIUM USP,official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,40894,active,2024-12-31,CIPLA LTD,,,OMEPRAZOLE USP PROCESS-II ,official,https://www.fda.gov/media/192069/download?attachment
+omeprazole,US_DMF,44233,active,2026-07-15,SRI SAI CHANDANA API PRIVATE LTD,,,OMEPRAZOLE ,official,https://www.fda.gov/media/192069/download?attachment
+pyridostigmine,US_DMF,10593,active,1993-11-30,PATHEON AUSTRIA GMBH AND CO KG,,,PYRIDOSTIGMINE BROMIDE,official,https://www.fda.gov/media/192069/download?attachment
+pyridostigmine,US_DMF,10877,inactive,1994-04-11,HELSINN ADVANCED SYNTHESIS SA,,,PYRIDOSTIGMINE BROMIDE,official,https://www.fda.gov/media/192069/download?attachment
+pyridostigmine,US_DMF,15665,inactive,2001-10-16,POLYCARBON INDUSTRIES INC DBA PCI SYNTHESIS,,,PYRIDOSTIGMINE BROMIDE USP,official,https://www.fda.gov/media/192069/download?attachment
+pyridostigmine,US_DMF,16035,active,2002-06-26,PROCOS SPA,,,PYRIDOSTIGMINE BROMIDE,official,https://www.fda.gov/media/192069/download?attachment
+pyridostigmine,US_DMF,35024,active,2020-08-15,MAITHRI LABORATORIES PRIVATE LTD,,,PYRIDOSTIGMINE BROMIDE USP,official,https://www.fda.gov/media/192069/download?attachment
+pyridostigmine,US_DMF,39379,active,2024-04-01,SHANGHAI ZHONGXI SUNVE PHARMACEUTICAL CO LTD,,,PYRIDOSTIGMINE BROMIDE,official,https://www.fda.gov/media/192069/download?attachment
+pyridostigmine,US_DMF,39637,active,2024-03-11,GLOBAL CALCIUM PRIVATE LTD,,,PYRIDOSTIGMINE BROMIDE USP,official,https://www.fda.gov/media/192069/download?attachment
+pyridostigmine,US_DMF,43788,active,2026-03-18,COHANCE LIFESCIENCES LTD,,,PYRIDOSTIGMINE BROMIDE USP,official,https://www.fda.gov/media/192069/download?attachment
+pyridostigmine,US_DMF,5505,active,1984-07-16,BAUSCH HEALTH US LLC,,,PYRIDOSTIGMINE BROMIDE,official,https://www.fda.gov/media/192069/download?attachment
+pyridostigmine,US_DMF,6939,inactive,1987-04-20,HOFFMANN LA ROCHE INC,,,PYRIDOSTIGMINE BROMIDE,official,https://www.fda.gov/media/192069/download?attachment
+pyridostigmine,US_DMF,8800,inactive,1990-10-25,DELMAR CHEMICALS INC,CA,GLEIF legal address,PYRIDOSTIGMINE BROMIDE,official,https://www.fda.gov/media/192069/download?attachment
+pyridostigmine,US_DMF,8952,inactive,1991-01-28,UNICHEM LABORATORIES LTD,,,PYRIDOSTIGMINE BROMIDE,official,https://www.fda.gov/media/192069/download?attachment
+pyridostigmine,US_DMF,9029,inactive,1991-03-25,CILAG CHEMIE AG,,,PYRIDOSTIGMINE BROMIDE,official,https://www.fda.gov/media/192069/download?attachment
+pyridostigmine,US_DMF,9216,inactive,1991-06-21,NV ORGANON,,,PYRIDOSTIGMINE BROMIDE,official,https://www.fda.gov/media/192069/download?attachment
+sacubitril,US_DMF,31271,active,2016-12-30,MATRIX PHARMACORP PRIVATE LTD,,,SACUBITRIL,official,https://www.fda.gov/media/192069/download?attachment
+sacubitril,US_DMF,31574,active,2017-08-29,DR REDDYS LABORATORIES LTD,,,SACUBITRIL/VALSARTAN,official,https://www.fda.gov/media/192069/download?attachment
+sacubitril,US_DMF,32171,active,2017-12-16,MSN LIFE SCIENCES PRIVATE LTD,,,SACUBITRIL AND VALSARTAN,official,https://www.fda.gov/media/192069/download?attachment
+sacubitril,US_DMF,32254,active,2017-12-07,MATRIX PHARMACORP PRIVATE LTD,,,SACUBITRIL/VALSARTAN,official,https://www.fda.gov/media/192069/download?attachment
+sacubitril,US_DMF,32325,active,2017-12-30,MSN LIFE SCIENCES PRIVATE LTD,,,SACUBITRIL AND VALSARTAN (AMORPHOUS),official,https://www.fda.gov/media/192069/download?attachment
+sacubitril,US_DMF,32337,active,2017-12-21,ZAKLADY FARMACEUTYCZNE POLPHARMA SA,PL,derived: alle Leaflet-Standorte dieser Firma in einem Land,SACUBITRIL/VALSARTAN COMPLEX,official,https://www.fda.gov/media/192069/download?attachment
+sacubitril,US_DMF,33232,active,2018-10-30,MSN LIFE SCIENCES PRIVATE LTD,,,SACUBITRIL SODIUM,official,https://www.fda.gov/media/192069/download?attachment
+sacubitril,US_DMF,33251,active,2018-10-30,RAKS PHARMA PVT LTD,,,SACUBITRIL SODIUM,official,https://www.fda.gov/media/192069/download?attachment
+sacubitril,US_DMF,33344,inactive,2019-03-15,LUPIN LTD,,,SACUBITRIL/VALSARTAN COMPLEX,official,https://www.fda.gov/media/192069/download?attachment
+sacubitril,US_DMF,33345,inactive,2018-12-24,LUPIN LTD,,,SACUBITRIL CALCIUM,official,https://www.fda.gov/media/192069/download?attachment
+sacubitril,US_DMF,33398,active,2018-12-31,MSN LIFE SCIENCES PRIVATE LTD,,,SACUBITRIL AND VALSARTAN (FORM-S),official,https://www.fda.gov/media/192069/download?attachment
+sacubitril,US_DMF,33426,active,2019-04-26,BIOCON LTD,,,SACUBITRIL SODIUM,official,https://www.fda.gov/media/192069/download?attachment
+sacubitril,US_DMF,33452,active,2019-02-01,HARMAN FINOCHEM LTD,,,SACUBITRIL/VALSARTAN,official,https://www.fda.gov/media/192069/download?attachment
+sacubitril,US_DMF,33455,active,2019-01-10,MACLEODS PHARMACEUTICALS LTD,IN,GLEIF legal address,SACUBITRIL/VALSARTAN,official,https://www.fda.gov/media/192069/download?attachment
+sacubitril,US_DMF,33457,active,2019-02-28,TAPI NL BV,,,SACUBITRIL/VALSARTAN,official,https://www.fda.gov/media/192069/download?attachment
+sacubitril,US_DMF,33474,active,2019-01-23,ZHUHAI RUNDU PHARMACEUTICAL CO LTD,,,SACUBITRIL SODIUM,official,https://www.fda.gov/media/192069/download?attachment
+sacubitril,US_DMF,33476,active,2018-12-31,ZHEJIANG TIANYU PHARMACEUTICAL CO LTD,,,SACUBITRIL SODIUM,official,https://www.fda.gov/media/192069/download?attachment
+sacubitril,US_DMF,33495,active,2019-02-11,UNICHEM LABORATORIES LTD,,,SACUBITRIL,official,https://www.fda.gov/media/192069/download?attachment
+sacubitril,US_DMF,33570,active,2019-03-22,ALEMBIC PHARMACEUTICALS LTD,,,SACUBITRIL VALSARTAN TRISODIUM HEMIPENTAHYDRATE,official,https://www.fda.gov/media/192069/download?attachment
+sacubitril,US_DMF,33647,active,2019-06-07,LAURUS LABS LTD,,,SACUBITRIL VALSARTAN 3NA COMPLEX,official,https://www.fda.gov/media/192069/download?attachment
+sacubitril,US_DMF,33657,active,2019-05-09,HONOUR LAB LTD,,,SACUBITRIL VALSARTAN SODIUM ON COLLOIDAL SILICON DIOXIDE,official,https://www.fda.gov/media/192069/download?attachment
+sacubitril,US_DMF,35480,active,2020-12-28,CHANGZHOU PHARMACEUTICAL FACTORY,,,SACUBITRIL VALSARTAN SODIUM,official,https://www.fda.gov/media/192069/download?attachment
+sacubitril,US_DMF,35868,active,2021-04-28,ZHUHAI RUNDU PHARMACEUTICAL CO LTD,,,SACUBITRIL/VALSARTAN,official,https://www.fda.gov/media/192069/download?attachment
+sacubitril,US_DMF,35962,active,2021-05-31,CHANGZHOU PHARMACEUTICAL FACTORY,,,SACUBITRIL SODIUM,official,https://www.fda.gov/media/192069/download?attachment
+sacubitril,US_DMF,36204,active,2021-10-12,MANKIND PHARMA LTD,,,SACUBITRIL SODIUM,official,https://www.fda.gov/media/192069/download?attachment
+sacubitril,US_DMF,36637,active,2022-01-17,MANKIND PHARMA LTD,,,SACUBITRIL VALSARTAN TRISODIUM (AMORPHOUS),official,https://www.fda.gov/media/192069/download?attachment
+sacubitril,US_DMF,37994,active,2023-03-09,AMI LIFESCIENCES PRIVATE LTD,,,SACUBITRIL VALSARTAN TRISODIUM SALT HEMIPENTAHYDRATE,official,https://www.fda.gov/media/192069/download?attachment
+sacubitril,US_DMF,38140,active,2023-03-17,AMI LIFESCIENCES PRIVATE LTD,,,SACUBITRIL SODIUM,official,https://www.fda.gov/media/192069/download?attachment
+sacubitril,US_DMF,39023,active,2024-08-22,LEE PHARMA LTD,,,SACUBITRIL VALSARTAN (AMORPHOUS),official,https://www.fda.gov/media/192069/download?attachment
+sacubitril,US_DMF,39322,active,2023-12-30,WISDOM PHARMACEUTICAL CO LTD,,,SACUBITRIL VALSARTAN SODIUM ,official,https://www.fda.gov/media/192069/download?attachment
+sacubitril,US_DMF,39382,active,2024-01-27,LINHAI TIANYU PHARMACEUTICAL CO LTD,,, SACUBITRIL VALSARTAN SODIUM (INTERNAL CODE: LCZ696),official,https://www.fda.gov/media/192069/download?attachment
+sacubitril,US_DMF,39591,active,2024-02-25,JIANGSU LIANHUAN PHARMACEUTICAL CO LTD,,,SACUBITRIL VALSARTAN SODIUM,official,https://www.fda.gov/media/192069/download?attachment
+sacubitril,US_DMF,39628,active,2024-04-06,AMOLI ORGANICS (A DIVISION OF UMEDICA LABORATORIES PVT LTD),,,SACUBITRIL/VALSARTAN,official,https://www.fda.gov/media/192069/download?attachment
+sacubitril,US_DMF,39929,active,2024-06-06,CHROMO LABORATORIES INDIA PRIVATE LTD,,,SACUBITRIL VALSARTAN TRISODIUM HEMIPENTAHYDRATE,official,https://www.fda.gov/media/192069/download?attachment
+sacubitril,US_DMF,40137,active,2024-07-12,ZHEJIANG HUAHAI PHARMACEUTICAL CO LTD,,,SACUBITRIL VALSARTAN SODIUM ,official,https://www.fda.gov/media/192069/download?attachment
+sacubitril,US_DMF,40307,active,2024-08-28,DR REDDYS LABORATORIES LTD,,, SACUBITRIL SODIUM,official,https://www.fda.gov/media/192069/download?attachment
+sacubitril,US_DMF,40710,active,2025-09-04,ZHEJIANG RAYBOW PHARMACEUTICAL CO LTD,,,SACUBITRIL VALSARTAN TRISODIUM HEMIPENTAHYDRATE COMPLEX,official,https://www.fda.gov/media/192069/download?attachment
+sacubitril,US_DMF,40981,active,2024-12-19,AMOLI ORGANICS (A DIVISION OF UMEDICA LABORATORIES PVT LTD),,,SACUBITRIL/VALSARTAN CRYSTALLINE,official,https://www.fda.gov/media/192069/download?attachment
+sacubitril,US_DMF,41246,active,2025-02-10,LEE PHARMA LTD,,,SACUBITRIL VALSARTAN SODIUM COMPLEX,official,https://www.fda.gov/media/192069/download?attachment
+sacubitril,US_DMF,41409,active,2025-02-27,SICHUAN KELUN PHARMACEUTICAL CO LTD,,,SACUBITRIL VALSARTAN SODIUM,official,https://www.fda.gov/media/192069/download?attachment
+sacubitril,US_DMF,41621,active,2025-09-30,ZHEJIANG TIANYU PHARMACEUTICAL CO LTD,,,SACUBITRIL SODIUM (PROCESS II),official,https://www.fda.gov/media/192069/download?attachment
+sacubitril,US_DMF,41944,active,2025-05-24,EXEMED PHARMACEUTICALS,,,SACUBITRIL VALSARTAN TRISODIUM HEMIPENTAHYDRATE,official,https://www.fda.gov/media/192069/download?attachment
+sacubitril,US_DMF,42543,active,2025-09-29,HONOUR LAB LTD,,,SACUBITRIL VALSARTAN SODIUM HYDRATE,official,https://www.fda.gov/media/192069/download?attachment
+sacubitril,US_DMF,42857,active,2025-10-31,ZHEJIANG APELOA JIAYUAN PHARMACEUTICAL CO LTD,,,SACUBITRIL VALSARTAN SODIUM HYDRATE ,official,https://www.fda.gov/media/192069/download?attachment
+sacubitril,US_DMF,42985,active,2025-11-14,AMOLI ORGANICS (A DIVISION OF UMEDICA LABORATORIES PVT LTD),,," 
+SACUBITRIL SODIUM
+
+",official,https://www.fda.gov/media/192069/download?attachment
+sacubitril,US_DMF,43510,active,2026-01-23,ZHEJIANG APELOA JIAYUAN PHARMACEUTICAL CO LTD,,,SACUBITRIL SODIUM,official,https://www.fda.gov/media/192069/download?attachment
+sacubitril,US_DMF,43974,active,2026-04-08,CHANGZHOU PHARMACEUTICAL FACTORY,,,SACUBITRIL VALSARTAN SODIUM (ROUTE CODE: SX),official,https://www.fda.gov/media/192069/download?attachment
+sacubitril,US_DMF,44024,active,2026-04-30,ZHEJIANG HUAHAI PHARMACEUTICAL CO LTD,,,"
+SACUBITRIL SODIUM",official,https://www.fda.gov/media/192069/download?attachment
+sacubitril,US_DMF,44660,active,2026-08-29,ZYDUS LIFESCIENCES LTD,,,SACUBITRIL AND VALSARTAN ,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,35712,active,2021-03-18,ZHEJIANG PEPTITES BIOTECH CO LTD,,,SEMAGLUTIDE ,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,35875,active,2021-04-22,ALP PHARM BEIJING CO LTD,,,SEMAGLUTIDE,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,36009,active,2022-05-04,SHENZHEN JYMED TECHNOLOGY CO LTD,,,SEMAGLUTIDE,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,36015,active,2021-08-06,AMBIO INC,,,SEMAGLUTIDE,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,36036,active,2021-08-23,DR REDDYS LABORATORIES LTD,,,SEMAGLUTIDE,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,36101,active,2021-07-12,POLYPEPTIDE SA,,,SEMAGLUTIDE,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,36273,active,2021-11-01,SINOPEP-ALLSINO BIOPHARMACEUTICAL CO LTD,,,SEMAGLUTIDE,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,36345,active,2021-10-15,SUN PHARMACEUTICAL INDUSTRIES LTD,,,SEMAGLUTIDE,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,36389,active,2021-10-15,ZYDUS WORLDWIDE DMCC,,,SEMAGLUTIDE,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,37594,active,2023-03-16,BACHEM AG,,,SEMAGLUTIDE,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,38177,active,2023-08-02,POLYPEPTIDE SA,,,SEMAGLUTIDE DRUG SUBSTANCE,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,38213,active,2023-03-27,SUZHOU TIANMA PHARMA GROUP TIANJI BIO-PHARMACEUTICAL CO LTD,,,SEMAGLUTIDE,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,38424,active,2023-10-23,CHENGDU SHENGNUO BIOPHARM CO LTD,,,SEMAGLUTIDE NON-STERILE BULK DRUG,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,38443,active,2023-06-09,HYBIO PHARMACEUTICAL CO LTD,,,"SEMAGLUTIDE, NON-STERILE DRUG SUBSTANCE",official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,38479,active,2023-09-11,YANGZHOU AURISCO PHARMACEUTICAL CO LTD,,,SEMAGLUTIDE,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,38480,active,2023-08-01,BEIJING QL BIOPHARMACEUTICAL CO LTD,,,SEMAGLUTIDE,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,38507,active,2023-07-19,HANGZHOU ZHONGMEI HUADONG PHARMACEUTICAL CO LTD,,,SEMAGLUTIDE ,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,38729,active,2023-09-23,MSN LIFE SCIENCES PRIVATE LTD,,,SEMAGLUTIDE,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,38798,active,2023-09-20,CHONGQING CHEN'AN BIOPHARMACEUTICAL CO LTD,,,SEMAGLUTIDE,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,39091,active,2023-11-23,ASYMCHEM LIFE SCIENCE TIANJIN CO LTD,,,SEMAGLUTIDE,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,39104,active,2023-11-10,CHINESE PEPTIDE CO,,,SEMAGLUTIDE ,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,39115,active,2023-11-10,WUHAN MORE BIOTECHNOLOGY CO LTD,,,SEMAGLUTIDE,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,39180,active,2024-04-10,NANJING HANXIN PHARMACEUTICAL TECHNOLOGY CO LTD,,, SEMAGLUTIDE MAIN CHAIN P29,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,39209,active,2024-09-28,NANJING HANXIN PHARMACEUTICAL TECHNOLOGY CO LTD,,,SEMAGLUTIDE DRUG SUBSTANCE,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,39480,active,2024-02-06,WUHAN MORE BIOTECHNOLOGY CO LTD,,,SEMAGLUTIDE MAIN CHAIN,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,39495,active,2024-03-03,HUISHENG BIOPHARMACEUTICAL CO LTD,,,SEMAGLUTIDE,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,39522,active,2024-03-07,FUJIAN GENOHOPE BIOTECH LTD,,,SEMAGLUTIDE ,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,39609,active,2024-02-28,HARBIN JIXIANGLONG BIOTECH CO LTD,,,SEMAGLUTIDE ,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,39791,active,2024-04-23,SHENZHEN READLINE BIOTECH CO LTD,,,SEMAGLUTIDE,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,39847,active,2024-06-15,NANJING CELLNUO BIOPHARMACEUTICAL CO LTD,,,"SEMAGLUTIDE, NON-STERILE DRUG SUBSTANCE",official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,39902,active,2024-06-28,HANGZHOU THINHEAL PHARMA-TECH CO LTD,,,SEMAGLUTIDE,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,39930,active,2024-05-22,HANGZHOU GO TOP PEPTIDE BIOTECH CO LTD,,,SEMAGLUTIDE,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,39932,active,2024-05-16,FUJIAN GENOHOPE BIOTECH LTD,,,SEMAGLUTIDE,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,40069,active,2024-06-14,NINGBO KUNPENG BIOTECH CO LTD,,,SEMAGLUTIDE,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,40124,active,2024-06-29,APICORE LLC,,,SEMAGLUTIDE,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,40212,active,2024-07-10,GUANGDONG ZETAPHARMAX CO LTD,,,SEMAGLUTIDE,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,40319,active,2024-08-08,HYBIO PHARMACEUTICAL CO LTD,,,SEMAGLUTIDE NON-STERILE DRUG SUBSTANCE,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,40471,active,2024-12-27,ZHEJIANG ZERUI BIOPHARMA CO LTD,,,SEMAGLUTIDE API ,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,40496,active,2024-09-11,SICHUAN QISHENG BIOMEDICAL TECHNOLOGY CO LTD,,,SEMAGLUTIDE,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,40534,active,2024-09-24,HYBIO PHARMACEUTICAL CO LTD,,,"SEMAGLUTIDE, RECOMBIANANT NON-STERILE DRUG SUBSTANCE",official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,40713,active,2025-01-28,HANGZHOU ZHONGMEIHUADONG PHARMACEUTICAL JIANGDONG CO LTD,,, SEMAGLUTIDE (PROCESS II),official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,40714,active,2024-12-21,BIOCON LTD,,,SEMAGLUTIDE,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,40957,active,2024-12-09,FUJIAN GENOHOPE BIOTECH LTD,,,SEMAGLUTIDE (PROCESS II),official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,40973,active,2025-02-24,SHANXI TONGDA PHARMACEUTICAL CO LTD,,,SEMAGLUTIDE,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,40989,active,2024-12-16,SUZHOU RYWAY BIOTECH CO LTD,,,SEMAGLUTIDE,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,41023,active,2024-12-30,ANHUI TAIENKANG PHARMACEUTICAL CO LTD,,,SEMAGLUTIDE,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,41076,active,2025-01-05,SHENZHEN READLINE BIOTECH CO LTD,,,SEMAGLUTIDE MAIN CHAIN ,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,41090,active,2025-01-17,SHENZHEN JYMED TECHNOLOGY CO LTD,,,SEMAGLUTIDE (PROCESS II),official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,41170,active,2025-01-08,SHENZHEN JYMED TECHNOLOGY CO LTD,,,SEMAGLUTIDE (PROCESS III),official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,41187,active,2025-03-25,REALI TIDE BIOLOGICAL TECHNOLOGY (WEIHAI) CO LTD,,,SEMAGLUTIDE,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,41314,active,2025-02-28,ANHUI POLY PHARM CO LTD,,,SEMAGLUTIDE,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,41460,active,2025-03-12,XIUSHI BIOPHARMA (NANTONG) CO LTD,,, SEMAGLUTIDE,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,41576,active,2025-03-19,SICHUAN JISHENG BIOPHARMACEUTICAL CO LTD,,,SEMAGLUTIDE ,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,41594,active,2025-03-19,NINGXIA LANBOSI CHEMISTRY TECHNOLOGY CO LTD,,,SEMAGLUTIDE ,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,41860,active,2025-05-16,SUZHOU MOTIF BIOTECH CO LTD,,,SEMAGLUTIDE ,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,41945,active,2025-06-06,SUZHOU LIXIN PHARMACEUTICAL CO LTD,,,"
+SEMAGLUTIDE",official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,42038,active,2025-06-23,CHONGQING SINTAHO PHARMACEUTICAL CO LTD,,,SEMAGLUTIDE,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,42108,active,2025-12-10,TAPI NL BV,,,SEMAGLUTIDE,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,42288,active,2025-07-24,ZHEJIANG PEPTITES BIOTECH CO LTD,,,"
+SEMAGLUTIDE",official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,42442,active,2026-03-06,AURO PEPTIDES LTD,,,SEMAGLUTIDE,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,42491,active,2025-09-30,FUJIAN GENOHOPE BIOTECH LTD,,,SEMAGLUTIDE (PROCESS III) ,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,42519,active,2026-02-05,SHENZHEN JYMED TECHNOLOGY CO LTD,,,SEMAGLUTIDE (PROCESS IV),official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,42525,active,2025-09-26,YANGZHOU AURISCO PHARMACEUTICAL CO LTD,,,SEMAGLUTIDE,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,42796,active,2025-12-01,SINOPEP-ALLSINO BIOPHARMACEUTICAL CO LTD,,,SEMAGLUTIDE,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,42883,active,2025-10-29,CHANGZHOU PHARMACEUTICAL FACTORY,,,"
+SEMAGLUTIDE",official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,43182,active,2026-01-29,CHENGDU BRILLIANT BIOPHARMACEUTICAL CO LTD,,,SEMAGLUTIDE ,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,43241,active,2026-07-16,ZHEJIANG TASLN BIOPHARMA CO LTD,,,SEMAGLUTIDE,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,43245,active,2025-12-15,ZHEJIANG PEPTITES BIOTECH CO LTD,,,SEMAGLUTIDE (PROCESS II),official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,43251,active,2025-12-29,SICHUAN DUORUI BIOPHARMACEUTICAL CO LTD,,,SEMAGLUTIDE,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,43260,active,2025-12-15,ZHEJIANG PEPTITES BIOTECH CO LTD,,,SEMAGLUTIDE(PROCESS III),official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,43275,active,2025-12-29,SINOPEP-ALLSINO BIOPHARMACEUTICAL CO LTD,,,SEMAGLUTIDE (SEMI-SYNTHETIC),official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,43358,active,2025-12-26,NOVOPROTEIN SCIENTIFIC (SHANGHAI) INC,,,SEMAGLUTIDE PEPTIDE SEQUENCE (9-37),official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,43425,active,2025-12-29,EL-PEPTIDO (SHANGHAI) BIOPHARMACEUTICAL CO LTD,,,SEMAGLUTIDE,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,43785,active,2026-03-31,FDC LIMITED,IN,GLEIF legal address,SEMAGLUTIDE ,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,43801,active,2026-03-13,PIRAMAL PHARMA LTD,,,SEMAGLUTIDE,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,43990,active,2026-04-14,TAIJI GROUP CHONGQING FULING PHARMACEUTICAL CO LTD,,,SEMAGLUTIDE DRUG SUBSTANCE PRODUCED BY RECOMBINANT SACCHAROMYCES CEREVISIAE FERMENTATION AND SUBSEQUENT CHEMICAL MODIFICATION,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,44008,active,2026-06-12,LEPU PHARMACEUTICAL CO LTD,,,SEMAGLUTIDE,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,44039,active,2026-04-27,VIRTU PHARMAKO (ZHEJIANG) CO LTD,,,SEMAGLUTIDE,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,44229,active,2026-07-17,HETERO DRUGS LTD,,,"
+SEMAGLUTIDE",official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,44246,active,2026-06-14,JILIN QIJIAN BIO-PHARMACEUTICAL CO LTD,,,SEMAGLUTIDE,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,44328,active,2026-07-02,HYBIO PHARMACEUTICAL CO LTD,,,"SEMAGLUTIDE, NON-STERILE DRUG SUBSTANCE",official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,44386,active,2026-09-11,ZHEJIANG HUAHAI PHARMACEUTICAL CO LTD,,,SEMAGLUTIDE ,official,https://www.fda.gov/media/192069/download?attachment
+semaglutide,US_DMF,44827,active,2026-09-20,XIUSHI BIOPHARMA (RUDONG) CO LTD,,,SEMAGLUTIDE,official,https://www.fda.gov/media/192069/download?attachment

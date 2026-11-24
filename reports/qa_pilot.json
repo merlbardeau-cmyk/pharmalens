@@ -8,13 +8,13 @@
   {
     "rule": "provenance:company",
     "violations": 0,
-    "total": 1556,
+    "total": 1823,
     "description": "Zeile ohne source_url/source_name/retrieved_at/status"
   },
   {
     "rule": "provenance:company_relation",
     "violations": 0,
-    "total": 11,
+    "total": 33,
     "description": "Zeile ohne source_url/source_name/retrieved_at/status"
   },
   {
@@ -32,7 +32,7 @@
   {
     "rule": "provenance:product_manufacturer",
     "violations": 0,
-    "total": 1587,
+    "total": 4829,
     "description": "Zeile ohne source_url/source_name/retrieved_at/status"
   },
   {
@@ -56,19 +56,19 @@
   {
     "rule": "provenance:supply_link",
     "violations": 0,
-    "total": 0,
+    "total": 3909,
     "description": "Zeile ohne source_url/source_name/retrieved_at/status"
   },
   {
     "rule": "company_without_country",
-    "violations": 1310,
-    "total": 1539,
+    "violations": 1277,
+    "total": 1659,
     "description": "Firma ohne Land (nicht erfunden -> gap)"
   },
   {
     "rule": "duplicate_company_after_ER",
     "violations": 0,
-    "total": 1539,
+    "total": 1659,
     "description": "gleicher legal_key mehrfach aktiv"
   },
   {
@@ -80,37 +80,37 @@
   {
     "rule": "manufacturer_quote_contains_name",
     "violations": 0,
-    "total": 1582,
+    "total": 3909,
     "description": "Zitat fehlt oder enthält den Herstellernamen nicht"
   },
   {
     "rule": "dmf_holder_country_not_from_dmf",
-    "violations": 2,
-    "total": 267,
-    "description": "Land einer reinen DMF-Halter-Firma nicht aus GLEIF (US-Agent-Fehler)"
+    "violations": 0,
+    "total": 282,
+    "description": "Land eines API-Herstellers aus anderer Quelle als GLEIF/Leaflet-Standort (US-Agent-Fehler der DMF-Liste)"
   },
   {
     "rule": "api_role_only_from_api_evidence",
     "violations": 0,
-    "total": 1539,
+    "total": 1659,
     "description": "API-Hersteller-Rolle ohne Zertifikat/Annex-IIA-Beleg (Importeur-Fehler)"
   },
   {
     "rule": "derived_links_marked_derived",
     "violations": 0,
-    "total": 0,
+    "total": 3909,
     "description": "nicht bestätigte Verbindung ohne status=derived"
   },
   {
     "rule": "no_email_in_quotes",
-    "violations": 4,
-    "total": 1582,
+    "violations": 0,
+    "total": 3909,
     "description": "E-Mail-Adresse im Zitat (DSGVO-Prüfung)"
   },
   {
     "rule": "manufacturer_site_country",
-    "violations": 30,
-    "total": 1582,
+    "violations": 88,
+    "total": 3909,
     "description": "Standort ohne bestimmbares Land"
   }
 ]

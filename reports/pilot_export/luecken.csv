@@ -1,0 +1,497 @@
+area,entity_type,entity_ref,reason,where_obtainable,source_name
+certificate,api,amlodipine,Written Confirmations nicht abrufbar (CDSCO blockiert),Handbeschaffung cdsco.gov.in,CDSCO Written Confirmations
+certificate,api,amlodipine,CEP nicht abrufbar (EDQM robots.txt/WAF) – Lizenzanfrage offen,EDQM Lizenz / manuelle Abfrage,EDQM CEP-Datenbank
+certificate,api,apixaban,CEP nicht abrufbar (EDQM robots.txt/WAF) – Lizenzanfrage offen,EDQM Lizenz / manuelle Abfrage,EDQM CEP-Datenbank
+certificate,api,apixaban,Written Confirmations nicht abrufbar (CDSCO blockiert),Handbeschaffung cdsco.gov.in,CDSCO Written Confirmations
+certificate,api,atorvastatin,CEP nicht abrufbar (EDQM robots.txt/WAF) – Lizenzanfrage offen,EDQM Lizenz / manuelle Abfrage,EDQM CEP-Datenbank
+certificate,api,atorvastatin,Written Confirmations nicht abrufbar (CDSCO blockiert),Handbeschaffung cdsco.gov.in,CDSCO Written Confirmations
+certificate,api,dapsone,Written Confirmations nicht abrufbar (CDSCO blockiert),Handbeschaffung cdsco.gov.in,CDSCO Written Confirmations
+certificate,api,dapsone,CEP nicht abrufbar (EDQM robots.txt/WAF) – Lizenzanfrage offen,EDQM Lizenz / manuelle Abfrage,EDQM CEP-Datenbank
+certificate,api,edoxaban,Written Confirmations nicht abrufbar (CDSCO blockiert),Handbeschaffung cdsco.gov.in,CDSCO Written Confirmations
+certificate,api,edoxaban,CEP nicht abrufbar (EDQM robots.txt/WAF) – Lizenzanfrage offen,EDQM Lizenz / manuelle Abfrage,EDQM CEP-Datenbank
+certificate,api,empagliflozin,Written Confirmations nicht abrufbar (CDSCO blockiert),Handbeschaffung cdsco.gov.in,CDSCO Written Confirmations
+certificate,api,empagliflozin,CEP nicht abrufbar (EDQM robots.txt/WAF) – Lizenzanfrage offen,EDQM Lizenz / manuelle Abfrage,EDQM CEP-Datenbank
+certificate,api,florfenicol,CEP nicht abrufbar (EDQM robots.txt/WAF) – Lizenzanfrage offen,EDQM Lizenz / manuelle Abfrage,EDQM CEP-Datenbank
+certificate,api,florfenicol,Written Confirmations nicht abrufbar (CDSCO blockiert),Handbeschaffung cdsco.gov.in,CDSCO Written Confirmations
+certificate,api,fludrocortisone,CEP nicht abrufbar (EDQM robots.txt/WAF) – Lizenzanfrage offen,EDQM Lizenz / manuelle Abfrage,EDQM CEP-Datenbank
+certificate,api,fludrocortisone,Written Confirmations nicht abrufbar (CDSCO blockiert),Handbeschaffung cdsco.gov.in,CDSCO Written Confirmations
+certificate,api,hydroxycarbamide,Written Confirmations nicht abrufbar (CDSCO blockiert),Handbeschaffung cdsco.gov.in,CDSCO Written Confirmations
+certificate,api,hydroxycarbamide,CEP nicht abrufbar (EDQM robots.txt/WAF) – Lizenzanfrage offen,EDQM Lizenz / manuelle Abfrage,EDQM CEP-Datenbank
+certificate,api,levothyroxine,Written Confirmations nicht abrufbar (CDSCO blockiert),Handbeschaffung cdsco.gov.in,CDSCO Written Confirmations
+certificate,api,levothyroxine,CEP nicht abrufbar (EDQM robots.txt/WAF) – Lizenzanfrage offen,EDQM Lizenz / manuelle Abfrage,EDQM CEP-Datenbank
+certificate,api,marbofloxacin,CEP nicht abrufbar (EDQM robots.txt/WAF) – Lizenzanfrage offen,EDQM Lizenz / manuelle Abfrage,EDQM CEP-Datenbank
+certificate,api,marbofloxacin,Written Confirmations nicht abrufbar (CDSCO blockiert),Handbeschaffung cdsco.gov.in,CDSCO Written Confirmations
+certificate,api,metformin,Written Confirmations nicht abrufbar (CDSCO blockiert),Handbeschaffung cdsco.gov.in,CDSCO Written Confirmations
+certificate,api,metformin,CEP nicht abrufbar (EDQM robots.txt/WAF) – Lizenzanfrage offen,EDQM Lizenz / manuelle Abfrage,EDQM CEP-Datenbank
+certificate,api,mexiletine,Written Confirmations nicht abrufbar (CDSCO blockiert),Handbeschaffung cdsco.gov.in,CDSCO Written Confirmations
+certificate,api,mexiletine,CEP nicht abrufbar (EDQM robots.txt/WAF) – Lizenzanfrage offen,EDQM Lizenz / manuelle Abfrage,EDQM CEP-Datenbank
+certificate,api,omeprazole,Written Confirmations nicht abrufbar (CDSCO blockiert),Handbeschaffung cdsco.gov.in,CDSCO Written Confirmations
+certificate,api,omeprazole,CEP nicht abrufbar (EDQM robots.txt/WAF) – Lizenzanfrage offen,EDQM Lizenz / manuelle Abfrage,EDQM CEP-Datenbank
+certificate,api,pimobendan,CEP nicht abrufbar (EDQM robots.txt/WAF) – Lizenzanfrage offen,EDQM Lizenz / manuelle Abfrage,EDQM CEP-Datenbank
+certificate,api,pimobendan,Written Confirmations nicht abrufbar (CDSCO blockiert),Handbeschaffung cdsco.gov.in,CDSCO Written Confirmations
+certificate,api,pyridostigmine,Written Confirmations nicht abrufbar (CDSCO blockiert),Handbeschaffung cdsco.gov.in,CDSCO Written Confirmations
+certificate,api,pyridostigmine,CEP nicht abrufbar (EDQM robots.txt/WAF) – Lizenzanfrage offen,EDQM Lizenz / manuelle Abfrage,EDQM CEP-Datenbank
+certificate,api,sacubitril,CEP nicht abrufbar (EDQM robots.txt/WAF) – Lizenzanfrage offen,EDQM Lizenz / manuelle Abfrage,EDQM CEP-Datenbank
+certificate,api,sacubitril,Written Confirmations nicht abrufbar (CDSCO blockiert),Handbeschaffung cdsco.gov.in,CDSCO Written Confirmations
+certificate,api,semaglutide,CEP nicht abrufbar (EDQM robots.txt/WAF) – Lizenzanfrage offen,EDQM Lizenz / manuelle Abfrage,EDQM CEP-Datenbank
+certificate,api,semaglutide,Written Confirmations nicht abrufbar (CDSCO blockiert),Handbeschaffung cdsco.gov.in,CDSCO Written Confirmations
+certificate,api,toltrazuril,Written Confirmations nicht abrufbar (CDSCO blockiert),Handbeschaffung cdsco.gov.in,CDSCO Written Confirmations
+certificate,api,toltrazuril,CEP nicht abrufbar (EDQM robots.txt/WAF) – Lizenzanfrage offen,EDQM Lizenz / manuelle Abfrage,EDQM CEP-Datenbank
+certificate,api,tulathromycin,Written Confirmations nicht abrufbar (CDSCO blockiert),Handbeschaffung cdsco.gov.in,CDSCO Written Confirmations
+certificate,api,tulathromycin,CEP nicht abrufbar (EDQM robots.txt/WAF) – Lizenzanfrage offen,EDQM Lizenz / manuelle Abfrage,EDQM CEP-Datenbank
+company_structure,company,18425,"GLEIF ultimate-parent: Beziehung LAPSED/ACTIVE, letzte Aktualisierung 2021-12-30 – nicht übernommen (möglicherweise veraltet)",Handelsregister / Geschäftsbericht / SEC,GLEIF LEI API
+company_structure,company,18425,"GLEIF direct-parent: Beziehung LAPSED/ACTIVE, letzte Aktualisierung 2021-12-30 – nicht übernommen (möglicherweise veraltet)",Handelsregister / Geschäftsbericht / SEC,GLEIF LEI API
+company_structure,company,18748,"GLEIF direct-parent: Beziehung LAPSED/ACTIVE, letzte Aktualisierung 2025-01-30 – nicht übernommen (möglicherweise veraltet)",Handelsregister / Geschäftsbericht / SEC,GLEIF LEI API
+company_structure,company,18748,"GLEIF ultimate-parent: Beziehung LAPSED/ACTIVE, letzte Aktualisierung 2025-01-30 – nicht übernommen (möglicherweise veraltet)",Handelsregister / Geschäftsbericht / SEC,GLEIF LEI API
+company_structure,company,18802,"GLEIF direct-parent: Beziehung LAPSED/ACTIVE, letzte Aktualisierung 2021-12-30 – nicht übernommen (möglicherweise veraltet)",Handelsregister / Geschäftsbericht / SEC,GLEIF LEI API
+company_structure,company,18802,"GLEIF ultimate-parent: Beziehung LAPSED/ACTIVE, letzte Aktualisierung 2021-12-30 – nicht übernommen (möglicherweise veraltet)",Handelsregister / Geschäftsbericht / SEC,GLEIF LEI API
+company_structure,company,19490,"GLEIF direct-parent: Beziehung LAPSED/ACTIVE, letzte Aktualisierung 2023-08-08 – nicht übernommen (möglicherweise veraltet)",Handelsregister / Geschäftsbericht / SEC,GLEIF LEI API
+company_structure,company,19490,"GLEIF ultimate-parent: Beziehung LAPSED/ACTIVE, letzte Aktualisierung 2023-08-08 – nicht übernommen (möglicherweise veraltet)",Handelsregister / Geschäftsbericht / SEC,GLEIF LEI API
+company_structure,company,19854,"GLEIF ultimate-parent: Beziehung LAPSED/ACTIVE, letzte Aktualisierung 2025-09-10 – nicht übernommen (möglicherweise veraltet)",Handelsregister / Geschäftsbericht / SEC,GLEIF LEI API
+company_structure,company,19854,"GLEIF direct-parent: Beziehung LAPSED/ACTIVE, letzte Aktualisierung 2025-09-10 – nicht übernommen (möglicherweise veraltet)",Handelsregister / Geschäftsbericht / SEC,GLEIF LEI API
+company_structure,company,19878,"GLEIF ultimate-parent: Beziehung LAPSED/ACTIVE, letzte Aktualisierung 2023-07-31 – nicht übernommen (möglicherweise veraltet)",Handelsregister / Geschäftsbericht / SEC,GLEIF LEI API
+manufacturer,product,13163,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://base-donnees-publique.medicaments.gouv.fr/medicament/64389621/extrait#notice,FR BDPM
+manufacturer,product,13164,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://base-donnees-publique.medicaments.gouv.fr/medicament/68278216/extrait#notice,FR BDPM
+manufacturer,product,13165,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://base-donnees-publique.medicaments.gouv.fr/medicament/61740296/extrait#notice,FR BDPM
+manufacturer,product,13275,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://base-donnees-publique.medicaments.gouv.fr/medicament/64572537/extrait#notice,FR BDPM
+manufacturer,product,13277,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://base-donnees-publique.medicaments.gouv.fr/medicament/60113814/extrait#notice,FR BDPM
+manufacturer,product,13286,"FR Parallelimport: Notice nennt Importeur/Umpacker, nicht den Hersteller – bewusst nicht als Hersteller übernommen",https://base-donnees-publique.medicaments.gouv.fr/medicament/60386460/extrait,FR BDPM
+manufacturer,product,13288,"FR Parallelimport: Notice nennt Importeur/Umpacker, nicht den Hersteller – bewusst nicht als Hersteller übernommen",https://base-donnees-publique.medicaments.gouv.fr/medicament/60772273/extrait,FR BDPM
+manufacturer,product,13289,"FR Parallelimport: Notice nennt Importeur/Umpacker, nicht den Hersteller – bewusst nicht als Hersteller übernommen",https://base-donnees-publique.medicaments.gouv.fr/medicament/66709963/extrait,FR BDPM
+manufacturer,product,13290,"FR Parallelimport: Notice nennt Importeur/Umpacker, nicht den Hersteller – bewusst nicht als Hersteller übernommen",https://base-donnees-publique.medicaments.gouv.fr/medicament/60657997/extrait,FR BDPM
+manufacturer,product,13292,"FR Parallelimport: Notice nennt Importeur/Umpacker, nicht den Hersteller – bewusst nicht als Hersteller übernommen",https://base-donnees-publique.medicaments.gouv.fr/medicament/66299756/extrait,FR BDPM
+manufacturer,product,13293,"FR Parallelimport: Notice nennt Importeur/Umpacker, nicht den Hersteller – bewusst nicht als Hersteller übernommen",https://base-donnees-publique.medicaments.gouv.fr/medicament/60660655/extrait,FR BDPM
+manufacturer,product,13294,"FR Parallelimport: Notice nennt Importeur/Umpacker, nicht den Hersteller – bewusst nicht als Hersteller übernommen",https://base-donnees-publique.medicaments.gouv.fr/medicament/60187348/extrait,FR BDPM
+manufacturer,product,13295,"FR Parallelimport: Notice nennt Importeur/Umpacker, nicht den Hersteller – bewusst nicht als Hersteller übernommen",https://base-donnees-publique.medicaments.gouv.fr/medicament/60236546/extrait,FR BDPM
+manufacturer,product,13297,"FR Parallelimport: Notice nennt Importeur/Umpacker, nicht den Hersteller – bewusst nicht als Hersteller übernommen",https://base-donnees-publique.medicaments.gouv.fr/medicament/62216243/extrait,FR BDPM
+manufacturer,product,13299,"FR Parallelimport: Notice nennt Importeur/Umpacker, nicht den Hersteller – bewusst nicht als Hersteller übernommen",https://base-donnees-publique.medicaments.gouv.fr/medicament/67126052/extrait,FR BDPM
+manufacturer,product,13300,"FR Parallelimport: Notice nennt Importeur/Umpacker, nicht den Hersteller – bewusst nicht als Hersteller übernommen",https://base-donnees-publique.medicaments.gouv.fr/medicament/69163754/extrait,FR BDPM
+manufacturer,product,13302,"FR Parallelimport: Notice nennt Importeur/Umpacker, nicht den Hersteller – bewusst nicht als Hersteller übernommen",https://base-donnees-publique.medicaments.gouv.fr/medicament/67753553/extrait,FR BDPM
+manufacturer,product,13303,"FR Parallelimport: Notice nennt Importeur/Umpacker, nicht den Hersteller – bewusst nicht als Hersteller übernommen",https://base-donnees-publique.medicaments.gouv.fr/medicament/60367022/extrait,FR BDPM
+manufacturer,product,13363,"FR Parallelimport: Notice nennt Importeur/Umpacker, nicht den Hersteller – bewusst nicht als Hersteller übernommen",https://base-donnees-publique.medicaments.gouv.fr/medicament/68915976/extrait,FR BDPM
+manufacturer,product,13414,"FR Parallelimport: Notice nennt Importeur/Umpacker, nicht den Hersteller – bewusst nicht als Hersteller übernommen",https://base-donnees-publique.medicaments.gouv.fr/medicament/68178657/extrait,FR BDPM
+manufacturer,product,13416,"FR Parallelimport: Notice nennt Importeur/Umpacker, nicht den Hersteller – bewusst nicht als Hersteller übernommen",https://base-donnees-publique.medicaments.gouv.fr/medicament/61201249/extrait,FR BDPM
+manufacturer,product,13417,"FR Parallelimport: Notice nennt Importeur/Umpacker, nicht den Hersteller – bewusst nicht als Hersteller übernommen",https://base-donnees-publique.medicaments.gouv.fr/medicament/61430696/extrait,FR BDPM
+manufacturer,product,13418,"FR Parallelimport: Notice nennt Importeur/Umpacker, nicht den Hersteller – bewusst nicht als Hersteller übernommen",https://base-donnees-publique.medicaments.gouv.fr/medicament/63428879/extrait,FR BDPM
+manufacturer,product,13420,"FR Parallelimport: Notice nennt Importeur/Umpacker, nicht den Hersteller – bewusst nicht als Hersteller übernommen",https://base-donnees-publique.medicaments.gouv.fr/medicament/63893173/extrait,FR BDPM
+manufacturer,product,13421,"FR Parallelimport: Notice nennt Importeur/Umpacker, nicht den Hersteller – bewusst nicht als Hersteller übernommen",https://base-donnees-publique.medicaments.gouv.fr/medicament/68225231/extrait,FR BDPM
+manufacturer,product,13428,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://base-donnees-publique.medicaments.gouv.fr/medicament/69065160/extrait#notice,FR BDPM
+manufacturer,product,13471,"FR Parallelimport: Notice nennt Importeur/Umpacker, nicht den Hersteller – bewusst nicht als Hersteller übernommen",https://base-donnees-publique.medicaments.gouv.fr/medicament/60345218/extrait,FR BDPM
+manufacturer,product,13472,"FR Parallelimport: Notice nennt Importeur/Umpacker, nicht den Hersteller – bewusst nicht als Hersteller übernommen",https://base-donnees-publique.medicaments.gouv.fr/medicament/60453382/extrait,FR BDPM
+manufacturer,product,13474,"FR Parallelimport: Notice nennt Importeur/Umpacker, nicht den Hersteller – bewusst nicht als Hersteller übernommen",https://base-donnees-publique.medicaments.gouv.fr/medicament/61890673/extrait,FR BDPM
+manufacturer,product,13476,"FR Parallelimport: Notice nennt Importeur/Umpacker, nicht den Hersteller – bewusst nicht als Hersteller übernommen",https://base-donnees-publique.medicaments.gouv.fr/medicament/66321989/extrait,FR BDPM
+manufacturer,product,13585,"FR Parallelimport: Notice nennt Importeur/Umpacker, nicht den Hersteller – bewusst nicht als Hersteller übernommen",https://base-donnees-publique.medicaments.gouv.fr/medicament/68294626/extrait,FR BDPM
+manufacturer,product,13586,"FR Parallelimport: Notice nennt Importeur/Umpacker, nicht den Hersteller – bewusst nicht als Hersteller übernommen",https://base-donnees-publique.medicaments.gouv.fr/medicament/63978976/extrait,FR BDPM
+manufacturer,product,13587,"FR Parallelimport: Notice nennt Importeur/Umpacker, nicht den Hersteller – bewusst nicht als Hersteller übernommen",https://base-donnees-publique.medicaments.gouv.fr/medicament/66328243/extrait,FR BDPM
+manufacturer,product,13588,"FR Parallelimport: Notice nennt Importeur/Umpacker, nicht den Hersteller – bewusst nicht als Hersteller übernommen",https://base-donnees-publique.medicaments.gouv.fr/medicament/66677825/extrait,FR BDPM
+manufacturer,product,16384,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/dochtml/p/85621/P_85621.html,ES AEMPS CIMA REST
+manufacturer,product,16385,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/dochtml/p/86791/P_86791.html,ES AEMPS CIMA REST
+manufacturer,product,16386,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/dochtml/p/86792/P_86792.html,ES AEMPS CIMA REST
+manufacturer,product,16407,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/dochtml/p/06354005/P_06354005.html,ES AEMPS CIMA REST
+manufacturer,product,16412,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/90577/P_90577.html,ES AEMPS CIMA REST
+manufacturer,product,16413,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/90578/P_90578.html,ES AEMPS CIMA REST
+manufacturer,product,16419,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/91355/P_91355.html,ES AEMPS CIMA REST
+manufacturer,product,16420,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/91354/P_91354.html,ES AEMPS CIMA REST
+manufacturer,product,16425,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/dochtml/p/07421005/P_07421005.html,ES AEMPS CIMA REST
+manufacturer,product,16439,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/91254/P_91254.html,ES AEMPS CIMA REST
+manufacturer,product,16440,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/91255/P_91255.html,ES AEMPS CIMA REST
+manufacturer,product,16476,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/dochtml/p/84266/P_84266.html,ES AEMPS CIMA REST
+manufacturer,product,16528,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/dochtml/p/1211619013/P_1211619013.html,ES AEMPS CIMA REST
+manufacturer,product,16594,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/27192/P_27192.pdf,ES AEMPS CIMA REST
+manufacturer,product,16595,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/27192IP/P_27192IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,16596,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/27191/P_27191.pdf,ES AEMPS CIMA REST
+manufacturer,product,16597,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/27191IP/P_27191IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,16598,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/27191IP1/P_27191IP1.pdf,ES AEMPS CIMA REST
+manufacturer,product,16599,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/27190/P_27190.pdf,ES AEMPS CIMA REST
+manufacturer,product,16600,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/27190IP/P_27190IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,16601,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/06354005IP1/P_06354005IP1.pdf,ES AEMPS CIMA REST
+manufacturer,product,16602,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/06354005IP/P_06354005IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,16603,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/08457010IP/P_08457010IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,16604,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/08457010IP1/P_08457010IP1.pdf,ES AEMPS CIMA REST
+manufacturer,product,16605,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/07425009IP/P_07425009IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,16606,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/07425009IP2/P_07425009IP2.pdf,ES AEMPS CIMA REST
+manufacturer,product,16607,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/07425009IP3/P_07425009IP3.pdf,ES AEMPS CIMA REST
+manufacturer,product,16608,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/07425009IP4/P_07425009IP4.pdf,ES AEMPS CIMA REST
+manufacturer,product,16609,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/07425048IP/P_07425048IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,16610,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/07425009IP1/P_07425009IP1.pdf,ES AEMPS CIMA REST
+manufacturer,product,16611,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/07425027IP/P_07425027IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,16612,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/07425027IP1/P_07425027IP1.pdf,ES AEMPS CIMA REST
+manufacturer,product,16613,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/07425048/P_07425048.pdf,ES AEMPS CIMA REST
+manufacturer,product,16614,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/07425003IP/P_07425003IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,16615,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/07425003IP2/P_07425003IP2.pdf,ES AEMPS CIMA REST
+manufacturer,product,16616,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/07425021IP/P_07425021IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,16617,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/07425021IP1/P_07425021IP1.pdf,ES AEMPS CIMA REST
+manufacturer,product,16618,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/07425039IP/P_07425039IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,16619,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/07425003IP1/P_07425003IP1.pdf,ES AEMPS CIMA REST
+manufacturer,product,16620,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/07425003IP3/P_07425003IP3.pdf,ES AEMPS CIMA REST
+manufacturer,product,16621,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/08484009IP/P_08484009IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,16622,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/08455010IP1/P_08455010IP1.pdf,ES AEMPS CIMA REST
+manufacturer,product,16623,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/08455010IP2/P_08455010IP2.pdf,ES AEMPS CIMA REST
+manufacturer,product,16624,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/08455010IP3/P_08455010IP3.pdf,ES AEMPS CIMA REST
+manufacturer,product,16625,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/08455010IP4/P_08455010IP4.pdf,ES AEMPS CIMA REST
+manufacturer,product,16626,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/08455010IP5/P_08455010IP5.pdf,ES AEMPS CIMA REST
+manufacturer,product,16627,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/08455010IP/P_08455010IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,16628,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/12780020IP1/P_12780020IP1.pdf,ES AEMPS CIMA REST
+manufacturer,product,16629,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/12780020IP2/P_12780020IP2.pdf,ES AEMPS CIMA REST
+manufacturer,product,16630,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/12780020IP3/P_12780020IP3.pdf,ES AEMPS CIMA REST
+manufacturer,product,16631,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/12780020IP4/P_12780020IP4.pdf,ES AEMPS CIMA REST
+manufacturer,product,16632,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/12780020IP/P_12780020IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,16633,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/12780006IP/P_12780006IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,16634,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/12780006IP1/P_12780006IP1.pdf,ES AEMPS CIMA REST
+manufacturer,product,16635,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/12780006IP2/P_12780006IP2.pdf,ES AEMPS CIMA REST
+manufacturer,product,16636,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/12780006IP3/P_12780006IP3.pdf,ES AEMPS CIMA REST
+manufacturer,product,16637,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/12780006IP4/P_12780006IP4.pdf,ES AEMPS CIMA REST
+manufacturer,product,16638,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/11731008IP/P_11731008IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,16639,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/11731002IP/P_11731002IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,16640,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/10620011IP/P_10620011IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,16641,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/10620011IP2/P_10620011IP2.pdf,ES AEMPS CIMA REST
+manufacturer,product,16642,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/10620011IP1/P_10620011IP1.pdf,ES AEMPS CIMA REST
+manufacturer,product,16643,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/08456010IP1/P_08456010IP1.pdf,ES AEMPS CIMA REST
+manufacturer,product,16644,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/08456010IP3/P_08456010IP3.pdf,ES AEMPS CIMA REST
+manufacturer,product,16645,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/08456010IP5/P_08456010IP5.pdf,ES AEMPS CIMA REST
+manufacturer,product,16646,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/08456010IP/P_08456010IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,16647,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/08456010IP2/P_08456010IP2.pdf,ES AEMPS CIMA REST
+manufacturer,product,16648,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/08456010IP4/P_08456010IP4.pdf,ES AEMPS CIMA REST
+manufacturer,product,16649,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/113843017IP/P_113843017IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,16650,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/113843005IP/P_113843005IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,16651,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/13900009IP/P_13900009IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,16652,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/13900009IP1/P_13900009IP1.pdf,ES AEMPS CIMA REST
+manufacturer,product,16653,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/13900003IP/P_13900003IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,16654,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/13900003IP1/P_13900003IP1.pdf,ES AEMPS CIMA REST
+manufacturer,product,16655,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/08483009IP/P_08483009IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,16656,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/08483009IP1/P_08483009IP1.pdf,ES AEMPS CIMA REST
+manufacturer,product,16657,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/08483009IP2/P_08483009IP2.pdf,ES AEMPS CIMA REST
+manufacturer,product,16658,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/08483009IP3/P_08483009IP3.pdf,ES AEMPS CIMA REST
+manufacturer,product,16659,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/08483003IP/P_08483003IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,16671,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/73176/P_73176.html,ES AEMPS CIMA REST
+manufacturer,product,16672,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/73177/P_73177.html,ES AEMPS CIMA REST
+manufacturer,product,16756,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/dochtml/p/78033/P_78033.html,ES AEMPS CIMA REST
+manufacturer,product,16757,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/78853/P_78853.html,ES AEMPS CIMA REST
+manufacturer,product,16802,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/86209/P_86209.html,ES AEMPS CIMA REST
+manufacturer,product,16803,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/86210/P_86210.html,ES AEMPS CIMA REST
+manufacturer,product,16804,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/86211/P_86211.html,ES AEMPS CIMA REST
+manufacturer,product,16805,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/86212/P_86212.html,ES AEMPS CIMA REST
+manufacturer,product,16806,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/86213/P_86213.html,ES AEMPS CIMA REST
+manufacturer,product,16807,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/86214/P_86214.html,ES AEMPS CIMA REST
+manufacturer,product,16808,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/90164/P_90164.html,ES AEMPS CIMA REST
+manufacturer,product,16809,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/90165/P_90165.html,ES AEMPS CIMA REST
+manufacturer,product,16810,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/90166/P_90166.html,ES AEMPS CIMA REST
+manufacturer,product,16811,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/90167/P_90167.html,ES AEMPS CIMA REST
+manufacturer,product,16812,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/90168/P_90168.html,ES AEMPS CIMA REST
+manufacturer,product,16813,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/90169/P_90169.html,ES AEMPS CIMA REST
+manufacturer,product,16842,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/72376/P_72376.html,ES AEMPS CIMA REST
+manufacturer,product,16843,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/72375/P_72375.html,ES AEMPS CIMA REST
+manufacturer,product,16844,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/72372/P_72372.html,ES AEMPS CIMA REST
+manufacturer,product,16845,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/72373/P_72373.html,ES AEMPS CIMA REST
+manufacturer,product,16856,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/73175/P_73175.html,ES AEMPS CIMA REST
+manufacturer,product,17045,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/74375/P_74375.pdf,ES AEMPS CIMA REST
+manufacturer,product,17046,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/74378/P_74378.pdf,ES AEMPS CIMA REST
+manufacturer,product,17047,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/74380/P_74380.pdf,ES AEMPS CIMA REST
+manufacturer,product,17048,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/74384/P_74384.pdf,ES AEMPS CIMA REST
+manufacturer,product,17049,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/LT1214806001IP/P_LT1214806001IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,17050,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/LT1214806001IP1/P_LT1214806001IP1.pdf,ES AEMPS CIMA REST
+manufacturer,product,17051,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/LT1214806001IP2/P_LT1214806001IP2.pdf,ES AEMPS CIMA REST
+manufacturer,product,17052,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/20210297/P_20210297.pdf,ES AEMPS CIMA REST
+manufacturer,product,17053,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/LT1214807001IP/P_LT1214807001IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,17054,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/LT1214807001IP1/P_LT1214807001IP1.pdf,ES AEMPS CIMA REST
+manufacturer,product,17055,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/LT1214807001IP2/P_LT1214807001IP2.pdf,ES AEMPS CIMA REST
+manufacturer,product,17056,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/20210298/P_20210298.pdf,ES AEMPS CIMA REST
+manufacturer,product,17057,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/LT1214808001IP/P_LT1214808001IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,17058,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/LT1214808001IP1/P_LT1214808001IP1.pdf,ES AEMPS CIMA REST
+manufacturer,product,17059,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/LT1214808001IP2/P_LT1214808001IP2.pdf,ES AEMPS CIMA REST
+manufacturer,product,17060,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/20210299/P_20210299.pdf,ES AEMPS CIMA REST
+manufacturer,product,17061,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/776720150114/P_776720150114.pdf,ES AEMPS CIMA REST
+manufacturer,product,17062,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/BE465804/P_BE465804.pdf,ES AEMPS CIMA REST
+manufacturer,product,17063,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/BE465804IP/P_BE465804IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,17064,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/BE465804IP1/P_BE465804IP1.pdf,ES AEMPS CIMA REST
+manufacturer,product,17065,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/BE465813IP/P_BE465813IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,17066,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/BE465813IP1/P_BE465813IP1.pdf,ES AEMPS CIMA REST
+manufacturer,product,17067,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/BE465822IP/P_BE465822IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,17068,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/BE465822IP1/P_BE465822IP1.pdf,ES AEMPS CIMA REST
+manufacturer,product,17069,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/BE465822IP2/P_BE465822IP2.pdf,ES AEMPS CIMA REST
+manufacturer,product,17070,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/LT1983805025IP3/P_LT1983805025IP3.pdf,ES AEMPS CIMA REST
+manufacturer,product,17071,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/PA23055017002/P_PA23055017002.pdf,ES AEMPS CIMA REST
+manufacturer,product,17072,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/LT-1-98-3805-025/P_LT-1-98-3805-025.pdf,ES AEMPS CIMA REST
+manufacturer,product,17073,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/LT1983805025IP1/P_LT1983805025IP1.pdf,ES AEMPS CIMA REST
+manufacturer,product,17074,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/LT1983805025IP2/P_LT1983805025IP2.pdf,ES AEMPS CIMA REST
+manufacturer,product,17075,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/LT1983805025IP4/P_LT1983805025IP4.pdf,ES AEMPS CIMA REST
+manufacturer,product,17076,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/PA23055017002IP/P_PA23055017002IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,17077,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/PA23055017003/P_PA23055017003.pdf,ES AEMPS CIMA REST
+manufacturer,product,17078,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/3400934306983/P_3400934306983.pdf,ES AEMPS CIMA REST
+manufacturer,product,17079,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/3400934306983IP3/P_3400934306983IP3.pdf,ES AEMPS CIMA REST
+manufacturer,product,17080,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/8194201506/P_8194201506.pdf,ES AEMPS CIMA REST
+manufacturer,product,17081,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/LT1983805044IP1/P_LT1983805044IP1.pdf,ES AEMPS CIMA REST
+manufacturer,product,17082,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/PA23055017003IP/P_PA23055017003IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,17083,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/3400934306983IP/P_3400934306983IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,17084,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/819420150119/P_819420150119.pdf,ES AEMPS CIMA REST
+manufacturer,product,17085,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/8194201506IP/P_8194201506IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,17086,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/LT1983805044IP/P_LT1983805044IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,17087,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/8194201506IP1/P_8194201506IP1.pdf,ES AEMPS CIMA REST
+manufacturer,product,17088,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/LT1983805063/P_LT1983805063.pdf,ES AEMPS CIMA REST
+manufacturer,product,17089,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/3400935557506/P_3400935557506.pdf,ES AEMPS CIMA REST
+manufacturer,product,17090,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/3400935557506IP/P_3400935557506IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,17091,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/3400935557506IP1/P_3400935557506IP1.pdf,ES AEMPS CIMA REST
+manufacturer,product,17092,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/819520150119/P_819520150119.pdf,ES AEMPS CIMA REST
+manufacturer,product,17093,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/8195201506/P_8195201506.pdf,ES AEMPS CIMA REST
+manufacturer,product,17094,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/BE232933IP/P_BE232933IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,17095,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/LT1983805025IP/P_LT1983805025IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,17096,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/BE184064/P_BE184064.pdf,ES AEMPS CIMA REST
+manufacturer,product,17097,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/3400934306983IP5/P_3400934306983IP5.pdf,ES AEMPS CIMA REST
+manufacturer,product,17098,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/BE232933/P_BE232933.pdf,ES AEMPS CIMA REST
+manufacturer,product,17099,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/4424416042019/P_4424416042019.pdf,ES AEMPS CIMA REST
+manufacturer,product,17100,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/1983805025IP1/P_1983805025IP1.pdf,ES AEMPS CIMA REST
+manufacturer,product,17101,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/983805025IP/P_983805025IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,17102,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/LT1983805044/P_LT1983805044.pdf,ES AEMPS CIMA REST
+manufacturer,product,17103,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/3400934306983IP4/P_3400934306983IP4.pdf,ES AEMPS CIMA REST
+manufacturer,product,17104,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/819420150120/P_819420150120.pdf,ES AEMPS CIMA REST
+manufacturer,product,17105,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/819420150120IP/P_819420150120IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,17106,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/BE184064IP/P_BE184064IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,17107,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/3400934306983IP1/P_3400934306983IP1.pdf,ES AEMPS CIMA REST
+manufacturer,product,17108,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/3400934306983IP6/P_3400934306983IP6.pdf,ES AEMPS CIMA REST
+manufacturer,product,17109,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/8194201508/P_8194201508.pdf,ES AEMPS CIMA REST
+manufacturer,product,17110,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/3400935557506IP2/P_3400935557506IP2.pdf,ES AEMPS CIMA REST
+manufacturer,product,17111,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/819520150120/P_819520150120.pdf,ES AEMPS CIMA REST
+manufacturer,product,17112,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/819520150120IP/P_819520150120IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,17113,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/34009_355_575_0_6IP/P_34009_355_575_0_6IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,17114,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/8195201508/P_8195201508.pdf,ES AEMPS CIMA REST
+manufacturer,product,17115,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/rest/docSegmentado/contenido/2?nregistro=BE465813&seccion=6,ES AEMPS CIMA REST
+manufacturer,product,17116,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/rest/docSegmentado/contenido/2?nregistro=3400928005557&seccion=6,ES AEMPS CIMA REST
+manufacturer,product,17117,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/rest/docSegmentado/contenido/2?nregistro=34009288005557IP&seccion=6,ES AEMPS CIMA REST
+manufacturer,product,17118,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/rest/docSegmentado/contenido/2?nregistro=BE465822&seccion=6,ES AEMPS CIMA REST
+manufacturer,product,17119,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/rest/docSegmentado/contenido/2?nregistro=3400928005786&seccion=6,ES AEMPS CIMA REST
+manufacturer,product,17120,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/rest/docSegmentado/contenido/2?nregistro=3400928005786IP&seccion=6,ES AEMPS CIMA REST
+manufacturer,product,17121,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/rest/docSegmentado/contenido/2?nregistro=LT-1-98-3805-025_IP&seccion=6,ES AEMPS CIMA REST
+manufacturer,product,17122,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/rest/docSegmentado/contenido/2?nregistro=PA1740-1-4&seccion=6,ES AEMPS CIMA REST
+manufacturer,product,17123,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/rest/docSegmentado/contenido/2?nregistro=3400928005557IP1&seccion=6,ES AEMPS CIMA REST
+manufacturer,product,17124,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/rest/docSegmentado/contenido/2?nregistro=3400928005786IP1&seccion=6,ES AEMPS CIMA REST
+manufacturer,product,17125,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/rest/docSegmentado/contenido/2?nregistro=LT-1-98-3805-025IP3&seccion=6,ES AEMPS CIMA REST
+manufacturer,product,17126,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/rest/docSegmentado/contenido/2?nregistro=3400934306983IP2&seccion=6,ES AEMPS CIMA REST
+manufacturer,product,17127,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/rest/docSegmentado/contenido/2?nregistro=LT-1-98-3805-025IP&seccion=6,ES AEMPS CIMA REST
+manufacturer,product,17128,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/65461/P_65461.html,ES AEMPS CIMA REST
+manufacturer,product,17129,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/65460/P_65460.html,ES AEMPS CIMA REST
+manufacturer,product,17132,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/68761/P_68761.html,ES AEMPS CIMA REST
+manufacturer,product,17133,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/68760/P_68760.html,ES AEMPS CIMA REST
+manufacturer,product,17156,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/dochtml/p/85255/P_85255.html,ES AEMPS CIMA REST
+manufacturer,product,17211,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/dochtml/p/85294/P_85294.html,ES AEMPS CIMA REST
+manufacturer,product,17212,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/dochtml/p/85295/P_85295.html,ES AEMPS CIMA REST
+manufacturer,product,17213,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/dochtml/p/85296/P_85296.html,ES AEMPS CIMA REST
+manufacturer,product,17214,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/dochtml/p/85297/P_85297.html,ES AEMPS CIMA REST
+manufacturer,product,17290,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/87993/P_87993.html,ES AEMPS CIMA REST
+manufacturer,product,17291,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/87992/P_87992.html,ES AEMPS CIMA REST
+manufacturer,product,17308,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/81301/P_81301.html,ES AEMPS CIMA REST
+manufacturer,product,17317,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/85845/P_85845.html,ES AEMPS CIMA REST
+manufacturer,product,17320,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/dochtml/p/83041/P_83041.html,ES AEMPS CIMA REST
+manufacturer,product,17321,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/dochtml/p/83042/P_83042.html,ES AEMPS CIMA REST
+manufacturer,product,17322,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/dochtml/p/83043/P_83043.html,ES AEMPS CIMA REST
+manufacturer,product,17397,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/84728/P_84728.html,ES AEMPS CIMA REST
+manufacturer,product,17398,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/83016/P_83016.html,ES AEMPS CIMA REST
+manufacturer,product,17399,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/83017/P_83017.html,ES AEMPS CIMA REST
+manufacturer,product,17428,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/82464/P_82464.html,ES AEMPS CIMA REST
+manufacturer,product,17429,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/82466/P_82466.html,ES AEMPS CIMA REST
+manufacturer,product,17430,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/82465/P_82465.html,ES AEMPS CIMA REST
+manufacturer,product,17437,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/82645/P_82645.html,ES AEMPS CIMA REST
+manufacturer,product,17438,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/82646/P_82646.html,ES AEMPS CIMA REST
+manufacturer,product,17439,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/82647/P_82647.html,ES AEMPS CIMA REST
+manufacturer,product,17502,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/85632/P_85632.html,ES AEMPS CIMA REST
+manufacturer,product,17574,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/LT1112460007/P_LT1112460007.pdf,ES AEMPS CIMA REST
+manufacturer,product,17575,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/BE390546/P_BE390546.pdf,ES AEMPS CIMA REST
+manufacturer,product,17576,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/BE390546IP/P_BE390546IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,17577,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/BE390564IP/P_BE390564IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,17578,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/BE390564IP1/P_BE390564IP1.pdf,ES AEMPS CIMA REST
+manufacturer,product,17579,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/BE390503IP/P_BE390503IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,17580,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/BE390503IP1/P_BE390503IP1.pdf,ES AEMPS CIMA REST
+manufacturer,product,17581,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/BE390503IP3/P_BE390503IP3.pdf,ES AEMPS CIMA REST
+manufacturer,product,17582,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/BE325473/P_BE325473.pdf,ES AEMPS CIMA REST
+manufacturer,product,17583,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/038947242/P_038947242.pdf,ES AEMPS CIMA REST
+manufacturer,product,17584,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/038947242IP3/P_038947242IP3.pdf,ES AEMPS CIMA REST
+manufacturer,product,17585,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/20080198/P_20080198.pdf,ES AEMPS CIMA REST
+manufacturer,product,17586,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/BE325464/P_BE325464.pdf,ES AEMPS CIMA REST
+manufacturer,product,17587,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/038947139/P_038947139.pdf,ES AEMPS CIMA REST
+manufacturer,product,17588,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/038947242IP2/P_038947242IP2.pdf,ES AEMPS CIMA REST
+manufacturer,product,17589,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/038947139IP2/P_038947139IP2.pdf,ES AEMPS CIMA REST
+manufacturer,product,17590,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/038947139IP3/P_038947139IP3.pdf,ES AEMPS CIMA REST
+manufacturer,product,17591,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/20080197/P_20080197.pdf,ES AEMPS CIMA REST
+manufacturer,product,17592,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/038946137IP1/P_038946137IP1.pdf,ES AEMPS CIMA REST
+manufacturer,product,17593,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/038946137/P_038946137.pdf,ES AEMPS CIMA REST
+manufacturer,product,17594,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/038946075/P_038946075.pdf,ES AEMPS CIMA REST
+manufacturer,product,17595,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/038946075IP/P_038946075IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,17596,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/038946075IP1/P_038946075IP1.pdf,ES AEMPS CIMA REST
+manufacturer,product,17597,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/038983161IP2/P_038983161IP2.pdf,ES AEMPS CIMA REST
+manufacturer,product,17598,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/BE387475IP/P_BE387475IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,17599,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/BE387475/P_BE387475.pdf,ES AEMPS CIMA REST
+manufacturer,product,17600,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/BE387493/P_BE387493.pdf,ES AEMPS CIMA REST
+manufacturer,product,17601,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/BE387493IP/P_BE387493IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,17602,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/038983247/P_038983247.pdf,ES AEMPS CIMA REST
+manufacturer,product,17603,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/038983247IP1/P_038983247IP1.pdf,ES AEMPS CIMA REST
+manufacturer,product,17604,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/038983161/P_038983161.pdf,ES AEMPS CIMA REST
+manufacturer,product,17605,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/038983161IP3/P_038983161IP3.pdf,ES AEMPS CIMA REST
+manufacturer,product,17606,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/038983161IP/P_038983161IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,17607,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/OGYIT2057205IP/P_OGYIT2057205IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,17608,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/OGYIT2057205IP1/P_OGYIT2057205IP1.pdf,ES AEMPS CIMA REST
+manufacturer,product,17609,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/OGYIT2057206/P_OGYIT2057206.pdf,ES AEMPS CIMA REST
+manufacturer,product,17610,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/1730704032021/P_1730704032021.pdf,ES AEMPS CIMA REST
+manufacturer,product,17611,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/2065305032021/P_2065305032021.pdf,ES AEMPS CIMA REST
+manufacturer,product,17612,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/180074/P_180074.pdf,ES AEMPS CIMA REST
+manufacturer,product,17613,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/180074IP/P_180074IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,17614,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/rest/docSegmentado/contenido/2?nregistro=BE390564&seccion=6,ES AEMPS CIMA REST
+manufacturer,product,17615,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/rest/docSegmentado/contenido/2?nregistro=BE390503&seccion=6,ES AEMPS CIMA REST
+manufacturer,product,17616,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/rest/docSegmentado/contenido/2?nregistro=038947242IP&seccion=6,ES AEMPS CIMA REST
+manufacturer,product,17617,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/rest/docSegmentado/contenido/2?nregistro=038947139IP&seccion=6,ES AEMPS CIMA REST
+manufacturer,product,17618,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/rest/docSegmentado/contenido/2?nregistro=5585324-8-2015&seccion=6,ES AEMPS CIMA REST
+manufacturer,product,17619,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/rest/docSegmentado/contenido/2?nregistro=038946137IP&seccion=6,ES AEMPS CIMA REST
+manufacturer,product,17620,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/rest/docSegmentado/contenido/2?nregistro=5585224-8-2015&seccion=6,ES AEMPS CIMA REST
+manufacturer,product,17621,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/rest/docSegmentado/contenido/2?nregistro=BE387484&seccion=6,ES AEMPS CIMA REST
+manufacturer,product,17622,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/rest/docSegmentado/contenido/2?nregistro=BE387502&seccion=6,ES AEMPS CIMA REST
+manufacturer,product,17623,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/rest/docSegmentado/contenido/2?nregistro=038983247IP&seccion=6,ES AEMPS CIMA REST
+manufacturer,product,17624,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/rest/docSegmentado/contenido/2?nregistro=038983161IP1&seccion=6,ES AEMPS CIMA REST
+manufacturer,product,17625,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/10648023IP/P_10648023IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,17626,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/10648016IP/P_10648016IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,17627,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/rest/docSegmentado/contenido/2?nregistro=OGYIT2057205IP2&seccion=6,ES AEMPS CIMA REST
+manufacturer,product,17628,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/rest/docSegmentado/contenido/2?nregistro=15-0092-01&seccion=6,ES AEMPS CIMA REST
+manufacturer,product,17629,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/rest/docSegmentado/contenido/2?nregistro=22474&seccion=6,ES AEMPS CIMA REST
+manufacturer,product,17630,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/rest/docSegmentado/contenido/2?nregistro=OGYIT2057206IP&seccion=6,ES AEMPS CIMA REST
+manufacturer,product,17631,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/rest/docSegmentado/contenido/2?nregistro=15-0093-01&seccion=6,ES AEMPS CIMA REST
+manufacturer,product,17632,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/rest/docSegmentado/contenido/2?nregistro=22473&seccion=6,ES AEMPS CIMA REST
+manufacturer,product,17635,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/78891/P_78891.html,ES AEMPS CIMA REST
+manufacturer,product,17644,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/76951/P_76951.html,ES AEMPS CIMA REST
+manufacturer,product,17665,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/dochtml/p/65094/P_65094.html,ES AEMPS CIMA REST
+manufacturer,product,17688,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/63230/P_63230.html,ES AEMPS CIMA REST
+manufacturer,product,17734,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/dochtml/p/65095/P_65095.html,ES AEMPS CIMA REST
+manufacturer,product,17735,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/dochtml/p/66602/P_66602.html,ES AEMPS CIMA REST
+manufacturer,product,17737,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/dochtml/p/58466/P_58466.html,ES AEMPS CIMA REST
+manufacturer,product,17744,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/65687/P_65687.pdf,ES AEMPS CIMA REST
+manufacturer,product,17811,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/rest/docSegmentado/contenido/2?nregistro=15201&seccion=6,ES AEMPS CIMA REST
+manufacturer,product,17816,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/1181325012/P_1181325012.pdf,ES AEMPS CIMA REST
+manufacturer,product,17817,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/1181325007/P_1181325007.pdf,ES AEMPS CIMA REST
+manufacturer,product,17819,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/89193/P_89193.html,ES AEMPS CIMA REST
+manufacturer,product,17836,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/dochtml/p/90219/P_90219.html,ES AEMPS CIMA REST
+manufacturer,product,17838,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/90741/P_90741.html,ES AEMPS CIMA REST
+manufacturer,product,17839,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/90740/P_90740.html,ES AEMPS CIMA REST
+manufacturer,product,17854,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/dochtml/p/89409/P_89409.html,ES AEMPS CIMA REST
+manufacturer,product,17855,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/dochtml/p/89410/P_89410.html,ES AEMPS CIMA REST
+manufacturer,product,17862,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/91363/P_91363.html,ES AEMPS CIMA REST
+manufacturer,product,17884,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/86417/P_86417.html,ES AEMPS CIMA REST
+manufacturer,product,17885,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/86418/P_86418.html,ES AEMPS CIMA REST
+manufacturer,product,17900,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/dochtml/p/86192/P_86192.html,ES AEMPS CIMA REST
+manufacturer,product,17901,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/dochtml/p/86191/P_86191.html,ES AEMPS CIMA REST
+manufacturer,product,17931,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/11691003IP/P_11691003IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,17991,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/151058001IP/P_151058001IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,17992,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/151058001IP2/P_151058001IP2.pdf,ES AEMPS CIMA REST
+manufacturer,product,17993,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/151058001IP3/P_151058001IP3.pdf,ES AEMPS CIMA REST
+manufacturer,product,17994,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/151058001IP4/P_151058001IP4.pdf,ES AEMPS CIMA REST
+manufacturer,product,17995,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/151058001IP1/P_151058001IP1.pdf,ES AEMPS CIMA REST
+manufacturer,product,17996,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/151058003IP/P_151058003IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,17997,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/151058003IP2/P_151058003IP2.pdf,ES AEMPS CIMA REST
+manufacturer,product,17998,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/151058003IP3/P_151058003IP3.pdf,ES AEMPS CIMA REST
+manufacturer,product,17999,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/151058003IP4/P_151058003IP4.pdf,ES AEMPS CIMA REST
+manufacturer,product,18000,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/151058003IP1/P_151058003IP1.pdf,ES AEMPS CIMA REST
+manufacturer,product,18001,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/151058006IP/P_151058006IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,18002,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/151058006IP1/P_151058006IP1.pdf,ES AEMPS CIMA REST
+manufacturer,product,18003,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/151058006IP2/P_151058006IP2.pdf,ES AEMPS CIMA REST
+manufacturer,product,18004,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/151058006IP3/P_151058006IP3.pdf,ES AEMPS CIMA REST
+manufacturer,product,18005,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/161103001IP/P_161103001IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,18006,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/161103003IP/P_161103003IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,18007,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/161103006IP/P_161103006IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,18068,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/1171251002IP/P_1171251002IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,18069,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/1171251002IP1/P_1171251002IP1.pdf,ES AEMPS CIMA REST
+manufacturer,product,18070,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/1171251002IP2/P_1171251002IP2.pdf,ES AEMPS CIMA REST
+manufacturer,product,18071,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/1171251003IP/P_1171251003IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,18072,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/1171251003IP1/P_1171251003IP1.pdf,ES AEMPS CIMA REST
+manufacturer,product,18073,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/1171251003IP2/P_1171251003IP2.pdf,ES AEMPS CIMA REST
+manufacturer,product,18074,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/1171251003IP3/P_1171251003IP3.pdf,ES AEMPS CIMA REST
+manufacturer,product,18075,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/1171251005IP/P_1171251005IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,18076,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/1171251005IP1/P_1171251005IP1.pdf,ES AEMPS CIMA REST
+manufacturer,product,18077,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/1171251005IP2/P_1171251005IP2.pdf,ES AEMPS CIMA REST
+manufacturer,product,18078,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/1171251005IP3/P_1171251005IP3.pdf,ES AEMPS CIMA REST
+manufacturer,product,18079,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/1211608006IP/P_1211608006IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,18080,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/1211608006IP1/P_1211608006IP1.pdf,ES AEMPS CIMA REST
+manufacturer,product,18081,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/1211608007IP/P_1211608007IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,18082,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/1211608008IP/P_1211608008IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,18083,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/1211608009IP/P_1211608009IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,18084,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/1211608010IP/P_1211608010IP.pdf,ES AEMPS CIMA REST
+manufacturer,product,18085,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/1211608010IP1/P_1211608010IP1.pdf,ES AEMPS CIMA REST
+manufacturer,product,215,EMA: Annex IIA nicht parsebar,https://www.ema.europa.eu/en/documents/product-information/tulissin-epar-product-information_en.pdf,EMA Medicine data download
+manufacturer,product,216,EMA: Annex IIA nicht parsebar,https://www.ema.europa.eu/en/documents/product-information/tulinovet-epar-product-information_en.pdf,EMA Medicine data download
+manufacturer,product,217,EMA: Annex IIA nicht parsebar,https://www.ema.europa.eu/en/documents/product-information/tulaven-epar-product-information_en.pdf,EMA Medicine data download
+manufacturer,product,218,EMA: Annex IIA nicht parsebar,https://www.ema.europa.eu/en/documents/product-information/rexxolide-epar-product-information_en.pdf,EMA Medicine data download
+manufacturer,product,219,EMA: Annex IIA nicht parsebar,https://www.ema.europa.eu/en/documents/product-information/procox-epar-product-information_en.pdf,EMA Medicine data download
+manufacturer,product,220,EMA: Annex IIA nicht parsebar,https://www.ema.europa.eu/en/documents/product-information/osurnia-epar-product-information_en.pdf,EMA Medicine data download
+manufacturer,product,221,EMA: Annex IIA nicht parsebar,https://www.ema.europa.eu/en/documents/product-information/lydaxx-epar-product-information_en.pdf,EMA Medicine data download
+manufacturer,product,222,EMA: Annex IIA nicht parsebar,https://www.ema.europa.eu/en/documents/product-information/neptra-epar-product-information_en.pdf,EMA Medicine data download
+manufacturer,product,223,EMA: Annex IIA nicht parsebar,https://www.ema.europa.eu/en/documents/product-information/fortekor-plus-epar-product-information_en.pdf,EMA Medicine data download
+manufacturer,product,224,EMA: Annex IIA nicht parsebar,https://www.ema.europa.eu/en/documents/product-information/draxxin-epar-product-information_en.pdf,EMA Medicine data download
+manufacturer,product,225,EMA: Annex IIA nicht parsebar,https://www.ema.europa.eu/en/documents/product-information/baycox-iron-epar-product-information_en.pdf,EMA Medicine data download
+manufacturer,product,231,EMA: Product-Information-PDF auf EPAR-Seite nicht gefunden,https://www.ema.europa.eu/en/medicines/veterinary/EPAR/omeprazole-triviumvet,EMA Medicine data download
+manufacturer,product,233,EMA: Annex IIA nicht parsebar,https://www.ema.europa.eu/en/documents/product-information/zeleris-epar-product-information_en.pdf,EMA Medicine data download
+manufacturer,product,234,EMA: Annex IIA nicht parsebar,https://www.ema.europa.eu/en/documents/product-information/forceris-epar-product-information_en.pdf,EMA Medicine data download
+manufacturer,product,235,EMA: Product-Information-PDF auf EPAR-Seite nicht gefunden,https://www.ema.europa.eu/en/medicines/veterinary/EPAR/chanaxin,EMA Medicine data download
+manufacturer,product,237,EMA: Annex IIA nicht parsebar,https://www.ema.europa.eu/en/documents/product-information/increxxa-epar-product-information_en.pdf,EMA Medicine data download
+patent,api,amlodipine,EU/CH/UK-Patente und SPC: EPO-OPS-Key fehlt; nationale SPC-Register nicht angebunden,"EPO OPS (Key), DPMA, INPI, UKIPO, IGE",EPO OPS
+patent,api,apixaban,EU/CH/UK-Patente und SPC: EPO-OPS-Key fehlt; nationale SPC-Register nicht angebunden,"EPO OPS (Key), DPMA, INPI, UKIPO, IGE",EPO OPS
+patent,api,atorvastatin,EU/CH/UK-Patente und SPC: EPO-OPS-Key fehlt; nationale SPC-Register nicht angebunden,"EPO OPS (Key), DPMA, INPI, UKIPO, IGE",EPO OPS
+patent,api,dapsone,EU/CH/UK-Patente und SPC: EPO-OPS-Key fehlt; nationale SPC-Register nicht angebunden,"EPO OPS (Key), DPMA, INPI, UKIPO, IGE",EPO OPS
+patent,api,edoxaban,EU/CH/UK-Patente und SPC: EPO-OPS-Key fehlt; nationale SPC-Register nicht angebunden,"EPO OPS (Key), DPMA, INPI, UKIPO, IGE",EPO OPS
+patent,api,empagliflozin,EU/CH/UK-Patente und SPC: EPO-OPS-Key fehlt; nationale SPC-Register nicht angebunden,"EPO OPS (Key), DPMA, INPI, UKIPO, IGE",EPO OPS
+patent,api,florfenicol,EU/CH/UK-Patente und SPC: EPO-OPS-Key fehlt; nationale SPC-Register nicht angebunden,"EPO OPS (Key), DPMA, INPI, UKIPO, IGE",EPO OPS
+patent,api,fludrocortisone,EU/CH/UK-Patente und SPC: EPO-OPS-Key fehlt; nationale SPC-Register nicht angebunden,"EPO OPS (Key), DPMA, INPI, UKIPO, IGE",EPO OPS
+patent,api,hydroxycarbamide,EU/CH/UK-Patente und SPC: EPO-OPS-Key fehlt; nationale SPC-Register nicht angebunden,"EPO OPS (Key), DPMA, INPI, UKIPO, IGE",EPO OPS
+patent,api,levothyroxine,EU/CH/UK-Patente und SPC: EPO-OPS-Key fehlt; nationale SPC-Register nicht angebunden,"EPO OPS (Key), DPMA, INPI, UKIPO, IGE",EPO OPS
+patent,api,marbofloxacin,EU/CH/UK-Patente und SPC: EPO-OPS-Key fehlt; nationale SPC-Register nicht angebunden,"EPO OPS (Key), DPMA, INPI, UKIPO, IGE",EPO OPS
+patent,api,metformin,EU/CH/UK-Patente und SPC: EPO-OPS-Key fehlt; nationale SPC-Register nicht angebunden,"EPO OPS (Key), DPMA, INPI, UKIPO, IGE",EPO OPS
+patent,api,mexiletine,EU/CH/UK-Patente und SPC: EPO-OPS-Key fehlt; nationale SPC-Register nicht angebunden,"EPO OPS (Key), DPMA, INPI, UKIPO, IGE",EPO OPS
+patent,api,omeprazole,EU/CH/UK-Patente und SPC: EPO-OPS-Key fehlt; nationale SPC-Register nicht angebunden,"EPO OPS (Key), DPMA, INPI, UKIPO, IGE",EPO OPS
+patent,api,pimobendan,EU/CH/UK-Patente und SPC: EPO-OPS-Key fehlt; nationale SPC-Register nicht angebunden,"EPO OPS (Key), DPMA, INPI, UKIPO, IGE",EPO OPS
+patent,api,pyridostigmine,EU/CH/UK-Patente und SPC: EPO-OPS-Key fehlt; nationale SPC-Register nicht angebunden,"EPO OPS (Key), DPMA, INPI, UKIPO, IGE",EPO OPS
+patent,api,sacubitril,EU/CH/UK-Patente und SPC: EPO-OPS-Key fehlt; nationale SPC-Register nicht angebunden,"EPO OPS (Key), DPMA, INPI, UKIPO, IGE",EPO OPS
+patent,api,semaglutide,EU/CH/UK-Patente und SPC: EPO-OPS-Key fehlt; nationale SPC-Register nicht angebunden,"EPO OPS (Key), DPMA, INPI, UKIPO, IGE",EPO OPS
+patent,api,toltrazuril,EU/CH/UK-Patente und SPC: EPO-OPS-Key fehlt; nationale SPC-Register nicht angebunden,"EPO OPS (Key), DPMA, INPI, UKIPO, IGE",EPO OPS
+patent,api,tulathromycin,EU/CH/UK-Patente und SPC: EPO-OPS-Key fehlt; nationale SPC-Register nicht angebunden,"EPO OPS (Key), DPMA, INPI, UKIPO, IGE",EPO OPS
+product,source,ES veterinary,Tierarzneimittel ES nur in CIMAVet (Host nicht freigegeben),cimavet.aemps.es,ES AEMPS CIMA REST
+product,source,IT non-reimbursed,AIFA-Listen enthalten nur erstattete Arzneimittel (Klasse A/H),medicinali.aifa.gov.it (HTML),IT AIFA Open Data
+product,source,TR,"SGK-Wochendatei enthält nur Änderungen der EK-4/A-Liste; Vollliste nicht lokalisiert, TİTCK per WAF gesperrt",www.sgk.gov.tr / Handbeschaffung TİTCK,ALT TR SGK Erstattungsliste EK-4/A
+product,source,US veterinary,Tierarzneimittel US (FDA Green Book) noch nicht angebunden,fda.gov Green Book,US Drugs@FDA
+source,source,ALT DE BfArM AMIce Portal,"HTTP 200, technisch erreichbar, aber: Authentifizierungs-Weiterleitung (SSO) – Login wird nicht verwendet",https://portal.bfarm.de/amguifree/?accessid=pharmnet_amis_off_ppv,ALT DE BfArM AMIce Portal
+source,source,ALT DE Gebrauchsinformation 4.0,"HTTP 200, technisch erreichbar, aber: Nutzungsbedingungen: Datenbanken urheberrechtlich geschützt, Vervielfältigung nur mit schriftlicher Genehmigung – Lizenz nötig",https://gebrauchsinformation4-0.de/rechtliche-hinweise,ALT DE Gebrauchsinformation 4.0
+source,source,Algerien Register,Keine offizielle Online-Quelle im Brief; Behörde (ANPP) zu identifizieren,unbekannt,Algerien Register
+source,source,CDSCO Written Confirmations,nicht erreichbar: ConnectError: [Errno 104] Connection reset by peer,https://cdsco.gov.in/opencms/opencms/en/Home/,CDSCO Written Confirmations
+source,source,CH Zefix,"HTTP 500, Web Application Firewall blockiert Cloud-IP/Bot – wird nicht umgangen",https://www.zefix.ch/en/search/entity/welcome,CH Zefix
+source,source,DE BfArM AMIce (frei),"robots.txt auf auth.bfarm.de verbietet alles (Disallow: /); Weiterleitung auf portal.bfarm.de/amguifree – Host nicht freigegeben, robots dort ungeprüft",https://auth.bfarm.de/sso-home/amguifree,DE BfArM AMIce (frei)
+source,source,DE BfArM Engpass-Datenbank,Host nicht freigegeben,anwendungen.pharmnet-bund.de,DE BfArM Engpass-Datenbank
+source,source,DE Unternehmensregister,Host nicht freigegeben,www.unternehmensregister.de,DE Unternehmensregister
+source,source,EDQM CEP-Datenbank,"HTTP 200, robots.txt verbietet den Pfad",https://extranet.edqm.eu/publications/recherches_CEP.shtml,EDQM CEP-Datenbank
+source,source,EDQM Knowledge Database,"HTTP 200, robots.txt verbietet den Pfad",https://extranet.edqm.eu/4DLink1/4DCGI/Web_View/mono/1,EDQM Knowledge Database
+source,source,European Patent Register,"HTTP 403, CAPTCHA/Bot-Challenge erkannt – wird nicht umgangen",https://register.epo.org/application?number=EP00916888&tab=main,European Patent Register
+source,source,FDA Data Dashboard,HTTP 403: Zugriff verweigert,https://datadashboard.fda.gov/oii/cd/inspections.htm,FDA Data Dashboard
+source,source,FR Infogreffe / RNE,Host nicht freigegeben,data.inpi.fr / www.infogreffe.fr,FR Infogreffe / RNE
+source,source,INPI SPC,"Host nicht freigegeben, URL in Brief fehlt",data.inpi.fr,INPI SPC
+source,source,Irish Patent Office,"Host nicht freigegeben, URL in Brief fehlt",eregister.ipoi.gov.ie,Irish Patent Office
+source,source,MA DMP Marokko,nicht erreichbar: ConnectError: [Errno 104] Connection reset by peer,https://dmp.sante.gov.ma/,MA DMP Marokko
+source,source,NHSBSA Open Data Portal,"HTTP 200, robots.txt verbietet den Pfad",https://opendata.nhsbsa.net/api/3/action/package_list,NHSBSA Open Data Portal
+source,source,NHWSTAT Nordics,"Host nicht freigegeben, URL in Brief fehlt",www.norpd.no / statistik,NHWSTAT Nordics
+source,source,OpenPrescribing (NHS England),"HTTP 403, CAPTCHA/Bot-Challenge erkannt – wird nicht umgangen",https://openprescribing.net/api/1.0/bnf_code/?q=metformin&format=json,OpenPrescribing (NHS England)
+source,source,PubChem FTP Bulk,"HTTP 200, robots.txt verbietet den Pfad",https://ftp.ncbi.nlm.nih.gov/pubchem/Compound/Extras/,PubChem FTP Bulk
+source,source,PubChem PUG-REST,"HTTP 200, robots.txt verbietet den Pfad","https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/metformin/property/MolecularFormula,InChIKey/JSON",PubChem PUG-REST
+source,source,TN DPM Tunesien,nicht erreichbar: ConnectError: [Errno 104] Connection reset by peer,https://www.dpm.tn/,TN DPM Tunesien
+source,source,TR TİTCK,"HTTP 500, Web Application Firewall blockiert Cloud-IP/Bot – wird nicht umgangen",https://www.titck.gov.tr/dinamikmodul/43,TR TİTCK
+source,source,Wikidata Dumps,nicht erreichbar: ConnectError: [Errno 104] Connection reset by peer,https://dumps.wikimedia.org/wikidatawiki/entities/,Wikidata Dumps
+source,source,Wikidata SPARQL,"HTTP 200, robots.txt verbietet den Pfad",https://query.wikidata.org/sparql?query=ASK%7B%7D&format=json,Wikidata SPARQL
+source,source,medstat.dk,Host nicht freigegeben,medstat.dk,medstat.dk
+supply_chain,api,amlodipine,API-Lieferant der Fertigprodukte nicht in Primärquelle belegt (für Generika i. d. R. vertraulich; ASMF nicht öffentlich),"Public Assessment Reports (HMA MRI), EudraGMDP, CEP-Lizenz",PharmaLens graph
+supply_chain,api,apixaban,API-Lieferant der Fertigprodukte nicht in Primärquelle belegt (für Generika i. d. R. vertraulich; ASMF nicht öffentlich),"Public Assessment Reports (HMA MRI), EudraGMDP, CEP-Lizenz",PharmaLens graph
+supply_chain,api,atorvastatin,API-Lieferant der Fertigprodukte nicht in Primärquelle belegt (für Generika i. d. R. vertraulich; ASMF nicht öffentlich),"Public Assessment Reports (HMA MRI), EudraGMDP, CEP-Lizenz",PharmaLens graph
+supply_chain,api,dapsone,API-Lieferant der Fertigprodukte nicht in Primärquelle belegt (für Generika i. d. R. vertraulich; ASMF nicht öffentlich),"Public Assessment Reports (HMA MRI), EudraGMDP, CEP-Lizenz",PharmaLens graph
+supply_chain,api,edoxaban,API-Lieferant der Fertigprodukte nicht in Primärquelle belegt (für Generika i. d. R. vertraulich; ASMF nicht öffentlich),"Public Assessment Reports (HMA MRI), EudraGMDP, CEP-Lizenz",PharmaLens graph
+supply_chain,api,empagliflozin,API-Lieferant der Fertigprodukte nicht in Primärquelle belegt (für Generika i. d. R. vertraulich; ASMF nicht öffentlich),"Public Assessment Reports (HMA MRI), EudraGMDP, CEP-Lizenz",PharmaLens graph
+supply_chain,api,florfenicol,API-Lieferant der Fertigprodukte nicht in Primärquelle belegt (für Generika i. d. R. vertraulich; ASMF nicht öffentlich),"Public Assessment Reports (HMA MRI), EudraGMDP, CEP-Lizenz",PharmaLens graph
+supply_chain,api,fludrocortisone,API-Lieferant der Fertigprodukte nicht in Primärquelle belegt (für Generika i. d. R. vertraulich; ASMF nicht öffentlich),"Public Assessment Reports (HMA MRI), EudraGMDP, CEP-Lizenz",PharmaLens graph
+supply_chain,api,hydroxycarbamide,API-Lieferant der Fertigprodukte nicht in Primärquelle belegt (für Generika i. d. R. vertraulich; ASMF nicht öffentlich),"Public Assessment Reports (HMA MRI), EudraGMDP, CEP-Lizenz",PharmaLens graph
+supply_chain,api,levothyroxine,API-Lieferant der Fertigprodukte nicht in Primärquelle belegt (für Generika i. d. R. vertraulich; ASMF nicht öffentlich),"Public Assessment Reports (HMA MRI), EudraGMDP, CEP-Lizenz",PharmaLens graph
+supply_chain,api,marbofloxacin,API-Lieferant der Fertigprodukte nicht in Primärquelle belegt (für Generika i. d. R. vertraulich; ASMF nicht öffentlich),"Public Assessment Reports (HMA MRI), EudraGMDP, CEP-Lizenz",PharmaLens graph
+supply_chain,api,metformin,API-Lieferant der Fertigprodukte nicht in Primärquelle belegt (für Generika i. d. R. vertraulich; ASMF nicht öffentlich),"Public Assessment Reports (HMA MRI), EudraGMDP, CEP-Lizenz",PharmaLens graph
+supply_chain,api,mexiletine,API-Lieferant der Fertigprodukte nicht in Primärquelle belegt (für Generika i. d. R. vertraulich; ASMF nicht öffentlich),"Public Assessment Reports (HMA MRI), EudraGMDP, CEP-Lizenz",PharmaLens graph
+supply_chain,api,omeprazole,API-Lieferant der Fertigprodukte nicht in Primärquelle belegt (für Generika i. d. R. vertraulich; ASMF nicht öffentlich),"Public Assessment Reports (HMA MRI), EudraGMDP, CEP-Lizenz",PharmaLens graph
+supply_chain,api,pimobendan,API-Lieferant der Fertigprodukte nicht in Primärquelle belegt (für Generika i. d. R. vertraulich; ASMF nicht öffentlich),"Public Assessment Reports (HMA MRI), EudraGMDP, CEP-Lizenz",PharmaLens graph
+supply_chain,api,pyridostigmine,API-Lieferant der Fertigprodukte nicht in Primärquelle belegt (für Generika i. d. R. vertraulich; ASMF nicht öffentlich),"Public Assessment Reports (HMA MRI), EudraGMDP, CEP-Lizenz",PharmaLens graph
+supply_chain,api,sacubitril,API-Lieferant der Fertigprodukte nicht in Primärquelle belegt (für Generika i. d. R. vertraulich; ASMF nicht öffentlich),"Public Assessment Reports (HMA MRI), EudraGMDP, CEP-Lizenz",PharmaLens graph
+supply_chain,api,toltrazuril,API-Lieferant der Fertigprodukte nicht in Primärquelle belegt (für Generika i. d. R. vertraulich; ASMF nicht öffentlich),"Public Assessment Reports (HMA MRI), EudraGMDP, CEP-Lizenz",PharmaLens graph
+supply_chain,api,tulathromycin,API-Lieferant der Fertigprodukte nicht in Primärquelle belegt (für Generika i. d. R. vertraulich; ASMF nicht öffentlich),"Public Assessment Reports (HMA MRI), EudraGMDP, CEP-Lizenz",PharmaLens graph

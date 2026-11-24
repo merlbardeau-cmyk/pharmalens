@@ -28,8 +28,17 @@ def text_of(url: str) -> str:
     if url in _cache:
         return _cache[url]
     c = client()
-    throttle(url)
-    r = c.get(url, timeout=180)
+    import time
+    for attempt in range(4):
+        throttle(url)
+        try:
+            r = c.get(url, timeout=180)
+            if r.status_code not in (429, 503):
+                break
+        except Exception:  # noqa: BLE001
+            if attempt == 3:
+                raise
+        time.sleep(30 * (attempt + 1))
     ct = r.headers.get("content-type", "")
     if "pdf" in ct or url.endswith(".pdf"):
         with tempfile.NamedTemporaryFile(suffix=".pdf") as t:
@@ -44,12 +53,15 @@ def text_of(url: str) -> str:
         txt = " ".join(pd.read_excel(io.BytesIO(r.content), header=None, sheet_name=None, dtype=str)
                        [k].fillna("").astype(str).agg(" ".join, axis=1).str.cat(sep=" ") for k in
                        pd.ExcelFile(io.BytesIO(r.content)).sheet_names)
+    elif "json" in ct:
+        txt = html.unescape(re.sub(r"<[^>]+>", " ", json.dumps(r.json(), ensure_ascii=False)))
     else:
         try:
             txt = r.content.decode("utf-8")
         except UnicodeDecodeError:
             txt = r.content.decode("latin-1")
-        txt = html.unescape(re.sub(r"<[^>]+>", " ", txt))
+        if "html" in ct or "xml" in ct:
+            txt = html.unescape(re.sub(r"<[^>]+>", " ", txt))
     _cache[url] = norm_text(re.sub(r"\s+", " ", txt))
     return _cache[url]
 
@@ -66,7 +78,8 @@ def run(seed=7):
     out = {}
     with connect() as conn:
         areas = {
-            "product_manufacturer": conn.execute("""SELECT row_id, source_url, manufacturer_raw, site_country FROM product_manufacturer
+            "_seed": conn.execute("SELECT setseed(0.42)").fetchall(),
+            "product_manufacturer": conn.execute("""SELECT row_id, source_url, manufacturer_raw, split_part(site_address_raw, ',', 1) FROM product_manufacturer
                                                     WHERE valid_to IS NULL ORDER BY random() LIMIT %s""", (N,)).fetchall(),
             "product": conn.execute("""SELECT row_id, CASE WHEN source_name='US Drugs@FDA' THEN 'https://www.fda.gov/media/89850/download'
                                               WHEN source_name='FR BDPM' THEN 'https://base-donnees-publique.medicaments.gouv.fr/download/file/CIS_bdpm.txt'
@@ -77,6 +90,7 @@ def run(seed=7):
             "api_certificate": conn.execute("""SELECT row_id, source_url, number, holder_raw FROM api_certificate WHERE valid_to IS NULL
                                                ORDER BY random() LIMIT %s""", (N,)).fetchall(),
         }
+        areas.pop("_seed")
         for area, rows in areas.items():
             ok, fails = 0, []
             for rid, url, a, b in rows:
@@ -85,7 +99,7 @@ def run(seed=7):
                 except Exception as e:  # noqa: BLE001
                     fails.append(dict(row_id=rid, url=url, error=str(e)[:120]))
                     continue
-                checks = [a] if area == "product_manufacturer" else [a, b]
+                checks = [a, b]
                 if all(contains(hay, x) for x in checks if not (area == "api_certificate" and x == a)) and \
                         (area != "api_certificate" or re.search(rf"\b{re.escape(str(a))}\b", hay)):
                     ok += 1

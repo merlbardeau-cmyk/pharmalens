@@ -1,0 +1,34 @@
+child,parent,relation_type,status,source_url
+DAIICHI SANKYO EUROPE GmbH,"Daiichi Sankyo Co., Ltd.",subsidiary,official,https://api.gleif.org/api/v1/lei-records/529900KWG23WIJDPKP09/direct-parent-relationship
+DAIICHI SANKYO EUROPE GmbH,"Daiichi Sankyo Co., Ltd.",ultimate_parent,official,https://api.gleif.org/api/v1/lei-records/529900KWG23WIJDPKP09/ultimate-parent-relationship
+ASTRAZENECA AB,ASTRAZENECA TREASURY LIMITED,subsidiary,official,https://api.gleif.org/api/v1/lei-records/636700ITSLXVAJVLAY33/direct-parent-relationship
+ASTRAZENECA AB,ASTRAZENECA PLC,ultimate_parent,official,https://api.gleif.org/api/v1/lei-records/636700ITSLXVAJVLAY33/ultimate-parent-relationship
+MERCK SHARP & DOHME B.V.,"MERCK & CO., INC.",ultimate_parent,official,https://api.gleif.org/api/v1/lei-records/549300YUY8VFXLXSSB43/ultimate-parent-relationship
+CHEPLAPHARM ARZNEIMITTEL GMBH,Braun Invest Holding GmbH,subsidiary,official,https://api.gleif.org/api/v1/lei-records/529900ONXKBELT7EW052/direct-parent-relationship
+CHEPLAPHARM ARZNEIMITTEL GMBH,Braun Invest Holding GmbH,ultimate_parent,official,https://api.gleif.org/api/v1/lei-records/529900ONXKBELT7EW052/ultimate-parent-relationship
+TOWA PHARMACEUTICAL EUROPE S.L.,TOWA PHARMA INTERNATIONAL HOLDINGS S.L. (SOCIEDAD UNIPERSONAL),subsidiary,official,https://api.gleif.org/api/v1/lei-records/959800C0AXZJSVLW4203/direct-parent-relationship
+TOWA PHARMACEUTICAL EUROPE S.L.,"Towa Pharmaceutical Co., Ltd.",ultimate_parent,official,https://api.gleif.org/api/v1/lei-records/959800C0AXZJSVLW4203/ultimate-parent-relationship
+Kern Pharma S.L.,GRUPO INDUKERN S.L.,subsidiary,official,https://api.gleif.org/api/v1/lei-records/95980020140005933182/direct-parent-relationship
+Kern Pharma S.L.,GRUPO INDUKERN S.L.,ultimate_parent,official,https://api.gleif.org/api/v1/lei-records/95980020140005933182/ultimate-parent-relationship
+SYNTHON BV,Synthon International Holding B.V.,subsidiary,official,https://api.gleif.org/api/v1/lei-records/724500ZPK2YP9X5EU910/direct-parent-relationship
+CENTRIENT PHARMACEUTICALS NETHERLANDS BV,Centrient Pharmaceuticals International B.V.,subsidiary,official,https://api.gleif.org/api/v1/lei-records/724500YW3QL939PTJ134/direct-parent-relationship
+LABORATORIOS ALTER S.A,ALTER S.L.,subsidiary,official,https://api.gleif.org/api/v1/lei-records/9598000F73VALCC0ZP98/direct-parent-relationship
+LABORATORIOS ALTER S.A,ALTER S.L.,ultimate_parent,official,https://api.gleif.org/api/v1/lei-records/9598000F73VALCC0ZP98/ultimate-parent-relationship
+ESTEVE QUIMICA SA,ESTEVE HEALTHCARE S.L.,subsidiary,official,https://api.gleif.org/api/v1/lei-records/95980020140005174060/direct-parent-relationship
+ESTEVE QUIMICA SA,ESTEVE HEALTHCARE S.L.,ultimate_parent,official,https://api.gleif.org/api/v1/lei-records/95980020140005174060/ultimate-parent-relationship
+MEDICHEM SA,"CORPORACION MEDICHEM, S.L.",subsidiary,official,https://api.gleif.org/api/v1/lei-records/95980020140005932697/direct-parent-relationship
+MEDICHEM SA,"CORPORACION MEDICHEM, S.L.",ultimate_parent,official,https://api.gleif.org/api/v1/lei-records/95980020140005932697/ultimate-parent-relationship
+Rottendorf Pharma GmbH,Rottendorf GmbH,subsidiary,official,https://api.gleif.org/api/v1/lei-records/529900VLN2WQS2MOQT15/direct-parent-relationship
+Rottendorf Pharma GmbH,Rottendorf GmbH,ultimate_parent,official,https://api.gleif.org/api/v1/lei-records/529900VLN2WQS2MOQT15/ultimate-parent-relationship
+Takeda Ireland Limited,Takeda Pharmaceuticals International AG,subsidiary,official,https://api.gleif.org/api/v1/lei-records/254900YZ5LGTKF6X2257/direct-parent-relationship
+Takeda Ireland Limited,Takeda Pharmaceutical Company Limited,ultimate_parent,official,https://api.gleif.org/api/v1/lei-records/254900YZ5LGTKF6X2257/ultimate-parent-relationship
+TEVA CZECH INDUSTRIES S.R.O.,TEVA PHARMACEUTICAL INDUSTRIES LTD,subsidiary,official,https://api.gleif.org/api/v1/lei-records/3157003YBLPGHW64V752/direct-parent-relationship
+TEVA CZECH INDUSTRIES S.R.O.,TEVA PHARMACEUTICAL INDUSTRIES LTD,ultimate_parent,official,https://api.gleif.org/api/v1/lei-records/3157003YBLPGHW64V752/ultimate-parent-relationship
+Pfizer Ireland Pharmaceuticals Unlimited Company,PFIZER INC.,subsidiary,official,https://api.gleif.org/api/v1/lei-records/254900916EI8NU0SVV60/direct-parent-relationship
+Pfizer Ireland Pharmaceuticals Unlimited Company,PFIZER INC.,ultimate_parent,official,https://api.gleif.org/api/v1/lei-records/254900916EI8NU0SVV60/ultimate-parent-relationship
+Boehringer Ingelheim Pharma GmbH & Co. KG,C.H. Boehringer Sohn AG & Co. KG,subsidiary,official,https://api.gleif.org/api/v1/lei-records/5299001JXIQ2V7N0ZD85/direct-parent-relationship
+Boehringer Ingelheim Pharma GmbH & Co. KG,C.H. Boehringer Sohn AG & Co. KG,ultimate_parent,official,https://api.gleif.org/api/v1/lei-records/5299001JXIQ2V7N0ZD85/ultimate-parent-relationship
+GALENICUM HEALTH S.L,GALENICUM GROUP HOLDING S.L.,subsidiary,official,https://api.gleif.org/api/v1/lei-records/959800MBW16KR9BCV445/direct-parent-relationship
+GALENICUM HEALTH S.L,GALENICUM GROUP HOLDING S.L.,ultimate_parent,official,https://api.gleif.org/api/v1/lei-records/959800MBW16KR9BCV445/ultimate-parent-relationship
+PFIZER MANUFACTURING DEUTSCHLAND GMBH,PFIZER DEUTSCHLAND GMBH,subsidiary,official,https://api.gleif.org/api/v1/lei-records/549300VXHUNCNDJ60O09/direct-parent-relationship
+PFIZER MANUFACTURING DEUTSCHLAND GMBH,PFIZER INC.,ultimate_parent,official,https://api.gleif.org/api/v1/lei-records/549300VXHUNCNDJ60O09/ultimate-parent-relationship
