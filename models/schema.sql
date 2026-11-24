@@ -372,3 +372,8 @@ CREATE TABLE IF NOT EXISTS potential_customer (
   source_url text NOT NULL, source_name text NOT NULL, retrieved_at timestamptz NOT NULL,
   status data_status NOT NULL DEFAULT 'derived' CHECK (status = 'derived'),
   valid_from timestamptz NOT NULL DEFAULT now(), valid_to timestamptz);
+
+-- v0.4: full-register products (outside the API pilot) keep the register's own substance text
+ALTER TABLE product ADD COLUMN IF NOT EXISTS substances_raw text;
+CREATE INDEX IF NOT EXISTS product_country_cur ON product (country) WHERE valid_to IS NULL;
+CREATE INDEX IF NOT EXISTS pm_company_cur ON product_manufacturer (company_id) WHERE valid_to IS NULL;

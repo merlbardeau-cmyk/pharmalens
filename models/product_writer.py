@@ -3,7 +3,7 @@ from __future__ import annotations
 
 from models.db import new_id, now, upsert_versioned
 
-COMPARE = ["name", "country", "mah_raw", "authorisation_no", "strength", "form", "procedure", "procedure_no",
+COMPARE = ["substances_raw", "name", "country", "mah_raw", "authorisation_no", "strength", "form", "procedure", "procedure_no",
            "product_status", "is_veterinary", "leaflet_url", "atc"]
 
 COUNTRY = {

@@ -5,3 +5,4 @@ __pycache__/
 app/apis.json
 app/api/
 app/*.json
+logs/
