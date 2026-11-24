@@ -1,0 +1,116 @@
+[
+  {
+    "rule": "provenance:api",
+    "violations": 0,
+    "total": 63,
+    "description": "Zeile ohne source_url/source_name/retrieved_at/status"
+  },
+  {
+    "rule": "provenance:company",
+    "violations": 0,
+    "total": 1556,
+    "description": "Zeile ohne source_url/source_name/retrieved_at/status"
+  },
+  {
+    "rule": "provenance:company_relation",
+    "violations": 0,
+    "total": 11,
+    "description": "Zeile ohne source_url/source_name/retrieved_at/status"
+  },
+  {
+    "rule": "provenance:api_certificate",
+    "violations": 0,
+    "total": 590,
+    "description": "Zeile ohne source_url/source_name/retrieved_at/status"
+  },
+  {
+    "rule": "provenance:product",
+    "violations": 0,
+    "total": 11471,
+    "description": "Zeile ohne source_url/source_name/retrieved_at/status"
+  },
+  {
+    "rule": "provenance:product_manufacturer",
+    "violations": 0,
+    "total": 1587,
+    "description": "Zeile ohne source_url/source_name/retrieved_at/status"
+  },
+  {
+    "rule": "provenance:patent",
+    "violations": 0,
+    "total": 276,
+    "description": "Zeile ohne source_url/source_name/retrieved_at/status"
+  },
+  {
+    "rule": "provenance:event",
+    "violations": 0,
+    "total": 26,
+    "description": "Zeile ohne source_url/source_name/retrieved_at/status"
+  },
+  {
+    "rule": "provenance:tender",
+    "violations": 0,
+    "total": 1211,
+    "description": "Zeile ohne source_url/source_name/retrieved_at/status"
+  },
+  {
+    "rule": "provenance:supply_link",
+    "violations": 0,
+    "total": 0,
+    "description": "Zeile ohne source_url/source_name/retrieved_at/status"
+  },
+  {
+    "rule": "company_without_country",
+    "violations": 1310,
+    "total": 1539,
+    "description": "Firma ohne Land (nicht erfunden -> gap)"
+  },
+  {
+    "rule": "duplicate_company_after_ER",
+    "violations": 0,
+    "total": 1539,
+    "description": "gleicher legal_key mehrfach aktiv"
+  },
+  {
+    "rule": "patent_expiry_plausible",
+    "violations": 0,
+    "total": 276,
+    "description": "Ablauf ausserhalb 1985-2050"
+  },
+  {
+    "rule": "manufacturer_quote_contains_name",
+    "violations": 0,
+    "total": 1582,
+    "description": "Zitat fehlt oder enthält den Herstellernamen nicht"
+  },
+  {
+    "rule": "dmf_holder_country_not_from_dmf",
+    "violations": 2,
+    "total": 267,
+    "description": "Land einer reinen DMF-Halter-Firma nicht aus GLEIF (US-Agent-Fehler)"
+  },
+  {
+    "rule": "api_role_only_from_api_evidence",
+    "violations": 0,
+    "total": 1539,
+    "description": "API-Hersteller-Rolle ohne Zertifikat/Annex-IIA-Beleg (Importeur-Fehler)"
+  },
+  {
+    "rule": "derived_links_marked_derived",
+    "violations": 0,
+    "total": 0,
+    "description": "nicht bestätigte Verbindung ohne status=derived"
+  },
+  {
+    "rule": "no_email_in_quotes",
+    "violations": 4,
+    "total": 1582,
+    "description": "E-Mail-Adresse im Zitat (DSGVO-Prüfung)"
+  },
+  {
+    "rule": "manufacturer_site_country",
+    "violations": 30,
+    "total": 1582,
+    "description": "Standort ohne bestimmbares Land"
+  }
+]

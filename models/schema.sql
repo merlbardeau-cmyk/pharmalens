@@ -307,3 +307,6 @@ CREATE UNIQUE INDEX IF NOT EXISTS product_nk_current ON product(natural_key) WHE
 ALTER TABLE api_certificate ADD COLUMN IF NOT EXISTS natural_key text;
 CREATE UNIQUE INDEX IF NOT EXISTS cert_nk_current ON api_certificate(natural_key) WHERE valid_to IS NULL;
 ALTER TABLE product ADD COLUMN IF NOT EXISTS atc text;
+ALTER TABLE product_manufacturer ADD COLUMN IF NOT EXISTS site_address_raw text;
+ALTER TABLE product_manufacturer ADD COLUMN IF NOT EXISTS site_country char(2);
+ALTER TABLE product_manufacturer ADD COLUMN IF NOT EXISTS country_basis text;

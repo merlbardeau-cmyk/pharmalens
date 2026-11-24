@@ -124,7 +124,7 @@ class Fetcher:
                 continue
             if r.status_code not in (429, 503):
                 break
-            wait = int(r.headers.get("retry-after", "0") or 0) or 30 * (attempt + 1)
+            wait = int(float(r.headers.get("retry-after", "0") or 0)) or 30 * (attempt + 1)
             time.sleep(min(wait, 180))
         full = str(r.request.url)
         sha, _ = store_raw(self.raw_dir, full, r.content, r.headers.get("content-type"), r.status_code, self.conn, self.sid)
