@@ -24,6 +24,14 @@ CT = {".xlsx": "application/vnd.openxmlformats-officedocument.spreadsheetml.shee
       ".html": "text/html", ".xml": "application/xml", ".js": "application/javascript"}
 
 
+def skey(rel: str) -> str:
+    """Storage object keys must be ASCII: NFKD + strip accents, other chars -> '_' (raw_object.path stays the local path)."""
+    import re
+    import unicodedata
+    t = "".join(ch for ch in unicodedata.normalize("NFKD", rel) if not unicodedata.combining(ch))
+    return re.sub(r"[^A-Za-z0-9/._-]", "_", t)
+
+
 def client():
     return httpx.Client(timeout=httpx.Timeout(300.0, connect=30.0), verify="/root/.ccr/ca-bundle.crt",
                         headers={"apikey": "proxy-injected"})
@@ -45,7 +53,11 @@ def existing(c, prefix=""):
         p = stack.pop()
         offset = 0
         while True:
-            r = c.post(f"{BASE}/object/list/{BUCKET}", json={"prefix": p, "limit": 1000, "offset": offset})
+            for a in range(6):
+                r = c.post(f"{BASE}/object/list/{BUCKET}", json={"prefix": p, "limit": 1000, "offset": offset})
+                if r.status_code != 429:
+                    break
+                time.sleep(10 * (a + 1))
             r.raise_for_status()
             items = r.json()
             for it in items:
@@ -73,7 +85,7 @@ def put(c, key, data: bytes, ctype: str):
 
 
 def upload_one(path: Path, have: dict):
-    rel = str(path.relative_to(ROOT))
+    rel = skey(str(path.relative_to(ROOT)))
     data = path.read_bytes()
     ctype = CT.get(path.suffix.lower(), "application/octet-stream")
     c = client()
@@ -111,7 +123,7 @@ def main(step="upload"):
         files = sorted(p for p in (ROOT / "raw").rglob("*") if p.is_file())
         missing, wrong = [], []
         for p in files:
-            rel, n = str(p.relative_to(ROOT)), p.stat().st_size
+            rel, n = skey(str(p.relative_to(ROOT))), p.stat().st_size
             if n > PART:
                 parts = [k for k in have if k.startswith(rel + ".part") and not k.endswith(".json")]
                 if sum(have[k] or 0 for k in parts) != n:
