@@ -46,8 +46,11 @@ def run(out: Path, today: date | None = None):
         for aid, cid, score, reasons, npd, ncc in q("""SELECT api_id, company_id, score, reasons, n_products, n_countries
                                                       FROM potential_customer WHERE valid_to IS NULL ORDER BY score DESC"""):
             pcs[aid].append(dict(id=cid, name=name.get(cid), score=float(score), reasons=reasons, products=npd, markets=ncc))
+        from enrich.company_profile import groups, same_group
+        g = groups(c)
+        ext = lambda aid, h: [x for x in pcs.get(aid, []) if not same_group(g, x["id"], h)]  # noqa: E731
         dmf = [dict(date=d(dt), api=inn.get(aid), holder=name.get(cid), holder_id=cid, no=(de or {}).get("number"), url=url,
-                    customers=pcs.get(aid, [])[:5], n_customers=len(pcs.get(aid, [])))
+                    customers=ext(aid, cid)[:5], n_customers=len(ext(aid, cid)))
                for dt, aid, cid, de, url in q("""SELECT signal_date, api_id, company_id, detail, source_url FROM signal
                                                  WHERE valid_to IS NULL AND signal_type='new_dmf' ORDER BY signal_date DESC""")]
 

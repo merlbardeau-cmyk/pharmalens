@@ -142,3 +142,11 @@ def test_company_cut_after_legal_form():
     assert [(x["company"], x["country"]) for x in s] == [("STADA Arzneimittel AG", "DE")]
     s = parse(["Hersteller:", "Clonmel Healthcare Ltd., Waterford Road, Co. Tipperary, Clonmel, Irland", "Z.Nr.: 1"])
     assert [(x["company"], x["country"]) for x in s] == [("Clonmel Healthcare Ltd.", "IE")]
+
+
+def test_product_name_country_rows_are_not_manufacturers():
+    from enrich.leaflet_parser import parse
+    assert parse(["Fabrikant", "Apixaban", "NL-Netherlands"], home_country="NL") == []
+    assert parse(["Manufacturer", "Edoxaban Teva 15 mg filmtabletta", "Teva Str 1", "Hungary"]) == []
+    s = parse(["Manufacturer", "Teva Pharma B.V.", "Swensweg 5", "2031 GA Haarlem", "Netherlands"])
+    assert s and s[0]["company"] == "Teva Pharma B.V."

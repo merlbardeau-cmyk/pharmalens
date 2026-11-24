@@ -54,10 +54,12 @@ def run(out: Path):
               (SELECT array_agg(s.salt_form ORDER BY s.salt_form) FROM api s WHERE s.parent_api_id=a.api_id AND s.valid_to IS NULL)
               FROM api a WHERE a.parent_api_id IS NULL AND a.valid_to IS NULL ORDER BY a.inn""").fetchall()
         index, inn_of = [], {}
+        cname = dict(c.execute("SELECT company_id, name_raw[1] FROM company WHERE valid_to IS NULL").fetchall())
+        cc_of = dict(c.execute("SELECT company_id, country FROM company WHERE valid_to IS NULL").fetchall())
         for aid, inn, unii, cas, atc, vet, src, salts in apis:
             inn_of[aid] = inn
             P = c.execute("""SELECT p.product_id,p.country,p.name,p.mah_raw,p.authorisation_no,p.strength,p.form,p.procedure,
-                                    p.product_status,p.is_veterinary,p.status,p.source_name,p.source_url,p.leaflet_url
+                                    p.product_status,p.is_veterinary,p.status,p.source_name,p.source_url,p.leaflet_url,p.mah_company_id
                              FROM product p JOIN product_api pa USING(product_id) WHERE pa.api_id=%s AND p.valid_to IS NULL
                              ORDER BY p.country,p.name""", (aid,)).fetchall()
             M = c.execute("""SELECT pm.product_id,p.country,p.name,pm.role,pm.manufacturer_raw,pm.site_address_raw,pm.site_country,
@@ -89,8 +91,23 @@ def run(out: Path):
             gaps = [dict(area=r[0], reason=r[1], where=r[2]) for r in G]
             sites = {(m["company"], m["site_cc"]) for m in mfr if m["role"] == "batch_release"}
             countries = sorted({p["cc"] for p in prods if p["cc"] != "EU"})
+            # customers (derived) and supply-chain flows site -> MAH -> market (official leaflet links only)
+            cust = [dict(id=r[0], name=cname.get(r[0]), score=float(r[1]), reasons=r[2], products=r[3], markets=r[4], cc=cc_of.get(r[0]))
+                    for r in c.execute("""SELECT company_id, score, reasons, n_products, n_countries FROM potential_customer
+                                          WHERE valid_to IS NULL AND api_id=%s ORDER BY score DESC""", (aid,)).fetchall()]
+            sites_of = defaultdict(set)
+            for r in M:
+                if r[3] == "batch_release" and r[9] == "official":
+                    sites_of[r[0]].add(cname.get(r[11]) or r[4])
+            flows = defaultdict(float)
+            for r in P:
+                mah = cname.get(r[14]) or r[3] or "Inhaber unbekannt"
+                ss = sites_of.get(r[0]) or {"Werk nicht im Leaflet"}
+                for site in ss:
+                    flows[(site, mah, r[1])] += 1 / len(ss)
             dump(dict(inn=inn, unii=unii, cas=cas, atc=atc, vet=vet, src=src, salts=salts or [], summary=summ.get(inn), group=group.get(inn),
-                      products=prods, manufacturers=mfr, certificates=certs, patents=pats, shortages=short, tenders=tend, gaps=gaps),
+                      products=prods, manufacturers=mfr, certificates=certs, patents=pats, shortages=short, tenders=tend, gaps=gaps,
+                      customers=cust, flows=[[a, b, cc, round(v, 2)] for (a, b, cc), v in flows.items()]),
                  out / "api" / f"{slug(inn)}.json")
             index.append(dict(slug=slug(inn), inn=inn, group=group.get(inn), unii=unii, cas=cas, atc=(atc or [None])[0], vet=vet,
                               salts=len(salts or []), products=len(prods), countries=len(countries),

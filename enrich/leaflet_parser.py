@@ -52,6 +52,9 @@ STREET = re.compile(r"\b(avenue|av\.|avda|avd\.|rue|calle|c/|via|viale|street|st
                     r"boulevard|bd|plaza|place|camino|carretera|ctra|pol[ií]gono|route|chemin|allee|weg)\b", re.I)
 
 
+DOSE = re.compile(r"\b\d+([.,]\d+)?\s*(mg|µg|mcg|mikrogramm|microgram|ie|iu|ml)\b", re.I)
+
+
 def closes_site(ln: str) -> bool:
     """line ends a site address: '..., España' / '... (ESPAÑA)' / '62-020 Swarzedz Polonia' - not 'avenue de France'."""
     t = norm_text(ln).strip(" .;:")
@@ -160,8 +163,8 @@ def parse(lines: list[str], home_country: str | None = None) -> list[dict]:
             continue  # a sentence, not a company name
         if not b or len(b) < 2 or len(b[0]) < 3 or not re.match(r"^[\w\"“(]", b[0]) or b[0][:1].islower():
             continue  # a site needs a company line plus at least one address line
-        if not b:
-            continue
+        if not re.search(LEGAL, b[0], re.I) and (DOSE.search(b[0]) or len(b) == 2 and len(b[1].split()) <= 2):
+            continue  # product name ("Edoxaban Teva 15 mg ...") or "<name> / <country>" table row, not a manufacturer
         company, address = b[0], ", ".join(b[1:])
         if b[0].count(",") >= 2:  # company and address on one line -> cut after legal form
             segs = [x.strip() for x in b[0].split(",")]

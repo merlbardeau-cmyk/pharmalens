@@ -7,8 +7,9 @@ signal (all official, taken 1:1 from a register date):
   patent_expiry      Orange Book patent expiring in the next 24 months
 new_cep and gmp_noncompliance stay gaps (EDQM licence, EudraGMDP returns no results).
 
-potential_customer (status derived): for every API with a new US DMF, the marketing-authorisation holders that sell
-finished products with that API in the covered markets, outside the DMF holder's group. Score = products + 3 * markets.
+potential_customer (status derived): for every pilot API, the marketing-authorisation holders that sell finished products
+with that API in the covered markets. Score = products + 3 * markets, -10 if the group holds its own active DMF.
+The dashboard removes the DMF holder's own group per new DMF.
 Selling the API is a reason to talk, not proof of demand.
 """
 from __future__ import annotations
@@ -68,25 +69,34 @@ def run(today: date | None = None):
                        ("gmp_noncompliance", "EudraGMDP liefert für automatisierte Abfragen keine Treffer")):
             add_gap(c, "signal", "signal_type", t, why, None, "graph/signals.py")
 
-        # potential customers for APIs with a new DMF
+        # potential customers per API (all pilot APIs): MAHs that market finished products with the API
         g = groups(c)
-        holders = defaultdict(set)
-        for aid, cid in c.execute("SELECT api_id, company_id FROM signal WHERE valid_to IS NULL AND signal_type='new_dmf'").fetchall():
-            holders[aid].add(cid)
+        dmf_holders = defaultdict(set)
+        for aid, cid in c.execute("""SELECT api_id, holder_company_id FROM api_certificate WHERE valid_to IS NULL
+                                     AND cert_status='active' AND holder_company_id IS NOT NULL""").fetchall():
+            dmf_holders[aid].add(cid)
+        rel = defaultdict(set)  # product -> batch-release companies
+        for pid, cid in c.execute("SELECT product_id, company_id FROM product_manufacturer WHERE valid_to IS NULL AND company_id IS NOT NULL").fetchall():
+            rel[pid].add(cid)
+        cname = dict(c.execute("SELECT company_id, name_raw[1] FROM company WHERE valid_to IS NULL").fetchall())
         pcs = []
-        for aid, hs in holders.items():
-            agg = defaultdict(lambda: [set(), set(), []])
+        for (aid,) in c.execute("SELECT DISTINCT api_id FROM product_api").fetchall():
+            agg = defaultdict(lambda: [set(), set(), [], set()])
             for rid, pid, mah, cc in c.execute("""SELECT p.row_id, p.product_id, p.mah_company_id, p.country FROM product p
                                                   JOIN product_api pa ON pa.product_id=p.product_id
                                                   WHERE p.valid_to IS NULL AND pa.api_id=%s AND p.mah_company_id IS NOT NULL""", (aid,)).fetchall():
-                if any(h and same_group(g, mah, h) for h in hs):
-                    continue
                 a = agg[mah]
-                a[0].add(pid); a[1].add(cc); a[2].append(rid)
-            for mah, (prods, ccs, ev) in agg.items():
-                score = len(prods) + 3 * len(ccs)
-                pcs.append((aid, mah, score, [f"{len(prods)} Fertigprodukte mit diesem Wirkstoff", f"zugelassen in {len(ccs)} Märkten: {', '.join(sorted(ccs))}",
-                                              "nicht im Konzern des DMF-Inhabers"], ev[:50], len(prods), len(ccs)))
+                a[0].add(pid); a[1].add(cc); a[2].append(rid); a[3] |= rel.get(pid, set())
+            for mah, (prods, ccs, ev, sites) in agg.items():
+                own = any(same_group(g, mah, h) for h in dmf_holders.get(aid, ()))
+                reasons = [f"{len(prods)} Fertigprodukte mit diesem Wirkstoff", f"zugelassen in {len(ccs)} Märkten: {', '.join(sorted(ccs))}"]
+                ext = sorted({cname.get(x) for x in sites if not same_group(g, x, mah)} - {None})
+                if ext:
+                    reasons.append("lässt fremd freigeben: " + ", ".join(ext[:4]) + (" …" if len(ext) > 4 else ""))
+                if own:
+                    reasons.append("Konzern hält selbst einen aktiven US-DMF für diesen Wirkstoff (teilweise integriert)")
+                score = len(prods) + 3 * len(ccs) - (10 if own else 0)
+                pcs.append((aid, mah, score, reasons, ev[:50], len(prods), len(ccs)))
         with c.cursor() as cur:
             cur.executemany("""INSERT INTO potential_customer (api_id, company_id, score, reasons, evidence_ids, n_products, n_countries,
                                source_url, source_name, retrieved_at, status) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,'PharmaLens',%s,'derived')""",

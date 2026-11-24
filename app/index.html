@@ -507,7 +507,7 @@ tr.click:active{background:var(--accent-soft)}
         </tbody></table>` : `<div class="empty">Kein Wirkstoff passt zu «${esc(state.q)}».</div>`}</section></div>`;
   }
 
-  const TABS = [['sites','Fertigprodukt-Hersteller'],['makers','API-Hersteller'],['products','Zulassungen'],['patents','Patente'],['shortages','Engpässe'],['tenders','Tender'],['gaps','Lücken']];
+  const TABS = [['sites','Fertigprodukt-Hersteller'],['customers','Kunden'],['flow','Lieferkette'],['makers','API-Hersteller'],['products','Zulassungen'],['patents','Patente'],['shortages','Engpässe'],['tenders','Tender'],['gaps','Lücken']];
   async function pApi(slug, keep){
     setNav('apis');
     if (!keep) view.innerHTML = `<div class="skeleton" style="height:180px;margin-top:16px"></div>`;
@@ -515,7 +515,7 @@ tr.click:active{background:var(--accent-soft)}
     const d = await data(); const idx = d.index.apis.find(x => x.slug === slug) || {};
     crumbs([['Wirkstoffe','#apis'],[a.inn,'','cap']]);
     const bio = a.manufacturers.filter(m => m.role === 'api_manufacturer');
-    const counts = { sites: new Set(a.manufacturers.filter(m => m.role==='batch_release').map(m => m.company+'|'+m.site_cc)).size, makers: a.certificates.length + bio.length,
+    const counts = { customers: (a.customers||[]).length, flow: new Set(a.manufacturers.filter(m => m.role==='batch_release').map(m => m.pid)).size, sites: new Set(a.manufacturers.filter(m => m.role==='batch_release').map(m => m.company+'|'+m.site_cc)).size, makers: a.certificates.length + bio.length,
       products: a.products.length, patents: a.patents.length, shortages: a.shortages.length, tenders: a.tenders.length, gaps: a.gaps.length };
     view.innerHTML = `<div class="${keep?'':'fade'}">
       <section class="card dhead" style="margin-top:12px"><div style="min-width:0;flex:1 1 520px">
@@ -597,7 +597,46 @@ tr.click:active{background:var(--accent-soft)}
         <section class="card tbl">${rows.length ? `<table><thead><tr><th>Bereich</th><th>Grund</th><th>Fälle</th><th>Wo erhältlich</th></tr></thead><tbody>
           ${rows.map(x => `<tr><td><span class="chip c-gap">${esc(AREA[x.area]||x.area)}</span></td><td class="main" style="font-weight:550">${esc(x.reason)}</td><td class="num">${fmt(x.n)}</td><td>${/^https?:/.test(x.where||'') ? link(x.where,'Beispiel') : esc(x.where||'–')}</td></tr>`).join('')}</tbody></table>` : '<div class="empty">Keine offenen Lücken.</div>'}</section>`;
     }
+    if (t === 'customers') {
+      const C = (a.customers||[]).filter(x => has({n:x.name, r:(x.reasons||[]).join(' ')}, q));
+      h = `<div class="toolbar"><span class="note">${fmt(C.length)} Zulassungsinhaber mit Fertigprodukten dieses Wirkstoffs = mögliche Abnehmer des Wirkstoffs. Abgeleitet, kein Nachweis von Bedarf. ${chip('derived')}</span>
+        <button class="btn" type="button" id="custXlsx" ${C.length?'':'disabled'}>Excel exportieren</button></div>
+        <section class="card tbl">${C.length ? `<table><thead><tr><th>Firma</th><th>Produkte</th><th>Märkte</th><th>Score</th><th>Warum</th></tr></thead><tbody>
+        ${C.slice(0, L).map(x => `<tr class="click" data-company="${x.id}" tabindex="0"><td class="main">${esc(x.name)}</td><td class="num">${fmt(x.products)}</td><td class="num">${fmt(x.markets)}</td><td class="num">${fmt(Math.round(x.score))}</td>
+          <td class="note" style="min-width:320px">${(x.reasons||[]).slice(1).map(esc).join('<br>')}</td></tr>`).join('')}</tbody></table>${moreBtn(Math.min(L, C.length), C.length)}` : '<div class="empty">Keine Zulassungsinhaber gefunden.</div>'}</section>`;
+    }
+    if (t === 'flow') {
+      const F = a.flows || []; const known = F.filter(f => f[0] !== 'Werk nicht im Leaflet').reduce((s, f) => s + f[3], 0), all = F.reduce((s, f) => s + f[3], 0);
+      const ccs = [...new Set(F.map(f => f[2]))].sort();
+      h = `<div class="toolbar">${`<label for="flcc" class="sr">Markt</label><select id="flcc" class="field" data-fld="cc"><option value="">Alle Märkte</option>${ccs.map(c => `<option ${state.cc===c?'selected':''}>${esc(c)}</option>`).join('')}</select>`}
+        <label class="note" style="display:flex;gap:6px;align-items:center"><input type="checkbox" id="flUnknown" ${state.flowUnknown?'checked':''}> Produkte ohne Werk zeigen</label>
+        <span class="note">Werk → Zulassungsinhaber → Markt. Breite = Produkte. Werk bekannt für ${pct(known, all)} % der Produkte.</span></div>
+        <section class="card panel"><div id="chFlow" style="height:640px" role="img" aria-label="Lieferkette als Sankey-Diagramm"></div>
+        <p class="note">Werk = Chargenfreigabe laut Packungsbeilage ${chip('official')}. Wer den Wirkstoff an das Werk liefert, ist bei chemischen Generika nicht öffentlich: ${fmt(a.certificates.filter(c => c.cs==='active').length)} aktive US-DMF-Inhaber kommen infrage, eine Zuordnung zum Werk wäre geraten und fehlt darum ${chip('gap')}.</p></section>`;
+    }
     p.innerHTML = h;
+    if (t === 'flow') { $('#flUnknown').addEventListener('change', e => { state.flowUnknown = e.target.checked; renderTab(a); }); echartsLib().then(() => drawFlow(a)).catch(() => $('#chFlow').innerHTML = '<div class="empty">Diagramm konnte nicht geladen werden.</div>'); }
+    if (t === 'customers') $('#custXlsx')?.addEventListener('click', () => xlsxRows(`PharmaLens_Kunden_${a.inn}`, (a.customers||[]).map(x => ({Firma:x.name, Produkte:x.products, Maerkte:x.markets, Score:Math.round(x.score), Gruende:(x.reasons||[]).join(' | '), Status:'derived'}))));
+  }
+  function drawFlow(a){
+    const cc = state.cc; let F = (a.flows||[]).filter(f => (!cc || f[2] === cc) && (state.flowUnknown || f[0] !== 'Werk nicht im Leaflet'));
+    const top = (idx, n, other) => { const t = {}; F.forEach(f => t[f[idx]] = (t[f[idx]]||0) + f[3]); const keep = new Set(Object.entries(t).sort((x,y) => y[1]-x[1]).slice(0, n).map(x => x[0])); return v => keep.has(v) ? v : other; };
+    const fs = top(0, 12, 'Andere Werke'), fm = top(1, 14, 'Andere Inhaber'), fc = top(2, 14, 'Andere Märkte');
+    const L = {}; const add = (k, v) => L[k] = (L[k]||0) + v;
+    F.forEach(f => { add(`W|${fs(f[0])}\tI|${fm(f[1])}`, f[3]); add(`I|${fm(f[1])}\tM|${fc(f[2])}`, f[3]); });
+    const nodes = new Set(); const links = Object.entries(L).map(([k, v]) => { const [s2, t2] = k.split('\t'); nodes.add(s2); nodes.add(t2); return {source:s2, target:t2, value:Math.round(v*100)/100}; });
+    const col = n => n.startsWith('W|') ? css('--off-fg') : n.startsWith('I|') ? css('--accent') : css('--muted');
+    mount('#chFlow').setOption({...chartBase(), tooltip:{...chartBase().tooltip, trigger:'item', formatter:p => p.dataType === 'edge' ? `${esc(p.data.source.slice(2))} → ${esc(p.data.target.slice(2))}<br><b>${fmt(Math.round(p.data.value))}</b> Produkte` : `${esc(p.name.slice(2))}<br><b>${fmt(Math.round(p.value))}</b> Produkte`},
+      series:[{type:'sankey', left:4, right:150, top:8, bottom:8, nodeGap:6, nodeWidth:10, draggable:false, emphasis:{focus:'adjacency'},
+        data:[...nodes].map(n => ({name:n, itemStyle:{color:col(n), borderWidth:0}})), links,
+        label:{color:css('--ink'), fontSize:11.5, formatter:p => { const t = p.name.slice(2); return t.length > 34 ? t.slice(0, 33) + '…' : t; }},
+        lineStyle:{color:'gradient', opacity:.28, curveness:.5}}]});
+  }
+  async function xlsxRows(name, rows){
+    if (!xlsxLib) xlsxLib = await new Promise((ok, no) => { const s = document.createElement('script'); s.src = 'https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js'; s.onload = () => ok(window.XLSX); s.onerror = no; document.head.appendChild(s); });
+    const wb = xlsxLib.utils.book_new(); xlsxLib.utils.book_append_sheet(wb, xlsxLib.utils.json_to_sheet(rows), 'Daten');
+    xlsxLib.utils.book_append_sheet(wb, xlsxLib.utils.aoa_to_sheet([['Export', new Date().toISOString().slice(0,10)], ['Hinweis', 'derived = abgeleitet, nicht bestätigt. Quelle: PharmaLens, öffentliche Register.']]), 'Info');
+    xlsxLib.writeFile(wb, `${name.replace(/[^A-Za-z0-9]+/g,'_')}_${new Date().toISOString().slice(0,10)}.xlsx`);
   }
 
   function siteSheet(key){

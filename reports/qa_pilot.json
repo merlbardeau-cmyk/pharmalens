@@ -8,13 +8,13 @@
   {
     "rule": "provenance:company",
     "violations": 0,
-    "total": 3318,
+    "total": 5634,
     "description": "Zeile ohne source_url/source_name/retrieved_at/status"
   },
   {
     "rule": "provenance:company_relation",
     "violations": 0,
-    "total": 6925,
+    "total": 8819,
     "description": "Zeile ohne source_url/source_name/retrieved_at/status"
   },
   {
@@ -32,7 +32,7 @@
   {
     "rule": "provenance:product_manufacturer",
     "violations": 0,
-    "total": 16102,
+    "total": 17522,
     "description": "Zeile ohne source_url/source_name/retrieved_at/status"
   },
   {
@@ -68,31 +68,31 @@
   {
     "rule": "provenance:company_alias",
     "violations": 0,
-    "total": 5689,
+    "total": 11996,
     "description": "Zeile ohne source_url/source_name/retrieved_at/status"
   },
   {
     "rule": "provenance:company_role",
     "violations": 0,
-    "total": 4208,
+    "total": 8161,
     "description": "Zeile ohne source_url/source_name/retrieved_at/status"
   },
   {
     "rule": "provenance:signal",
     "violations": 0,
-    "total": 2756,
+    "total": 6940,
     "description": "Zeile ohne source_url/source_name/retrieved_at/status"
   },
   {
     "rule": "provenance:potential_customer",
     "violations": 0,
-    "total": 4128,
+    "total": 9742,
     "description": "Zeile ohne source_url/source_name/retrieved_at/status"
   },
   {
     "rule": "cdmo_role_derived_with_evidence",
     "violations": 0,
-    "total": 144,
+    "total": 275,
     "description": "CDMO-Rolle muss derived sein, mit Begründung und Belegen"
   },
   {
@@ -110,7 +110,7 @@
   {
     "rule": "potential_customer_derived_with_reasons",
     "violations": 0,
-    "total": 2064,
+    "total": 2807,
     "description": "Kunden-Hinweis nur abgeleitet, mit Gründen und Belegen"
   },
   {
@@ -121,14 +121,14 @@
   },
   {
     "rule": "company_without_country",
-    "violations": 1531,
-    "total": 2064,
+    "violations": 2944,
+    "total": 3931,
     "description": "Firma ohne Land (nicht erfunden -> gap)"
   },
   {
     "rule": "duplicate_company_after_ER",
     "violations": 0,
-    "total": 2064,
+    "total": 3931,
     "description": "gleicher legal_key mehrfach aktiv"
   },
   {
@@ -140,7 +140,7 @@
   {
     "rule": "manufacturer_quote_contains_name",
     "violations": 0,
-    "total": 10439,
+    "total": 11761,
     "description": "Zitat fehlt oder enthält den Herstellernamen nicht"
   },
   {
@@ -152,7 +152,7 @@
   {
     "rule": "api_role_only_from_api_evidence",
     "violations": 0,
-    "total": 2064,
+    "total": 3931,
     "description": "API-Hersteller-Rolle ohne Zertifikat/Annex-IIA-Beleg (Importeur-Fehler)"
   },
   {
@@ -164,13 +164,13 @@
   {
     "rule": "no_email_in_quotes",
     "violations": 0,
-    "total": 10439,
+    "total": 11761,
     "description": "E-Mail-Adresse im Zitat (DSGVO-Prüfung)"
   },
   {
     "rule": "manufacturer_site_country",
     "violations": 0,
-    "total": 10439,
+    "total": 11761,
     "description": "Standort ohne bestimmbares Land"
   },
   {
