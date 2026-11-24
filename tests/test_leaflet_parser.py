@@ -84,3 +84,22 @@ def test_line_ending_with_country_closes_site_but_not_company_line():
     s = parse(lines)
     assert [(x["company"], x["country"]) for x in s] == [
         ("LABORATORI FUNDACIÓ DAU", "ES"), ("Synoptis Industrial Sp. z o.o.", "PL"), ("Boehringer Ingelheim France", "FR")]
+
+
+def test_nl_leaflet():
+    lines = ["Houder van de vergunning voor het in de handel brengen en fabrikant", "Registratiehouder:", "Mylan Pharmaceuticals Ltd",
+             "Damastown Industrial Park", "Dublin 15", "Ierland", "Voor informatie en inlichtingen:", "Mylan B.V.", "Krijgsman 20",
+             "Fabrikant:", "Mylan Hungary Kft,", "H-2900 Komárom, Mylan út. 1, Hongarije", "Logiters, Logistica, Portugal, S.A.",
+             "Estrada dos Arneiros, 4, Azambuja, 2050-306, Portugal", "In het register ingeschreven onder", "RVG 104243"]
+    s = parse(lines)
+    assert [(x["company"], x["country"]) for x in s] == [("Mylan Hungary Kft,", "HU"), ("Logiters, Logistica, Portugal, S.A.", "PT")]
+
+
+def test_nl_single_line_sites_street_first_and_noise():
+    lines = ["Fabrikant", "KRKA, d.d., Novo mesto, Šmarješka cesta 6, 8501 Novo mesto, Slovenië",
+             "TAD Pharma GmbH, Heinz-Lohmann-Straße 5, 27472 Cuxhaven, Duitsland", "Dit geneesmiddel is ingeschreven"]
+    s = parse(lines)
+    assert [(x["company"], x["country"]) for x in s] == [("KRKA, d.d., Novo mesto", "SI"), ("TAD Pharma GmbH", "DE")]
+    assert parse(["Fabrikant", "Swensweg 5", "2031 GA Haarlem", "Nederland"]) == []
+    assert parse(["Fabrikant", "Module 1", "Administrative information", "and prescribing information"]) == []
+    assert [x["company"] for x in parse(["Fabrikant: Pharmachemie B.V.", "Swensweg 5", "2031 GA Haarlem", "Nederland"])] == ["Pharmachemie B.V."]

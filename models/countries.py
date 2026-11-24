@@ -52,6 +52,15 @@ _NAMES = {
     "JP": ["japan", "japon", "giappone"],
     "KR": ["korea", "south korea", "republic of korea", "corea del sur", "coree du sud"],
 }
+
+for _iso, _ns in {'DE': ['duitsland', 'tyskland'], 'FR': ['frankrijk', 'frankrig'], 'ES': ['spanje', 'spanien'], 'IT': ['italie', 'italien'], 'NL': ['nederland', 'holland'], 'BE': ['belgie'], 'IE': ['ierland', 'irland'], 'GB': ['verenigd koninkrijk', 'storbritannien', 'det forenede kongerige'], 'AT': ['oostenrijk', 'osterrig'], 'PL': ['polen'], 'HU': ['hongarije', 'ungarn'], 'CZ': ['tsjechie', 'tjekkiet'], 'SI': ['slovenie', 'slovenien'], 'HR': ['kroatie', 'kroatien'], 'GR': ['griekenland', 'graekenland'], 'RO': ['roemenie', 'rumaenien'], 'BG': ['bulgarije', 'bulgarien'], 'SE': ['zweden', 'sverige'], 'DK': ['denemarken', 'danmark'], 'FI': ['finland'], 'NO': ['noorwegen', 'norge'], 'IS': ['ijsland', 'island'], 'SK': ['slowakije', 'slovakiet'], 'CH': ['zwitserland', 'schweiz'], 'LT': ['litouwen', 'litauen'], 'LV': ['letland'], 'EE': ['estland'], 'LU': ['luxemburg'], 'PT': ['portugal'], 'MT': ['malta'], 'CY': ['cyprus'], 'IN': ['indie', 'indien'], 'US': ['verenigde staten', 'usa']}.items():
+    _NAMES.setdefault(_iso, []).extend(_ns)
+_DA = {"GR": ["grækenland"], "AT": ["østrig"], "RO": ["rumænien"], "NL": ["nederlandene"], "CY": ["cypern"], "CZ": ["tjekkiet"],
+       "FR": ["frankrig"], "GB": ["storbritannien", "det forenede kongerige"], "SE": ["sverige"], "NO": ["norge"], "DK": ["danmark"],
+       "IN": ["indien"], "CN": ["kina"], "IS": ["island"], "BE": ["belgien"], "SK": ["slovakiet"], "LT": ["litauen"], "LV": ["letland"],
+       "HU": ["ungarn"], "HR": ["kroatien"], "SI": ["slovenien"], "IE": ["irland"], "IT": ["italien"], "ES": ["spanien"], "DE": ["tyskland"]}
+for _iso, _ns in _DA.items():
+    _NAMES.setdefault(_iso, []).extend(_ns)
 NAME_TO_ISO = {n: iso for iso, names in _NAMES.items() for n in names}
 POSTAL_PREFIX = {"D": "DE", "F": "FR", "E": "ES", "I": "IT", "A": "AT", "CH": "CH", "NL": "NL", "B": "BE",
                  "P": "PT", "IRL": "IE", "PL": "PL", "DK": "DK", "S": "SE", "FIN": "FI", "H": "HU", "CZ": "CZ", "SLO": "SI"}

@@ -20,6 +20,9 @@ def lines_for(source_name, raw_bytes):
         ls = html_to_lines(raw_bytes.decode("utf-8", errors="ignore"))
         idx = next((i for i, ln in enumerate(ls) if ln.lower().startswith("notice")), 0)
         return ls[idx:], "FR", "html"
+    home = {"NL CBG Geneesmiddeleninformatiebank": "NL", "AT BASG Arzneispezialitätenregister": "AT", "DK DKMA": "DK"}.get(source_name)
+    if home:
+        return pdf_lines(raw_bytes), home, "pdf_leaflet"
     return pdf_lines(raw_bytes), None, "pdf"
 
 

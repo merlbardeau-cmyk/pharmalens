@@ -16,7 +16,9 @@ START = [
     re.compile(r"^Fabricant(s)?\s*:?$", re.I),                                               # FR
     re.compile(r"^Name and address of the manufacturer\(?s?\)? responsible for batch release\s*:?$", re.I),  # EMA IIA
     re.compile(r"^Manufacturer\(?s?\)?\s*:?$", re.I),                                         # EN PL
-    re.compile(r"^Hersteller(in)?\s*:?$", re.I),                                             # DE/CH
+    re.compile(r"^Hersteller(in)?\s*:?$", re.I),                                             # DE/CH/AT
+    re.compile(r"^Fabrikant(en)?( vrijgifte)?\s*:?$", re.I),                                  # NL
+    re.compile(r"^Fremstiller(e)?\s*:?$", re.I),                                              # DK
 ]
 COMBINED = re.compile(r"^Titular de la autorizaci[oó]n de comercializaci[oó]n y responsable de la fabricaci[oó]n\s*:?$", re.I)
 STOP = re.compile(
@@ -26,12 +28,16 @@ STOP = re.compile(
     r"Repr[ée]sentant|Pour toute information|Conformément à la réglementation|"
     r"B\.$|C\.$|B\. CONDITIONS|B\.\s+CONDITIONS|CONDITIONS OR RESTRICTIONS|The printed package leaflet|Name and address of the manufacturer.* biological|C\. OTHER CONDITIONS|"
     r"This leaflet was last revised|For any information|Marketing Authorisation Holder|"
-    r"Titular de la autorizaci[oó]n|Titulaire de l.autorisation|Exploitant)", re.I)
+    r"Titular de la autorizaci[oó]n|Titulaire de l.autorisation|Exploitant|"
+    r"Dit geneesmiddel is|In het register ingeschreven|Voor informatie en inlichtingen|Registratiehouder|"
+    r"Houder van de vergunning|Deze bijsluiter is|Neem voor alle informatie|Dit middel is|"
+    r"Pharmazeutischer Unternehmer|Zulassungsinhaber|Diese Packungsbeilage wurde|Z\.Nr\.|Zulassungsnummer|"
+    r"Indehaver af markedsf|Denne indl[æa]gsseddel blev|Repr[æa]sentant|Lokal repr)", re.I)
 FORM_HEADER = re.compile(r"^(film-coated |prolonged-release |gastro-resistant |hard |soft |orodispersible )?"
                          r"(tablets?|capsules?|granules|powder|solution|suspension|injection|concentrate|pens?|syringes?|"
                          r"solution for injection.*|granules in capsules.*|oral .*)\b.{0,60}$", re.I)
 CONTACT = re.compile(r"@|\b(tel|t[eé]l[eé]phone|tfno|phone|fax|e-?mail|correo)\b\.?\s*:?|https?://|www\.", re.I)
-SEP = re.compile(r"^(o|ó|ou|or|oder|y|et|and)(\s*\(.{0,80}\))?\s*:?$", re.I)
+SEP = re.compile(r"^(o|ó|ou|or|oder|y|et|and|en|of|eller|og|und)(\s*\(.{0,80}\))?\s*:?$", re.I)
 MAX_LINES = 120
 
 
@@ -58,6 +64,24 @@ def html_to_lines(text: str) -> list[str]:
     return [re.sub(r"\s+", " ", ln).strip() for ln in text.splitlines() if ln.strip() and ln.strip() != "\xa0"]
 
 
+INLINE = re.compile(r"^(Fabrikant(?:en)?|Fabricante|Fabricant|Manufacturer|Hersteller|Fremstiller)\s*:\s*(\S.{2,})$", re.I)
+NOISE = re.compile(r"^(Module \d+\b.*|Administrative information|and prescribing information|Page \d+ of \d+|Pagina \d+ van \d+|Seite \d+ von \d+|Side \d+ af \d+)$", re.I)
+HOUSE_NO = re.compile(r"\b\d+[a-z]?\s*$|^\d")
+
+
+def split_inline(lines: list[str]) -> list[str]:
+    out = []
+    for ln in lines:
+        if NOISE.match(ln):
+            continue
+        m = INLINE.match(ln)
+        if m:
+            out += [m.group(1) + ":", m.group(2)]
+        else:
+            out.append(ln)
+    return out
+
+
 def find_section(lines: list[str]) -> tuple[int, str] | None:
     for rx in START:
         for i, ln in enumerate(lines):
@@ -70,6 +94,7 @@ def find_section(lines: list[str]) -> tuple[int, str] | None:
 
 
 def parse(lines: list[str], home_country: str | None = None) -> list[dict]:
+    lines = split_inline(lines)
     hit = find_section(lines)
     if hit is None:
         return []
@@ -97,7 +122,8 @@ def parse(lines: list[str], home_country: str | None = None) -> list[dict]:
         cur = []
         for ln in b:
             cur.append(ln)
-            ends_with_country = norm_text(ln).strip(" .,;:()") in NAME_TO_ISO or (len(cur) >= 2 and closes_site(ln))
+            single_line_site = len(cur) == 1 and ln.count(",") >= 3 and closes_site(ln)
+            ends_with_country = norm_text(ln).strip(" .,;:()") in NAME_TO_ISO or single_line_site or (len(cur) >= 2 and closes_site(ln))
             if ends_with_country:
                 split.append(cur)
                 cur = []
@@ -109,6 +135,16 @@ def parse(lines: list[str], home_country: str | None = None) -> list[dict]:
         b = [x for x in b if not re.match(r"^\(?(s[oó]lo|only|uniquement|nur)\b.*\)?$", x, re.I)]
         while b and FORM_HEADER.match(b[0]):  # dosage-form sub-headings in Annex IIA are not companies
             b = b[1:]
+        if len(b) == 1 and b[0].count(",") >= 3 and closes_site(b[0]):
+            parts = [x.strip() for x in b[0].split(",")]
+            k = next((i for i, x in enumerate(parts) if re.search(r"\d", x)), len(parts))
+            company = ", ".join(parts[:max(k, 1)]).strip()
+            iso, basis = country_of(b)
+            sites.append(dict(company=company, address=", ".join(parts[max(k, 1):]), country=iso, country_basis=basis,
+                              quote=heading + "\n" + b[0]))
+            continue
+        if b and (STREET.search(b[0]) or HOUSE_NO.search(b[0])) and not re.search(r"\b(gmbh|ag|s\.?a|ltd|limited|b\.?v|kft|d\.?d|s\.?r\.?l|s\.?p\.?a|a/s|inc|llc|plc|sp\. z|zrt|ehf|oy|ab)\b", b[0], re.I):
+            continue  # first line is an address, not a company (column layout) -> no guess
         if not b or len(b) < 2 or len(b[0]) < 3 or not re.match(r"^[\w\"“(]", b[0]) or b[0][:1].islower():
             continue  # a site needs a company line plus at least one address line
         if not b:
