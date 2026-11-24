@@ -1,12 +1,12 @@
 area,entity_type,entity_ref,reason,where_obtainable,source_name
-certificate,api,amlodipine,Written Confirmations nicht abrufbar (CDSCO blockiert),Handbeschaffung cdsco.gov.in,CDSCO Written Confirmations
 certificate,api,amlodipine,CEP nicht abrufbar (EDQM robots.txt/WAF) – Lizenzanfrage offen,EDQM Lizenz / manuelle Abfrage,EDQM CEP-Datenbank
+certificate,api,amlodipine,Written Confirmations nicht abrufbar (CDSCO blockiert),Handbeschaffung cdsco.gov.in,CDSCO Written Confirmations
 certificate,api,apixaban,CEP nicht abrufbar (EDQM robots.txt/WAF) – Lizenzanfrage offen,EDQM Lizenz / manuelle Abfrage,EDQM CEP-Datenbank
 certificate,api,apixaban,Written Confirmations nicht abrufbar (CDSCO blockiert),Handbeschaffung cdsco.gov.in,CDSCO Written Confirmations
-certificate,api,atorvastatin,CEP nicht abrufbar (EDQM robots.txt/WAF) – Lizenzanfrage offen,EDQM Lizenz / manuelle Abfrage,EDQM CEP-Datenbank
 certificate,api,atorvastatin,Written Confirmations nicht abrufbar (CDSCO blockiert),Handbeschaffung cdsco.gov.in,CDSCO Written Confirmations
-certificate,api,dapsone,Written Confirmations nicht abrufbar (CDSCO blockiert),Handbeschaffung cdsco.gov.in,CDSCO Written Confirmations
+certificate,api,atorvastatin,CEP nicht abrufbar (EDQM robots.txt/WAF) – Lizenzanfrage offen,EDQM Lizenz / manuelle Abfrage,EDQM CEP-Datenbank
 certificate,api,dapsone,CEP nicht abrufbar (EDQM robots.txt/WAF) – Lizenzanfrage offen,EDQM Lizenz / manuelle Abfrage,EDQM CEP-Datenbank
+certificate,api,dapsone,Written Confirmations nicht abrufbar (CDSCO blockiert),Handbeschaffung cdsco.gov.in,CDSCO Written Confirmations
 certificate,api,edoxaban,Written Confirmations nicht abrufbar (CDSCO blockiert),Handbeschaffung cdsco.gov.in,CDSCO Written Confirmations
 certificate,api,edoxaban,CEP nicht abrufbar (EDQM robots.txt/WAF) – Lizenzanfrage offen,EDQM Lizenz / manuelle Abfrage,EDQM CEP-Datenbank
 certificate,api,empagliflozin,Written Confirmations nicht abrufbar (CDSCO blockiert),Handbeschaffung cdsco.gov.in,CDSCO Written Confirmations
@@ -15,16 +15,16 @@ certificate,api,florfenicol,CEP nicht abrufbar (EDQM robots.txt/WAF) – Lizenza
 certificate,api,florfenicol,Written Confirmations nicht abrufbar (CDSCO blockiert),Handbeschaffung cdsco.gov.in,CDSCO Written Confirmations
 certificate,api,fludrocortisone,CEP nicht abrufbar (EDQM robots.txt/WAF) – Lizenzanfrage offen,EDQM Lizenz / manuelle Abfrage,EDQM CEP-Datenbank
 certificate,api,fludrocortisone,Written Confirmations nicht abrufbar (CDSCO blockiert),Handbeschaffung cdsco.gov.in,CDSCO Written Confirmations
-certificate,api,hydroxycarbamide,Written Confirmations nicht abrufbar (CDSCO blockiert),Handbeschaffung cdsco.gov.in,CDSCO Written Confirmations
 certificate,api,hydroxycarbamide,CEP nicht abrufbar (EDQM robots.txt/WAF) – Lizenzanfrage offen,EDQM Lizenz / manuelle Abfrage,EDQM CEP-Datenbank
+certificate,api,hydroxycarbamide,Written Confirmations nicht abrufbar (CDSCO blockiert),Handbeschaffung cdsco.gov.in,CDSCO Written Confirmations
 certificate,api,levothyroxine,Written Confirmations nicht abrufbar (CDSCO blockiert),Handbeschaffung cdsco.gov.in,CDSCO Written Confirmations
 certificate,api,levothyroxine,CEP nicht abrufbar (EDQM robots.txt/WAF) – Lizenzanfrage offen,EDQM Lizenz / manuelle Abfrage,EDQM CEP-Datenbank
 certificate,api,marbofloxacin,CEP nicht abrufbar (EDQM robots.txt/WAF) – Lizenzanfrage offen,EDQM Lizenz / manuelle Abfrage,EDQM CEP-Datenbank
 certificate,api,marbofloxacin,Written Confirmations nicht abrufbar (CDSCO blockiert),Handbeschaffung cdsco.gov.in,CDSCO Written Confirmations
 certificate,api,metformin,Written Confirmations nicht abrufbar (CDSCO blockiert),Handbeschaffung cdsco.gov.in,CDSCO Written Confirmations
 certificate,api,metformin,CEP nicht abrufbar (EDQM robots.txt/WAF) – Lizenzanfrage offen,EDQM Lizenz / manuelle Abfrage,EDQM CEP-Datenbank
-certificate,api,mexiletine,Written Confirmations nicht abrufbar (CDSCO blockiert),Handbeschaffung cdsco.gov.in,CDSCO Written Confirmations
 certificate,api,mexiletine,CEP nicht abrufbar (EDQM robots.txt/WAF) – Lizenzanfrage offen,EDQM Lizenz / manuelle Abfrage,EDQM CEP-Datenbank
+certificate,api,mexiletine,Written Confirmations nicht abrufbar (CDSCO blockiert),Handbeschaffung cdsco.gov.in,CDSCO Written Confirmations
 certificate,api,omeprazole,Written Confirmations nicht abrufbar (CDSCO blockiert),Handbeschaffung cdsco.gov.in,CDSCO Written Confirmations
 certificate,api,omeprazole,CEP nicht abrufbar (EDQM robots.txt/WAF) – Lizenzanfrage offen,EDQM Lizenz / manuelle Abfrage,EDQM CEP-Datenbank
 certificate,api,pimobendan,CEP nicht abrufbar (EDQM robots.txt/WAF) – Lizenzanfrage offen,EDQM Lizenz / manuelle Abfrage,EDQM CEP-Datenbank
@@ -33,22 +33,22 @@ certificate,api,pyridostigmine,Written Confirmations nicht abrufbar (CDSCO block
 certificate,api,pyridostigmine,CEP nicht abrufbar (EDQM robots.txt/WAF) – Lizenzanfrage offen,EDQM Lizenz / manuelle Abfrage,EDQM CEP-Datenbank
 certificate,api,sacubitril,CEP nicht abrufbar (EDQM robots.txt/WAF) – Lizenzanfrage offen,EDQM Lizenz / manuelle Abfrage,EDQM CEP-Datenbank
 certificate,api,sacubitril,Written Confirmations nicht abrufbar (CDSCO blockiert),Handbeschaffung cdsco.gov.in,CDSCO Written Confirmations
-certificate,api,semaglutide,CEP nicht abrufbar (EDQM robots.txt/WAF) – Lizenzanfrage offen,EDQM Lizenz / manuelle Abfrage,EDQM CEP-Datenbank
 certificate,api,semaglutide,Written Confirmations nicht abrufbar (CDSCO blockiert),Handbeschaffung cdsco.gov.in,CDSCO Written Confirmations
+certificate,api,semaglutide,CEP nicht abrufbar (EDQM robots.txt/WAF) – Lizenzanfrage offen,EDQM Lizenz / manuelle Abfrage,EDQM CEP-Datenbank
 certificate,api,toltrazuril,Written Confirmations nicht abrufbar (CDSCO blockiert),Handbeschaffung cdsco.gov.in,CDSCO Written Confirmations
 certificate,api,toltrazuril,CEP nicht abrufbar (EDQM robots.txt/WAF) – Lizenzanfrage offen,EDQM Lizenz / manuelle Abfrage,EDQM CEP-Datenbank
-certificate,api,tulathromycin,Written Confirmations nicht abrufbar (CDSCO blockiert),Handbeschaffung cdsco.gov.in,CDSCO Written Confirmations
 certificate,api,tulathromycin,CEP nicht abrufbar (EDQM robots.txt/WAF) – Lizenzanfrage offen,EDQM Lizenz / manuelle Abfrage,EDQM CEP-Datenbank
+certificate,api,tulathromycin,Written Confirmations nicht abrufbar (CDSCO blockiert),Handbeschaffung cdsco.gov.in,CDSCO Written Confirmations
 company_structure,company,18425,"GLEIF ultimate-parent: Beziehung LAPSED/ACTIVE, letzte Aktualisierung 2021-12-30 – nicht übernommen (möglicherweise veraltet)",Handelsregister / Geschäftsbericht / SEC,GLEIF LEI API
 company_structure,company,18425,"GLEIF direct-parent: Beziehung LAPSED/ACTIVE, letzte Aktualisierung 2021-12-30 – nicht übernommen (möglicherweise veraltet)",Handelsregister / Geschäftsbericht / SEC,GLEIF LEI API
 company_structure,company,18748,"GLEIF direct-parent: Beziehung LAPSED/ACTIVE, letzte Aktualisierung 2025-01-30 – nicht übernommen (möglicherweise veraltet)",Handelsregister / Geschäftsbericht / SEC,GLEIF LEI API
 company_structure,company,18748,"GLEIF ultimate-parent: Beziehung LAPSED/ACTIVE, letzte Aktualisierung 2025-01-30 – nicht übernommen (möglicherweise veraltet)",Handelsregister / Geschäftsbericht / SEC,GLEIF LEI API
-company_structure,company,18802,"GLEIF direct-parent: Beziehung LAPSED/ACTIVE, letzte Aktualisierung 2021-12-30 – nicht übernommen (möglicherweise veraltet)",Handelsregister / Geschäftsbericht / SEC,GLEIF LEI API
 company_structure,company,18802,"GLEIF ultimate-parent: Beziehung LAPSED/ACTIVE, letzte Aktualisierung 2021-12-30 – nicht übernommen (möglicherweise veraltet)",Handelsregister / Geschäftsbericht / SEC,GLEIF LEI API
-company_structure,company,19490,"GLEIF direct-parent: Beziehung LAPSED/ACTIVE, letzte Aktualisierung 2023-08-08 – nicht übernommen (möglicherweise veraltet)",Handelsregister / Geschäftsbericht / SEC,GLEIF LEI API
+company_structure,company,18802,"GLEIF direct-parent: Beziehung LAPSED/ACTIVE, letzte Aktualisierung 2021-12-30 – nicht übernommen (möglicherweise veraltet)",Handelsregister / Geschäftsbericht / SEC,GLEIF LEI API
 company_structure,company,19490,"GLEIF ultimate-parent: Beziehung LAPSED/ACTIVE, letzte Aktualisierung 2023-08-08 – nicht übernommen (möglicherweise veraltet)",Handelsregister / Geschäftsbericht / SEC,GLEIF LEI API
-company_structure,company,19854,"GLEIF ultimate-parent: Beziehung LAPSED/ACTIVE, letzte Aktualisierung 2025-09-10 – nicht übernommen (möglicherweise veraltet)",Handelsregister / Geschäftsbericht / SEC,GLEIF LEI API
+company_structure,company,19490,"GLEIF direct-parent: Beziehung LAPSED/ACTIVE, letzte Aktualisierung 2023-08-08 – nicht übernommen (möglicherweise veraltet)",Handelsregister / Geschäftsbericht / SEC,GLEIF LEI API
 company_structure,company,19854,"GLEIF direct-parent: Beziehung LAPSED/ACTIVE, letzte Aktualisierung 2025-09-10 – nicht übernommen (möglicherweise veraltet)",Handelsregister / Geschäftsbericht / SEC,GLEIF LEI API
+company_structure,company,19854,"GLEIF ultimate-parent: Beziehung LAPSED/ACTIVE, letzte Aktualisierung 2025-09-10 – nicht übernommen (möglicherweise veraltet)",Handelsregister / Geschäftsbericht / SEC,GLEIF LEI API
 company_structure,company,19878,"GLEIF ultimate-parent: Beziehung LAPSED/ACTIVE, letzte Aktualisierung 2023-07-31 – nicht übernommen (möglicherweise veraltet)",Handelsregister / Geschäftsbericht / SEC,GLEIF LEI API
 manufacturer,product,13163,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://base-donnees-publique.medicaments.gouv.fr/medicament/64389621/extrait#notice,FR BDPM
 manufacturer,product,13164,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://base-donnees-publique.medicaments.gouv.fr/medicament/68278216/extrait#notice,FR BDPM
@@ -80,10 +80,16 @@ manufacturer,product,13471,"FR Parallelimport: Notice nennt Importeur/Umpacker, 
 manufacturer,product,13472,"FR Parallelimport: Notice nennt Importeur/Umpacker, nicht den Hersteller – bewusst nicht als Hersteller übernommen",https://base-donnees-publique.medicaments.gouv.fr/medicament/60453382/extrait,FR BDPM
 manufacturer,product,13474,"FR Parallelimport: Notice nennt Importeur/Umpacker, nicht den Hersteller – bewusst nicht als Hersteller übernommen",https://base-donnees-publique.medicaments.gouv.fr/medicament/61890673/extrait,FR BDPM
 manufacturer,product,13476,"FR Parallelimport: Notice nennt Importeur/Umpacker, nicht den Hersteller – bewusst nicht als Hersteller übernommen",https://base-donnees-publique.medicaments.gouv.fr/medicament/66321989/extrait,FR BDPM
+manufacturer,product,13508,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://base-donnees-publique.medicaments.gouv.fr/medicament/67928853/extrait#notice,FR BDPM
+manufacturer,product,13550,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://base-donnees-publique.medicaments.gouv.fr/medicament/67299595/extrait#notice,FR BDPM
+manufacturer,product,13551,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://base-donnees-publique.medicaments.gouv.fr/medicament/60555889/extrait#notice,FR BDPM
+manufacturer,product,13552,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://base-donnees-publique.medicaments.gouv.fr/medicament/63321667/extrait#notice,FR BDPM
+manufacturer,product,13553,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://base-donnees-publique.medicaments.gouv.fr/medicament/60722288/extrait#notice,FR BDPM
 manufacturer,product,13585,"FR Parallelimport: Notice nennt Importeur/Umpacker, nicht den Hersteller – bewusst nicht als Hersteller übernommen",https://base-donnees-publique.medicaments.gouv.fr/medicament/68294626/extrait,FR BDPM
 manufacturer,product,13586,"FR Parallelimport: Notice nennt Importeur/Umpacker, nicht den Hersteller – bewusst nicht als Hersteller übernommen",https://base-donnees-publique.medicaments.gouv.fr/medicament/63978976/extrait,FR BDPM
 manufacturer,product,13587,"FR Parallelimport: Notice nennt Importeur/Umpacker, nicht den Hersteller – bewusst nicht als Hersteller übernommen",https://base-donnees-publique.medicaments.gouv.fr/medicament/66328243/extrait,FR BDPM
 manufacturer,product,13588,"FR Parallelimport: Notice nennt Importeur/Umpacker, nicht den Hersteller – bewusst nicht als Hersteller übernommen",https://base-donnees-publique.medicaments.gouv.fr/medicament/66677825/extrait,FR BDPM
+manufacturer,product,16362,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/69709/P_69709.html,ES AEMPS CIMA REST
 manufacturer,product,16384,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/dochtml/p/85621/P_85621.html,ES AEMPS CIMA REST
 manufacturer,product,16385,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/dochtml/p/86791/P_86791.html,ES AEMPS CIMA REST
 manufacturer,product,16386,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/dochtml/p/86792/P_86792.html,ES AEMPS CIMA REST
@@ -184,6 +190,14 @@ manufacturer,product,16843,Hersteller-Sektion nach Parser-Korrektur ohne gültig
 manufacturer,product,16844,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/72372/P_72372.html,ES AEMPS CIMA REST
 manufacturer,product,16845,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/72373/P_72373.html,ES AEMPS CIMA REST
 manufacturer,product,16856,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/73175/P_73175.html,ES AEMPS CIMA REST
+manufacturer,product,16941,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/79543/P_79543.html,ES AEMPS CIMA REST
+manufacturer,product,16942,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/79531/P_79531.html,ES AEMPS CIMA REST
+manufacturer,product,16943,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/79532/P_79532.html,ES AEMPS CIMA REST
+manufacturer,product,16944,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/79533/P_79533.html,ES AEMPS CIMA REST
+manufacturer,product,16979,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/90121/P_90121.html,ES AEMPS CIMA REST
+manufacturer,product,16980,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/90122/P_90122.html,ES AEMPS CIMA REST
+manufacturer,product,16981,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/90123/P_90123.html,ES AEMPS CIMA REST
+manufacturer,product,16982,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/90124/P_90124.html,ES AEMPS CIMA REST
 manufacturer,product,17045,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/74375/P_74375.pdf,ES AEMPS CIMA REST
 manufacturer,product,17046,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/74378/P_74378.pdf,ES AEMPS CIMA REST
 manufacturer,product,17047,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/74380/P_74380.pdf,ES AEMPS CIMA REST
@@ -355,6 +369,9 @@ manufacturer,product,17632,ES: Hersteller-Sektion im Prospekt nicht gefunden (HT
 manufacturer,product,17635,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/78891/P_78891.html,ES AEMPS CIMA REST
 manufacturer,product,17644,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/76951/P_76951.html,ES AEMPS CIMA REST
 manufacturer,product,17665,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/dochtml/p/65094/P_65094.html,ES AEMPS CIMA REST
+manufacturer,product,17674,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/79486/P_79486.html,ES AEMPS CIMA REST
+manufacturer,product,17678,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/81297/P_81297.html,ES AEMPS CIMA REST
+manufacturer,product,17679,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/81298/P_81298.html,ES AEMPS CIMA REST
 manufacturer,product,17688,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/63230/P_63230.html,ES AEMPS CIMA REST
 manufacturer,product,17734,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/dochtml/p/65095/P_65095.html,ES AEMPS CIMA REST
 manufacturer,product,17735,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/dochtml/p/66602/P_66602.html,ES AEMPS CIMA REST
@@ -370,10 +387,14 @@ manufacturer,product,17839,Hersteller-Sektion nach Parser-Korrektur ohne gültig
 manufacturer,product,17854,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/dochtml/p/89409/P_89409.html,ES AEMPS CIMA REST
 manufacturer,product,17855,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/dochtml/p/89410/P_89410.html,ES AEMPS CIMA REST
 manufacturer,product,17862,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/91363/P_91363.html,ES AEMPS CIMA REST
+manufacturer,product,17876,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/85789/P_85789.html,ES AEMPS CIMA REST
+manufacturer,product,17877,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/85790/P_85790.html,ES AEMPS CIMA REST
 manufacturer,product,17884,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/86417/P_86417.html,ES AEMPS CIMA REST
 manufacturer,product,17885,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/86418/P_86418.html,ES AEMPS CIMA REST
 manufacturer,product,17900,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/dochtml/p/86192/P_86192.html,ES AEMPS CIMA REST
 manufacturer,product,17901,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/dochtml/p/86191/P_86191.html,ES AEMPS CIMA REST
+manufacturer,product,17903,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/91224/P_91224.html,ES AEMPS CIMA REST
+manufacturer,product,17904,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://cima.aemps.es/cima/dochtml/p/91225/P_91225.html,ES AEMPS CIMA REST
 manufacturer,product,17931,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/11691003IP/P_11691003IP.pdf,ES AEMPS CIMA REST
 manufacturer,product,17991,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/151058001IP/P_151058001IP.pdf,ES AEMPS CIMA REST
 manufacturer,product,17992,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/151058001IP2/P_151058001IP2.pdf,ES AEMPS CIMA REST
@@ -410,21 +431,470 @@ manufacturer,product,18082,ES: Hersteller-Sektion im Prospekt nicht gefunden (HT
 manufacturer,product,18083,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/1211608009IP/P_1211608009IP.pdf,ES AEMPS CIMA REST
 manufacturer,product,18084,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/1211608010IP/P_1211608010IP.pdf,ES AEMPS CIMA REST
 manufacturer,product,18085,ES: Hersteller-Sektion im Prospekt nicht gefunden (HTTP 200),https://cima.aemps.es/cima/pdfs/p/1211608010IP1/P_1211608010IP1.pdf,ES AEMPS CIMA REST
+manufacturer,product,21047,NL Parallelimport: Bijsluiter nennt Importeur/Umpacker – bewusst nicht als Hersteller übernommen,https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h123079.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21048,NL Parallelimport: Bijsluiter nennt Importeur/Umpacker – bewusst nicht als Hersteller übernommen,https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h123080.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21049,NL Parallelimport: Bijsluiter nennt Importeur/Umpacker – bewusst nicht als Hersteller übernommen,https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h132895.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21050,NL Parallelimport: Bijsluiter nennt Importeur/Umpacker – bewusst nicht als Hersteller übernommen,https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h135805.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21051,NL Parallelimport: Bijsluiter nennt Importeur/Umpacker – bewusst nicht als Hersteller übernommen,https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h132978.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21057,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h106853.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21058,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h106855.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21085,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h123594.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21096,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h131675.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21101,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h132623.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21103,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h133396.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21104,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h133416.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21107,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h133491.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21112,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h21684.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21113,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h25876.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21116,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h31877.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21118,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h50721.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21119,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp108097,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21123,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp135808,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21125,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp113578,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21126,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp73392,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21133,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp100120,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21134,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp105217,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21138,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp100690,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21140,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp104688,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21144,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp115750,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21150,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h131660_piluk.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21153,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp73026,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21154,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp117678,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21158,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp127832,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21159,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp120629,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21160,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h133563_piluk.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21164,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp132024,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21166,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp135810,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21170,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp73143,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21171,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h131658_piluk.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21172,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp105221,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21174,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp100118,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21175,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp118765,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21176,NL Parallelimport: Bijsluiter nennt Importeur/Umpacker – bewusst nicht als Hersteller übernommen,https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h136383.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21177,NL Parallelimport: Bijsluiter nennt Importeur/Umpacker – bewusst nicht als Hersteller übernommen,https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h136384.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21178,NL Parallelimport: Bijsluiter nennt Importeur/Umpacker – bewusst nicht als Hersteller übernommen,https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h129270.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21211,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h123587.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21212,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h123588.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21213,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h123591.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21215,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h125044.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21225,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h129716.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21226,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h129794.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21227,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h129922.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21229,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h131963.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21232,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h132619.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21244,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp132025,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21245,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp124951,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21247,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp116659,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21248,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp132018,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21250,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp130415,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21253,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp73394,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21255,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp73396,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21256,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp103654,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21257,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp127810,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21260,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp106154,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21262,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp73395,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21263,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp113585,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21265,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp130149,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21266,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp112165,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21268,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp134229,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21273,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp121562,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21275,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp130413,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21278,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp105223,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21283,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp117159,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21284,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp115748,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21289,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp132023,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21291,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp107212,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21292,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp73390,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21293,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp130412,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21295,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp134981,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21307,NL Parallelimport: Bijsluiter nennt Importeur/Umpacker – bewusst nicht als Hersteller übernommen,https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h135811.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21317,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h106854.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21318,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h106856.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21342,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h123374.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21345,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h123586.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21352,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h125833.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21353,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h125835.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21358,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h127701.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21360,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h129738.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21361,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h129795.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21362,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h129921.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21368,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h131911.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21372,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h132621.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21373,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h132626.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21374,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h132651.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21389,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h21685.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21395,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h52476.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21398,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp105219,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21399,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp113278,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21414,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp118771,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21419,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp130148,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21423,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp106155,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21425,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp106156,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21430,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp134983,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21433,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp103304,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21440,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp128291,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21441,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp119855,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21443,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp113584,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21446,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp129665,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21450,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp73398,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21451,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp116657,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21456,NL Parallelimport: Bijsluiter nennt Importeur/Umpacker – bewusst nicht als Hersteller übernommen,https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h120454.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21457,NL Parallelimport: Bijsluiter nennt Importeur/Umpacker – bewusst nicht als Hersteller übernommen,https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h123082.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21458,NL Parallelimport: Bijsluiter nennt Importeur/Umpacker – bewusst nicht als Hersteller übernommen,https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h126072.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21459,NL Parallelimport: Bijsluiter nennt Importeur/Umpacker – bewusst nicht als Hersteller übernommen,https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h128565.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21460,NL Parallelimport: Bijsluiter nennt Importeur/Umpacker – bewusst nicht als Hersteller übernommen,https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h135812.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21469,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h106848.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21470,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h106852.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21489,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h121458.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21494,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h122766.pdf,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,215,EMA: Annex IIA nicht parsebar,https://www.ema.europa.eu/en/documents/product-information/tulissin-epar-product-information_en.pdf,EMA Medicine data download
+manufacturer,product,21501,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h123585.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21510,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h127655.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21518,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h131340.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21522,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h132625.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21523,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h132648.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21524,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h132649.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21527,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h133415.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21537,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h31466.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21541,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h31876.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21544,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp123477,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21546,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp115145,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21552,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h133658_piluk.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21559,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp117158,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21563,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp127808,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21565,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h131657_piluk.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21573,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h128069_piluk.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21575,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp103296,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21577,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp73391,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21583,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp106153,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21586,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp123479,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21589,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp105220,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21593,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h128068_piluk.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21594,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp127807,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21595,NL Parallelimport: Bijsluiter nennt Importeur/Umpacker – bewusst nicht als Hersteller übernommen,https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h129359.pdf,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,216,EMA: Annex IIA nicht parsebar,https://www.ema.europa.eu/en/documents/product-information/tulinovet-epar-product-information_en.pdf,EMA Medicine data download
+manufacturer,product,21610,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h106857.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21611,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h106859.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21612,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h106860.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21639,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h123589.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21646,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h127656.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21649,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h129717.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21652,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h132628.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21653,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h132629.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21654,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h132650.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21655,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h132652.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21661,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h133490.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21670,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h31467.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21671,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h31469.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21675,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp113279,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21677,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp103652,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21679,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp105222,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21680,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h131659_piluk.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21682,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp103656,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21689,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp110712,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21698,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp120626,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21699,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp127589,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,217,EMA: Annex IIA nicht parsebar,https://www.ema.europa.eu/en/documents/product-information/tulaven-epar-product-information_en.pdf,EMA Medicine data download
+manufacturer,product,21708,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp122659,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21709,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp114607,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21713,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp134982,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21717,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp110227,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21720,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp106200,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21723,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp128290,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21726,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp115749,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21728,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp110226,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21732,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h133562_piluk.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21735,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp132396,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21739,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp135809,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21740,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h133661_piluk.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21741,NL Parallelimport: Bijsluiter nennt Importeur/Umpacker – bewusst nicht als Hersteller übernommen,https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h129014.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21754,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h106851.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21766,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h123592.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21767,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h123596.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21773,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h125834.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21783,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h130357.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21785,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h131910.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21792,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h132647.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21797,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h133397.pdf,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,218,EMA: Annex IIA nicht parsebar,https://www.ema.europa.eu/en/documents/product-information/rexxolide-epar-product-information_en.pdf,EMA Medicine data download
+manufacturer,product,21813,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp108095,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21820,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp113583,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21824,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp100121,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21828,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp135807,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21829,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp107071,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21830,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp106202,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21835,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp120630,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21836,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp100688,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21837,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp132399,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21838,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp127811,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21840,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp132397,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21845,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp115146,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21847,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp135946,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21848,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp73144,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21849,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp73393,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21852,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp118201,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21853,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp125138,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21855,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp104689,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21858,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp130155,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21859,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp124952,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21861,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp123478,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21863,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp73397,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21867,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp119856,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21868,NL Parallelimport: Bijsluiter nennt Importeur/Umpacker – bewusst nicht als Hersteller übernommen,https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h123077.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21869,NL Parallelimport: Bijsluiter nennt Importeur/Umpacker – bewusst nicht als Hersteller übernommen,https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h133240.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21870,NL Parallelimport: Bijsluiter nennt Importeur/Umpacker – bewusst nicht als Hersteller übernommen,https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h123115.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21871,NL Parallelimport: Bijsluiter nennt Importeur/Umpacker – bewusst nicht als Hersteller übernommen,https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h129450.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21872,NL Parallelimport: Bijsluiter nennt Importeur/Umpacker – bewusst nicht als Hersteller übernommen,https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h136385.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21873,NL Parallelimport: Bijsluiter nennt Importeur/Umpacker – bewusst nicht als Hersteller übernommen,https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h136706.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21882,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h106858.pdf,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,219,EMA: Annex IIA nicht parsebar,https://www.ema.europa.eu/en/documents/product-information/procox-epar-product-information_en.pdf,EMA Medicine data download
+manufacturer,product,21905,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h121455.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21911,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h123590.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21914,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h125017.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21916,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h125832.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21929,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h131962.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21945,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h31468.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21946,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp117679,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21948,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp117157,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21958,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp115747,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21960,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp130414,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21971,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp134980,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21972,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp73142,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21973,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp130154,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21975,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp113473,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21977,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp129664,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21983,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp130411,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21986,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp127583,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21988,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp73694,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21989,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp127584,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21990,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp119857,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21993,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp132395,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21994,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp105224,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21995,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp116658,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21996,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp100119,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21997,NL Parallelimport: Bijsluiter nennt Importeur/Umpacker – bewusst nicht als Hersteller übernommen,https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h133241.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21998,NL Parallelimport: Bijsluiter nennt Importeur/Umpacker – bewusst nicht als Hersteller übernommen,https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h129428.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,21999,NL Parallelimport: Bijsluiter nennt Importeur/Umpacker – bewusst nicht als Hersteller übernommen,https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h128733.pdf,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,220,EMA: Annex IIA nicht parsebar,https://www.ema.europa.eu/en/documents/product-information/osurnia-epar-product-information_en.pdf,EMA Medicine data download
+manufacturer,product,22000,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h06585.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,22016,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h106850.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,22041,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h123593.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,22042,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h123595.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,22058,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h131343.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,22061,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h132620.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,22062,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h132624.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,22067,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h133698.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,22078,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h21683.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,22081,NL: Fabrikant-Sektion im Bijsluiter nicht gefunden (HTTP 200),https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h31875.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,22084,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp103655,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,22087,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp118200,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,22089,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp124953,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,22090,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp120631,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,22093,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp103653,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,22094,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp105218,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,221,EMA: Annex IIA nicht parsebar,https://www.ema.europa.eu/en/documents/product-information/lydaxx-epar-product-information_en.pdf,EMA Medicine data download
+manufacturer,product,22100,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp127590,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,22102,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp118770,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,22107,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h133572_piluk.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,22109,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp125139,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,22111,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp72905,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,22112,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp112166,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,22116,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp132400,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,22122,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp134984,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,22131,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp73693,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,22132,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp127809,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,22139,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp105216,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,22140,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp105215,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,22142,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h133570_piluk.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,22152,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://www.geneesmiddeleninformatiebank.nl/bijsluiters/h133663_piluk.pdf,NL CBG Geneesmiddeleninformatiebank
+manufacturer,product,22154,NL: keine Bijsluiter-Datei im CBG-Register (z. B. EU-zentral → EMA Annex IIA),https://www.geneesmiddeleninformatiebank.nl/nl/cp115144,NL CBG Geneesmiddeleninformatiebank
 manufacturer,product,222,EMA: Annex IIA nicht parsebar,https://www.ema.europa.eu/en/documents/product-information/neptra-epar-product-information_en.pdf,EMA Medicine data download
 manufacturer,product,223,EMA: Annex IIA nicht parsebar,https://www.ema.europa.eu/en/documents/product-information/fortekor-plus-epar-product-information_en.pdf,EMA Medicine data download
+manufacturer,product,22389,AT: Hersteller-Abschnitt in Gebrauchsinformation nicht gefunden (HTTP 200),https://medikamente.basg.gv.at/documents/1-24850__DMTC_GEBR_INFO_BF.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22390,AT: Hersteller-Abschnitt in Gebrauchsinformation nicht gefunden (HTTP 200),https://medikamente.basg.gv.at/documents/1-24851__DMTC_GEBR_INFO_BF.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22391,AT: Hersteller-Abschnitt in Gebrauchsinformation nicht gefunden (HTTP 200),https://medikamente.basg.gv.at/documents/1-19855__DMTC_GEBR_INFO_BF.pdf,AT BASG Arzneispezialitätenregister
 manufacturer,product,224,EMA: Annex IIA nicht parsebar,https://www.ema.europa.eu/en/documents/product-information/draxxin-epar-product-information_en.pdf,EMA Medicine data download
+manufacturer,product,22413,AT: Hersteller-Abschnitt in Gebrauchsinformation nicht gefunden (HTTP 200),https://medikamente.basg.gv.at/documents/141301__DMTC_GEBR_INFO_BF.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22414,AT: Hersteller-Abschnitt in Gebrauchsinformation nicht gefunden (HTTP 200),https://medikamente.basg.gv.at/documents/141302__DMTC_GEBR_INFO_BF.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22430,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/137901__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22436,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/140909__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22437,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/140907__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22438,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/140908__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22490,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/143466__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22491,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/143465__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22492,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/138670__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22493,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/138669__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22498,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/137704__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22499,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/137703__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
 manufacturer,product,225,EMA: Annex IIA nicht parsebar,https://www.ema.europa.eu/en/documents/product-information/baycox-iron-epar-product-information_en.pdf,EMA Medicine data download
+manufacturer,product,22500,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/143468__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22501,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/143467__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22529,AT: Hersteller-Abschnitt in Gebrauchsinformation nicht gefunden (HTTP 200),https://medikamente.basg.gv.at/documents/1-30821__DMTC_GEBR_INFO_BF.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22530,AT: Hersteller-Abschnitt in Gebrauchsinformation nicht gefunden (HTTP 200),https://medikamente.basg.gv.at/documents/1-30822__DMTC_GEBR_INFO_BF.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22531,AT: Hersteller-Abschnitt in Gebrauchsinformation nicht gefunden (HTTP 200),https://medikamente.basg.gv.at/documents/1-30823__DMTC_GEBR_INFO_BF.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22532,AT: Hersteller-Abschnitt in Gebrauchsinformation nicht gefunden (HTTP 200),https://medikamente.basg.gv.at/documents/1-30825__DMTC_GEBR_INFO_BF.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22561,AT: Hersteller-Abschnitt in Gebrauchsinformation nicht gefunden (HTTP 200),https://medikamente.basg.gv.at/documents/1-30810__DMTC_GEBR_INFO_BF.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22562,AT: Hersteller-Abschnitt in Gebrauchsinformation nicht gefunden (HTTP 200),https://medikamente.basg.gv.at/documents/1-30811__DMTC_GEBR_INFO_BF.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22563,AT: Hersteller-Abschnitt in Gebrauchsinformation nicht gefunden (HTTP 200),https://medikamente.basg.gv.at/documents/1-30812__DMTC_GEBR_INFO_BF.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22564,AT: Hersteller-Abschnitt in Gebrauchsinformation nicht gefunden (HTTP 200),https://medikamente.basg.gv.at/documents/1-30813__DMTC_GEBR_INFO_BF.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22586,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/142470__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22587,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/142471__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22588,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/142472__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22589,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/142473__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22590,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/142474__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22591,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/142475__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22606,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/1-30592__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22607,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/1-30593__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22608,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/1-30594__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22609,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/1-30595__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22616,AT: Hersteller-Abschnitt in Gebrauchsinformation nicht gefunden (HTTP 200),https://medikamente.basg.gv.at/documents/1-26271-P1__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22617,PDF ist ein Scan ohne Textebene – Hersteller nur per OCR lesbar (nicht automatisiert),https://medikamente.basg.gv.at/de/medicinal-products/,AT BASG Arzneispezialitätenregister
+manufacturer,product,22631,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/143031__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22632,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/143032__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22633,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/143033__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22634,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/143034__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22655,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/143207__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22656,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/143208__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22657,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/143209__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22658,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/143210__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22660,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/1-29555__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22662,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/1-29556__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22664,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/1-29557__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22665,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/1-29554__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22667,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/143215__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22668,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/143216__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22669,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/143217__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22670,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/143218__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22671,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/143219__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22672,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/143220__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22673,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/143221__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22674,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/143222__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22675,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/143223__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22676,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/143224__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22677,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/143225__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22678,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/143226__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22695,AT: Hersteller-Abschnitt in Gebrauchsinformation nicht gefunden (HTTP 200),https://medikamente.basg.gv.at/documents/1-27872__DMTC_GEBR_INFO_BF.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22696,AT: Hersteller-Abschnitt in Gebrauchsinformation nicht gefunden (HTTP 200),https://medikamente.basg.gv.at/documents/1-27871__DMTC_GEBR_INFO_BF.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22703,AT: Hersteller-Abschnitt in Gebrauchsinformation nicht gefunden (HTTP 200),https://medikamente.basg.gv.at/documents/1-25906__DMTC_GEBR_INFO_BF.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22704,AT: Hersteller-Abschnitt in Gebrauchsinformation nicht gefunden (HTTP 200),https://medikamente.basg.gv.at/documents/1-25905__DMTC_GEBR_INFO_BF.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22714,AT: Hersteller-Abschnitt in Gebrauchsinformation nicht gefunden (HTTP 200),https://medikamente.basg.gv.at/documents/1-25050__DMTC_GEBR_INFO_BF.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22715,AT: Hersteller-Abschnitt in Gebrauchsinformation nicht gefunden (HTTP 200),https://medikamente.basg.gv.at/documents/1-25049__DMTC_GEBR_INFO_BF.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22786,AT: Hersteller-Abschnitt in Gebrauchsinformation nicht gefunden (HTTP 200),https://medikamente.basg.gv.at/documents/141333__DMTC_GEBR_INFO_BF.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22787,AT: Hersteller-Abschnitt in Gebrauchsinformation nicht gefunden (HTTP 200),https://medikamente.basg.gv.at/documents/141334__DMTC_GEBR_INFO_BF.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22788,AT: Hersteller-Abschnitt in Gebrauchsinformation nicht gefunden (HTTP 200),https://medikamente.basg.gv.at/documents/141332__DMTC_GEBR_INFO_BF.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22789,AT: Hersteller-Abschnitt in Gebrauchsinformation nicht gefunden (HTTP 200),https://medikamente.basg.gv.at/documents/141335__DMTC_GEBR_INFO_BF.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22790,AT: Hersteller-Abschnitt in Gebrauchsinformation nicht gefunden (HTTP 200),https://medikamente.basg.gv.at/documents/141331__DMTC_GEBR_INFO_BF.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22849,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/137954__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22850,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/137961__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22851,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/137962__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22855,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/137963__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22856,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/137967__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22857,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/137964__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22858,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/138322__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22859,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/138324__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22860,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/138323__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22910,AT: Hersteller-Abschnitt in Gebrauchsinformation nicht gefunden (HTTP 200),https://medikamente.basg.gv.at/documents/838374__DMTC_GEBR_INFO_BF.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22984,AT: Hersteller-Abschnitt in Gebrauchsinformation nicht gefunden (HTTP 200),https://medikamente.basg.gv.at/documents/3-00142__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22985,AT: Hersteller-Abschnitt in Gebrauchsinformation nicht gefunden (HTTP 200),https://medikamente.basg.gv.at/documents/3-00144__DMTC_GEBR_INFO_BF.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,22986,AT: Hersteller-Abschnitt in Gebrauchsinformation nicht gefunden (HTTP 200),https://medikamente.basg.gv.at/documents/3-00143__DMTC_GEBR_INFO_BF.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,23037,AT: Hersteller-Abschnitt in Gebrauchsinformation nicht gefunden (HTTP 200),https://medikamente.basg.gv.at/documents/340345__DMTC_GEBR_INFO_BF.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,23039,PDF ist ein Scan ohne Textebene – Hersteller nur per OCR lesbar (nicht automatisiert),https://medikamente.basg.gv.at/de/medicinal-products/,AT BASG Arzneispezialitätenregister
+manufacturer,product,23041,PDF ist ein Scan ohne Textebene – Hersteller nur per OCR lesbar (nicht automatisiert),https://medikamente.basg.gv.at/de/medicinal-products/,AT BASG Arzneispezialitätenregister
+manufacturer,product,23044,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/141295__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,23045,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/141296__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,23048,AT: Hersteller-Abschnitt in Gebrauchsinformation nicht gefunden (HTTP 200),https://medikamente.basg.gv.at/documents/1-24090__DMTC_GEBR_INFO_BF.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,23050,PDF ist ein Scan ohne Textebene – Hersteller nur per OCR lesbar (nicht automatisiert),https://medikamente.basg.gv.at/de/medicinal-products/,AT BASG Arzneispezialitätenregister
+manufacturer,product,23052,AT: Hersteller-Abschnitt in Gebrauchsinformation nicht gefunden (HTTP 200),https://medikamente.basg.gv.at/documents/1-23227-P3__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,23053,PDF ist ein Scan ohne Textebene – Hersteller nur per OCR lesbar (nicht automatisiert),https://medikamente.basg.gv.at/documents/1-23227-P1__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,23054,PDF ist ein Scan ohne Textebene – Hersteller nur per OCR lesbar (nicht automatisiert),https://medikamente.basg.gv.at/de/medicinal-products/,AT BASG Arzneispezialitätenregister
+manufacturer,product,23061,AT: Hersteller-Abschnitt in Gebrauchsinformation nicht gefunden (HTTP 200),https://medikamente.basg.gv.at/documents/839179__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,23068,AT: Hersteller-Abschnitt in Gebrauchsinformation nicht gefunden (HTTP 200),https://medikamente.basg.gv.at/documents/835156__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,23070,AT: Hersteller-Abschnitt in Gebrauchsinformation nicht gefunden (HTTP 200),https://medikamente.basg.gv.at/documents/8-70069__DMTC_GEBR_INFO_BF.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,23071,AT: Hersteller-Abschnitt in Gebrauchsinformation nicht gefunden (HTTP 200),https://medikamente.basg.gv.at/documents/843184__DMTC_GEBR_INFO_BF.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,23077,AT: Hersteller-Abschnitt in Gebrauchsinformation nicht gefunden (HTTP 200),https://medikamente.basg.gv.at/documents/8-00716__DMTC_GEBR_INFO_BF.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,23085,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://medikamente.basg.gv.at/documents/841631__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,23098,AT: Hersteller-Abschnitt in Gebrauchsinformation nicht gefunden (HTTP 200),https://medikamente.basg.gv.at/documents/840337__DMTC_GEBR_INFO_BF.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,23099,AT: Hersteller-Abschnitt in Gebrauchsinformation nicht gefunden (HTTP 200),https://medikamente.basg.gv.at/documents/840338__DMTC_GEBR_INFO_BF.pdf,AT BASG Arzneispezialitätenregister
 manufacturer,product,231,EMA: Product-Information-PDF auf EPAR-Seite nicht gefunden,https://www.ema.europa.eu/en/medicines/veterinary/EPAR/omeprazole-triviumvet,EMA Medicine data download
+manufacturer,product,23124,AT: Hersteller-Abschnitt in Gebrauchsinformation nicht gefunden (HTTP 200),https://medikamente.basg.gv.at/documents/8-00740__DMTC_GEBR_INFO_BF.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,23125,AT: Hersteller-Abschnitt in Gebrauchsinformation nicht gefunden (HTTP 200),https://medikamente.basg.gv.at/documents/8-00742__DMTC_GEBR_INFO_BF.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,23126,AT: Hersteller-Abschnitt in Gebrauchsinformation nicht gefunden (HTTP 200),https://medikamente.basg.gv.at/documents/8-00741__DMTC_GEBR_INFO_BF.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,23133,AT: Hersteller-Abschnitt in Gebrauchsinformation nicht gefunden (HTTP 200),https://medikamente.basg.gv.at/documents/8-00592__DMTC_GEBR_INFO_BF.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,23135,AT: Hersteller-Abschnitt in Gebrauchsinformation nicht gefunden (HTTP 200),https://medikamente.basg.gv.at/documents/842739__DMTC_GEBR_INFO_BF.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,23136,AT: Hersteller-Abschnitt in Gebrauchsinformation nicht gefunden (HTTP 200),https://medikamente.basg.gv.at/documents/835538__DMTC_GEBR_INFO_BF.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,23138,AT: Hersteller-Abschnitt in Gebrauchsinformation nicht gefunden (HTTP 200),https://medikamente.basg.gv.at/documents/8-00445__DMTC_GEBR_INFO_BF.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,23140,AT: Hersteller-Abschnitt in Gebrauchsinformation nicht gefunden (HTTP 200),https://medikamente.basg.gv.at/documents/8-00446__DMTC_GEBR_INFO_BF.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,23149,AT: Hersteller-Abschnitt in Gebrauchsinformation nicht gefunden (HTTP 200),https://medikamente.basg.gv.at/documents/835335__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,23151,AT: Hersteller-Abschnitt in Gebrauchsinformation nicht gefunden (HTTP 200),https://medikamente.basg.gv.at/documents/837383__DMTC_GEBR_INFO_BF.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,23152,AT: Hersteller-Abschnitt in Gebrauchsinformation nicht gefunden (HTTP 200),https://medikamente.basg.gv.at/documents/837385__DMTC_GEBR_INFO_BF.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,23153,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://medikamente.basg.gv.at/documents/8-01172__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,23154,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://medikamente.basg.gv.at/documents/8-01174__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,23155,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://medikamente.basg.gv.at/documents/8-01173__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,23160,AT: Hersteller-Abschnitt in Gebrauchsinformation nicht gefunden (HTTP 200),https://medikamente.basg.gv.at/documents/8-00430__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,23161,AT: Hersteller-Abschnitt in Gebrauchsinformation nicht gefunden (HTTP 200),https://medikamente.basg.gv.at/documents/8-00433__DMTC_GEBR_INFO_BF.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,23210,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/140841__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,23211,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/140842__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,23216,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/140835__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,23217,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/140836__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,23220,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/143152__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,23221,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/143153__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,23236,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/142530__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,23237,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/142531__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,23238,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/143287__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,23239,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/143288__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,23242,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/142844__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,23243,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/142845__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,23270,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/143707__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,23271,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/143708__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
+manufacturer,product,23272,"AT: Produkt zugelassen, aber nicht vermarktet – BASG hinterlegt Platzhalter statt Gebrauchsinformation",https://medikamente.basg.gv.at/documents/143709__DOTC_GEBR_INFO.pdf,AT BASG Arzneispezialitätenregister
 manufacturer,product,233,EMA: Annex IIA nicht parsebar,https://www.ema.europa.eu/en/documents/product-information/zeleris-epar-product-information_en.pdf,EMA Medicine data download
+manufacturer,product,23392,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://xnet.dkma.dk/indlaegsseddel/PdfFileServlet?formulationid=29013&lang=da,DK DKMA
 manufacturer,product,234,EMA: Annex IIA nicht parsebar,https://www.ema.europa.eu/en/documents/product-information/forceris-epar-product-information_en.pdf,EMA Medicine data download
+manufacturer,product,23400,DK: Fremstiller-Abschnitt nicht gefunden (HTTP 200),https://xnet.dkma.dk/indlaegsseddel/PdfFileServlet?formulationid=28969&lang=da,DK DKMA
+manufacturer,product,23417,DK: Fremstiller-Abschnitt nicht gefunden (HTTP 200),https://xnet.dkma.dk/indlaegsseddel/PdfFileServlet?formulationid=29139&lang=da,DK DKMA
+manufacturer,product,23418,DK: Fremstiller-Abschnitt nicht gefunden (HTTP 200),https://xnet.dkma.dk/indlaegsseddel/PdfFileServlet?formulationid=29140&lang=da,DK DKMA
+manufacturer,product,23428,DK: Fremstiller-Abschnitt nicht gefunden (HTTP 200),https://xnet.dkma.dk/indlaegsseddel/PdfFileServlet?formulationid=2361&lang=da,DK DKMA
+manufacturer,product,23429,DK: Fremstiller-Abschnitt nicht gefunden (HTTP 200),https://xnet.dkma.dk/indlaegsseddel/PdfFileServlet?formulationid=2362&lang=da,DK DKMA
+manufacturer,product,23436,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://xnet.dkma.dk/indlaegsseddel/PdfFileServlet?formulationid=31799&lang=da,DK DKMA
+manufacturer,product,23437,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://xnet.dkma.dk/indlaegsseddel/PdfFileServlet?formulationid=30104&lang=da,DK DKMA
+manufacturer,product,23443,DK: Fremstiller-Abschnitt nicht gefunden (HTTP 200),https://xnet.dkma.dk/indlaegsseddel/PdfFileServlet?formulationid=22633&lang=da,DK DKMA
+manufacturer,product,23448,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://xnet.dkma.dk/indlaegsseddel/PdfFileServlet?formulationid=27845&lang=da,DK DKMA
+manufacturer,product,23451,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://xnet.dkma.dk/indlaegsseddel/PdfFileServlet?formulationid=29550&lang=da,DK DKMA
+manufacturer,product,23452,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://xnet.dkma.dk/indlaegsseddel/PdfFileServlet?formulationid=8469&lang=da,DK DKMA
+manufacturer,product,23460,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://xnet.dkma.dk/indlaegsseddel/PdfFileServlet?formulationid=13970&lang=da,DK DKMA
+manufacturer,product,23466,DK: Fremstiller-Abschnitt nicht gefunden (HTTP 200),https://xnet.dkma.dk/indlaegsseddel/PdfFileServlet?formulationid=29337&lang=da,DK DKMA
+manufacturer,product,23470,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://xnet.dkma.dk/indlaegsseddel/PdfFileServlet?formulationid=27655&lang=da,DK DKMA
+manufacturer,product,23471,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://xnet.dkma.dk/indlaegsseddel/PdfFileServlet?formulationid=32388&lang=da,DK DKMA
+manufacturer,product,23472,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://xnet.dkma.dk/indlaegsseddel/PdfFileServlet?formulationid=32389&lang=da,DK DKMA
+manufacturer,product,23473,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://xnet.dkma.dk/indlaegsseddel/PdfFileServlet?formulationid=32390&lang=da,DK DKMA
+manufacturer,product,23474,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://xnet.dkma.dk/indlaegsseddel/PdfFileServlet?formulationid=17943&lang=da,DK DKMA
+manufacturer,product,23475,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://xnet.dkma.dk/indlaegsseddel/PdfFileServlet?formulationid=17944&lang=da,DK DKMA
+manufacturer,product,23476,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://xnet.dkma.dk/indlaegsseddel/PdfFileServlet?formulationid=17945&lang=da,DK DKMA
+manufacturer,product,23477,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://xnet.dkma.dk/indlaegsseddel/PdfFileServlet?formulationid=17946&lang=da,DK DKMA
+manufacturer,product,23486,DK: Fremstiller-Abschnitt nicht gefunden (HTTP 200),https://xnet.dkma.dk/indlaegsseddel/PdfFileServlet?formulationid=16658&lang=da,DK DKMA
+manufacturer,product,23487,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://xnet.dkma.dk/indlaegsseddel/PdfFileServlet?formulationid=17887&lang=da,DK DKMA
+manufacturer,product,23488,DK: Fremstiller-Abschnitt nicht gefunden (HTTP 200),https://xnet.dkma.dk/indlaegsseddel/PdfFileServlet?formulationid=23809&lang=da,DK DKMA
 manufacturer,product,235,EMA: Product-Information-PDF auf EPAR-Seite nicht gefunden,https://www.ema.europa.eu/en/medicines/veterinary/EPAR/chanaxin,EMA Medicine data download
+manufacturer,product,23506,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://xnet.dkma.dk/indlaegsseddel/PdfFileServlet?formulationid=20216&lang=da,DK DKMA
+manufacturer,product,23507,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://xnet.dkma.dk/indlaegsseddel/PdfFileServlet?formulationid=20217&lang=da,DK DKMA
+manufacturer,product,23508,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://xnet.dkma.dk/indlaegsseddel/PdfFileServlet?formulationid=20218&lang=da,DK DKMA
+manufacturer,product,23509,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://xnet.dkma.dk/indlaegsseddel/PdfFileServlet?formulationid=20219&lang=da,DK DKMA
+manufacturer,product,23510,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://xnet.dkma.dk/indlaegsseddel/PdfFileServlet?formulationid=20220&lang=da,DK DKMA
+manufacturer,product,23511,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://xnet.dkma.dk/indlaegsseddel/PdfFileServlet?formulationid=20221&lang=da,DK DKMA
+manufacturer,product,23512,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://xnet.dkma.dk/indlaegsseddel/PdfFileServlet?formulationid=20222&lang=da,DK DKMA
+manufacturer,product,23513,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://xnet.dkma.dk/indlaegsseddel/PdfFileServlet?formulationid=20223&lang=da,DK DKMA
+manufacturer,product,23514,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://xnet.dkma.dk/indlaegsseddel/PdfFileServlet?formulationid=20224&lang=da,DK DKMA
+manufacturer,product,23515,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://xnet.dkma.dk/indlaegsseddel/PdfFileServlet?formulationid=20225&lang=da,DK DKMA
+manufacturer,product,23516,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://xnet.dkma.dk/indlaegsseddel/PdfFileServlet?formulationid=23891&lang=da,DK DKMA
+manufacturer,product,23517,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://xnet.dkma.dk/indlaegsseddel/PdfFileServlet?formulationid=23892&lang=da,DK DKMA
+manufacturer,product,23518,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://xnet.dkma.dk/indlaegsseddel/PdfFileServlet?formulationid=29580&lang=da,DK DKMA
+manufacturer,product,23519,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://xnet.dkma.dk/indlaegsseddel/PdfFileServlet?formulationid=29581&lang=da,DK DKMA
+manufacturer,product,23520,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://xnet.dkma.dk/indlaegsseddel/PdfFileServlet?formulationid=29582&lang=da,DK DKMA
+manufacturer,product,23521,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://xnet.dkma.dk/indlaegsseddel/PdfFileServlet?formulationid=32022&lang=da,DK DKMA
+manufacturer,product,23522,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://xnet.dkma.dk/indlaegsseddel/PdfFileServlet?formulationid=32023&lang=da,DK DKMA
+manufacturer,product,23523,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://xnet.dkma.dk/indlaegsseddel/PdfFileServlet?formulationid=32024&lang=da,DK DKMA
+manufacturer,product,23524,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://xnet.dkma.dk/indlaegsseddel/PdfFileServlet?formulationid=32025&lang=da,DK DKMA
+manufacturer,product,23525,Hersteller-Sektion nach Parser-Korrektur ohne gültigen Standort,https://xnet.dkma.dk/indlaegsseddel/PdfFileServlet?formulationid=32026&lang=da,DK DKMA
 manufacturer,product,237,EMA: Annex IIA nicht parsebar,https://www.ema.europa.eu/en/documents/product-information/increxxa-epar-product-information_en.pdf,EMA Medicine data download
 patent,api,amlodipine,EU/CH/UK-Patente und SPC: EPO-OPS-Key fehlt; nationale SPC-Register nicht angebunden,"EPO OPS (Key), DPMA, INPI, UKIPO, IGE",EPO OPS
 patent,api,apixaban,EU/CH/UK-Patente und SPC: EPO-OPS-Key fehlt; nationale SPC-Register nicht angebunden,"EPO OPS (Key), DPMA, INPI, UKIPO, IGE",EPO OPS
@@ -473,6 +943,7 @@ source,source,PubChem FTP Bulk,"HTTP 200, robots.txt verbietet den Pfad",https:/
 source,source,PubChem PUG-REST,"HTTP 200, robots.txt verbietet den Pfad","https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/metformin/property/MolecularFormula,InChIKey/JSON",PubChem PUG-REST
 source,source,TN DPM Tunesien,nicht erreichbar: ConnectError: [Errno 104] Connection reset by peer,https://www.dpm.tn/,TN DPM Tunesien
 source,source,TR TİTCK,"HTTP 500, Web Application Firewall blockiert Cloud-IP/Bot – wird nicht umgangen",https://www.titck.gov.tr/dinamikmodul/43,TR TİTCK
+source,source,UK MHRA Products,"Produktseiten rendern im Browser, die seiteneigene Suche liefert für Produktdokumente 0 Treffer; direkter Zugriff auf die interne Such-API mit eingebettetem Schlüssel bewusst nicht genutzt",products.mhra.gov.uk – MHRA anfragen (Datenexport) oder erneut prüfen,UK MHRA Products
 source,source,Wikidata Dumps,nicht erreichbar: ConnectError: [Errno 104] Connection reset by peer,https://dumps.wikimedia.org/wikidatawiki/entities/,Wikidata Dumps
 source,source,Wikidata SPARQL,"HTTP 200, robots.txt verbietet den Pfad",https://query.wikidata.org/sparql?query=ASK%7B%7D&format=json,Wikidata SPARQL
 source,source,medstat.dk,Host nicht freigegeben,medstat.dk,medstat.dk

@@ -1,0 +1,17 @@
+{
+ "NL CBG Geneesmiddeleninformatiebank": {
+  "sampled": 30,
+  "confirmed": 30,
+  "failures": []
+ },
+ "AT BASG Arzneispezialitätenregister": {
+  "sampled": 30,
+  "confirmed": 30,
+  "failures": []
+ },
+ "DK DKMA": {
+  "sampled": 30,
+  "confirmed": 30,
+  "failures": []
+ }
+}

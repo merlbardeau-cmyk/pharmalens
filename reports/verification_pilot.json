@@ -7,9 +7,26 @@
   },
   "product": {
     "sampled": 50,
-    "confirmed": 50,
-    "error_rate": 0.0,
-    "failures": []
+    "confirmed": 48,
+    "error_rate": 0.04,
+    "failures": [
+      {
+        "row_id": 20680,
+        "url": "https://medikamente.basg.gv.at/documents/143033__DOTC_GEBR_INFO.pdf",
+        "value": [
+          "Ezetimib/Atorvastatin Althera 10 mg/40 mg Filmtabletten",
+          "Althera Laboratories Limited"
+        ]
+      },
+      {
+        "row_id": 20461,
+        "url": "https://medikamente.basg.gv.at/documents/141302__DMTC_GEBR_INFO_BF.pdf",
+        "value": [
+          "Jansitin Duo 50 mg/850 mg-Filmtabletten",
+          "G.L. Pharma GmbH"
+        ]
+      }
+    ]
   },
   "api_certificate": {
     "sampled": 50,

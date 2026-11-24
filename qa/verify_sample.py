@@ -83,8 +83,11 @@ def run(seed=7):
                                                     WHERE valid_to IS NULL ORDER BY random() LIMIT %s""", (N,)).fetchall(),
             "product": conn.execute("""SELECT row_id, CASE WHEN source_name='US Drugs@FDA' THEN 'https://www.fda.gov/media/89850/download'
                                               WHEN source_name='FR BDPM' THEN 'https://base-donnees-publique.medicaments.gouv.fr/download/file/CIS_bdpm.txt'
+                                              WHEN source_name IN ('AT BASG Arzneispezialitätenregister','DK DKMA') AND leaflet_url IS NOT NULL THEN leaflet_url
                                               ELSE source_url END, name, mah_raw FROM product
-                                       WHERE valid_to IS NULL AND source_name NOT LIKE 'EMA Article%%' ORDER BY random() LIMIT %s""", (N - 10,)).fetchall()
+                                       WHERE valid_to IS NULL AND source_name NOT LIKE 'EMA Article%%'
+                                       AND NOT (source_name IN ('AT BASG Arzneispezialitätenregister','DK DKMA') AND leaflet_url IS NULL)
+                                       ORDER BY random() LIMIT %s""", (N - 10,)).fetchall()
                        + conn.execute("""SELECT row_id, source_url, name, mah_raw FROM product WHERE valid_to IS NULL
                                          AND source_name LIKE 'EMA Article%%' ORDER BY random() LIMIT 10""").fetchall(),
             "api_certificate": conn.execute("""SELECT row_id, source_url, number, holder_raw FROM api_certificate WHERE valid_to IS NULL

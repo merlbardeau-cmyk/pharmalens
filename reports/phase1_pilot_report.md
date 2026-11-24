@@ -52,3 +52,22 @@ Rohspeicher: 3'495 Objekte, 491 MB, SHA-256. Alle Parser-Korrekturen wurden aus 
 ## 5. Lücken (496 offen, Tabelle `gap`)
 
 ES-Prospekte ohne Hersteller-Sektion (273), CEP (20), Written Confirmations (20), EU-Patente/SPC (20), API→FDF-Lieferant ohne Primärbeleg (19), FR-Parallelimporte (28), EMA Annex IIA nicht parsebar (14), GLEIF-Beziehungen veraltet (11), Türkei-Vollliste, Tierarzneimittel ES/US.
+
+---
+
+## Nachtrag Phase 1b (2026-11-24): NL, AT, DK, UK und Markengruppen
+
+| Land | Quelle / Zugriff | Produkte | mit Hersteller aus Leaflet |
+|---|---|---|---|
+| NL | CBG `metadata.csv` (offizieller Gesamtexport) + Bijsluiter-PDF | 1'108 | 839 (76 %) |
+| AT | BASG «Medikamente Info Austria», Browser-Rendering; Nutzungshinweise: Weiterverwendung erlaubt, unverändert | 979 (inkl. Tierarzneimittel) | 679 (69 %) |
+| DK | DKMA indlaegsseddel.dk, Browser-Rendering, Suche nach INN + Marken aus Art. 57 | 173 | 132 (76 %) |
+| UK | MHRA Products: Sitemap ok, Dokumente laden im Browser nicht (seiteneigene Suche liefert 0); interne Such-API mit eingebettetem Schlüssel bewusst nicht genutzt | – | Lücke |
+
+Lückengründe AT: 72 Produkte zugelassen, aber nicht vermarktet (Platzhalter statt GI), 78 PDF-Scans ohne Textebene (alle Länder; nur per OCR lesbar).
+
+**Präzisionsregeln neu (aus QA-Befunden):** Standort nur mit bestimmbarem Land; Inland-PLZ-Ableitung nur ES/FR/NL; Abschnittsende bei Listen «Land: Produktname»; Satz ≠ Firmenname; Firmenname nach Rechtsform abgeschnitten (Zitat bleibt wörtlich). 33 Tests. Neuauswertung vollständig aus dem Rohspeicher.
+
+**Stichprobe live:** NL/AT/DK je 30 Standorte: 90/90 bestätigt. Gesamtstichprobe 3 × 50: Hersteller 50/50, Zertifikate 50/50, Produkte 48/50 (1 nicht vermarktetes Produkt mit Platzhalter-Dokument, 1 vorübergehender Abruffehler; kein Datenfehler). Die Stichprobe deckte vorher zwei echte Fehlerklassen auf (EWR-Namenslisten als Hersteller in DK/NL; «NaN» als MAH bei 16 EMA-Produkten) – beide behoben, QA-Regeln ergänzt.
+
+**Firmen:** 702 Auto-Merges, 184 Prüfpaare, 241 Markengruppen (`derived`, «nicht bestätigt») mit 908 Mitgliedern. Homonym-Regel Merck & Co. (MSD) ≠ Merck KGaA; chinesische/indische Ortspräfixe (Zhejiang, Jiangsu …) bilden keine Gruppe. 633 veraltete Firmen-Entitäten (aus früheren Parser-Fehlern) versioniert geschlossen.

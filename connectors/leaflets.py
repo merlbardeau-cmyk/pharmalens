@@ -28,11 +28,11 @@ def write_sites(conn, product_id, sites, role, leaflet_url, source_url, source_n
             seen.add(k)
             uniq.append(s)
     sites = uniq
-    cur = conn.execute("SELECT row_id, evidence_quote, coalesce(site_country,'') FROM product_manufacturer WHERE product_id=%s"
-                       " AND role=%s AND valid_to IS NULL", (product_id, role)).fetchall()
-    if sorted((q, c) for _, q, c in cur) == sorted((s["quote"], s["country"] or "") for s in sites):
+    cur = conn.execute("SELECT row_id, evidence_quote, coalesce(site_country,''), manufacturer_raw FROM product_manufacturer"
+                       " WHERE product_id=%s AND role=%s AND valid_to IS NULL", (product_id, role)).fetchall()
+    if sorted((q, c, m) for _, q, c, m in cur) == sorted((s["quote"], s["country"] or "", s["company"]) for s in sites):
         return "same"
-    for rid, _, _ in cur:
+    for rid, *_ in cur:
         conn.execute("UPDATE product_manufacturer SET valid_to=now() WHERE row_id=%s", (rid,))
     for s in sites:
         conn.execute(

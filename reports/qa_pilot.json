@@ -8,13 +8,13 @@
   {
     "rule": "provenance:company",
     "violations": 0,
-    "total": 1823,
+    "total": 3044,
     "description": "Zeile ohne source_url/source_name/retrieved_at/status"
   },
   {
     "rule": "provenance:company_relation",
     "violations": 0,
-    "total": 33,
+    "total": 5994,
     "description": "Zeile ohne source_url/source_name/retrieved_at/status"
   },
   {
@@ -26,13 +26,13 @@
   {
     "rule": "provenance:product",
     "violations": 0,
-    "total": 11471,
+    "total": 13747,
     "description": "Zeile ohne source_url/source_name/retrieved_at/status"
   },
   {
     "rule": "provenance:product_manufacturer",
     "violations": 0,
-    "total": 4829,
+    "total": 12993,
     "description": "Zeile ohne source_url/source_name/retrieved_at/status"
   },
   {
@@ -56,19 +56,19 @@
   {
     "rule": "provenance:supply_link",
     "violations": 0,
-    "total": 3909,
+    "total": 7330,
     "description": "Zeile ohne source_url/source_name/retrieved_at/status"
   },
   {
     "rule": "company_without_country",
-    "violations": 1277,
-    "total": 1659,
+    "violations": 1542,
+    "total": 2054,
     "description": "Firma ohne Land (nicht erfunden -> gap)"
   },
   {
     "rule": "duplicate_company_after_ER",
     "violations": 0,
-    "total": 1659,
+    "total": 2054,
     "description": "gleicher legal_key mehrfach aktiv"
   },
   {
@@ -80,7 +80,7 @@
   {
     "rule": "manufacturer_quote_contains_name",
     "violations": 0,
-    "total": 3909,
+    "total": 7330,
     "description": "Zitat fehlt oder enthält den Herstellernamen nicht"
   },
   {
@@ -92,25 +92,37 @@
   {
     "rule": "api_role_only_from_api_evidence",
     "violations": 0,
-    "total": 1659,
+    "total": 2054,
     "description": "API-Hersteller-Rolle ohne Zertifikat/Annex-IIA-Beleg (Importeur-Fehler)"
   },
   {
     "rule": "derived_links_marked_derived",
     "violations": 0,
-    "total": 3909,
+    "total": 7330,
     "description": "nicht bestätigte Verbindung ohne status=derived"
   },
   {
     "rule": "no_email_in_quotes",
     "violations": 0,
-    "total": 3909,
+    "total": 7330,
     "description": "E-Mail-Adresse im Zitat (DSGVO-Prüfung)"
   },
   {
     "rule": "manufacturer_site_country",
-    "violations": 88,
-    "total": 3909,
+    "violations": 0,
+    "total": 7330,
     "description": "Standort ohne bestimmbares Land"
+  },
+  {
+    "rule": "no_nan_literals",
+    "violations": 0,
+    "total": 13731,
+    "description": "Fehlwert als Text 'NaN'/'None' gespeichert"
+  },
+  {
+    "rule": "no_nan_company",
+    "violations": 0,
+    "total": 1,
+    "description": "Scheinfirma aus Fehlwert"
   }
 ]

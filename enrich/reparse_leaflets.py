@@ -52,5 +52,39 @@ def run():
     print("reparse", st)
 
 
-if __name__ == "__main__":
+if __name__ == "__main__" and len(sys.argv) == 1:
     run()
+
+
+def reparse_gaps():
+    """Re-evaluate open manufacturer gaps from stored raw objects (no network); classify scans without text."""
+    st = dict(gaps=0, resolved=0, scans=0, still_gap=0)
+    with connect() as conn:
+        rows = conn.execute("""SELECT gap_id, entity_ref, where_obtainable, source_name FROM gap WHERE area='manufacturer'
+                               AND resolved_at IS NULL AND reason NOT LIKE '%%Parallelimport%%'
+                               AND source_name IN ('ES AEMPS CIMA REST','FR BDPM','NL CBG Geneesmiddeleninformatiebank',
+                                                   'AT BASG Arzneispezialitätenregister','DK DKMA')""").fetchall()
+        for gap_id, pid, url, src in rows:
+            st["gaps"] += 1
+            raw = conn.execute("SELECT raw_id, path FROM raw_object WHERE url=%s ORDER BY raw_id DESC LIMIT 1", (url,)).fetchone()
+            if not raw:
+                st["still_gap"] += 1
+                continue
+            data = (ROOT / raw[1]).read_bytes()
+            lines, home, kind = lines_for(src, data)
+            sites = annex_iia_sites(lines) if kind == "pdf" else parse(lines, home_country=home)
+            if sites:
+                write_sites(conn, int(pid), sites, "batch_release", url, url, src, raw[0])
+                conn.execute("UPDATE gap SET resolved_at=now() WHERE gap_id=%s", (gap_id,))
+                st["resolved"] += 1
+            elif kind.startswith("pdf") and len(lines) < 25:
+                conn.execute("UPDATE gap SET reason=%s WHERE gap_id=%s",
+                             ("PDF ist ein Scan ohne Textebene – Hersteller nur per OCR lesbar (nicht automatisiert)", gap_id))
+                st["scans"] += 1
+            else:
+                st["still_gap"] += 1
+    print("reparse gaps", st)
+
+
+if __name__ == "__main__" and len(sys.argv) > 1 and sys.argv[1] == "gaps":
+    reparse_gaps()

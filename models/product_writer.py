@@ -27,7 +27,13 @@ class ProductWriter:
         row = self.conn.execute("SELECT product_id FROM product WHERE natural_key=%s AND valid_to IS NULL",
                                 (natural_key,)).fetchone()
         pid = row[0] if row else new_id(self.conn)
-        full = {k: vals.get(k) for k in COMPARE} | dict(natural_key=natural_key, source_url=source_url,
+        def clean(v):  # pandas NaN / 'nan' strings are missing values, never data
+            if isinstance(v, float) and v != v:
+                return None
+            if isinstance(v, str) and v.strip().lower() in ("nan", "none", "null", ""):
+                return None
+            return v
+        full = {k: clean(vals.get(k)) for k in COMPARE} | dict(natural_key=natural_key, source_url=source_url,
                                                         source_name=self.src, retrieved_at=now(), status=status,
                                                         raw_id=raw_id)
         res = upsert_versioned(self.conn, "product", "product_id", pid, full, COMPARE)

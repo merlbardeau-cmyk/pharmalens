@@ -45,6 +45,11 @@ def rules(conn):
     out.append(("no_email_in_quotes", v, n, "E-Mail-Adresse im Zitat (DSGVO-Prüfung)"))
     v, n = conn.execute("SELECT count(*) FILTER (WHERE site_country IS NULL), count(*) FROM product_manufacturer WHERE valid_to IS NULL").fetchone()
     out.append(("manufacturer_site_country", v, n, "Standort ohne bestimmbares Land"))
+    v, n = conn.execute("""SELECT count(*) FILTER (WHERE lower(mah_raw) IN ('nan','none','null') OR lower(name) IN ('nan','none')),
+                           count(*) FROM product WHERE valid_to IS NULL""").fetchone()
+    out.append(("no_nan_literals", v, n, "Fehlwert als Text 'NaN'/'None' gespeichert"))
+    v = conn.execute("SELECT count(*) FROM company WHERE valid_to IS NULL AND split_part(name_normalized,'|',1) IN ('NAN','NONE','NULL')").fetchone()[0]
+    out.append(("no_nan_company", v, 1, "Scheinfirma aus Fehlwert"))
     return out
 
 

@@ -99,7 +99,46 @@ def test_nl_single_line_sites_street_first_and_noise():
     lines = ["Fabrikant", "KRKA, d.d., Novo mesto, Šmarješka cesta 6, 8501 Novo mesto, Slovenië",
              "TAD Pharma GmbH, Heinz-Lohmann-Straße 5, 27472 Cuxhaven, Duitsland", "Dit geneesmiddel is ingeschreven"]
     s = parse(lines)
-    assert [(x["company"], x["country"]) for x in s] == [("KRKA, d.d., Novo mesto", "SI"), ("TAD Pharma GmbH", "DE")]
+    assert [(x["company"], x["country"]) for x in s] == [("KRKA, d.d.", "SI"), ("TAD Pharma GmbH", "DE")]
     assert parse(["Fabrikant", "Swensweg 5", "2031 GA Haarlem", "Nederland"]) == []
     assert parse(["Fabrikant", "Module 1", "Administrative information", "and prescribing information"]) == []
     assert [x["company"] for x in parse(["Fabrikant: Pharmachemie B.V.", "Swensweg 5", "2031 GA Haarlem", "Nederland"])] == ["Pharmachemie B.V."]
+
+
+def test_at_combined_vet_and_two_comma_lines():
+    s = parse(["Pharmazeutischer Unternehmer und Hersteller", "IBSA Farmaceutici Italia Srl", "Via Martiri di Cefalonia 2",
+               "26900 Lodi", "Italien", "Syntroxine 13 Mikrogramm Weichkapseln– Z. Nr.: 1-30382"])
+    assert [(x["company"], x["country"]) for x in s] == [("IBSA Farmaceutici Italia Srl", "IT")]
+    s = parse(["Pharmazeutischer Unternehmer und Hersteller", "Pharmazeutischer Unternehmer:", "Sandoz GmbH, 6250 Kundl, Österreich",
+               "Hersteller:", "Lek Pharmaceuticals d.d., 1526 Laibach, Slowenien", "Z.Nr.: 143060"])
+    assert [(x["company"], x["country"]) for x in s] == [("Lek Pharmaceuticals d.d.", "SI")]
+    s = parse(["Für die Chargenfreigabe verantwortlicher Hersteller:", "Ceva Santé Animale", "Boulevard de la Communication",
+               "53950 Louverné", "Frankreich", "Örtlicher Vertreter"])
+    assert [(x["company"], x["country"]) for x in s] == [("Ceva Santé Animale", "FR")]
+
+
+def test_sites_without_country_are_rejected():
+    assert parse(["Fabrikant", "RVG100984", "RVG100986", "RVG100987"]) == []
+    assert parse(["Fremstiller", "Danmark: Metformin Sandoz", "Findland: Oramet 500 mg"]) == []
+    s = parse(["Fabrikant", "Pharmachemie B.V.", "Swensweg 5", "2031 GA Haarlem"], home_country="NL")
+    assert [(x["company"], x["country"]) for x in s] == [("Pharmachemie B.V.", "NL")]
+    assert parse(["Hersteller:", "Balkanpharma – Dupnitsa AD", "3 Samokovsko Shoose Str.", "2600 Dupnitsa"], home_country="AT") == []
+
+
+def test_member_state_name_lists_end_section():
+    s = parse(["Fremstiller", "Laboratori Fundacio DAU", "C/ C, 12-14", "08040 Barcelona", "Spanien",
+               "Dette lægemiddel er godkendt i EØS under følgende navne", "Tyskland: Atorvastatin Amarox"])
+    assert [(x["company"], x["country"]) for x in s] == [("Laboratori Fundacio DAU", "ES")]
+    assert parse(["Fremstiller", "Tyskland: Atorvastatin Amarox", "Spanien: Atorvastatina Amarox"]) == []
+
+
+def test_sentences_are_not_companies():
+    assert parse(["Fabrikant", "Dit medicijn is geregistreerd in lidstaten van de Europese Economische Ruimte onder de volgende namen:",
+                  "Nederland", "Duitsland"]) == []
+
+
+def test_company_cut_after_legal_form():
+    s = parse(["Hersteller:", "STADA Arzneimittel AG, Stadastraße 2 - 18, 61118 Bad Vilbel", "Deutschland"])
+    assert [(x["company"], x["country"]) for x in s] == [("STADA Arzneimittel AG", "DE")]
+    s = parse(["Hersteller:", "Clonmel Healthcare Ltd., Waterford Road, Co. Tipperary, Clonmel, Irland", "Z.Nr.: 1"])
+    assert [(x["company"], x["country"]) for x in s] == [("Clonmel Healthcare Ltd.", "IE")]

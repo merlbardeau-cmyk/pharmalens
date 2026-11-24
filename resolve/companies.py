@@ -106,6 +106,10 @@ def run():
                              " VALUES ('company',%s,%s,1.0,%s,'auto_merged')",
                              (cid, cid, json.dumps(dict(kept=names[0], merged=n, rule="identical name + legal form after normalisation"))))
                 stats["auto_merges"] += 1
+        # entities whose names no longer occur in any source get closed (versioned, not deleted)
+        closed = conn.execute("""UPDATE company SET valid_to=now() WHERE valid_to IS NULL AND source_name='PharmaLens ER'
+                                 AND NOT (name_normalized = ANY(%s)) RETURNING company_id""", (list(groups.keys()),)).fetchall()
+        stats["closed_stale"] = len(closed)
         # review candidates: same base name, different legal form (potential group members, NOT merged)
         by_base = defaultdict(list)
         for (cid, key) in conn.execute("SELECT company_id, name_normalized FROM company WHERE valid_to IS NULL"):
