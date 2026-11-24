@@ -10,7 +10,7 @@ from connectors.common import ROOT  # noqa: E402
 from models.db import connect  # noqa: E402
 
 PROV_TABLES = ["api", "company", "company_relation", "api_certificate", "product", "product_manufacturer", "patent", "event",
-               "tender", "supply_link"]
+               "tender", "supply_link", "api_synonym", "company_alias", "company_role"]
 
 
 def rules(conn):
@@ -19,6 +19,15 @@ def rules(conn):
         v, n = conn.execute(f"""SELECT count(*) FILTER (WHERE source_url IS NULL OR source_url='' OR source_name IS NULL
                                  OR retrieved_at IS NULL OR status IS NULL), count(*) FROM {t}""").fetchone()
         out.append((f"provenance:{t}", v, n, "Zeile ohne source_url/source_name/retrieved_at/status"))
+    v, n = conn.execute("""SELECT count(*) FILTER (WHERE status<>'derived' OR rationale IS NULL OR cardinality(evidence_ids)=0),
+                           count(*) FROM company_role WHERE valid_to IS NULL AND role='cdmo'""").fetchone()
+    out.append(("cdmo_role_derived_with_evidence", v, n, "CDMO-Rolle muss derived sein, mit Begründung und Belegen"))
+    v, n = conn.execute("""SELECT count(*) FILTER (WHERE auth_date < '1900-01-01' OR auth_date > now()::date), count(auth_date)
+                           FROM product WHERE valid_to IS NULL""").fetchone()
+    out.append(("auth_date_plausible", v, n, "Zulassungsdatum vor 1900 oder in der Zukunft"))
+    v, n = conn.execute("""SELECT count(*) FILTER (WHERE kind='register_spelling' AND status<>'derived'), count(*)
+                           FROM api_synonym WHERE valid_to IS NULL""").fetchone()
+    out.append(("register_spelling_is_derived", v, n, "beobachtete Schreibweisen sind abgeleitet"))
     v, n = conn.execute("SELECT count(*) FILTER (WHERE country IS NULL), count(*) FROM company WHERE valid_to IS NULL").fetchone()
     out.append(("company_without_country", v, n, "Firma ohne Land (nicht erfunden -> gap)"))
     v = conn.execute("SELECT count(*) FROM (SELECT name_normalized FROM company WHERE valid_to IS NULL GROUP BY 1 HAVING count(*)>1) x").fetchone()[0]

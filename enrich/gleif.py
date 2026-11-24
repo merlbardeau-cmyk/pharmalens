@@ -57,10 +57,14 @@ def run(limit=None):
     st = dict(checked=0, matched=0, parents=0, ultimate=0)
     with connect() as conn:
         f = Fetcher(conn, "GLEIF LEI API", raw_dir="gleif")
-        todo = conn.execute("""SELECT company_id, name_normalized, name_raw FROM company WHERE valid_to IS NULL AND lei IS NULL
-                               AND name_normalized NOT LIKE '%%|-'
-                               AND ('api_manufacturer'=ANY(roles) OR 'fdf_manufacturer'=ANY(roles))
-                               ORDER BY company_id""").fetchall()[:limit]
+        todo = conn.execute("""SELECT c.company_id, c.name_normalized, c.name_raw FROM company c
+                               LEFT JOIN (SELECT company_id, max(coalesce(n_products, n_apis, 0)) AS w FROM company_role
+                                          WHERE valid_to IS NULL GROUP BY 1) r USING (company_id)
+                               WHERE c.valid_to IS NULL AND c.lei IS NULL AND c.name_normalized NOT LIKE '%%|-'
+                               AND (r.w IS NOT NULL OR 'api_manufacturer'=ANY(c.roles) OR 'fdf_manufacturer'=ANY(c.roles))
+                               AND NOT EXISTS (SELECT 1 FROM raw_object ro WHERE ro.url LIKE '%%fuzzycompletions%%'
+                                               AND ro.url LIKE '%%' || replace(c.name_raw[1], ' ', '%%') || '%%')
+                               ORDER BY r.w DESC NULLS LAST, c.company_id""").fetchall()[:limit]
         for cid, key, names in todo:
             st["checked"] += 1
             r, raw_id = f.get(f"{API}/fuzzycompletions", params={"field": "entity.legalName", "q": names[0]})

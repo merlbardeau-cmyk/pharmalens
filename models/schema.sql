@@ -310,3 +310,65 @@ ALTER TABLE product ADD COLUMN IF NOT EXISTS atc text;
 ALTER TABLE product_manufacturer ADD COLUMN IF NOT EXISTS site_address_raw text;
 ALTER TABLE product_manufacturer ADD COLUMN IF NOT EXISTS site_country char(2);
 ALTER TABLE product_manufacturer ADD COLUMN IF NOT EXISTS country_basis text;
+
+-- v0.3 (PharmaLens v2): enrichment tables. Every table: source + status + validity.
+ALTER TABLE product ADD COLUMN IF NOT EXISTS auth_date date;
+ALTER TABLE product ADD COLUMN IF NOT EXISTS auth_date_source text;
+
+CREATE TABLE IF NOT EXISTS api_synonym (
+  syn_id bigserial PRIMARY KEY, api_id bigint NOT NULL, synonym text NOT NULL, synonym_norm text NOT NULL,
+  lang text, kind text NOT NULL,            -- inn | name | salt | register_spelling
+  n_observed int,                            -- how often seen in registers (register_spelling)
+  source_url text NOT NULL, source_name text NOT NULL, retrieved_at timestamptz NOT NULL, status data_status NOT NULL,
+  valid_from timestamptz NOT NULL DEFAULT now(), valid_to timestamptz);
+CREATE UNIQUE INDEX IF NOT EXISTS api_synonym_cur ON api_synonym(api_id, synonym_norm, kind) WHERE valid_to IS NULL;
+CREATE INDEX IF NOT EXISTS api_synonym_trgm ON api_synonym USING gin (synonym_norm gin_trgm_ops);
+
+CREATE TABLE IF NOT EXISTS company_alias (
+  alias_id bigserial PRIMARY KEY, company_id bigint NOT NULL, alias text NOT NULL, alias_norm text NOT NULL,
+  kind text NOT NULL,                        -- legal_name | spelling | brand_group | gleif_other_name | transliteration
+  n_observed int, seen_in text[],
+  source_url text NOT NULL, source_name text NOT NULL, retrieved_at timestamptz NOT NULL, status data_status NOT NULL,
+  valid_from timestamptz NOT NULL DEFAULT now(), valid_to timestamptz);
+CREATE UNIQUE INDEX IF NOT EXISTS company_alias_cur ON company_alias(company_id, alias_norm, kind) WHERE valid_to IS NULL;
+CREATE INDEX IF NOT EXISTS company_alias_trgm ON company_alias USING gin (alias_norm gin_trgm_ops);
+
+CREATE TABLE IF NOT EXISTS company_role (
+  role_id bigserial PRIMARY KEY, company_id bigint NOT NULL,
+  role text NOT NULL,                        -- api_manufacturer | fdf_manufacturer | cdmo | mah | distributor | importer
+  n_products int, n_apis int, n_markets int, rationale text, evidence_ids bigint[],
+  source_url text NOT NULL, source_name text NOT NULL, retrieved_at timestamptz NOT NULL, status data_status NOT NULL,
+  valid_from timestamptz NOT NULL DEFAULT now(), valid_to timestamptz);
+CREATE UNIQUE INDEX IF NOT EXISTS company_role_cur ON company_role(company_id, role) WHERE valid_to IS NULL;
+
+CREATE TABLE IF NOT EXISTS site_certificate (
+  cert_id bigserial PRIMARY KEY, site_id bigint, company_id bigint,
+  cert_type text NOT NULL,                   -- GMP | MIA | API_REG | NON_COMPLIANCE | FDA_INSPECTION
+  number text, issuing_authority text, issued date, valid_until date, scope text, checked_at timestamptz,
+  source_url text NOT NULL, source_name text NOT NULL, retrieved_at timestamptz NOT NULL, status data_status NOT NULL,
+  valid_from timestamptz NOT NULL DEFAULT now(), valid_to timestamptz);
+
+CREATE TABLE IF NOT EXISTS signal (
+  signal_id bigserial PRIMARY KEY,
+  signal_type text NOT NULL,                 -- new_dmf | new_cep | new_authorisation | shortage | patent_expiry | gmp_noncompliance
+  signal_date date NOT NULL, api_id bigint, company_id bigint, product_id bigint, country char(2),
+  title text NOT NULL, detail jsonb, evidence_ids bigint[],
+  source_url text NOT NULL, source_name text NOT NULL, retrieved_at timestamptz NOT NULL, status data_status NOT NULL,
+  valid_from timestamptz NOT NULL DEFAULT now(), valid_to timestamptz);
+CREATE INDEX IF NOT EXISTS signal_date_idx ON signal(signal_date DESC);
+
+CREATE TABLE IF NOT EXISTS price (
+  price_id bigserial PRIMARY KEY, level text NOT NULL CHECK (level IN ('api','fdf_list','tender')),
+  api_id bigint, product_id bigint, country char(2), pack_text text,
+  value numeric NOT NULL, currency char(3) NOT NULL, price_type text,      -- public | ex_factory | reimbursement | award
+  units_per_pack numeric, unit text, normalized_value numeric, plausible boolean, price_date date,
+  source_url text NOT NULL, source_name text NOT NULL, retrieved_at timestamptz NOT NULL, status data_status NOT NULL,
+  valid_from timestamptz NOT NULL DEFAULT now(), valid_to timestamptz);
+
+CREATE TABLE IF NOT EXISTS potential_customer (
+  pc_id bigserial PRIMARY KEY, api_id bigint NOT NULL, company_id bigint NOT NULL,
+  score numeric NOT NULL, reasons text[] NOT NULL, evidence_ids bigint[],
+  n_products int, n_countries int,
+  source_url text NOT NULL, source_name text NOT NULL, retrieved_at timestamptz NOT NULL,
+  status data_status NOT NULL DEFAULT 'derived' CHECK (status = 'derived'),
+  valid_from timestamptz NOT NULL DEFAULT now(), valid_to timestamptz);
