@@ -38,19 +38,23 @@ def clean(sql: str) -> str:
 
 
 def statements(sql: str):
-    """split pg_dump output on ';' at line end outside dollar-quotes"""
-    out, cur, in_dollar = [], [], False
+    """split pg_dump output into statements; a ';' only ends a statement outside single-quoted strings and $$ blocks"""
+    out, cur, in_quote, in_dollar = [], [], False, False
     for line in sql.splitlines():
-        if line.startswith("--") and not cur:
+        if not cur and not in_quote and line.startswith("--"):
             continue
         cur.append(line)
-        if line.count("$$") % 2 == 1:
+        if not in_dollar and line.count("'") % 2 == 1:   # '' escapes keep parity, odd count toggles
+            in_quote = not in_quote
+        if not in_quote and line.count("$$") % 2 == 1:
             in_dollar = not in_dollar
-        if not in_dollar and line.rstrip().endswith(";"):
-            s = "\n".join(cur).strip()
-            if s:
-                out.append(s)
+        if not in_quote and not in_dollar and line.rstrip().endswith(";"):
+            stmt = "\n".join(cur).strip()
+            if stmt:
+                out.append(stmt)
             cur = []
+    if cur and "\n".join(cur).strip():
+        raise ValueError("unterminated statement at end of dump")
     return out
 
 
@@ -84,6 +88,33 @@ def main(step: str):
         if batch:
             q("\n".join(batch)); n += len(batch)
         print("data statements:", n)
+    elif step == "data_json":
+        import secrets
+        import psycopg
+        local = psycopg.connect("postgresql://pharmalens:pharmalens@localhost/pharmalens")
+        tables = [r[0] for r in local.execute("SELECT tablename FROM pg_tables WHERE schemaname='public' ORDER BY 1")]
+        first = ["source", "raw_object"]  # FK targets first
+        tables = first + [t for t in tables if t not in first]
+        for t in tables:
+            n = local.execute(f'SELECT count(*) FROM public."{t}"').fetchone()[0]
+            done = 0
+            while done < n:
+                rows = local.execute(f'SELECT coalesce(json_agg(x), \'[]\') FROM (SELECT * FROM public."{t}" ORDER BY 1 '
+                                     f'LIMIT 1500 OFFSET {done}) x').fetchone()[0]
+                payload = json.dumps(rows, ensure_ascii=False)
+                tag = "pl" + secrets.token_hex(6)
+                assert f"${tag}$" not in payload
+                q(f'INSERT INTO public."{t}" SELECT * FROM json_populate_recordset(null::public."{t}", ${tag}${payload}${tag}$::json);')
+                done += len(rows)
+            print(t, done, flush=True)
+        seq = local.execute("SELECT last_value FROM entity_seq").fetchone()[0]
+        q(f"SELECT setval('public.entity_seq', {seq});")
+        for t, col in local.execute("""SELECT table_name, column_name FROM information_schema.columns WHERE table_schema='public'
+                                        AND column_default LIKE 'nextval(%%' AND column_default NOT LIKE '%%entity_seq%%'""").fetchall():
+            mx = local.execute(f'SELECT coalesce(max("{col}"),0) FROM public."{t}"').fetchone()[0]
+            if mx:
+                q(f"SELECT setval(pg_get_serial_sequence('public.\"{t}\"', '{col}'), {mx});")
+        print("sequences set")
     elif step == "counts":
         tables = [r["tablename"] for r in q("select tablename from pg_tables where schemaname='public' order by 1")]
         res = q(" union all ".join(f"select '{t}' t, count(*) n from public.\"{t}\"" for t in tables))
