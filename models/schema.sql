@@ -300,3 +300,10 @@ CREATE TABLE IF NOT EXISTS gap (
   recorded_at       timestamptz NOT NULL DEFAULT now(),
   resolved_at       timestamptz
 );
+
+-- v0.2: natural keys for idempotent, versioned imports
+ALTER TABLE product ADD COLUMN IF NOT EXISTS natural_key text;
+CREATE UNIQUE INDEX IF NOT EXISTS product_nk_current ON product(natural_key) WHERE valid_to IS NULL;
+ALTER TABLE api_certificate ADD COLUMN IF NOT EXISTS natural_key text;
+CREATE UNIQUE INDEX IF NOT EXISTS cert_nk_current ON api_certificate(natural_key) WHERE valid_to IS NULL;
+ALTER TABLE product ADD COLUMN IF NOT EXISTS atc text;

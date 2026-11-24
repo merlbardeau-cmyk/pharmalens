@@ -113,8 +113,19 @@ class Fetcher:
     def get(self, url: str, method: str = "GET", **kw):
         if self.check_robots and robots_status(self.c, url) == "disallowed":
             raise PermissionError(f"robots.txt disallows {url}")
-        throttle(url)
-        r = self.c.request(method, url, **kw)
+        for attempt in range(4):
+            throttle(url)
+            try:
+                r = self.c.request(method, url, timeout=httpx.Timeout(180.0, connect=30.0), **kw)
+            except httpx.TransportError:
+                if attempt == 3:
+                    raise
+                time.sleep(20 * (attempt + 1))
+                continue
+            if r.status_code not in (429, 503):
+                break
+            wait = int(r.headers.get("retry-after", "0") or 0) or 30 * (attempt + 1)
+            time.sleep(min(wait, 180))
         full = str(r.request.url)
         sha, _ = store_raw(self.raw_dir, full, r.content, r.headers.get("content-type"), r.status_code, self.conn, self.sid)
         raw_id = self.conn.execute("SELECT raw_id FROM raw_object WHERE url=%s AND sha256=%s", (full, sha)).fetchone()[0]
