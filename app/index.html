@@ -143,6 +143,9 @@ tr.click:active{background:var(--accent-soft)}
 /* bars */
 .bars{display:flex;flex-direction:column;gap:10px}
 .bar{display:grid;grid-template-columns:120px minmax(0,1fr) 56px;gap:10px;align-items:center;font-size:13.5px}
+.bars.wide .bar{grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) 44px}
+.bars.wide .lbl a{overflow:hidden;text-overflow:ellipsis}
+.nw{white-space:nowrap}
 .bar .lbl{display:flex;gap:8px;align-items:center;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .track{height:8px;background:var(--neu-bg);border-radius:99px;overflow:hidden;display:flex}
 .fill{height:100%;background:var(--accent);border-radius:99px}
@@ -234,7 +237,7 @@ tr.click:active{background:var(--accent-soft)}
     </button>
     <nav class="navgroup" aria-label="Arbeitsbereich">
       <div class="navlabel">Arbeitsbereich</div>
-      <a class="navitem" href="#overview" data-nav="overview"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>Übersicht</a>
+      <a class="navitem" href="#overview" data-nav="overview"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>Dashboard</a>
       <a class="navitem" href="#apis" data-nav="apis"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3h4v6l5 9a2 2 0 0 1-2 3H7a2 2 0 0 1-2-3l5-9z"/><path d="M8 15h8"/></svg>Wirkstoffe<span class="count num" id="nApis"></span></a>
       <a class="navitem" href="#companies" data-nav="companies"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V10l6 4V10l6 4V6l6 4v11z"/></svg>Firmen<span class="count num" id="nComp"></span></a>
       <a class="navitem" href="#markets" data-nav="markets"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>Märkte<span class="count num" id="nMk"></span></a>
@@ -328,7 +331,7 @@ tr.click:active{background:var(--accent-soft)}
   });
   async function renderPalette(){
     const d = await data(); const q = $('#pq').value.trim().toLowerCase();
-    const pages = [['overview','Übersicht'],['apis','Wirkstoffe'],['companies','Hersteller'],['markets','Märkte'],['gaps','Lücken'],['sources','Quellen']];
+    const pages = [['overview','Dashboard'],['apis','Wirkstoffe'],['companies','Hersteller'],['markets','Märkte'],['gaps','Lücken'],['sources','Quellen']];
     const g = [];
     const A = d.index.apis.filter(a => !q || [a.inn,a.unii,a.cas,a.atc].some(x => (x||'').toLowerCase().includes(q))).slice(0, 6)
       .map(a => ({icon:'API', label:a.inn, cap:true, sub:`${a.countries} Länder · ${fmt(a.products)} Produkte`, go:'#api-'+a.slug}));
@@ -392,46 +395,98 @@ tr.click:active{background:var(--accent-soft)}
   let current = () => {};
   function renderCurrent(keep){ current(keep); }
 
+  let DB, ECH; const charts = [];
+  const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+  async function echartsLib(){ if (!ECH) ECH = await new Promise((ok, no) => { const s = document.createElement('script'); s.src = 'https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.1/echarts.min.js'; s.onload = () => ok(window.echarts); s.onerror = no; document.head.appendChild(s); }); return ECH; }
+  const bar = (v, max) => `<div class="track" style="flex:1"><div class="fill" style="width:${max ? Math.round(v / max * 100) : 0}%"></div></div>`;
   async function pOverview(){
-    const d = await data(); const t = d.totals; const A = d.index.apis;
-    crumbs([['Übersicht']]); setNav('overview');
-    const leaflet = d.markets.filter(m => m.leaflet_products > 0).map(m => ({...m, cov: pct(m.with_mfr, m.products)})).sort((a,b) => b.cov - a.cov);
-    const linkTot = t.confirmed + t.derived;
-    const topGaps = d.gaps.slice(0, 5);
-    const q = state.q.toLowerCase();
-    const rows = A.filter(a => !q || a.inn.includes(q)).sort((a,b) => b.products - a.products).slice(0, 8);
+    const d = await data(); if (!DB) DB = await j('dashboard.json');
+    crumbs([['Dashboard']]); setNav('overview');
+    const x = DB, k = x.kpi, n = x.counts;
+    const qMax = Math.max(...x.quality.map(r => r.products));
+    const mixTot = Object.values(x.status_mix).reduce((a, b) => a + b, 0);
+    const SIG = {new_dmf:'c-official', new_authorisation:'c-neutral', shortage:'c-gap', patent_expiry:'c-derived'};
     view.innerHTML = `<div class="fade">
-      <div class="page-head"><div><h1>Übersicht</h1><p>Stand ${esc(d.index.generated)}. Jeder Wert ist mit seiner Quelle verknüpft; was fehlt, steht unter Lücken.</p></div>
-        <button class="btn btn-primary" type="button" id="ovSearch"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>Wirkstoff suchen</button></div>
+      <div class="page-head"><div><h1>Dashboard</h1><p class="week" style="font-size:17px;color:var(--ink);font-weight:550">${esc(x.sentence)}</p>
+        <p>Stand ${esc(x.generated)}. Signale stammen 1:1 aus Registerdaten; Kunden-Hinweise sind abgeleitet.</p></div>
+        <button class="btn btn-primary" type="button" id="ovSearch">Suchen</button></div>
       <div class="kpis">
-        <div class="card kpi"><span>Fertigprodukte</span><b class="num">${fmt(t.products)}</b><small>in ${t.countries} Ländern plus EU-zentral</small></div>
-        <div class="card kpi"><span>Herstellerangaben aus Leaflets</span><b class="num">${fmt(t.sites)}</b><small>Batch-Release, mit Zitat</small></div>
-        <div class="card kpi"><span>Hersteller</span><b class="num">${fmt(t.companies)}</b><small>Werke und API-Hersteller</small></div>
-        <div class="card kpi"><span>API-Zertifikate</span><b class="num">${fmt(t.dmf)}</b><small>US-DMF; CEP folgt</small></div>
-        <div class="card kpi"><span>Offene Lücken</span><b class="num">${fmt(t.gaps)}</b><small>jede mit Grund</small></div>
+        <div class="card kpi"><span>Neue Zulassungen</span><b class="num">${fmt(n.new_authorisation.month)}</b><small>letzte 30 Tage · ${fmt(n.new_authorisation.year)} in 12 Mt.</small></div>
+        <div class="card kpi"><span>Neue US-DMF</span><b class="num">${fmt(n.new_dmf.year)}</b><small>letzte 12 Monate, Pilot-Wirkstoffe</small></div>
+        <div class="card kpi"><span>Offene Engpässe</span><b class="num">${fmt(n.shortage.open)}</b><small>EMA und AEMPS</small></div>
+        <div class="card kpi"><span>Patentabläufe</span><b class="num">${fmt(n.patent_expiry.next24m)}</b><small>US, nächste 24 Monate</small></div>
+        <div class="card kpi"><span>Produkte</span><b class="num">${fmt(k.products)}</b><small>${k.markets} Märkte · ${fmt(k.releases)} mit Hersteller</small></div>
+        <div class="card kpi"><span>CDMO erkannt</span><b class="num">${fmt(k.cdmo)}</b><small>abgeleitet aus Packungsbeilagen</small></div>
       </div>
+
+      <section class="card panel" style="margin-top:16px"><div class="panel-h"><h2>Neue US-DMF und mögliche Kunden</h2><span class="note">Neue CEP folgen nach EDQM-Lizenz</span></div>
+        <p class="note" style="margin:-6px 0 12px">Mögliche Kunden = Zulassungsinhaber, die Fertigprodukte mit diesem Wirkstoff vertreiben und nicht zum Konzern des DMF-Inhabers gehören. ${chip('derived')}</p>
+        <div class="tbl" style="margin:0 -20px -20px"><table><thead><tr><th>Datum</th><th>Wirkstoff</th><th>DMF-Inhaber</th><th>DMF</th><th>Mögliche Kunden (Top 3)</th></tr></thead><tbody>
+        ${x.dmf.slice(0, 8).map(r => `<tr><td class="num nw">${esc(r.date)}</td><td class="main cap">${esc(r.api)}</td><td><a href="#co-${r.holder_id}">${esc(r.holder)}</a></td><td>${link(r.url, r.no)}</td>
+          <td>${r.customers.slice(0, 3).map(c => `<a class="chip c-neutral" style="margin:1px" href="#co-${c.id}" title="${esc(c.reasons.join(' · '))}">${esc(c.name)} <b class="num">${c.products}</b></a>`).join('')}${r.n_customers > 3 ? ` <span class="note">+${fmt(r.n_customers - 3)}</span>` : ''}</td></tr>`).join('')}
+        </tbody></table></div></section>
+
       <div class="grid2">
-        <section class="card panel"><div class="panel-h"><h2>Wirkstoffe nach Produktzahl</h2><a href="#apis">Alle ${A.length} anzeigen</a></div>
-          <div class="tbl" style="margin:0 -20px -20px"><table><thead><tr><th>Wirkstoff</th><th>Gruppe</th><th>Länder</th><th>Produkte</th><th>Werke</th><th>Engpässe</th></tr></thead><tbody>
-          ${rows.map(a => `<tr class="click" data-href="api-${a.slug}" tabindex="0"><td class="main cap">${esc(a.inn)}</td><td><span class="chip c-neutral">${esc(GROUP[a.group]||'')}</span></td>
-            <td class="num">${a.countries}</td><td class="num">${fmt(a.products)}</td><td class="num">${fmt(a.sites)}</td><td>${a.shortages ? `<span class="chip c-gap">${a.shortages} offen</span>` : '<span class="note">–</span>'}</td></tr>`).join('')}
-          </tbody></table></div></section>
-        <div style="display:flex;flex-direction:column;gap:16px">
-          <section class="card panel"><div class="panel-h"><h2>Lieferkette</h2><span class="note num">${fmt(linkTot)} Verbindungen</span></div>
-            <div class="stack" role="img" aria-label="${fmt(t.confirmed)} bestätigt, ${fmt(t.derived)} abgeleitet"><i style="width:${pct(t.confirmed,linkTot)}%;background:var(--off-fg)"></i><i style="width:${pct(t.derived,linkTot)}%;background:var(--accent)"></i></div>
-            <div class="legend"><span><i class="sw" style="background:var(--off-fg)"></i>Bestätigt <b class="num">${fmt(t.confirmed)}</b></span><span><i class="sw" style="background:var(--accent)"></i>Abgeleitet <b class="num">${fmt(t.derived)}</b></span></div>
-            <p class="note" style="margin-top:10px">Werk → Produkt aus Leaflets. API-Lieferanten chemischer Generika sind meist nicht öffentlich und bleiben offen.</p></section>
-          <section class="card panel"><div class="panel-h"><h2>Hersteller-Abdeckung</h2><a href="#markets">Alle Märkte</a></div>
-            <div class="bars">${leaflet.map(m => `<div class="bar"><span class="lbl"><span class="cc">${esc(m.cc)}</span>${esc(m.name)}</span><div class="track"><div class="fill" style="width:${m.cov}%"></div></div><span class="num" style="text-align:right">${m.cov} %</span></div>`).join('')}</div>
-            <p class="note" style="margin-top:10px">Anteil Produkte mit Batch-Release-Werk aus dem Leaflet.</p></section>
-        </div>
+        <section class="card panel"><div class="panel-h"><h2>Neue Zulassungen pro Monat</h2>
+          <label for="authcc" class="sr">Markt</label><select id="authcc" class="field"><option value="">Alle Märkte</option>${[...new Set(Object.values(x.auth.by_cc).flatMap(Object.keys))].sort().map(c => `<option>${esc(c)}</option>`).join('')}</select></div>
+          <div id="chAuth" style="height:260px" role="img" aria-label="Neue Zulassungen pro Monat, letzte 24 Monate"></div>
+          <p class="note">Zulassungsdatum aus BDPM, CIMA, Swissmedic, CBG, Drugs@FDA, EMA. AT, DK, IT und DE liefern kein Datum (Lücke).</p></section>
+        <section class="card panel"><div class="panel-h"><h2>Neueste Signale</h2></div>
+          <div class="sig" style="max-height:330px;overflow:auto;margin:0 -8px">${x.recent.slice(0, 25).map(s => `<div style="display:flex;gap:10px;align-items:flex-start;padding:8px;border-bottom:1px solid var(--line)">
+            <span class="chip ${SIG[s.type]}" style="flex:none">${esc(s.label)}</span><div style="min-width:0;flex:1"><div style="font-weight:550;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(s.title)}</div>
+            <div class="note">${esc(s.date)}${s.cc ? ' · ' + esc(s.cc) : ''}${s.api ? ' · <span class="cap">' + esc(s.api) + '</span>' : ''} · ${link(s.url, 'Quelle')}</div></div></div>`).join('')}</div></section>
       </div>
-      <section class="card panel" style="margin-top:16px"><div class="panel-h"><h2>Grösste Lücken</h2><a href="#gaps">Alle Lücken</a></div>
-        <div class="tbl" style="margin:0 -20px -20px"><table><thead><tr><th>Bereich</th><th>Grund</th><th>Anzahl</th></tr></thead><tbody>
-        ${topGaps.map(g => `<tr><td><span class="chip c-gap">${esc(AREA[g.area]||g.area)}</span></td><td class="main" style="font-weight:550">${esc(g.reason)}</td><td class="num">${fmt(g.n)}</td></tr>`).join('')}</tbody></table></div></section>
+
+      <section class="card panel" style="margin-top:16px"><div class="panel-h"><h2>Produkte je Wirkstoff und Markt</h2><a href="#apis">Wirkstoffe</a></div>
+        <div id="chHeat" style="height:${Math.max(320, x.heat.apis.length * 24 + 80)}px" role="img" aria-label="Heatmap Produkte je Wirkstoff und Markt"></div></section>
+
+      <div class="grid2" style="grid-template-columns:1fr 1fr">
+        <section class="card panel"><div class="panel-h"><h2>Top Lohnhersteller (CDMO)</h2><a href="#companies">Alle Firmen</a></div>
+          <div class="bars wide">${x.top_cdmo.map(c => `<div class="bar"><span class="lbl"><a href="#co-${c.id}" title="${esc(c.name)}">${esc(c.name)}</a></span>${bar(c.products, x.top_cdmo[0].products)}<span class="num" style="text-align:right">${fmt(c.products)}</span></div>`).join('')}</div>
+          <p class="note" style="margin-top:10px">Produkte konzernfremder Zulassungsinhaber, Chargenfreigabe laut Packungsbeilage. ${chip('derived')}</p></section>
+        <section class="card panel"><div class="panel-h"><h2>Top Zulassungsinhaber</h2></div>
+          <div class="bars wide">${x.top_mah.map(c => `<div class="bar"><span class="lbl"><a href="#co-${c.id}" title="${esc(c.name)}">${esc(c.name)}</a></span>${bar(c.products, x.top_mah[0].products)}<span class="num" style="text-align:right">${fmt(c.products)}</span></div>`).join('')}</div>
+          <p class="note" style="margin-top:10px">Produkte der Pilot-Wirkstoffe plus ES/FR-Vollregister. Hersteller-Anteil ES/FR steigt, solange der Packungsbeilagen-Lauf läuft. ${chip('official')}</p></section>
+      </div>
+
+      <section class="card panel" style="margin-top:16px"><div class="panel-h"><h2>Datenqualität</h2><a href="#gaps">Lücken</a></div>
+        <div class="stack" role="img" aria-label="Statusmix">${['official','derived','secondary','gap'].filter(s => x.status_mix[s]).map(s => `<i style="width:${pct(x.status_mix[s], mixTot)}%;background:var(--${s==='official'?'off-fg':s==='derived'?'accent':'gap-fg'})"></i>`).join('')}</div>
+        <div class="legend" style="margin-bottom:14px">${['official','derived','secondary','gap'].filter(s => x.status_mix[s]).map(s => `<span><i class="sw" style="background:var(--${s==='official'?'off-fg':s==='derived'?'accent':'gap-fg'})"></i>${STATUS[s]} <b class="num">${fmt(x.status_mix[s])}</b></span>`).join('')}</div>
+        <div class="tbl" style="margin:0 -20px -20px"><table><thead><tr><th>Markt</th><th>Produkte</th><th style="min-width:200px">mit Zulassungsdatum</th><th style="min-width:200px">mit Hersteller</th></tr></thead><tbody>
+        ${x.quality.slice(0, 14).map(r => `<tr><td><span class="cc">${esc(r.cc)}</span></td><td class="num">${fmt(r.products)}</td>
+          <td><div style="display:flex;gap:10px;align-items:center">${bar(r.auth_date, r.products)}<span class="num nw" style="width:52px;text-align:right">${pct(r.auth_date, r.products)} %</span></div></td>
+          <td><div style="display:flex;gap:10px;align-items:center">${bar(r.manufacturer, r.products)}<span class="num nw" style="width:52px;text-align:right">${pct(r.manufacturer, r.products)} %</span></div></td></tr>`).join('')}</tbody></table></div></section>
     </div>`;
     $('#ovSearch').addEventListener('click', openPalette);
+    $('#authcc').addEventListener('change', () => drawAuth($('#authcc').value));
+    try { await echartsLib(); drawAuth(''); drawHeat(); } catch(e) { ['#chAuth','#chHeat'].forEach(s => $(s).innerHTML = '<div class="empty">Diagramm konnte nicht geladen werden.</div>'); }
   }
+  function chartBase(){ return { textStyle:{fontFamily:css('--font')||'Inter, sans-serif', color:css('--ink2')}, grid:{left:8, right:12, top:12, bottom:8, containLabel:true},
+    tooltip:{backgroundColor:css('--card'), borderColor:css('--line'), textStyle:{color:css('--ink')}} }; }
+  function mount(id){ const el = $(id); const old = ECH.getInstanceByDom(el); if (old) old.dispose(); const ch = ECH.init(el); charts.push(ch); return ch; }
+  function drawAuth(cc){
+    const a = DB.auth; const vals = a.months.map(m => cc ? (a.by_cc[m][cc] || 0) : Object.values(a.by_cc[m]).reduce((s, v) => s + v, 0));
+    mount('#chAuth').setOption({...chartBase(), tooltip:{...chartBase().tooltip, trigger:'axis', axisPointer:{type:'shadow'}, valueFormatter:v => fmt(v) + ' Zulassungen'},
+      xAxis:{type:'category', data:a.months, axisLine:{lineStyle:{color:css('--line')}}, axisTick:{show:false}, axisLabel:{color:css('--muted'), interval:2}},
+      yAxis:{type:'value', splitLine:{lineStyle:{color:css('--line')}}, axisLabel:{color:css('--muted')}},
+      series:[{type:'bar', name:'Neue Zulassungen', data:vals, barMaxWidth:18, itemStyle:{color:css('--accent'), borderRadius:[4,4,0,0]}}]});
+  }
+  function drawHeat(){
+    const h = DB.heat; const max = Math.max(...h.cells.map(c => c[2]));
+    mount('#chHeat').setOption({...chartBase(), grid:{left:8, right:12, top:8, bottom:52, containLabel:true},
+      tooltip:{...chartBase().tooltip, formatter:p => `<b>${esc(h.apis[p.value[1]])}</b> · ${esc(h.ccs[p.value[0]])}<br>${fmt(p.value[2])} Produkte`},
+      xAxis:{type:'category', data:h.ccs, splitArea:{show:false}, axisTick:{show:false}, axisLine:{show:false}, axisLabel:{color:css('--muted'), fontSize:11}},
+      yAxis:{type:'category', data:h.apis.map(a => a.charAt(0).toUpperCase() + a.slice(1)), inverse:true, axisTick:{show:false}, axisLine:{show:false}, axisLabel:{color:css('--ink')}},
+      visualMap:{min:0, max, calculable:false, orient:'horizontal', left:'center', bottom:0, itemWidth:12, itemHeight:160, text:[fmt(max), '0'], textStyle:{color:css('--muted')},
+        inRange:{color: isDark() ? ['#1A2A55', css('--accent'), '#DCE5FF'] : ['#E8EEFD', css('--accent'), '#0B1A3A']}},
+      series:[{type:'heatmap', data:h.cells.map(c => [c[1], c[0], c[2]]),
+        itemStyle:{borderColor:css('--card'), borderWidth:2, borderRadius:3}, emphasis:{itemStyle:{borderColor:css('--ink'), borderWidth:1}}}]});
+  }
+  addEventListener('resize', () => charts.forEach(c => !c.isDisposed() && c.resize()));
+  const redraw = () => { if (route.page === 'overview' && DB && ECH && $('#chHeat')) { drawAuth($('#authcc') ? $('#authcc').value : ''); drawHeat(); } };
+  new MutationObserver(redraw).observe(document.documentElement, {attributes:true, attributeFilter:['data-theme']});
+  matchMedia('(prefers-color-scheme: dark)').addEventListener('change', redraw);
+
   const AREA = {manufacturer:'Hersteller', certificate:'Zertifikat', patent:'Patent', supply_chain:'Lieferkette', product:'Zulassung', company_structure:'Konzern', source:'Quelle'};
 
   function sortHead(key, label){ const [k, dir] = state.sort; return `<th><button type="button" data-sort="${key}" aria-label="Nach ${label} sortieren">${label}${k===key ? (dir<0?' ↓':' ↑') : ''}</button></th>`; }

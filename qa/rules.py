@@ -10,7 +10,7 @@ from connectors.common import ROOT  # noqa: E402
 from models.db import connect  # noqa: E402
 
 PROV_TABLES = ["api", "company", "company_relation", "api_certificate", "product", "product_manufacturer", "patent", "event",
-               "tender", "supply_link", "api_synonym", "company_alias", "company_role"]
+               "tender", "supply_link", "api_synonym", "company_alias", "company_role", "signal", "potential_customer"]
 
 
 def rules(conn):
@@ -28,6 +28,12 @@ def rules(conn):
     v, n = conn.execute("""SELECT count(*) FILTER (WHERE kind='register_spelling' AND status<>'derived'), count(*)
                            FROM api_synonym WHERE valid_to IS NULL""").fetchone()
     out.append(("register_spelling_is_derived", v, n, "beobachtete Schreibweisen sind abgeleitet"))
+    v, n = conn.execute("""SELECT count(*) FILTER (WHERE status<>'derived' OR cardinality(reasons)=0 OR cardinality(evidence_ids)=0),
+                           count(*) FROM potential_customer WHERE valid_to IS NULL""").fetchone()
+    out.append(("potential_customer_derived_with_reasons", v, n, "Kunden-Hinweis nur abgeleitet, mit Gründen und Belegen"))
+    v, n = conn.execute("""SELECT count(*) FILTER (WHERE source_url IS NULL OR cardinality(evidence_ids)=0 OR signal_date IS NULL),
+                           count(*) FROM signal WHERE valid_to IS NULL""").fetchone()
+    out.append(("signal_has_date_source_evidence", v, n, "Signal ohne Datum, Quelle oder Beleg"))
     v, n = conn.execute("SELECT count(*) FILTER (WHERE country IS NULL), count(*) FROM company WHERE valid_to IS NULL").fetchone()
     out.append(("company_without_country", v, n, "Firma ohne Land (nicht erfunden -> gap)"))
     v = conn.execute("SELECT count(*) FROM (SELECT name_normalized FROM company WHERE valid_to IS NULL GROUP BY 1 HAVING count(*)>1) x").fetchone()[0]
