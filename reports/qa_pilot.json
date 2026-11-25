@@ -32,7 +32,7 @@
   {
     "rule": "provenance:product_manufacturer",
     "violations": 0,
-    "total": 18682,
+    "total": 23394,
     "description": "Zeile ohne source_url/source_name/retrieved_at/status"
   },
   {
@@ -44,7 +44,7 @@
   {
     "rule": "provenance:event",
     "violations": 0,
-    "total": 26,
+    "total": 324,
     "description": "Zeile ohne source_url/source_name/retrieved_at/status"
   },
   {
@@ -90,6 +90,24 @@
     "description": "Zeile ohne source_url/source_name/retrieved_at/status"
   },
   {
+    "rule": "provenance:price",
+    "violations": 0,
+    "total": 117010,
+    "description": "Zeile ohne source_url/source_name/retrieved_at/status"
+  },
+  {
+    "rule": "provenance:market_metric",
+    "violations": 0,
+    "total": 37458,
+    "description": "Zeile ohne source_url/source_name/retrieved_at/status"
+  },
+  {
+    "rule": "provenance:product_generic",
+    "violations": 0,
+    "total": 18757,
+    "description": "Zeile ohne source_url/source_name/retrieved_at/status"
+  },
+  {
     "rule": "cdmo_role_derived_with_evidence",
     "violations": 0,
     "total": 275,
@@ -120,6 +138,18 @@
     "description": "Signal ohne Datum, Quelle oder Beleg"
   },
   {
+    "rule": "price_positive_and_unit_consistent",
+    "violations": 0,
+    "total": 117010,
+    "description": "Preis <= 0 oder Stückpreis ohne Stückzahl"
+  },
+  {
+    "rule": "volume_has_period_and_unit",
+    "violations": 0,
+    "total": 37458,
+    "description": "Volumen ohne Periode/Einheit oder negativ"
+  },
+  {
     "rule": "company_without_country",
     "violations": 2944,
     "total": 3931,
@@ -140,7 +170,7 @@
   {
     "rule": "manufacturer_quote_contains_name",
     "violations": 0,
-    "total": 12911,
+    "total": 17623,
     "description": "Zitat fehlt oder enthält den Herstellernamen nicht"
   },
   {
@@ -164,13 +194,13 @@
   {
     "rule": "no_email_in_quotes",
     "violations": 0,
-    "total": 12911,
+    "total": 17623,
     "description": "E-Mail-Adresse im Zitat (DSGVO-Prüfung)"
   },
   {
     "rule": "manufacturer_site_country",
     "violations": 0,
-    "total": 12911,
+    "total": 17623,
     "description": "Standort ohne bestimmbares Land"
   },
   {

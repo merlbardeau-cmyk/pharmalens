@@ -375,8 +375,8 @@ tr.click:active{background:var(--press)}
   // ---------- data ----------
   const D = {}; const API = {};
   const j = async p => (await fetch(p)).json();
-  async function data(){ if (!D.index) { const [i,c,m,s,g,x,mf] = await Promise.all([j('apis.json'), j('companies.json'), j('markets.json'), j('sources.json'), j('gaps.json'), j('search.json'), j('manufacturers.json')]);
-      Object.assign(D, {index:i, companies:c, markets:m, sources:s, gaps:g, search:x, mfr:mf, mfrMap:Object.fromEntries(mf.map(e => [e.id, e]))}); } return D; }
+  async function data(){ if (!D.index) { const [i,c,m,s,g,x,mf,mk] = await Promise.all([j('apis.json'), j('companies.json'), j('markets.json'), j('sources.json'), j('gaps.json'), j('search.json'), j('manufacturers.json'), j('market_index.json')]);
+      Object.assign(D, {index:i, companies:c, markets:m, sources:s, gaps:g, search:x, mfr:mf, mfrMap:Object.fromEntries(mf.map(e => [e.id, e])), mkt:mk}); } return D; }
   async function api(slug){ if (!API[slug]) API[slug] = await j(`api/${slug}.json`); return API[slug]; }
 
   // ---------- theme ----------
@@ -412,7 +412,7 @@ tr.click:active{background:var(--press)}
     const A = d.index.apis.filter(a => !q || [a.inn,a.unii,a.cas,a.atc].some(x => (x||'').toLowerCase().includes(q))).slice(0, 6)
       .map(a => ({icon:'API', label:a.inn, cap:true, sub:`${a.countries} countries · ${fmt(a.products)} products`, go:'#api-'+a.slug}));
     const C = q ? findCompanies(d.search, q).slice(0, 7).map(([c, why]) => ({icon:(c.cc||'–'), label:c.n, sub:(mfrOf(c.id)?.primary === 'manufacturer' ? 'API manufacturer · ' : 'Company · ') + (why || (mfrOf(c.id)?.primary === 'manufacturer' ? `${fmt(mfrOf(c.id).dmf)} active US DMFs` : compSub(c))), company:c.id})) : [];
-    const M = q ? d.markets.filter(m => m.name.toLowerCase().includes(q) || m.cc.toLowerCase() === q).slice(0, 4).map(m => ({icon:m.cc, label:m.name, sub:`${fmt(m.products)} products`, go:'#markets', market:m.cc})) : [];
+    const M = q ? d.markets.filter(m => m.name.toLowerCase().includes(q) || m.cc.toLowerCase() === q).slice(0, 4).map(m => ({icon:m.cc, label:m.name, sub:`${fmt(m.products)} products`, go:'#markets/' + m.cc})) : [];
     const P = pages.filter(([,l]) => !q || l.toLowerCase().includes(q)).map(([k,l]) => ({icon:'→', label:l, sub:'Page', go:'#'+k}));
     if (A.length) g.push(['APIs', A]); if (C.length) g.push(['Companies', C]); if (M.length) g.push(['Markets', M]); if (P.length) g.push(['Pages', P]);
     pItems = g.flatMap(x => x[1]); pSel = 0;
@@ -447,7 +447,7 @@ tr.click:active{background:var(--press)}
   $('#plist').addEventListener('click', e => { const b = e.target.closest('.pitem'); if (b) pick(+b.dataset.i); });
 
   // ---------- page state ----------
-  const state = { mtab:'portfolio', mfCc:'', q:'', group:'all', sort:['products', -1], compRole:'all', compCc:'', srcLight:'all', limit:60, tab:'sites', cc:'', marketQ:'' };
+  const state = { msec:'top', atab:'products', mtab:'portfolio', mfCc:'', q:'', group:'all', sort:['products', -1], compRole:'all', compCc:'', srcLight:'all', limit:60, tab:'sites', cc:'', marketQ:'' };
   const view = $('#view');
   const pageq = $('#pageq');
   pageq.addEventListener('input', () => { state.q = pageq.value; state.limit = 60; renderCurrent(true); });
@@ -982,16 +982,206 @@ tr.click:active{background:var(--press)}
 
   async function pMarkets(keep){
     const d = await data(); crumbs([['Markets']]); setNav('markets');
-    if (state.marketQ) { state.q = state.marketQ; pageq.value = state.marketQ; state.marketQ = ''; }
-    const q = state.q.toLowerCase();
-    const M = d.markets.filter(m => !q || m.name.toLowerCase().includes(q) || m.cc.toLowerCase() === q);
+    if (state.marketQ) { location.hash = 'markets/' + state.marketQ; state.marketQ = ''; return; }
+    const q = state.q.toLowerCase(), src = Object.fromEntries(d.markets.map(m => [m.cc, m]));
+    const M = (d.mkt || []).filter(m => !q || m.name.toLowerCase().includes(q) || m.cc.toLowerCase() === q).sort((a, b) => b.products - a.products);
+    const yes = (ok, what) => ok ? '<span class="chip c-official">Yes</span>' : `<span class="chip c-gap" title="${esc(what)}">No</span>`;
     view.innerHTML = `<div class="${keep?'':'fade'}">
-      <div class="page-head"><div><h1>Markets</h1><p>Authorisations per country. Manufacturers per product are available where a leaflet register is connected.</p></div></div>
-      <section class="card tbl"><table><thead><tr><th>Market</th><th>Products</th><th>Authorisation holders</th><th>APIs</th><th style="min-width:220px">Manufacturer per product</th><th>Sources</th></tr></thead><tbody>
-      ${M.map(m => { const cov = pct(m.with_mfr, m.products); return `<tr><td class="main"><span class="cc">${esc(m.cc)}</span> ${esc(m.name)}</td><td class="num">${fmt(m.products)}${m.vet?` <span class="note">(${m.vet} vet)</span>`:''}</td><td class="num">${fmt(m.mahs)}</td><td class="num">${m.apis}</td>
-        <td>${m.with_mfr ? `<div style="display:flex;align-items:center;gap:10px"><div class="track" style="flex:1"><div class="fill" style="width:${cov}%"></div></div><span class="num" style="width:40px;text-align:right">${cov}%</span></div>` : '<span class="chip c-gap">Register only</span>'}</td>
-        <td class="note">${m.sources.map(shortSrc).join(', ')}</td></tr>`; }).join('')}
+      <div class="page-head"><div><h1>Markets</h1><p>Select a country for Market 360: products, companies, supply, prices, shortages, tenders and drill-down per API.</p></div></div>
+      <section class="card tbl"><table class="dense"><thead><tr><th>Market</th><th>Products</th><th>Holders</th><th>Pilot APIs</th><th style="min-width:180px">Manufacturer per product</th><th>Volume</th><th>Prices</th><th>Open shortages</th><th>Updated</th><th>Sources</th></tr></thead><tbody>
+      ${M.map(m => { const cov = pct(m.with_mf, m.products), s0 = src[m.cc] || {sources:[]};
+        const miss = [!m.with_mf && 'leaflet register (manufacturer per product)', !m.volume && 'public volume source', !m.prices && 'public price list'].filter(Boolean);
+        return `<tr class="click" data-href="markets/${esc(m.cc)}" tabindex="0"><td class="main"><span class="cc">${esc(m.cc)}</span> ${esc(m.name)}</td><td class="num">${fmt(m.products)}</td><td class="num">${fmt(m.mahs)}</td><td class="num">${fmt(m.apis)}</td>
+        <td>${m.with_mf ? `<div style="display:flex;align-items:center;gap:8px"><div class="track" style="flex:1"><div class="fill" style="width:${cov}%"></div></div><span class="num nw" style="width:36px;text-align:right">${cov}%</span></div>` : `<span class="chip c-gap" title="Missing: ${esc(miss.join(', '))}">Register only</span>`}</td>
+        <td>${yes(m.volume, 'No public volume source connected')}</td><td>${yes(m.prices, 'No public price list connected')}</td><td class="num">${m.shortages_open != null ? fmt(m.shortages_open) : '<span class="chip c-neutral" title="No national shortage register connected">Not checked</span>'}</td><td class="num nw">${esc(m.updated||'–')}</td>
+        <td class="note">${(s0.sources||[]).map(shortSrc).join(', ')}</td></tr>`; }).join('')}
       </tbody></table></section></div>`;
+  }
+
+  // ---------- Market 360 ----------
+  const MKT = {};
+  async function market(cc){ if (!MKT[cc]) MKT[cc] = await j(`mkt/${cc}.json`); return MKT[cc]; }
+  const fold = s => String(s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9 ]+/g, ' ').trim();
+  const eur = (v, cur) => v == null ? '–' : (cur === 'DKK' ? 'DKK ' : '€') + (v >= 1e9 ? (v/1e9).toFixed(2) + ' bn' : v >= 1e6 ? (v/1e6).toFixed(1) + ' m' : fmt(Math.round(v)));
+  const metricLabel = m => ({reimbursed_amount:'Reimbursed amount (EUR, Open Medic)', products:'Number of authorised products', reimbursed_packs:'Reimbursed packs'}[m] || m);
+  function findApi(x, qq){
+    const q = fold(qq); if (!q) return null;
+    const list = Object.values(x.apis);
+    return list.find(a => fold(a.api) === q) || list.find(a => a.synonyms.some(s => fold(s) === q))
+      || list.find(a => fold(a.api).startsWith(q) || q.startsWith(fold(a.api))) || list.find(a => a.synonyms.some(s => fold(s).includes(q)));
+  }
+  const MSECT = [['top','Largest markets'],['companies','Companies'],['supply','Supply'],['prices','Prices'],['shortages','Shortages'],['tenders','Tenders'],['events','Authorisations'],['gaps','Gaps']];
+  async function pMarket(cc, keep){
+    setNav('markets'); await data();
+    if (!keep) view.innerHTML = `<div class="skeleton" style="height:180px"></div>`;
+    let x; try { x = await market(cc); } catch(e) { crumbs([['Markets','#markets'],['Not found']]); view.innerHTML = `<div class="card empty">No data for ${esc(cc)}. <a href="#markets">Back</a></div>`; return; }
+    crumbs([['Markets','#markets'],[x.name]]);
+    const k = x.kpi, sec = state.msec;
+    const tile = (s, l, v, sub) => `<button type="button" class="card kpi kpib" data-msec="${s}"><span>${l}</span><b class="num">${v}</b><small>${sub}</small></button>`;
+    const LIGHT = {green:'c-official', yellow:'c-gap', red:'c-red'};
+    view.innerHTML = `<div class="${keep?'':'fade'}">
+      <section class="card dhead"><div style="min-width:0;flex:1 1 560px">
+        <p class="eyebrow">Market 360</p><h1><span class="cc" style="height:22px;font-size:12px;vertical-align:4px;margin-right:6px">${esc(cc)}</span>${esc(x.name)}</h1>
+        <div class="ids"><span><b>Authorities</b> ${esc(x.authority || '–')}</span><span><b>Data as of</b> ${esc(x.generated)}</span></div>
+        <div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px">${x.sources.map(s => `<a class="chip ${LIGHT[s.light]||'c-neutral'}" href="${esc(s.url||'#sources')}" target="_blank" rel="noopener" title="${esc(s.reason||'')}"><span class="dot"></span>${esc(s.name)}</a>`).join('')}</div>
+        <p class="summary">${esc(x.summary)}</p></div>
+        <div style="flex:0 1 300px;min-width:220px"><label class="h3" for="mktq">Search an API in ${esc(x.name)}</label>
+          <div class="topsearch" style="margin:0;flex:none"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+          <input id="mktq" type="search" placeholder="e.g. ${cc==='FR'?'metformine':cc==='ES'?'metformina':cc==='DK'?'metformin':'metformin'}" autocomplete="off" list="mktlist"></div>
+          <datalist id="mktlist">${Object.values(x.apis).map(a => `<option value="${esc(a.api)}">`).join('')}</datalist>
+          <p class="note" id="mktmsg" style="margin-top:4px">Local spellings and salts work (${Object.keys(x.apis).length} pilot APIs).</p></div></section>
+      <div class="kpis" style="margin-top:12px">
+        ${tile('events','Authorised products', fmt(k.products), `${fmt(k.vet)} veterinary · ${fmt(k.mahs)} holders · ${fmt(k.apis)} pilot APIs`)}
+        ${tile('supply','Batch-release sites', fmt(k.manufacturers), `${pct(k.with_mf, k.products)}% of products with known site`)}
+        ${tile('shortages','Open shortages', k.shortages_open != null ? fmt(k.shortages_open) : '<span class="chip c-neutral">Not checked</span>', k.shortages_open != null ? 'Notices in connected sources' : 'No national shortage register connected')}
+        ${tile('events','New authorisations', k.new12 != null ? fmt(k.new12) : '<span class="chip c-gap">Gap</span>', k.new12 != null ? 'Last 12 months' : 'Register gives no authorisation date')}
+        ${tile('top','Market volume', k.amount != null ? eur(k.amount) : '<span class="chip c-gap">Gap</span>', k.amount != null ? `${fmt(k.packs)} reimbursed packs · ${esc(k.volume_period)} · Open Medic` : 'No public volume source')}
+      </div>
+      <div class="tabs" role="tablist" aria-label="Sections">${MSECT.map(([s,l]) => `<button class="tab" role="tab" type="button" data-msec="${s}" aria-selected="${sec===s}">${l}</button>`).join('')}</div>
+      <div id="tabpanel"></div></div>`;
+    view.querySelectorAll('[data-msec]').forEach(b => b.addEventListener('click', () => { state.msec = b.dataset.msec; pMarket(cc, true); }));
+    const go = () => { const a = findApi(x, $('#mktq').value); if (a) location.hash = `markets/${cc}/apis/${a.slug}`; else $('#mktmsg').textContent = `No pilot API matches “${$('#mktq').value}” in ${x.name}.`; };
+    $('#mktq').addEventListener('keydown', e => { if (e.key === 'Enter') go(); });
+    $('#mktq').addEventListener('change', go);
+    renderMSec(x);
+  }
+  function hbar(id, rows, label, valFmt){ return () => echartsLib().then(() => { const el = $(id); if (!el) return;
+    mount(id).setOption({...chartBase(), grid:{left:8, right:60, top:4, bottom:4, containLabel:true}, tooltip:{...chartBase().tooltip, trigger:'axis', axisPointer:{type:'shadow'}, valueFormatter:valFmt},
+      xAxis:{type:'value', show:false}, yAxis:{type:'category', inverse:true, data:rows.map(r => r[0].length > 36 ? r[0].slice(0, 35) + '…' : r[0]), axisTick:{show:false}, axisLine:{show:false}, axisLabel:{color:css('--ink2'), fontSize:11}},
+      series:[{type:'bar', name:label, data:rows.map(r => r[1]), barMaxWidth:14, itemStyle:{color:css('--accent'), borderRadius:[0,4,4,0]}, label:{show:true, position:'right', color:css('--muted'), fontSize:10, formatter:p => valFmt(p.value)}}]}); }).catch(() => {}); }
+  function renderMSec(x){
+    const s = state.msec, el = $('#tabpanel'), cc = x.cc; let h = '', after = null;
+    const apiLink = (name, sl) => sl ? `<a href="#markets/${cc}/apis/${sl}" class="cap">${esc(name)}</a>` : `<span class="cap">${esc(name)}</span>`;
+    if (s === 'top') { const T = x.top_subst, vol = T.metric === 'reimbursed_amount', rows = T.rows.slice(0, 20);
+      h = `<section class="card panel"><div class="panel-h"><h2>Largest markets by substance</h2><span class="chip c-neutral">Metric: ${esc(metricLabel(T.metric))}</span></div>
+        <div id="chTop" style="height:${rows.length * 24 + 20}px" role="img" aria-label="Largest substances by ${esc(metricLabel(T.metric))}"></div>
+        <p class="note">${vol ? `Source: ${link(x.kpi.volume_source.url.split(' ')[0], 'Open Medic ' + x.kpi.volume_period)} ${chip('official')} – amounts reimbursed by the French health insurance, all regimes. Substances without pilot drill-down are not linked.` : 'No public volume source for this country, so substances are ranked by the number of authorised products.'}</p>
+        <div class="tbl" style="margin:10px -16px -16px"><table class="dense"><thead><tr><th>Substance</th><th>Products</th>${vol ? '<th>Reimbursed packs</th><th>Reimbursed EUR</th>' : ''}</tr></thead><tbody>
+        ${rows.map(r => `<tr><td class="main">${apiLink(r.name, r.slug)}</td><td class="num">${fmt(r.products)}</td>${vol ? `<td class="num">${fmt(r.packs)}</td><td class="num">${eur(r.amount)}</td>` : ''}</tr>`).join('')}</tbody></table></div></section>`;
+      after = hbar('#chTop', rows.map(r => [r.name, vol ? r.amount : r.products]), metricLabel(T.metric), v => vol ? eur(v) : fmt(v)); }
+    if (s === 'companies') { const V = x.top_mah_vol.length;
+      h = `<div class="grid2" style="grid-template-columns:1fr 1fr;margin-top:0">
+        <section class="card panel"><div class="panel-h"><h2>Top holders by authorisations</h2><span class="chip c-neutral">Metric: products</span></div><div id="chMah" style="height:${x.top_mah.length*22+20}px"></div></section>
+        <section class="card panel"><div class="panel-h"><h2>Top holders by volume</h2>${V ? '<span class="chip c-neutral">Metric: reimbursed EUR</span>' : ''}</div>${V ? `<div id="chMahV" style="height:${V*22+20}px"></div><p class="note">Open Medic ${esc(x.kpi.volume_period)} ${chip('official')}</p>` : `<div class="empty">No public volume source ${gapChip('Volume')}</div>`}</section></div>
+        <section class="card tbl" style="margin-top:16px"><div class="panel-h" style="padding:14px 14px 0"><h2>Concentration per API</h2><span class="note">Number of holders and share of the largest one ${chip('derived')}</span></div><table class="dense"><thead><tr><th>API</th><th>Holders</th><th>Largest holder share</th><th>Metric</th></tr></thead><tbody>
+        ${x.concentration.sort((a,b) => a.holders - b.holders).map(r => `<tr><td class="main">${apiLink(r.api, r.slug)}</td><td class="num">${fmt(r.holders)}</td><td class="num">${r.top_share != null ? r.top_share + '%' : '–'}</td><td class="note">${esc(metricLabel(r.metric))}</td></tr>`).join('')}</tbody></table></section>`;
+      after = () => { hbar('#chMah', x.top_mah.map(r => [r.name, r.products]), 'Products', v => fmt(v))(); if (V) hbar('#chMahV', x.top_mah_vol.map(r => [r.name, r.amount]), 'EUR', v => eur(v))(); }; }
+    if (s === 'supply') { const G = x.supply.site_groups, tot = Object.values(G).reduce((a,b) => a+b, 0);
+      h = `<div class="grid2" style="margin-top:0"><section class="card panel"><div class="panel-h"><h2>Where products for ${esc(x.name)} are released</h2><span class="note">${fmt(tot)} product–site links from leaflets</span></div>
+        <div class="bars">${Object.entries(G).sort((a,b) => b[1]-a[1]).map(([g,n]) => `<div class="bar"><span class="lbl">${esc(g)}</span>${bar(n, tot)}<span class="num" style="text-align:right">${pct(n, tot)}%</span></div>`).join('')}</div>
+        <p class="note" style="margin-top:8px">Batch-release site per package leaflet ${chip('official')}. Domestic = site in ${esc(x.name)}.</p></section>
+        <section class="card panel"><div class="panel-h"><h2>Top release sites</h2></div><div class="bars wide">${x.supply.top_sites.map(t => `<div class="bar"><span class="lbl">${t.id ? `<a href="#${entityHash(t.id)}" title="${esc(t.name)}">${esc(t.name)}</a>` : esc(t.name)} <span class="cc">${esc(t.cc||'?')}</span></span>${bar(t.products, x.supply.top_sites[0].products)}<span class="num" style="text-align:right">${fmt(t.products)}</span></div>`).join('')}</div></section></div>
+        <section class="card panel" style="margin-top:16px"><div class="panel-h"><h2>Site country → release site → authorisation holder</h2><span class="note">Top 80 links, width = products</span></div><div id="chMflow" style="height:620px" role="img" aria-label="Supply flows"></div></section>
+        <section class="card panel" style="margin-top:16px"><div class="panel-h"><h2>API sources for the pilot APIs</h2>${chip('derived')}</div>
+          <p class="note" style="margin-bottom:8px">Active US DMF holders are possible API suppliers; who supplies which product is not public. CEP holders follow once the EDQM licence is granted.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:6px">${x.supply.api_sources.map(a => `<a class="chip c-neutral" href="#markets/${cc}/apis/${(a.api||'').replace(/[^a-z0-9]+/g,'-')}"><span class="cap">${esc(a.api)}</span> <b class="num">${a.n}</b></a>`).join('')}</div></section>`;
+      after = () => echartsLib().then(() => drawFlowGeneric('#chMflow', x.supply.flows)); }
+    if (s === 'prices') { const P = x.prices;
+      h = P.available ? `<section class="card tbl"><div class="panel-h" style="padding:14px 14px 0"><h2>Price per unit by API</h2><span class="note">Source: ${esc(P.source.join(', '))} ${chip('official')}</span></div>
+        <table class="dense"><thead><tr><th>API</th><th>Prices</th><th>Min / unit</th><th>Median / unit</th><th>Max / unit</th><th>Generics</th><th>References</th></tr></thead><tbody>
+        ${P.per_api.filter(r => r.n).map(r => `<tr><td class="main">${apiLink(r.api, r.slug)}</td><td class="num">${fmt(r.n)}</td><td class="num">${r.min != null ? r.min.toFixed(3) + ' ' + r.cur : '–'}</td><td class="num">${r.median != null ? r.median.toFixed(3) + ' ' + r.cur : '–'}</td><td class="num">${r.max != null ? r.max.toFixed(3) + ' ' + r.cur : '–'}</td><td class="num">${fmt(r.generics)}</td><td class="num">${fmt(r.references)}</td></tr>`).join('')}</tbody></table>
+        <p class="note" style="padding:10px 14px">Per unit = pack price ÷ units in the pack (tablets, capsules, ampoules …); packs without a countable unit are left out. All strengths and forms are mixed here – compare like with like on the API page. ${cc==='FR'?'FR: public price excl. dispensing fee (BDPM).':cc==='ES'?'ES: PVP incl. VAT and reference price (Nomenclátor).':cc==='DK'?'DK: AIP and AUP (Sundhedsdatastyrelsen).':''}</p></section>`
+        : `<div class="card empty">No public price list connected for ${esc(x.name)}. ${gapChip('Prices')}</div>`; }
+    if (s === 'shortages') { const S = x.shortages;
+      h = `<section class="card panel"><div class="panel-h"><h2>Shortage notices per month</h2></div><div id="chShort" style="height:200px"></div></section>
+        <section class="card tbl" style="margin-top:16px">${S.list.length ? `<table class="dense"><thead><tr><th>Date</th><th>Product</th><th>API</th><th>State</th><th>Reporter</th><th>Area</th><th>Source</th></tr></thead><tbody>
+        ${S.list.slice(0, state.limit).map(r => `<tr><td class="num nw">${esc(r.date||'–')}</td><td class="main">${esc(r.product||'–')}</td><td class="cap">${r.api ? apiLink(r.api, r.api.replace(/[^a-z0-9]+/g,'-')) : '–'}</td><td>${r.active ? `<span class="chip c-gap">${esc(r.state||'Open')}</span>` : `<span class="chip c-neutral">${esc(r.state||'Resolved')}</span>`}</td><td class="note">${esc(r.reporter||'–')}</td><td class="note">${esc(r.domain||'–')}</td><td>${link(r.url,'Notice')} ${chip(r.st)}</td></tr>`).join('')}</tbody></table>${moreBtn(Math.min(state.limit, S.list.length), S.list.length)}` : `<div class="empty">No shortage notices in the connected sources for ${esc(x.name)}.</div>`}</section>`;
+      after = () => echartsLib().then(() => { if (!$('#chShort')) return; mount('#chShort').setOption({...chartBase(), tooltip:{...chartBase().tooltip, trigger:'axis'}, xAxis:{type:'category', data:S.by_month.map(r => r[0]), axisLabel:{color:css('--muted')}, axisTick:{show:false}}, yAxis:{type:'value', splitLine:{lineStyle:{color:css('--line')}}, axisLabel:{color:css('--muted')}}, series:[{type:'bar', name:'Notices', data:S.by_month.map(r => r[1]), barMaxWidth:14, itemStyle:{color:css('--gap-fg'), borderRadius:[3,3,0,0]}}]}); }); }
+    if (s === 'tenders') h = `<section class="card tbl">${x.tenders.length ? `<table class="dense"><thead><tr><th>Date</th><th>API</th><th>Buyer</th><th>Winner (raw text)</th><th>Value</th><th>Source</th></tr></thead><tbody>
+        ${x.tenders.slice(0, state.limit).map(t => `<tr><td class="num nw">${esc(t.date||'–')}</td><td class="cap">${esc(t.api||'–')}</td><td class="main">${esc(t.buyer)}</td><td>${esc(t.winner||'–')}</td><td class="num">${t.value != null ? fmt(Math.round(t.value)) + ' ' + esc(t.cur||'') : '–'}</td><td>${link(t.url, 'TED ' + t.id)}</td></tr>`).join('')}</tbody></table>${moreBtn(Math.min(state.limit, x.tenders.length), x.tenders.length)}` : `<div class="empty">No TED award notice for the pilot APIs with a buyer in ${esc(x.name)}. ${gapChip('Tenders')}</div>`}</section>`;
+    if (s === 'events') { h = `<div class="grid2" style="margin-top:0"><section class="card panel"><div class="panel-h"><h2>New authorisations per month</h2><span class="note">Last 24 months</span></div><div id="chNew" style="height:240px"></div></section>
+        <section class="card panel"><div class="panel-h"><h2>Latest authorisations</h2></div><div style="max-height:260px;overflow:auto">${x.recent.length ? x.recent.map(r => `<div class="sig-row"><span class="num note nw">${esc(r.date)}</span><div style="min-width:0"><div class="sig-t" title="${esc(r.name)}">${esc(r.name)}</div><div class="note">${esc(r.mah||'')} · ${link(r.src,'Source')}</div></div></div>`).join('') : '<div class="empty">No authorisation date in this register.</div>'}</div></section></div>
+        <section class="card panel" style="margin-top:16px"><div class="panel-h"><h2>Withdrawals (marketing stopped)</h2></div>${x.withdrawals.length ? x.withdrawals.map(r => `<div class="sig-row"><span class="num note nw">${esc(r.date||'–')}</span><div class="sig-t">${esc(r.product)}</div>${link(r.url,'ANSM')}</div>`).join('') : `<div class="empty">No withdrawal notices in the connected sources.</div>`}</section>`;
+      after = () => echartsLib().then(() => { if (!$('#chNew')) return; mount('#chNew').setOption({...chartBase(), tooltip:{...chartBase().tooltip, trigger:'axis'}, xAxis:{type:'category', data:x.months.map(r => r[0]), axisLabel:{color:css('--muted')}, axisTick:{show:false}}, yAxis:{type:'value', splitLine:{lineStyle:{color:css('--line')}}, axisLabel:{color:css('--muted')}}, series:[{type:'bar', name:'New authorisations', data:x.months.map(r => r[1]), barMaxWidth:14, itemStyle:{color:css('--accent'), borderRadius:[3,3,0,0]}}]}); }); }
+    if (s === 'gaps') h = `<section class="card tbl"><table><thead><tr><th>Area</th><th>What is missing and why</th><th>Cases</th><th>Where obtainable</th></tr></thead><tbody>${x.gaps.map(g => `<tr><td><span class="chip c-gap">${esc(AREA[g.area]||g.area)}</span></td><td class="main" style="font-weight:500">${esc(g.reason)}</td><td class="num">${g.n != null ? fmt(g.n) : '–'}</td><td>${/^https?:/.test(g.where||'') ? link(g.where,'Example') : esc(g.where||'–')}</td></tr>`).join('')}</tbody></table></section>`;
+    el.innerHTML = h; if (after) after();
+  }
+  function drawFlowGeneric(id, F){
+    if (!$(id)) return;
+    const L = {}, add = (k, v) => L[k] = (L[k]||0) + v;
+    F.forEach(([c, s, m, n]) => { add(`C|${c}\tS|${s}`, n); add(`S|${s}\tM|${m}`, n); });
+    const nodes = new Set(); const links = Object.entries(L).map(([k, v]) => { const [a, b] = k.split('\t'); nodes.add(a); nodes.add(b); return {source:a, target:b, value:v}; });
+    const col = n => n.startsWith('C|') ? css('--muted') : n.startsWith('S|') ? css('--off-fg') : css('--accent');
+    mount(id).setOption({...chartBase(), tooltip:{...chartBase().tooltip, trigger:'item', formatter:p => p.dataType === 'edge' ? `${esc(p.data.source.slice(2))} → ${esc(p.data.target.slice(2))}<br><b>${fmt(p.data.value)}</b> products` : `${esc(p.name.slice(2))}<br><b>${fmt(p.value)}</b> products`},
+      series:[{type:'sankey', left:4, right:170, top:8, bottom:8, nodeGap:5, nodeWidth:9, draggable:false, emphasis:{focus:'adjacency'},
+        data:[...nodes].map(n => ({name:n, itemStyle:{color:col(n), borderWidth:0}})), links,
+        label:{color:css('--ink'), fontSize:10.5, formatter:p => { const t = p.name.slice(2); return t.length > 32 ? t.slice(0, 31) + '…' : t; }}, lineStyle:{color:'gradient', opacity:.28, curveness:.5}}]});
+  }
+
+  const ATABS = [['products','Products'],['shares','Market shares'],['prices','Prices'],['patents','Patents'],['customers','Potential customers'],['sources','API sources'],['supply','Supply chain']];
+  async function pMarketApi(cc, sl, keep){
+    setNav('markets'); await data();
+    let x; try { x = await market(cc); } catch(e) { view.innerHTML = `<div class="card empty">No data for ${esc(cc)}.</div>`; return; }
+    const a = x.apis[sl];
+    if (!a) { crumbs([['Markets','#markets'],[x.name, '#markets/' + cc],['Not found']]); view.innerHTML = `<div class="card empty">This API has no products in ${esc(x.name)} in the pilot data. <a href="#markets/${cc}">Back to ${esc(x.name)}</a></div>`; return; }
+    crumbs([['Markets','#markets'],[x.name, '#markets/' + cc],[a.api.charAt(0).toUpperCase() + a.api.slice(1)]]);
+    const k = a.kpi, t = state.atab;
+    view.innerHTML = `<div class="${keep?'':'fade'}">
+      <section class="card dhead"><div style="min-width:0;flex:1 1 560px"><p class="eyebrow">API in market · ${esc(x.name)}</p><h1 class="cap">${esc(a.api)}</h1>
+        <div class="ids"><span><a href="#api-${esc(sl)}">Open API 360 (all markets)</a></span><span><a href="#markets/${cc}">Back to ${esc(x.name)}</a></span></div>
+        <p class="summary">${esc(a.summary)}</p></div></section>
+      <div class="kpis" style="margin-top:12px">
+        <div class="card kpi"><span>Products</span><b class="num">${fmt(k.products)}</b><small>${fmt(k.mahs)} holders · incl. fixed combinations</small></div>
+        <div class="card kpi"><span>With known site</span><b class="num">${fmt(k.with_mf)}</b><small>Batch release from leaflet</small></div>
+        <div class="card kpi"><span>Volume</span><b class="num">${k.amount != null ? eur(k.amount) : '<span class="chip c-gap">Gap</span>'}</b><small>${k.amount != null ? fmt(k.packs) + ' packs · Open Medic ' + esc(x.kpi.volume_period) : 'No public volume source'}</small></div>
+        <div class="card kpi"><span>Shortage</span><b class="num">${x.kpi.shortages_open == null ? '<span class="chip c-neutral">Not checked</span>' : k.shortage ? '<span class="chip c-gap">Open</span>' : '<span class="chip c-neutral">None open</span>'}</b><small>${x.kpi.shortages_open == null ? 'No national shortage register connected' : 'Connected shortage sources'}</small></div>
+        <div class="card kpi"><span>API sources</span><b class="num">${fmt(k.api_sources)}</b><small>Active US DMF holders · CEP not checked</small></div>
+      </div>
+      <div style="display:flex;align-items:flex-end;gap:12px;justify-content:space-between;flex-wrap:wrap">
+        <div class="tabs" role="tablist" aria-label="Sections" style="flex:1;min-width:0">${ATABS.map(([s,l]) => `<button class="tab" role="tab" type="button" data-atab="${s}" aria-selected="${t===s}">${l}</button>`).join('')}</div>
+        <button class="btn" type="button" id="mxXlsx" style="margin-bottom:12px">Export all tables to Excel</button></div>
+      <div id="tabpanel"></div></div>`;
+    view.querySelectorAll('[data-atab]').forEach(b => b.addEventListener('click', () => { state.atab = b.dataset.atab; state.limit = 60; pMarketApi(cc, sl, true); }));
+    $('#mxXlsx').addEventListener('click', () => exportMarketApi(x, a));
+    renderATab(x, a);
+  }
+  function renderATab(x, a){
+    const t = state.atab, el = $('#tabpanel'), L = state.limit, q = state.q; let h = '', after = null;
+    if (t === 'products') { const R = a.products.filter(r => has({n:r.name, m:r.mah, no:r.no}, q));
+      h = `<section class="card tbl scroll"><table class="dense"><thead><tr><th>Product</th><th>Strength / form</th><th>Holder</th><th>Authorisation</th><th>Status</th><th>Manufacturer (leaflet)</th><th>Price</th><th>Reimb.</th><th>Volume</th><th>Shortage</th><th>Source</th></tr></thead><tbody>
+      ${R.slice(0, L).map((r, i) => { const p0 = r.prices.find(p => !/reference/.test(p.type)) || r.prices[0];
+        return `<tr><td class="main">${esc(r.name)}${r.generic ? ` <span class="chip c-neutral">${esc(r.generic)}</span>` : ''}</td><td class="note">${esc([r.strength, r.form].filter(Boolean).join(' · ') || '–')}</td>
+        <td>${r.mah_id ? `<a href="#${entityHash(r.mah_id)}">${esc(r.mah)}</a>` : esc(r.mah||'–')}</td><td class="num">${esc(r.no||'–')}</td><td class="note">${esc(r.status||'–')}</td>
+        <td>${r.manufacturers.length ? r.manufacturers.map((m, j) => `<button class="btn" type="button" data-q="${i}:${j}" style="height:22px;padding:0 6px;font-size:11px">${esc(m.name.length > 28 ? m.name.slice(0, 27) + '…' : m.name)} <span class="cc">${esc(m.cc||'?')}</span></button>`).join(' ') : '<span class="note">–</span>'}</td>
+        <td class="num nw">${p0 ? `${p0.value.toFixed(2)} ${esc(p0.cur)}${p0.per_unit != null ? `<br><span class="note">${p0.per_unit.toFixed(3)} / unit</span>` : ''}` : '–'}</td><td class="num">${esc((p0 && p0.reimb) || '–')}</td>
+        <td class="num nw">${r.packs != null ? fmt(r.packs) + ' packs<br><span class="note">' + eur(r.amount) + '</span>' : `<span class="note" title="${x.kpi.amount != null ? 'No Open Medic row for this product (not reimbursed in the period, or an EMA Art. 57 entry without French pack codes)' : 'No public volume source'}">–</span>`}</td><td>${r.shortage ? '<span class="chip c-gap">Yes</span>' : '<span class="note">No</span>'}</td>
+        <td>${link(r.src, 'Register')}${p0 ? '<br>' + link(p0.url, 'Price') : ''}</td></tr>`; }).join('')}</tbody></table>${moreBtn(Math.min(L, R.length), R.length)}</section>
+        <p class="note" style="margin-top:8px">The API filter includes fixed-dose combinations containing ${esc(a.api)}.${a.api_prices.length ? ` ${fmt(a.api_prices.length)} price rows are linked to the API but not to a single product (register names differ).` : ''}</p>`;
+      after = () => el.querySelectorAll('[data-q]').forEach(b => b.addEventListener('click', () => { const [i, jx] = b.dataset.q.split(':').map(Number); const r = R[i], m = r.manufacturers[jx];
+        showSheet(`${x.cc} · ${r.mah||''}`, r.name, `<div><h3 class="h3">Verbatim from the package leaflet</h3><div class="quote">${esc(m.quote||'–')}</div><p style="margin-top:8px">${link(m.url,'Open leaflet')}</p></div><dl class="dl"><dt>Site</dt><dd>${esc(m.name)} <span class="cc">${esc(m.cc||'?')}</span></dd><dt>Status</dt><dd>${chip(m.st)}</dd></dl>`); })); }
+    if (t === 'shares') { h = `<section class="card panel"><div class="panel-h"><h2>Market shares of holders</h2><span class="chip c-neutral">Metric: ${esc(metricLabel(a.share_metric))}</span></div><div id="chShare" style="height:${a.shares.length*24+20}px"></div>
+        <p class="note">${a.share_metric === 'reimbursed_amount' ? `Open Medic ${esc(x.kpi.volume_period)} ${chip('official')}, per holder of the products. Includes fixed combinations.` : 'No volume source – share of authorised products, not of sales.'}</p></section>`;
+      after = hbar('#chShare', a.shares.map(s => [s.mah, s.share]), 'Share %', v => v + '%'); }
+    if (t === 'prices') { const pts = a.price_points.slice().sort((p, q2) => p[1] - q2[1]);
+      h = pts.length ? `<section class="card panel"><div class="panel-h"><h2>Price per unit by product</h2><span class="note">${esc([...new Set(pts.map(p => p[2]))].join(' · '))}</span></div><div id="chPrice" style="height:${Math.min(900, pts.length*14+40)}px"></div>
+        <p class="note">Public / consumer price per unit (purchase and reference prices are left out here), sorted from lowest to highest; all strengths and forms. Source and date per value are in the Products tab and the Excel export.</p></section>
+        ${a.history.length ? `<section class="card panel" style="margin-top:16px"><div class="panel-h"><h2>Price development</h2><span class="chip c-neutral">${esc(a.history_metric)}</span></div><div id="chHist" style="height:240px"></div><p class="note">Sundhedsdatastyrelsen price list, biweekly ${chip('official')}. The median moves with price changes and with packs entering or leaving the list – it is not a single product’s price.</p></section>` : ''}`
+        : `<div class="card empty">No price data for ${esc(a.api)} in ${esc(x.name)}. ${gapChip('Prices')}</div>`;
+      after = () => { if (!pts.length) return; hbar('#chPrice', pts.slice(0, 60).map(p => [p[0], +p[1].toFixed(4)]), 'per unit', v => v + ' ' + (pts[0][3]||''))();
+        if (a.history.length) echartsLib().then(() => mount('#chHist').setOption({...chartBase(), tooltip:{...chartBase().tooltip, trigger:'axis'}, xAxis:{type:'category', data:a.history.map(r => r[0]), axisLabel:{color:css('--muted')}, axisTick:{show:false}}, yAxis:{type:'value', scale:true, splitLine:{lineStyle:{color:css('--line')}}, axisLabel:{color:css('--muted')}}, series:[{type:'line', name:'Median per unit', data:a.history.map(r => r[1]), showSymbol:false, lineStyle:{width:2, color:css('--accent')}, itemStyle:{color:css('--accent')}}]})); }; }
+    if (t === 'patents') h = `<section class="card tbl"><table class="dense"><thead><tr><th>Number</th><th>Type</th><th>Expiry</th><th>Source</th></tr></thead><tbody>${a.patents.map(p => `<tr><td class="main num">${esc(p.no)} <span class="cc">US</span></td><td>${esc(p.type)}</td><td class="num">${esc(p.exp||'–')}</td><td>${link(p.url,'Orange Book')}</td></tr>`).join('') || '<tr><td colspan="4" class="empty">No US patent in the Orange Book.</td></tr>'}</tbody></table>
+        <p class="note" style="padding:10px 14px">Patents and SPCs for ${esc(x.name)}: not checked – EPO OPS access pending, national SPC registers not connected ${gapChip('Patents')}. Generic status from the register flag: ${fmt(a.kpi.generics)} generics, ${fmt(a.kpi.references)} reference products.</p></section>`;
+    if (t === 'customers') h = `<div class="toolbar"><span class="note">Authorisation holders with products of ${esc(a.api)} in ${esc(x.name)}. Ranked by products, volume, open shortage, US patent expiry within 24 months and few API sources. ${chip('derived')}</span></div>
+      <section class="card tbl"><table class="dense"><thead><tr><th>Company</th><th>Score</th><th>Why</th><th>Status</th></tr></thead><tbody>${a.customers.map(c => `<tr class="click" data-company="${c.id}" tabindex="0"><td class="main">${esc(c.name)}</td><td class="num">${fmt(c.score)}</td><td class="note">${c.reasons.map(esc).join('<br>')}</td><td>${chip(c.status)}</td></tr>`).join('')}</tbody></table></section>`;
+    if (t === 'sources') h = `<div class="toolbar"><span class="note">Possible API sources: active US DMF holders. Who supplies which product is not public. CEP holders and EU DMF hints follow once EDQM data is licensed. ${chip('derived')}</span></div>
+      <section class="card tbl"><table class="dense"><thead><tr><th>API manufacturer</th><th>US DMF</th><th>Submitted</th><th>EU DMF hint</th><th>Source</th></tr></thead><tbody>${a.api_sources.map(s => `<tr class="click" data-company="${s.id}" tabindex="0"><td class="main">${esc(s.name)}</td><td class="num">${esc(s.no)}</td><td class="num">${esc(s.date||'–')}</td><td>${NC}</td><td>${link(s.url,'FDA')} ${chip(s.status)}</td></tr>`).join('')}</tbody></table></section>`;
+    if (t === 'supply') { h = a.flows.length ? `<section class="card panel"><div class="panel-h"><h2>Supply chain in ${esc(x.name)}</h2><span class="note">Site country → release site → holder</span></div><div id="chAflow" style="height:520px"></div><p class="note">From package leaflets ${chip('official')}. API supplier → site is not public ${gapChip('API supplier')}.</p></section>` : `<div class="card empty">No leaflet manufacturer data for ${esc(a.api)} in ${esc(x.name)} yet.</div>`;
+      after = () => { if (a.flows.length) echartsLib().then(() => drawFlowGeneric('#chAflow', a.flows)); }; }
+    el.innerHTML = h; if (after) after();
+  }
+  async function exportMarketApi(x, a){
+    if (!xlsxLib) xlsxLib = await new Promise((ok, no) => { const s = document.createElement('script'); s.src = 'https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js'; s.onload = () => ok(window.XLSX); s.onerror = no; document.head.appendChild(s); });
+    const X = xlsxLib.utils, wb = X.book_new(), add = (n, rows) => X.book_append_sheet(wb, X.json_to_sheet(rows.length ? rows : [{Note:'No rows'}]), n);
+    add('Products', a.products.map(r => ({Product:r.name, Strength:r.strength, Form:r.form, Holder:r.mah, Authorisation:r.no, Status:r.status, Generic_type:r.generic||'', Manufacturers:r.manufacturers.map(m => `${m.name} (${m.cc||'?'})`).join('; '), Reimbursed_packs:r.packs, Reimbursed_EUR:r.amount, Shortage:r.shortage?'yes':'no', Data_status:r.st, Source:r.src})));
+    add('Prices', a.products.flatMap(r => r.prices.map(p => ({Product:r.name, Pack:p.pack, Pack_code:p.code, Price:p.value, Currency:p.cur, Type:p.type, Units:p.units, Per_unit:p.per_unit, Reimbursement:p.reimb, Date:p.date, Source:p.url}))).concat(a.api_prices.map(p => ({Product:'(API-level)', Pack:p.pack, Pack_code:p.code, Price:p.value, Currency:p.cur, Type:p.type, Units:p.units, Per_unit:p.per_unit, Date:p.date, Source:p.url}))));
+    add('Market shares', a.shares.map(s => ({Holder:s.mah, Value:s.value, Share_pct:s.share, Metric:a.share_metric})));
+    add('Price history', a.history.map(h => ({Date:h[0], Median_per_unit:h[1], Metric:a.history_metric})));
+    add('Patents', a.patents.map(p => ({Number:p.no, Type:p.type, Expiry:p.exp, Country:'US', Source:p.url})));
+    add('Potential customers', a.customers.map(c => ({Company:c.name, Score:c.score, Reasons:c.reasons.join(' | '), Status:c.status})));
+    add('API sources', a.api_sources.map(s => ({Manufacturer:s.name, US_DMF:s.no, Submitted:s.date, Status:s.status, Source:s.url})));
+    add('Supply chain', a.flows.map(f => ({Site_country:f[0], Release_site:f[1], Holder:f[2], Products:f[3]})));
+    X.book_append_sheet(wb, X.aoa_to_sheet([['Country', x.name], ['API', a.api], ['Export', new Date().toISOString().slice(0,10)], ['Note', 'derived = inferred, not confirmed. Volume = Open Medic where available. Every row has its source.']]), 'Info');
+    xlsxLib.writeFile(wb, `PharmaLens_${x.cc}_${a.slug}_${new Date().toISOString().slice(0,10)}.xlsx`);
   }
 
   async function pGaps(keep){
@@ -1023,17 +1213,21 @@ tr.click:active{background:var(--press)}
   async function route(){
     closeLayer();
     const h = location.hash.replace('#','') || 'overview';
-    const prevPage = route.page; let page = h.startsWith('api-') ? 'api' : h.startsWith('co-') ? 'co' : h.startsWith('mf-') ? 'mf' : h;
-    if (page !== prevPage || page === 'api' || page === 'co' || page === 'mf') { state.q = ''; pageq.value = ''; state.limit = 60; state.sort = ['products', -1]; }
+    const prevPage = route.page; let page = h.startsWith('api-') ? 'api' : h.startsWith('co-') ? 'co' : h.startsWith('mf-') ? 'mf' : /^markets\/[A-Z]{2}\/apis\//.test(h) ? 'mkta' : /^markets\/[A-Z]{2}$/.test(h) ? 'mkt' : h;
+    if (page !== prevPage || page === 'api' || page === 'co' || page === 'mf' || page === 'mkt' || page === 'mkta') { state.q = ''; pageq.value = ''; state.limit = 60; state.sort = ['products', -1]; }
     if (page === 'api' && prevPage !== 'api') { state.tab = 'sites'; state.cc = ''; }
     if (page === 'co') { state.ctab = h.endsWith('~mah') ? 'mah' : 'cdmo'; state.cc = ''; }
     if (page === 'mf') { state.mtab = 'portfolio'; }
+    if (page === 'mkt' && prevPage !== 'mkt') state.msec = 'top';
+    if (page === 'mkta') state.atab = 'products';
     route.page = page;
     const map = { overview:pOverview, apis:pApis, companies:pCompanies, manufacturers:pManufacturers, markets:pMarkets, gaps:pGaps, sources:pSources };
-    pageq.placeholder = { overview:'Filter this page', apis:'Filter: API, UNII, CAS, ATC', companies:'Filter: company, alias, group', co:'Filter: product, holder, API', mf:'Filter: API, company, reason', manufacturers:'Filter: manufacturer, API, group', markets:'Filter: country', gaps:'Filter: reason', sources:'Filter: source or country', api:'Filter: company, product, number' }[page] || 'Filter this page';
+    pageq.placeholder = { overview:'Filter this page', apis:'Filter: API, UNII, CAS, ATC', companies:'Filter: company, alias, group', co:'Filter: product, holder, API', mf:'Filter: API, company, reason', mkt:'Filter this page', mkta:'Filter: product, holder, number', manufacturers:'Filter: manufacturer, API, group', markets:'Filter: country', gaps:'Filter: reason', sources:'Filter: source or country', api:'Filter: company, product, number' }[page] || 'Filter this page';
     if (page === 'api') current = keep => pApi(h.slice(4), keep);
     else if (h.startsWith('co-')) { current = keep => pCompany(parseInt(h.slice(3)), keep); page = 'co'; }
     else if (h.startsWith('mf-')) { current = keep => pManufacturer(+h.slice(3), keep); }
+    else if (page === 'mkt') { current = keep => pMarket(h.slice(8), keep); }
+    else if (page === 'mkta') { const [, cc, , sl] = h.split('/'); current = keep => pMarketApi(cc, sl, keep); }
     else current = map[page] || pOverview;
     await current();
     window.scrollTo(0, 0);

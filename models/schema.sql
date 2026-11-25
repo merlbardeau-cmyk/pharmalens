@@ -377,3 +377,18 @@ CREATE TABLE IF NOT EXISTS potential_customer (
 ALTER TABLE product ADD COLUMN IF NOT EXISTS substances_raw text;
 CREATE INDEX IF NOT EXISTS product_country_cur ON product (country) WHERE valid_to IS NULL;
 CREATE INDEX IF NOT EXISTS pm_company_cur ON product_manufacturer (company_id) WHERE valid_to IS NULL;
+
+-- v0.5: market data (prices per pack, reimbursement, generic groups, volumes per pack)
+ALTER TABLE price ADD COLUMN IF NOT EXISTS pack_code text;
+ALTER TABLE price ADD COLUMN IF NOT EXISTS reimbursement_rate text;
+ALTER TABLE price ADD COLUMN IF NOT EXISTS raw_id bigint;
+ALTER TABLE market_metric ADD COLUMN IF NOT EXISTS product_id bigint;
+ALTER TABLE market_metric ADD COLUMN IF NOT EXISTS pack_code text;
+CREATE INDEX IF NOT EXISTS mm_country_cur ON market_metric (country, metric) WHERE valid_to IS NULL;
+CREATE INDEX IF NOT EXISTS price_country_cur ON price (country) WHERE valid_to IS NULL;
+CREATE TABLE IF NOT EXISTS product_generic (
+  row_id bigserial PRIMARY KEY, product_id bigint, group_id text, group_label text,
+  generic_type text CHECK (generic_type IN ('reference','generic','complementary','substitutable')),
+  source_url text, source_name text, retrieved_at timestamptz, status data_status DEFAULT 'official', raw_id bigint,
+  valid_from timestamptz DEFAULT now(), valid_to timestamptz);
+CREATE INDEX IF NOT EXISTS pg_product_cur ON product_generic (product_id) WHERE valid_to IS NULL;

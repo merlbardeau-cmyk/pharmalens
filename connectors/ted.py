@@ -11,6 +11,10 @@ from connectors.common import Fetcher  # noqa: E402
 from models.db import connect, now  # noqa: E402
 
 API = "https://api.ted.europa.eu/v3/notices/search"
+ISO3 = {"AUT": "AT", "BEL": "BE", "BGR": "BG", "HRV": "HR", "CYP": "CY", "CZE": "CZ", "DNK": "DK", "EST": "EE", "FIN": "FI", "FRA": "FR",
+        "DEU": "DE", "GRC": "GR", "HUN": "HU", "IRL": "IE", "ITA": "IT", "LVA": "LV", "LTU": "LT", "LUX": "LU", "MLT": "MT", "NLD": "NL",
+        "POL": "PL", "PRT": "PT", "ROU": "RO", "SVK": "SK", "SVN": "SI", "ESP": "ES", "SWE": "SE", "NOR": "NO", "ISL": "IS", "LIE": "LI",
+        "CHE": "CH", "GBR": "GB"}
 FIELDS = ["publication-number", "notice-type", "buyer-name", "buyer-country", "winner-name", "publication-date",
           "total-value", "total-value-cur"]
 
@@ -41,7 +45,7 @@ def run():
                     """INSERT INTO tender (api_id, country, buyer, winner_raw, value, currency, award_date, notice_id,
                            source_url, source_name, retrieved_at, status, raw_id)
                        VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,'TED API v3',%s,'official',%s)""",
-                    (aid, None, (first(nt.get("buyer-name")) or "") + (f" [{cc}]" if cc else ""), "; ".join(sorted({w for v in (nt.get("winner-name") or {}).values() for w in v}))
+                    (aid, ISO3.get(cc), (first(nt.get("buyer-name")) or "") + (f" [{cc}]" if cc else ""), "; ".join(sorted({w for v in (nt.get("winner-name") or {}).values() for w in v}))
                      if isinstance(nt.get("winner-name"), dict) else None,
                      float(val) if val not in (None, "") else None, first(nt.get("total-value-cur")),
                      (nt.get("publication-date") or "")[:10] or None, pub, f"https://ted.europa.eu/en/notice/-/detail/{pub}",

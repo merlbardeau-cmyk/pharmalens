@@ -10,7 +10,7 @@ from connectors.common import ROOT  # noqa: E402
 from models.db import connect  # noqa: E402
 
 PROV_TABLES = ["api", "company", "company_relation", "api_certificate", "product", "product_manufacturer", "patent", "event",
-               "tender", "supply_link", "api_synonym", "company_alias", "company_role", "signal", "potential_customer"]
+               "tender", "supply_link", "api_synonym", "company_alias", "company_role", "signal", "potential_customer", "price", "market_metric", "product_generic"]
 
 
 def rules(conn):
@@ -34,6 +34,11 @@ def rules(conn):
     v, n = conn.execute("""SELECT count(*) FILTER (WHERE source_url IS NULL OR cardinality(evidence_ids)=0 OR signal_date IS NULL),
                            count(*) FROM signal WHERE valid_to IS NULL""").fetchone()
     out.append(("signal_has_date_source_evidence", v, n, "Signal ohne Datum, Quelle oder Beleg"))
+    v, n = conn.execute("""SELECT count(*) FILTER (WHERE value <= 0 OR (normalized_value IS NOT NULL AND units_per_pack IS NULL)), count(*)
+                           FROM price WHERE valid_to IS NULL""").fetchone()
+    out.append(("price_positive_and_unit_consistent", v, n, "Preis <= 0 oder Stückpreis ohne Stückzahl"))
+    v, n = conn.execute("""SELECT count(*) FILTER (WHERE value < 0 OR period IS NULL OR unit IS NULL), count(*) FROM market_metric WHERE valid_to IS NULL""").fetchone()
+    out.append(("volume_has_period_and_unit", v, n, "Volumen ohne Periode/Einheit oder negativ"))
     v, n = conn.execute("SELECT count(*) FILTER (WHERE country IS NULL), count(*) FROM company WHERE valid_to IS NULL").fetchone()
     out.append(("company_without_country", v, n, "Firma ohne Land (nicht erfunden -> gap)"))
     v = conn.execute("SELECT count(*) FROM (SELECT name_normalized FROM company WHERE valid_to IS NULL GROUP BY 1 HAVING count(*)>1) x").fetchone()[0]
