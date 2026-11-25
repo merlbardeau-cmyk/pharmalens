@@ -151,6 +151,15 @@ a.chip:hover{filter:brightness(.97)}
 .toolbar input.field{flex:1 1 220px;min-width:0}
 
 /* ---------- MetricCard ---------- */
+.kpib{font:inherit;text-align:left;cursor:pointer;color:inherit;transition:transform var(--t-press) ease-out,border-color var(--t-fast) ease}
+.kpib:hover{border-color:var(--line-strong)}.kpib:active{transform:scale(.985)}
+.kpib b .chip{font-size:var(--fs-xs);vertical-align:4px}
+.kpi b .chip,.kpi small .chip{display:inline-flex}
+.tbl.scroll{overflow-x:auto}.tbl.scroll th{position:static}
+table.dense td,table.dense th{padding-left:9px;padding-right:9px}
+.seg a.segl{display:inline-flex;align-items:center;height:24px;padding:0 9px;border-radius:5px;color:var(--ink2);font-size:var(--fs-s);font-weight:500}
+.seg a.segl:hover{color:var(--ink)}
+.seg a.segl[aria-pressed="true"]{background:var(--card);color:var(--ink);box-shadow:0 1px 2px rgba(15,23,42,.10),0 0 0 .5px var(--line-strong)}
 .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:var(--s3)}
 .kpi{padding:14px 16px}
 .kpi span{display:block;font-size:var(--fs-xs);color:var(--muted);font-weight:500}
@@ -305,6 +314,7 @@ tr.click:active{background:var(--press)}
       <a class="navitem" href="#overview" data-nav="overview"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>Dashboard</a>
       <a class="navitem" href="#apis" data-nav="apis"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3h4v6l5 9a2 2 0 0 1-2 3H7a2 2 0 0 1-2-3l5-9z"/><path d="M8 15h8"/></svg>APIs<span class="count num" id="nApis"></span></a>
       <a class="navitem" href="#companies" data-nav="companies"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V10l6 4V10l6 4V6l6 4v11z"/></svg>Companies<span class="count num" id="nComp"></span></a>
+      <a class="navitem" href="#manufacturers" data-nav="manufacturers"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6M10 3v5.5L5.5 17A2.5 2.5 0 0 0 7.7 21h8.6a2.5 2.5 0 0 0 2.2-4L14 8.5V3"/><circle cx="10" cy="15" r="1"/><circle cx="14" cy="17" r="1"/></svg>Manufacturers<span class="count num" id="nMf"></span></a>
       <a class="navitem" href="#markets" data-nav="markets"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>Markets<span class="count num" id="nMk"></span></a>
     </nav>
     <nav class="navgroup" aria-label="Data quality">
@@ -365,8 +375,8 @@ tr.click:active{background:var(--press)}
   // ---------- data ----------
   const D = {}; const API = {};
   const j = async p => (await fetch(p)).json();
-  async function data(){ if (!D.index) { const [i,c,m,s,g,x] = await Promise.all([j('apis.json'), j('companies.json'), j('markets.json'), j('sources.json'), j('gaps.json'), j('search.json')]);
-      Object.assign(D, {index:i, companies:c, markets:m, sources:s, gaps:g, search:x}); } return D; }
+  async function data(){ if (!D.index) { const [i,c,m,s,g,x,mf] = await Promise.all([j('apis.json'), j('companies.json'), j('markets.json'), j('sources.json'), j('gaps.json'), j('search.json'), j('manufacturers.json')]);
+      Object.assign(D, {index:i, companies:c, markets:m, sources:s, gaps:g, search:x, mfr:mf, mfrMap:Object.fromEntries(mf.map(e => [e.id, e]))}); } return D; }
   async function api(slug){ if (!API[slug]) API[slug] = await j(`api/${slug}.json`); return API[slug]; }
 
   // ---------- theme ----------
@@ -397,11 +407,11 @@ tr.click:active{background:var(--press)}
   });
   async function renderPalette(){
     const d = await data(); const q = $('#pq').value.trim().toLowerCase();
-    const pages = [['overview','Dashboard'],['apis','APIs'],['companies','Companies'],['markets','Markets'],['gaps','Gaps'],['sources','Sources']];
+    const pages = [['overview','Dashboard'],['apis','APIs'],['companies','Companies'],['manufacturers','Manufacturers'],['markets','Markets'],['gaps','Gaps'],['sources','Sources']];
     const g = [];
     const A = d.index.apis.filter(a => !q || [a.inn,a.unii,a.cas,a.atc].some(x => (x||'').toLowerCase().includes(q))).slice(0, 6)
       .map(a => ({icon:'API', label:a.inn, cap:true, sub:`${a.countries} countries · ${fmt(a.products)} products`, go:'#api-'+a.slug}));
-    const C = q ? findCompanies(d.search, q).slice(0, 7).map(([c, why]) => ({icon:(c.cc||'–'), label:c.n, sub:why || compSub(c), company:c.id})) : [];
+    const C = q ? findCompanies(d.search, q).slice(0, 7).map(([c, why]) => ({icon:(c.cc||'–'), label:c.n, sub:(mfrOf(c.id)?.primary === 'manufacturer' ? 'API manufacturer · ' : 'Company · ') + (why || (mfrOf(c.id)?.primary === 'manufacturer' ? `${fmt(mfrOf(c.id).dmf)} active US DMFs` : compSub(c))), company:c.id})) : [];
     const M = q ? d.markets.filter(m => m.name.toLowerCase().includes(q) || m.cc.toLowerCase() === q).slice(0, 4).map(m => ({icon:m.cc, label:m.name, sub:`${fmt(m.products)} products`, go:'#markets', market:m.cc})) : [];
     const P = pages.filter(([,l]) => !q || l.toLowerCase().includes(q)).map(([k,l]) => ({icon:'→', label:l, sub:'Page', go:'#'+k}));
     if (A.length) g.push(['APIs', A]); if (C.length) g.push(['Companies', C]); if (M.length) g.push(['Markets', M]); if (P.length) g.push(['Pages', P]);
@@ -426,7 +436,7 @@ tr.click:active{background:var(--press)}
   }
   function compSub(c){ const k = c.k || {}; return [k.foreign_released ? `${fmt(k.foreign_released)} contract releases` : '', k.released ? `${fmt(k.released)} batch releases` : '', k.mah_products ? `${fmt(k.mah_products)} own authorisations` : ''].filter(Boolean).join(' · ') || ROLE_SHORT[c.r[0]] || 'Company'; }
   function markSel(){ document.querySelectorAll('.pitem').forEach(b => b.setAttribute('aria-selected', +b.dataset.i === pSel)); const s = document.querySelector(`.pitem[data-i="${pSel}"]`); if (s) s.scrollIntoView({block:'nearest'}); }
-  function pick(i){ const it = pItems[i]; if (!it) return; closeLayer(); if (it.company) { location.hash = 'co-' + it.company; } else { if (it.market) state.marketQ = it.market; location.hash = it.go.slice(1); if (location.hash === it.go) route(); } }
+  function pick(i){ const it = pItems[i]; if (!it) return; closeLayer(); if (it.company) { location.hash = entityHash(it.company); } else { if (it.market) state.marketQ = it.market; location.hash = it.go.slice(1); if (location.hash === it.go) route(); } }
   $('#pq').addEventListener('input', renderPalette);
   $('#pq').addEventListener('keydown', e => {
     if (e.key === 'ArrowDown') { e.preventDefault(); pSel = Math.min(pItems.length-1, pSel+1); markSel(); }
@@ -437,7 +447,7 @@ tr.click:active{background:var(--press)}
   $('#plist').addEventListener('click', e => { const b = e.target.closest('.pitem'); if (b) pick(+b.dataset.i); });
 
   // ---------- page state ----------
-  const state = { q:'', group:'all', sort:['products', -1], compRole:'all', compCc:'', srcLight:'all', limit:60, tab:'sites', cc:'', marketQ:'' };
+  const state = { mtab:'portfolio', mfCc:'', q:'', group:'all', sort:['products', -1], compRole:'all', compCc:'', srcLight:'all', limit:60, tab:'sites', cc:'', marketQ:'' };
   const view = $('#view');
   const pageq = $('#pageq');
   pageq.addEventListener('input', () => { state.q = pageq.value; state.limit = 60; renderCurrent(true); });
@@ -448,7 +458,7 @@ tr.click:active{background:var(--press)}
     if (e.target.closest('[data-more]')) { state.limit += 60; renderCurrent(); return; }
     const sortB = e.target.closest('[data-sort]'); if (sortB) { const k = sortB.dataset.sort; state.sort = [k, state.sort[0] === k ? -state.sort[1] : -1]; renderCurrent(); return; }
     const row = e.target.closest('[data-href]'); if (row && !e.target.closest('a,button')) { location.hash = row.dataset.href; return; }
-    const comp = e.target.closest('[data-company]'); if (comp && !e.target.closest('a')) { location.hash = 'co-' + comp.dataset.company; return; }
+    const comp = e.target.closest('[data-company]'); if (comp && !e.target.closest('a')) { location.hash = entityHash(comp.dataset.company); return; }
     const xl = e.target.closest('[data-xlsx]'); if (xl) { exportXlsx(xl.dataset.xlsx); return; }
     const seg = e.target.closest('[data-seg]'); if (seg) { state[seg.dataset.seg] = seg.dataset.val; state.limit = 60; renderCurrent(); return; }
     const tab = e.target.closest('[data-tab]'); if (tab) { state.tab = tab.dataset.tab; state.cc = ''; state.limit = 60; renderCurrent(); return; }
@@ -487,7 +497,7 @@ tr.click:active{background:var(--press)}
       <section class="card panel" style="margin-top:16px"><div class="panel-h"><h2>New US DMFs and potential customers</h2><span class="note">New CEPs follow once the EDQM licence is granted</span></div>
         <p class="note" style="margin:-4px 0 10px">Potential customers = marketing authorisation holders selling finished products with this API, outside the DMF holder’s group. ${chip('derived')}</p>
         <div class="tbl" style="margin:0 -16px -16px"><table><thead><tr><th>Date</th><th>API</th><th>DMF holder</th><th>DMF</th><th>Potential customers (top 3)</th></tr></thead><tbody>
-        ${x.dmf.slice(0, 8).map(r => `<tr><td class="num nw">${esc(r.date)}</td><td class="main cap">${esc(r.api)}</td><td class="trunc"><a href="#co-${r.holder_id}">${esc(r.holder)}</a></td><td class="nw">${link(r.url, r.no)} ${chip('official')}</td>
+        ${x.dmf.slice(0, 8).map(r => `<tr><td class="num nw">${esc(r.date)}</td><td class="main cap">${esc(r.api)}</td><td class="trunc"><a href="#${entityHash(r.holder_id)}">${esc(r.holder)}</a></td><td class="nw">${link(r.url, r.no)} ${chip('official')}</td>
           <td>${r.customers.slice(0, 3).map(c => `<a class="chip c-neutral" style="margin:1px" href="#co-${c.id}" title="${esc(c.reasons.join(' · '))}">${esc(c.name)} <b class="num">${c.products}</b></a>`).join('')}${r.n_customers > 3 ? ` <span class="note">+${fmt(r.n_customers - 3)}</span>` : ''}</td></tr>`).join('')}
         </tbody></table></div></section>
 
@@ -723,14 +733,15 @@ tr.click:active{background:var(--press)}
     const d = await data(); crumbs([['Companies']]); setNav('companies');
     const q = state.q.trim().toLowerCase();
     const role = state.compRole;
-    const base = q ? findCompanies(d.search, q).map(x => x[0]) : d.search;
+    const pool = d.search.filter(c => mfrOf(c.id)?.primary !== 'manufacturer');
+    const base = q ? findCompanies(pool, q).map(x => x[0]) : pool;
     const C = base.filter(c => (role === 'all' || c.r.includes(role)) && (!state.compCc || c.cc === state.compCc));
     const ccs = [...new Set(d.search.map(c => c.cc).filter(Boolean))].sort();
     const L = state.limit;
     const nCdmo = d.search.filter(c => c.r.includes('cdmo')).length;
     view.innerHTML = `<div class="${keep?'':'fade'}">
-      <div class="page-head"><div><h1>Companies</h1><p>${fmt(C.length)} of ${fmt(d.search.length)} companies. Search also matches register spellings, brand groups and GLEIF groups.</p></div>
-        <div style="display:flex;flex-wrap:wrap;gap:10px"><div class="seg" role="group" aria-label="Role">${[['all','All'],['cdmo',`CDMO ${nCdmo}`],['fdf_manufacturer','Batch release'],['api_manufacturer','API'],['mah','Authorisation holder']].map(([k,l]) => `<button type="button" data-seg="compRole" data-val="${k}" aria-pressed="${role===k}">${l}</button>`).join('')}</div>
+      <div class="page-head"><div><h1>Companies</h1><p>${fmt(C.length)} of ${fmt(pool.length)} companies (authorisation holders, finished-product manufacturers, CDMOs). API manufacturers are listed under <a href="#manufacturers">Manufacturers</a>. Search also matches register spellings, brand groups and GLEIF groups.</p></div>
+        <div style="display:flex;flex-wrap:wrap;gap:10px"><div class="seg" role="group" aria-label="Role">${[['all','All'],['cdmo',`CDMO ${nCdmo}`],['fdf_manufacturer','Batch release'],['mah','Authorisation holder']].map(([k,l]) => `<button type="button" data-seg="compRole" data-val="${k}" aria-pressed="${role===k}">${l}</button>`).join('')}</div>
           <label for="ccomp" class="sr">Country</label><select id="ccomp" class="field" data-fld="compCc"><option value="">All countries</option>${ccs.map(c => `<option ${state.compCc===c?'selected':''}>${esc(c)}</option>`).join('')}</select></div></div>
       <section class="card tbl">${C.length ? `<table><thead><tr><th>Company</th><th>Country</th><th>Roles</th><th>Contract releases</th><th>Batch releases</th><th>Own authorisations</th><th>Group</th></tr></thead><tbody>
         ${C.slice(0, L).map(c => `<tr class="click" data-company="${c.id}" tabindex="0"><td class="main">${esc(c.n)}</td><td>${c.cc ? `<span class="cc">${esc(c.cc)}</span>` : '<span class="note">–</span>'}</td>
@@ -739,32 +750,35 @@ tr.click:active{background:var(--press)}
       </tbody></table>${moreBtn(Math.min(L, C.length), C.length)}` : `<div class="empty">No company matches the selection.</div>`}</section></div>`;
   }
 
-  const CTABS = [['cdmo','Contract manufacturing (CDMO)'],['customers','Customers'],['release','All batch releases'],['mah','Own authorisations'],['dmf','US DMF'],['identity','Names & group']];
+  const CTABS = [['cdmo','Contract manufacturing (CDMO)'],['customers','Customers'],['release','All batch releases'],['mah','Own authorisations'],['identity','Names & group']];
   async function pCompany(id, keep){
     setNav('companies');
     if (!keep) view.innerHTML = `<div class="skeleton" style="height:180px;margin-top:16px"></div>`;
     let c; try { c = await company(id); } catch(e) { crumbs([['Companies','#companies'],['Not found']]); view.innerHTML = `<div class="card empty">This company is not in the dataset. <a href="#companies">Back to list</a></div>`; return; }
     crumbs([['Companies','#companies'],[c.name]]);
     const cdmo = c.roles.find(r => r.role === 'cdmo');
-    const k = c.kpi;
+    const rl = new Set(c.roles.map(r => r.role)), k = c.kpi;
+    const ok = { cdmo: rl.has('cdmo') || k.foreign_released > 0, customers: rl.has('cdmo') || k.customers > 0, release: rl.has('fdf_manufacturer') || k.released > 0, mah: rl.has('mah') || k.mah_products > 0, dmf: false, identity: true };
+    if (!ok.cdmo && !ok.release && !ok.mah && mfrOf(id)) { location.replace('#mf-' + id); return; }
+    if (!ok[state.ctab]) state.ctab = CTABS.map(t => t[0]).find(t => ok[t]) || 'identity';
     const counts = { cdmo: k.foreign_released, customers: k.customers, release: k.released, mah: k.mah_products, dmf: k.dmf, identity: c.aliases.length };
     const grp = c.parent ? `${link(c.parent.source_url, c.parent.name)} ${chip(c.parent.status)} <span class="note">GLEIF ${c.parent.type==='ultimate_parent'?'ultimate parent':'direct parent'}</span>`
       : c.group ? `Brand group ${esc(c.group.name)} ${chip('derived')}` : '<span class="note">Unknown</span>';
+    const T = [];
+    if (ok.cdmo) T.push(['cdmo', 'Contract manufacturing', fmt(k.foreign_released), 'Products of holders outside the group']);
+    if (ok.customers) T.push(['customers', 'Customers', fmt(k.customers), 'Authorisation holders (derived)']);
+    if (ok.release) T.push(['release', 'Batch releases', fmt(k.released), 'From package leaflets']);
+    if (ok.mah) T.push(['mah', 'Own authorisations', fmt(k.mah_products), `In ${fmt(k.markets)} markets`]);
     view.innerHTML = `<div class="${keep?'':'fade'}">
       <section class="card dhead"><div style="min-width:0;flex:1 1 520px">
         <p class="eyebrow">Company 360</p><h1>${esc(c.name)}</h1>
-        <div class="ids"><span><b>Country</b> ${c.cc ? `<span class="cc">${esc(c.cc)}</span>` : '–'}${c.cc_basis ? ` <span class="note">${esc(c.cc_basis)}</span>` : ''}</span><span><b>LEI</b> ${esc(c.lei||'–')}</span><span><b>Group</b> ${grp}</span></div>
+        <div class="ids"><span><b>Country</b> ${c.cc ? `<span class="cc">${esc(c.cc)}</span>` : gapChip('Country not stated in source')}${c.cc_basis ? ` <span class="note">${esc(c.cc_basis)}</span>` : ''}</span><span><b>LEI</b> ${esc(c.lei||'–')}</span><span><b>Group</b> ${grp}</span></div>
         <div style="margin-top:10px">${c.roles.map(r => roleChip(r.role)).join('')}${cdmo && cdmo.group_unverified ? ' <span class="chip c-gap" title="No GLEIF parent recorded – group membership unverified">Group unverified</span>' : ''}</div>
+        ${roleSwitch(id, state.ctab === 'mah' ? 'mah' : 'fdf')}
         ${cdmo ? `<p class="summary">${esc(cdmo.rationale)}${cdmo.group_unverified ? ' No parent company is recorded for this company in the GLEIF register, so releases for sister companies may appear as contract manufacturing.' : ''}</p>` : ''}
       </div></section>
-      <div class="kpis" style="margin-top:12px">
-        <div class="card kpi"><span>Contract manufacturing</span><b class="num">${fmt(k.foreign_released)}</b><small>Products of holders outside the group</small></div>
-        <div class="card kpi"><span>Customers</span><b class="num">${fmt(k.customers)}</b><small>Authorisation holders (derived)</small></div>
-        <div class="card kpi"><span>Batch releases</span><b class="num">${fmt(k.released)}</b><small>From package leaflets</small></div>
-        <div class="card kpi"><span>Own authorisations</span><b class="num">${fmt(k.mah_products)}</b><small>In ${fmt(k.markets)} markets</small></div>
-        <div class="card kpi"><span>US DMFs</span><b class="num">${fmt(k.dmf)}</b><small>Type II API</small></div>
-      </div>
-      <div class="tabs" role="tablist" aria-label="Sections">${CTABS.map(([t,l]) => `<button class="tab" role="tab" type="button" data-ctab="${t}" aria-selected="${state.ctab===t}">${l}<span class="n num">${fmt(counts[t])}</span></button>`).join('')}</div>
+      <div class="kpis" style="margin-top:12px">${T.map(([t, l, v, sub]) => `<button type="button" class="card kpi kpib" data-ctab="${t}"><span>${l}</span><b class="num">${v}</b><small>${sub}</small></button>`).join('')}</div>
+      <div class="tabs" role="tablist" aria-label="Sections">${CTABS.filter(([t]) => ok[t]).map(([t,l]) => `<button class="tab" role="tab" type="button" data-ctab="${t}" aria-selected="${state.ctab===t}">${l}<span class="n num">${fmt(counts[t])}</span></button>`).join('')}</div>
       <div id="tabpanel"></div></div>`;
     view.querySelectorAll('[data-ctab]').forEach(b => b.addEventListener('click', () => { state.ctab = b.dataset.ctab; state.cc = ''; state.limit = 60; pCompany(id, true); }));
     renderCTab(c);
@@ -812,7 +826,7 @@ tr.click:active{background:var(--press)}
 
   let xlsxLib;
   async function exportXlsx(tab){
-    const id = +location.hash.slice(4); const c = COMP[id]; if (!c) return;
+    const id = parseInt(location.hash.slice(4)); const c = COMP[id]; if (!c) return;
     if (!xlsxLib) xlsxLib = await new Promise((ok, no) => { const s = document.createElement('script'); s.src = 'https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js'; s.onload = () => ok(window.XLSX); s.onerror = no; document.head.appendChild(s); });
     const rows = ctabRows(c); const today = new Date().toISOString().slice(0, 10);
     const M = {
@@ -827,6 +841,143 @@ tr.click:active{background:var(--press)}
     xlsxLib.utils.book_append_sheet(wb, xlsxLib.utils.aoa_to_sheet([['Company', c.name], ['LEI', c.lei||''], ['Export', today], ['Section', CTABS.find(t => t[0]===tab)[1]],
       ['Note', 'derived = inferred, not confirmed. Every row has its source. Source: PharmaLens, public registers.']]), 'Info');
     xlsxLib.writeFile(wb, `PharmaLens_${c.name.replace(/[^A-Za-z0-9]+/g,'_').slice(0,40)}_${tab}_${today}.xlsx`);
+  }
+
+  // ---------- Manufacturer 360 (API manufacturers) ----------
+  const MFR = {}, MSHARD = {};
+  async function manufacturer(id){ if (!MFR[id]) { const k = String(id % 16).padStart(2, '0'); if (!MSHARD[k]) MSHARD[k] = await j(`mfr/s${k}.json`); if (!MSHARD[k][id]) throw new Error('not found'); MFR[id] = MSHARD[k][id]; } return MFR[id]; }
+  const mfrIndex = () => D.mfr || [];
+  const mfrOf = id => (D.mfrMap || {})[id];
+  const entityHash = id => { const m = mfrOf(+id); return (m && m.primary === 'manufacturer' ? 'mf-' : 'co-') + id; };
+  const NC = `<span class="chip c-neutral" title="Source not connected yet – see Gaps">Not checked</span>`;
+  const gapChip = reason => `<span class="chip c-gap" title="${esc(reason||'')}">Gap</span>`;
+  function roleSwitch(id, active){
+    const m = mfrOf(id), s = (D.search || []).find(x => x.id === id);
+    const fdf = s && s.r.some(r => r !== 'api_manufacturer'), api = !!m;
+    if (!(fdf && api)) return '';
+    const hasMah = s.r.includes('mah'), hasFdf = s.r.some(r => r === 'fdf_manufacturer' || r === 'cdmo');
+    return `<div class="seg" role="group" aria-label="Role view" style="margin-top:10px">
+      <a href="#mf-${id}" role="button" aria-pressed="${active==='api'}" class="segl">API manufacturer</a>
+      ${hasFdf ? `<a href="#co-${id}" role="button" aria-pressed="${active==='fdf'}" class="segl">Finished products</a>` : ''}
+      ${hasMah ? `<a href="#co-${id}~mah" role="button" aria-pressed="${active==='mah'}" class="segl">MAH</a>` : ''}</div>`;
+  }
+
+  async function pManufacturers(keep){
+    const d = await data(); crumbs([['Manufacturers']]); setNav('manufacturers');
+    const q = state.q.trim().toLowerCase();
+    const ccs = [...new Set(mfrIndex().map(m => m.cc).filter(Boolean))].sort();
+    const M = mfrIndex().filter(m => (!q || m.n.toLowerCase().includes(q) || m.apis.some(a => a.includes(q)) || (m.g||'').toLowerCase().includes(q))
+      && (!state.mfCc || m.cc === state.mfCc));
+    const L = state.limit;
+    view.innerHTML = `<div class="${keep?'':'fade'}">
+      <div class="page-head"><div><h1>Manufacturers</h1><p>${fmt(M.length)} API manufacturers from the US DMF list and EMA Annex IIA. CEP, JDMF, KDMF and Written Confirmations are not connected yet.</p></div>
+        <label for="mfcc" class="sr">Country</label><select id="mfcc" class="field" data-fld="mfCc"><option value="">All countries</option>${ccs.map(c => `<option ${state.mfCc===c?'selected':''}>${esc(c)}</option>`).join('')}</select></div>
+      <section class="card tbl">${M.length ? `<table><thead><tr><th>Manufacturer</th><th>Country</th><th>APIs (pilot)</th><th>Active US DMFs</th><th>Known sites</th><th>Group</th><th>Potential customers</th></tr></thead><tbody>
+        ${M.slice(0, L).map(m => `<tr class="click" data-href="mf-${m.id}" tabindex="0"><td class="main">${esc(m.n)}${m.primary==='company' ? ' <span class="chip c-neutral">Also FDF/MAH</span>' : ''}</td>
+          <td>${m.cc ? `<span class="cc">${esc(m.cc)}</span>` : gapChip('Country not stated in source')}</td><td class="cap">${esc(m.apis.join(', ') || '–')}</td>
+          <td class="num">${fmt(m.dmf)}</td><td class="num">${m.sites ? fmt(m.sites) : gapChip('No site address in the US DMF list')}</td>
+          <td>${m.g ? `${esc(m.g)} ${chip(m.gs)}` : '<span class="note">–</span>'}</td><td class="num">${fmt(m.cust)} ${chip('derived')}</td></tr>`).join('')}
+      </tbody></table>${moreBtn(Math.min(L, M.length), M.length)}` : '<div class="empty">No manufacturer matches the selection.</div>'}</section></div>`;
+  }
+
+  const MTABS = [['portfolio','Portfolio'],['sites','Sites'],['compliance','Compliance'],['customers','Potential customers'],['supply','Supply chain'],['signals','Signals'],['names','Names & group'],['gaps','Gaps']];
+  const CERTS = ['CEP','US-DMF','JDMF','KDMF','WC','WHO-PQ','EU-GMP'];
+  async function pManufacturer(id, keep){
+    setNav('manufacturers'); await data();
+    if (!keep) view.innerHTML = `<div class="skeleton" style="height:180px"></div>`;
+    let m; try { m = await manufacturer(id); } catch(e) { crumbs([['Manufacturers','#manufacturers'],['Not found']]); view.innerHTML = `<div class="card empty">No API manufacturer data for this company. <a href="#co-${id}">Open Company 360</a></div>`; return; }
+    crumbs([['Manufacturers','#manufacturers'],[m.name]]);
+    const k = m.kpi, cntry = m.country, grp = m.group;
+    const counts = { portfolio: m.portfolio.length, sites: m.sites.length, compliance: m.compliance.length, customers: m.customers.length, supply: Math.min(m.customers.length, 16), signals: m.signals.length, names: m.aliases.length, gaps: m.gaps.length };
+    const tile = (tab, label, val, sub) => `<button type="button" class="card kpi kpib" data-mtab="${tab}"><span>${label}</span><b class="num">${val}</b><small>${sub}</small></button>`;
+    view.innerHTML = `<div class="${keep?'':'fade'}">
+      <section class="card dhead"><div style="min-width:0;flex:1 1 560px">
+        <p class="eyebrow">Manufacturer 360 · API manufacturer</p><h1>${esc(m.name)}</h1>
+        <p class="note" style="margin-top:2px">Name in source: ${esc(m.original)}</p>
+        <div class="ids"><span><b>Country</b> ${cntry.cc ? `<span class="cc">${esc(cntry.cc)}</span> <span class="note">${esc(cntry.basis)}</span>` : `${gapChip(cntry.reason)} <span class="note">Not stated in source</span>`}</span>
+          <span><b>Sites</b> ${m.sites.length ? fmt(m.sites.length) : gapChip('No site address in the US DMF list')}</span>
+          <span><b>Group</b> ${grp.name ? `${grp.id ? `<a href="#${entityHash(grp.id)}">${esc(grp.name)}</a>` : esc(grp.name)} ${chip(grp.status)} <span class="note">${(grp.basis||'').startsWith('Possible parent') ? 'Possible parent' : esc(grp.basis||'')}</span>` : gapChip(grp.reason)}</span>
+          ${m.lei ? `<span><b>LEI</b> ${esc(m.lei)}</span>` : ''}</div>
+        ${(grp.basis||'').startsWith('Possible parent') ? `<p class="note" style="margin-top:6px">${esc(grp.basis)}</p>` : ''}
+        ${roleSwitch(id, 'api')}
+        <p class="summary">${esc(m.summary)}</p></div></section>
+      <div class="kpis" style="margin-top:12px">
+        ${tile('portfolio','APIs in portfolio', fmt(k.apis), 'Pilot APIs with a certificate or Annex IIA entry')}
+        ${tile('portfolio','Certificates', `${fmt(k.dmf_active)} <small style="display:inline;font-size:var(--fs-xs)">US DMF active</small>`, `CEP · JDMF · KDMF · WC · WHO-PQ not checked`)}
+        ${tile('sites','Sites', k.sites ? fmt(k.sites) : '<span class="chip c-gap">Gap</span>', k.sites ? 'From EMA Annex IIA' : 'No address in US DMF list')}
+        ${tile('compliance','GMP status', '<span class="chip c-neutral">Not checked</span>', 'EU-GMP · FDA inspection')}
+        ${tile('compliance','Compliance', '<span class="chip c-neutral">Not checked</span>', 'Warning letters · import alerts · EU NCR')}
+        ${tile('gaps','EU DMF hints', '<span class="chip c-neutral">No data basis</span>', 'Needs CEP or ASMF data')}
+        ${tile('customers','Potential customers', fmt(k.customers), `${k.customers_evidenced ? fmt(k.customers_evidenced) + ' with document · ' : ''}derived`)}
+      </div>
+      <div style="display:flex;align-items:flex-end;gap:12px;justify-content:space-between;flex-wrap:wrap">
+        <div class="tabs" role="tablist" aria-label="Sections" style="flex:1;min-width:0">${MTABS.map(([t,l]) => `<button class="tab" role="tab" type="button" data-mtab="${t}" aria-selected="${state.mtab===t}">${l}<span class="n num">${fmt(counts[t])}</span></button>`).join('')}</div>
+        <button class="btn" type="button" id="mfXlsx" style="margin-bottom:12px">Export all tabs to Excel</button></div>
+      <div id="tabpanel"></div></div>`;
+    view.querySelectorAll('[data-mtab]').forEach(b => b.addEventListener('click', () => { state.mtab = b.dataset.mtab; state.limit = 60; pManufacturer(id, true); }));
+    $('#mfXlsx').addEventListener('click', () => exportMfr(m));
+    renderMTab(m);
+  }
+
+  function mtabRows(m, t){
+    const q = state.q;
+    return { portfolio: m.portfolio.filter(r => has({a:r.api}, q)), sites: m.sites.filter(s => has(s, q)), compliance: m.compliance,
+      customers: m.customers.filter(x => has({n:x.name, a:x.apis.join(' ')}, q)), supply: m.customers.slice(0, 16), signals: m.signals.filter(x => has(x, q)),
+      names: m.aliases.filter(x => has({a:x.a}, q)), gaps: m.gaps.filter(x => has(x, q)) }[t];
+  }
+  function renderMTab(m){
+    const t = state.mtab, el = $('#tabpanel'), rows = mtabRows(m, t), L = state.limit;
+    let h = '';
+    if (t === 'portfolio') h = `<div class="toolbar"><span class="note">One row per API. Cells show number, date and status where the source is connected; other certificate types are marked “Not checked”.</span></div>
+      <section class="card tbl scroll">${rows.length ? `<table class="dense"><thead><tr><th>API</th>${CERTS.map(c => `<th>${c}</th>`).join('')}<th>EU products</th><th>Patent (US)</th><th>Competing API makers</th></tr></thead><tbody>
+      ${rows.map(r => `<tr><td class="main cap"><a href="#api-${esc((r.api||'').replace(/[^a-z0-9]+/g,'-'))}">${esc(r.api||'–')}</a>${r.shortage ? ' <span class="chip c-gap">Open shortage</span>' : ''}</td>
+        ${CERTS.map(c => c === 'US-DMF' ? `<td class="nw">${r.dmf.length ? r.dmf.map(x => `${link(x.url, x.no)} <span class="note">${esc(x.date||'')}</span> ${x.cs==='active' ? '<span class="chip c-official">Active</span>' : '<span class="chip c-neutral">Inactive</span>'}`).join('<br>') : (r.annex.length ? `<span class="note">–</span>` : '–')}</td>`
+          : c === 'EU-GMP' && r.annex.length ? `<td>${r.annex.slice(0,2).map(a => `${link(a.url, 'Annex IIA')} <span class="note">${esc(a.product)}</span>`).join('<br>')} ${chip('official')}</td>`
+          : `<td>${NC}</td>`).join('')}
+        <td class="num">${fmt(r.eu_products)}</td><td class="num nw">${r.patent && r.patent.us_expiry ? esc(r.patent.us_expiry) : '<span class="note">–</span>'}<br><span class="note">EU/SPC not checked</span></td><td class="num">${fmt(r.competitors)}</td></tr>`).join('')}
+      </tbody></table>` : '<div class="empty">No API in the portfolio.</div>'}</section>
+      <p class="note" style="margin-top:8px">EU-GMP column: where the manufacturer is named for the API in an EMA Annex IIA, the document is linked; this is a product authorisation document, not a GMP certificate.</p>`;
+    if (t === 'sites') h = rows.length ? `<section class="card tbl"><table><thead><tr><th>Address</th><th>Country</th><th>FEI</th><th>EudraGMDP / OMS ID</th><th>Certificates</th><th>Products</th><th>Source</th></tr></thead><tbody>
+      ${rows.map(s => `<tr><td class="main">${esc(s.addr||'–')}</td><td><span class="cc">${esc(s.cc||'–')}</span></td><td>${NC}</td><td>${NC}</td><td>${NC}</td><td class="num">${fmt(s.products)}</td><td>${link(s.url,'Annex IIA')} ${chip(s.st)}</td></tr>`).join('')}</tbody></table></section>
+      <p class="note" style="margin-top:8px">Map not shown: sites are not geocoded yet.</p>`
+      : `<div class="card empty">No site known. The US DMF list carries no address; FDA establishment (FEI), EudraGMDP and CEP holder addresses are not connected. ${gapChip('Sites')}</div>`;
+    if (t === 'compliance') h = `<div class="toolbar"><span class="note">Timeline of inspections, warning letters, import alerts and EU non-compliance. None of these sources is connected yet – nothing is shown as “clean”.</span></div>
+      <section class="card tbl"><table><thead><tr><th>Source</th><th>Status</th><th>Reason</th></tr></thead><tbody>${rows.map(x => `<tr><td class="main">${esc(x.kind)}</td><td>${NC}</td><td class="note">${esc(x.reason)}</td></tr>`).join('')}</tbody></table></section>`;
+    if (t === 'customers') h = `<div class="toolbar"><span class="note">Authorisation holders selling EU products with this manufacturer’s APIs, outside its group. Ranked by products × markets, higher with an open shortage, a US patent expiring within 24 months or few API sources. ${chip('derived')} unless a document names the link ${chip('official')}.</span></div>
+      <section class="card tbl">${rows.length ? `<table><thead><tr><th>Company</th><th>APIs</th><th>Products</th><th>Markets</th><th>Score</th><th>Why</th><th>Status</th></tr></thead><tbody>
+      ${rows.slice(0, L).map(x => `<tr class="click" data-company="${x.id}" tabindex="0"><td class="main">${esc(x.name)}</td><td class="cap">${esc(x.apis.join(', '))}</td><td class="num">${fmt(x.products)}</td><td class="num">${fmt(x.markets)}</td><td class="num">${fmt(x.score)}</td>
+        <td class="note" style="min-width:280px">${x.reasons.map(esc).join('<br>')}${x.evidence.length ? '<br>' + x.evidence.slice(0,3).map(e => link(e.url, e.product + ' (' + e.cc + ')')).join(' · ') : ''}</td><td>${chip(x.status)}</td></tr>`).join('')}</tbody></table>${moreBtn(Math.min(L, rows.length), rows.length)}` : '<div class="empty">No potential customers found.</div>'}</section>`;
+    if (t === 'supply') h = `<div class="toolbar"><span class="note">Manufacturer in the middle, potential buyers on the right (top 16 by score). Solid line = named in a document (EMA Annex IIA); dashed = derived.</span></div>
+      <section class="card panel"><div id="chSupply" style="height:${Math.max(360, rows.length * 34 + 40)}px" role="img" aria-label="Supply chain: manufacturer and potential buyers"></div></section>`;
+    if (t === 'signals') h = `<section class="card tbl">${rows.length ? `<table><thead><tr><th>Date</th><th>Signal</th><th>API</th><th>Source</th></tr></thead><tbody>${rows.map(x => `<tr><td class="num nw">${esc(x.date)}</td><td class="main">${esc(x.title)}</td><td class="cap">${esc(x.api||'–')}</td><td>${link(x.url,'FDA')} ${chip(x.st)}</td></tr>`).join('')}</tbody></table>` : '<div class="empty">No new submissions in the last 12 months. New CEPs and status changes follow once the sources are connected.</div>'}</section>`;
+    if (t === 'names') h = `<section class="card tbl"><table><thead><tr><th>Name / spelling</th><th>Kind</th><th>Seen</th><th>Sources</th><th>Status</th></tr></thead><tbody>
+      <tr><td class="main">${esc(m.name)}</td><td>Normalised display name</td><td>–</td><td class="note">PharmaLens</td><td>${chip('derived')}</td></tr>
+      ${rows.map(x => `<tr><td class="main">${esc(x.a)}</td><td>${esc({source_name:'Name in source',legal_name:'Most frequent spelling',spelling:'Variant',gleif_other_name:'GLEIF name',transliteration:'Transliteration',brand_group:'Brand group'}[x.k]||x.k)}</td><td class="num">${fmt(x.n)}</td><td class="note">${esc((x.src||[]).map(shortSrc).join(', '))}</td><td>${chip(x.st)}</td></tr>`).join('')}
+      ${m.group.name ? `<tr><td class="main">${esc(m.group.name)}</td><td>Group</td><td>–</td><td class="note">${esc(m.group.basis||'')}</td><td>${chip(m.group.status)}</td></tr>` : ''}</tbody></table></section>`;
+    if (t === 'gaps') h = `<section class="card tbl"><table><thead><tr><th>Area</th><th>What is missing and why</th></tr></thead><tbody>${rows.map(x => `<tr><td><span class="chip c-gap">${esc(x.area)}</span></td><td class="main" style="font-weight:500">${esc(x.reason)}</td></tr>`).join('')}</tbody></table></section>`;
+    el.innerHTML = h;
+    if (t === 'supply') echartsLib().then(() => drawSupply(m)).catch(() => $('#chSupply').innerHTML = '<div class="empty">Chart could not be loaded.</div>');
+  }
+  function drawSupply(m){
+    const C = m.customers.slice(0, 16), H = $('#chSupply').clientHeight, W = $('#chSupply').clientWidth;
+    const nodes = [{name:m.name, x:W*0.38, y:H/2, symbolSize:14, itemStyle:{color:css('--off-fg')}, label:{position:'left', color:css('--ink'), fontWeight:600}}]
+      .concat(C.map((c, i) => ({name:c.name + ' ', x:W*0.72, y:20 + i * (H - 40) / Math.max(1, C.length - 1), symbolSize:8, itemStyle:{color:c.status==='official'?css('--off-fg'):css('--accent')}, label:{position:'right', color:css('--ink2')}, value:c.score})));
+    const links = C.map(c => ({source:m.name, target:c.name + ' ', lineStyle:{type:c.status==='official'?'solid':'dashed', color:c.status==='official'?css('--off-fg'):css('--accent'), width:c.status==='official'?2:1.2, opacity:.7, curveness:.15}}));
+    mount('#chSupply').setOption({...chartBase(), tooltip:{...chartBase().tooltip, formatter:p => p.dataType === 'edge' ? `${esc(p.data.source)} → ${esc(p.data.target)}<br>${C.find(c => c.name + ' ' === p.data.target)?.status === 'official' ? 'Named in EMA Annex IIA' : 'Derived – not confirmed'}` : esc(p.name)},
+      series:[{type:'graph', layout:'none', roam:false, data:nodes, links, label:{show:true, fontSize:11, formatter:p => p.name.length > 40 ? p.name.slice(0, 39) + '…' : p.name}, emphasis:{focus:'adjacency'}}]});
+  }
+  async function exportMfr(m){
+    if (!xlsxLib) xlsxLib = await new Promise((ok, no) => { const s = document.createElement('script'); s.src = 'https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js'; s.onload = () => ok(window.XLSX); s.onerror = no; document.head.appendChild(s); });
+    const X = xlsxLib.utils, wb = X.book_new(), add = (n, rows) => X.book_append_sheet(wb, X.json_to_sheet(rows.length ? rows : [{Note:'No rows'}]), n);
+    add('Portfolio', m.portfolio.flatMap(r => (r.dmf.length ? r.dmf : [{}]).map(x => ({API:r.api, Certificate:x.no ? 'US-DMF' : '', Number:x.no||'', Date:x.date||'', Status:x.cs||'', Data_status:x.st||'', Source:x.url||'', EU_products:r.eu_products, US_patent_expiry:r.patent?.us_expiry||'', Competing_API_makers:r.competitors, CEP:'not checked', JDMF:'not checked', KDMF:'not checked', WC:'not checked', WHO_PQ:'not checked', EU_GMP:'not checked'}))));
+    add('Sites', m.sites.map(s => ({Address:s.addr, Country:s.cc, Products:s.products, Status:s.st, Source:s.url})));
+    add('Compliance', m.compliance.map(x => ({Source:x.kind, Status:'not checked', Reason:x.reason})));
+    add('Potential customers', m.customers.map(x => ({Company:x.name, APIs:x.apis.join(', '), Products:x.products, Markets:x.markets, Score:x.score, Reasons:x.reasons.join(' | '), Status:x.status, Evidence:x.evidence.map(e => e.url).join(' ')})));
+    add('Signals', m.signals.map(x => ({Date:x.date, Signal:x.title, API:x.api, Status:x.st, Source:x.url})));
+    add('Names & group', m.aliases.map(x => ({Name:x.a, Kind:x.k, Seen:x.n, Sources:(x.src||[]).join(', '), Status:x.st})).concat(m.group.name ? [{Name:m.group.name, Kind:'group', Status:m.group.status, Sources:m.group.basis}] : []));
+    add('Gaps', m.gaps.map(x => ({Area:x.area, Reason:x.reason})));
+    X.book_append_sheet(wb, X.aoa_to_sheet([['Manufacturer', m.name], ['Name in source', m.original], ['Country', m.country.cc || 'gap: ' + m.country.reason], ['Export', new Date().toISOString().slice(0,10)], ['Note', 'derived = inferred, not confirmed; not checked = source not connected. Every row has its source.']]), 'Info');
+    xlsxLib.writeFile(wb, `PharmaLens_Manufacturer_${m.name.replace(/[^A-Za-z0-9]+/g,'_').slice(0,40)}_${new Date().toISOString().slice(0,10)}.xlsx`);
   }
 
   async function pMarkets(keep){
@@ -872,21 +1023,23 @@ tr.click:active{background:var(--press)}
   async function route(){
     closeLayer();
     const h = location.hash.replace('#','') || 'overview';
-    const prevPage = route.page; let page = h.startsWith('api-') ? 'api' : h.startsWith('co-') ? 'co' : h;
-    if (page !== prevPage || page === 'api' || page === 'co') { state.q = ''; pageq.value = ''; state.limit = 60; state.sort = ['products', -1]; }
+    const prevPage = route.page; let page = h.startsWith('api-') ? 'api' : h.startsWith('co-') ? 'co' : h.startsWith('mf-') ? 'mf' : h;
+    if (page !== prevPage || page === 'api' || page === 'co' || page === 'mf') { state.q = ''; pageq.value = ''; state.limit = 60; state.sort = ['products', -1]; }
     if (page === 'api' && prevPage !== 'api') { state.tab = 'sites'; state.cc = ''; }
-    if (page === 'co') { state.ctab = 'cdmo'; state.cc = ''; }
+    if (page === 'co') { state.ctab = h.endsWith('~mah') ? 'mah' : 'cdmo'; state.cc = ''; }
+    if (page === 'mf') { state.mtab = 'portfolio'; }
     route.page = page;
-    const map = { overview:pOverview, apis:pApis, companies:pCompanies, markets:pMarkets, gaps:pGaps, sources:pSources };
-    pageq.placeholder = { overview:'Filter this page', apis:'Filter: API, UNII, CAS, ATC', companies:'Filter: company, alias, group', co:'Filter: product, holder, API', markets:'Filter: country', gaps:'Filter: reason', sources:'Filter: source or country', api:'Filter: company, product, number' }[page] || 'Filter this page';
+    const map = { overview:pOverview, apis:pApis, companies:pCompanies, manufacturers:pManufacturers, markets:pMarkets, gaps:pGaps, sources:pSources };
+    pageq.placeholder = { overview:'Filter this page', apis:'Filter: API, UNII, CAS, ATC', companies:'Filter: company, alias, group', co:'Filter: product, holder, API', mf:'Filter: API, company, reason', manufacturers:'Filter: manufacturer, API, group', markets:'Filter: country', gaps:'Filter: reason', sources:'Filter: source or country', api:'Filter: company, product, number' }[page] || 'Filter this page';
     if (page === 'api') current = keep => pApi(h.slice(4), keep);
-    else if (h.startsWith('co-')) { current = keep => pCompany(+h.slice(3), keep); page = 'co'; }
+    else if (h.startsWith('co-')) { current = keep => pCompany(parseInt(h.slice(3)), keep); page = 'co'; }
+    else if (h.startsWith('mf-')) { current = keep => pManufacturer(+h.slice(3), keep); }
     else current = map[page] || pOverview;
     await current();
     window.scrollTo(0, 0);
   }
   data().then(d => {
-    $('#nApis').textContent = d.index.apis.length; $('#nComp').textContent = fmt(d.search.length); $('#nMk').textContent = d.markets.length;
+    $('#nApis').textContent = d.index.apis.length; $('#nComp').textContent = fmt(d.search.filter(c => mfrOf(c.id)?.primary !== 'manufacturer').length); $('#nMf').textContent = fmt(d.mfr.length); $('#nMk').textContent = d.markets.length;
     $('#nGaps').textContent = fmt(d.index.totals.gaps); $('#nSrc').textContent = d.sources.length; $('#stand').textContent = 'Data as of ' + d.index.generated;
   });
   document.addEventListener('pointerover', e => { const el = e.target.closest('td.main,.lbl a,.sig-t,.site h3,.crumbs b,.trunc'); if (el && !el.title && el.scrollWidth > el.clientWidth + 1) el.title = el.textContent.trim(); });
