@@ -14,7 +14,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from graph.export_app import d, dump  # noqa: E402
 from models.db import connect  # noqa: E402
 
-TYPE = {"new_dmf": "Neue US-DMF", "new_authorisation": "Neue Zulassung", "shortage": "Lieferengpass", "patent_expiry": "Patentablauf"}
+TYPE = {"new_dmf": "New US DMF", "new_authorisation": "New authorisation", "shortage": "Shortage", "patent_expiry": "Patent expiry"}
 
 
 def run(out: Path, today: date | None = None):
@@ -34,12 +34,12 @@ def run(out: Path, today: date | None = None):
         cnt["shortage"]["open"] = q("SELECT count(*) FROM signal WHERE valid_to IS NULL AND signal_type='shortage'")[0][0]
         parts = []
         if cnt["new_authorisation"]["week"]:
-            parts.append(f"{cnt['new_authorisation']['week']} neue Zulassungen")
+            parts.append(f"{cnt['new_authorisation']['week']} new authorisations")
         if cnt["new_dmf"]["month"]:
-            parts.append(f"{cnt['new_dmf']['month']} neue US-DMF in 30 Tagen")
+            parts.append(f"{cnt['new_dmf']['month']} new US DMFs in 30 days")
         if cnt["shortage"]["open"]:
-            parts.append(f"{cnt['shortage']['open']} offene Lieferengpässe")
-        sentence = ("Letzte 7 Tage: " + ", ".join(parts) + ".") if parts else "Keine neuen Signale in den letzten 7 Tagen."
+            parts.append(f"{cnt['shortage']['open']} open shortages")
+        sentence = ("Last 7 days: " + ", ".join(parts) + ".") if parts else "No new signals in the last 7 days."
 
         # new DMF + potential customers
         pcs = defaultdict(list)

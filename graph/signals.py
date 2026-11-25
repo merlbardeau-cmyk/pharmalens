@@ -39,13 +39,13 @@ def run(today: date | None = None):
         for rid, aid, cid, no, d, url, src in c.execute("""
                 SELECT row_id, api_id, holder_company_id, number, issue_date, source_url, source_name FROM api_certificate
                 WHERE valid_to IS NULL AND cert_type='US_DMF' AND issue_date >= %s""", (y1,)).fetchall():
-            rows.append(("new_dmf", d, aid, cid, None, None, f"Neue US-DMF {no}", dict(number=no), [rid], url, src))
+            rows.append(("new_dmf", d, aid, cid, None, None, f"New US DMF {no}", dict(number=no), [rid], url, src))
         for rid, pid, aid, cid, cc, d, name, url, src in c.execute("""
                 SELECT p.row_id, p.product_id, min(pa.api_id), p.mah_company_id, p.country, p.auth_date, p.name, p.source_url, p.source_name
                 FROM product p LEFT JOIN product_api pa ON pa.product_id=p.product_id
                 WHERE p.valid_to IS NULL AND p.auth_date >= %s AND p.auth_date <= %s
                 GROUP BY 1,2,4,5,6,7,8,9""", (y1, today)).fetchall():
-            rows.append(("new_authorisation", d, aid, cid, pid, cc, f"Neue Zulassung {name}", dict(source_field="auth_date"), [rid], url, src))
+            rows.append(("new_authorisation", d, aid, cid, pid, cc, f"New authorisation {name}", dict(source_field="auth_date"), [rid], url, src))
         for rid, aid, d, de, url, src in c.execute("""
                 SELECT row_id, entity_ref, event_date, detail, source_url, source_name FROM event
                 WHERE valid_to IS NULL AND event_type='shortage' AND entity_type='api'""").fetchall():
@@ -53,11 +53,11 @@ def run(today: date | None = None):
             if de.get("active") is False or "resolved" in str(de.get("state", "")).lower():
                 continue  # only open shortages are signals
             rows.append(("shortage", d, aid, None, None, (de.get("country") or "")[:2] or None,
-                         f"Lieferengpass {de.get('product', '')}".strip(), de, [rid], url, src))
+                         f"Shortage {de.get('product', '')}".strip(), de, [rid], url, src))
         for rid, aid, no, d, ptype, url, src in c.execute("""
                 SELECT row_id, api_id, number, expiry, patent_type, source_url, source_name FROM patent
                 WHERE valid_to IS NULL AND expiry BETWEEN %s AND %s""", (today, y2)).fetchall():
-            rows.append(("patent_expiry", d, aid, None, None, "US", f"US-Patent {no} läuft ab", dict(number=no, type=ptype), [rid], url, src))
+            rows.append(("patent_expiry", d, aid, None, None, "US", f"US patent {no} expires", dict(number=no, type=ptype), [rid], url, src))
         with c.cursor() as cur:
             cur.executemany("""INSERT INTO signal (signal_type, signal_date, api_id, company_id, product_id, country, title, detail,
                                evidence_ids, source_url, source_name, retrieved_at, status)
@@ -89,12 +89,12 @@ def run(today: date | None = None):
                 a[0].add(pid); a[1].add(cc); a[2].append(rid); a[3] |= rel.get(pid, set())
             for mah, (prods, ccs, ev, sites) in agg.items():
                 own = any(same_group(g, mah, h) for h in dmf_holders.get(aid, ()))
-                reasons = [f"{len(prods)} Fertigprodukte mit diesem Wirkstoff", f"zugelassen in {len(ccs)} Märkten: {', '.join(sorted(ccs))}"]
+                reasons = [f"{len(prods)} finished products with this API", f"authorised in {len(ccs)} markets: {', '.join(sorted(ccs))}"]
                 ext = sorted({cname.get(x) for x in sites if not same_group(g, x, mah)} - {None})
                 if ext:
-                    reasons.append("lässt fremd freigeben: " + ", ".join(ext[:4]) + (" …" if len(ext) > 4 else ""))
+                    reasons.append("uses external release sites: " + ", ".join(ext[:4]) + (" …" if len(ext) > 4 else ""))
                 if own:
-                    reasons.append("Konzern hält selbst einen aktiven US-DMF für diesen Wirkstoff (teilweise integriert)")
+                    reasons.append("own group holds an active US DMF for this API (partly integrated)")
                 score = len(prods) + 3 * len(ccs) - (10 if own else 0)
                 pcs.append((aid, mah, score, reasons, ev[:50], len(prods), len(ccs)))
         with c.cursor() as cur:

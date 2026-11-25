@@ -32,7 +32,7 @@
   {
     "rule": "provenance:product_manufacturer",
     "violations": 0,
-    "total": 17522,
+    "total": 18682,
     "description": "Zeile ohne source_url/source_name/retrieved_at/status"
   },
   {
@@ -68,25 +68,25 @@
   {
     "rule": "provenance:company_alias",
     "violations": 0,
-    "total": 11996,
+    "total": 18303,
     "description": "Zeile ohne source_url/source_name/retrieved_at/status"
   },
   {
     "rule": "provenance:company_role",
     "violations": 0,
-    "total": 8161,
+    "total": 12114,
     "description": "Zeile ohne source_url/source_name/retrieved_at/status"
   },
   {
     "rule": "provenance:signal",
     "violations": 0,
-    "total": 6940,
+    "total": 8999,
     "description": "Zeile ohne source_url/source_name/retrieved_at/status"
   },
   {
     "rule": "provenance:potential_customer",
     "violations": 0,
-    "total": 9742,
+    "total": 12549,
     "description": "Zeile ohne source_url/source_name/retrieved_at/status"
   },
   {
@@ -116,7 +116,7 @@
   {
     "rule": "signal_has_date_source_evidence",
     "violations": 0,
-    "total": 2092,
+    "total": 2059,
     "description": "Signal ohne Datum, Quelle oder Beleg"
   },
   {
@@ -140,7 +140,7 @@
   {
     "rule": "manufacturer_quote_contains_name",
     "violations": 0,
-    "total": 11761,
+    "total": 12911,
     "description": "Zitat fehlt oder enthält den Herstellernamen nicht"
   },
   {
@@ -164,13 +164,13 @@
   {
     "rule": "no_email_in_quotes",
     "violations": 0,
-    "total": 11761,
+    "total": 12911,
     "description": "E-Mail-Adresse im Zitat (DSGVO-Prüfung)"
   },
   {
     "rule": "manufacturer_site_country",
     "violations": 0,
-    "total": 11761,
+    "total": 12911,
     "description": "Standort ohne bestimmbares Land"
   },
   {

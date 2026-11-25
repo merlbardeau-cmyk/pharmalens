@@ -105,7 +105,7 @@ def run():
                        (array_agg(DISTINCT p.row_id))[1:50]
                 FROM product p LEFT JOIN product_api pa ON pa.product_id=p.product_id
                 WHERE p.valid_to IS NULL AND p.mah_company_id IS NOT NULL GROUP BY 1""").fetchall():
-            roles.append((cid, "mah", n_prod, n_api, n_mkt, f"Zulassungsinhaber für {n_prod} Produkte in {n_mkt} Märkten",
+            roles.append((cid, "mah", n_prod, n_api, n_mkt, f"Marketing authorisation holder for {n_prod} products in {n_mkt} markets",
                           ev, "official"))
         for cid, n_prod, n_api, n_mkt, ev in conn.execute("""
                 SELECT pm.company_id, count(DISTINCT pm.product_id), count(DISTINCT pa.api_id), count(DISTINCT p.country),
@@ -114,11 +114,11 @@ def run():
                 LEFT JOIN product_api pa ON pa.product_id=pm.product_id
                 WHERE pm.valid_to IS NULL AND pm.company_id IS NOT NULL AND pm.status='official' GROUP BY 1""").fetchall():
             roles.append((cid, "fdf_manufacturer", n_prod, n_api, n_mkt,
-                          f"In Packungsbeilage/Annex IIA als Chargenfreigabe-Standort genannt ({n_prod} Produkte)", ev, "official"))
+                          f"Named as batch-release site in package leaflet/Annex IIA ({n_prod} products)", ev, "official"))
         for cid, n_api, ev in conn.execute("""
                 SELECT holder_company_id, count(DISTINCT api_id), (array_agg(DISTINCT row_id))[1:50] FROM api_certificate
                 WHERE valid_to IS NULL AND holder_company_id IS NOT NULL GROUP BY 1""").fetchall():
-            roles.append((cid, "api_manufacturer", None, n_api, None, f"Inhaber von US-DMF Typ II für {n_api} Wirkstoffe", ev, "official"))
+            roles.append((cid, "api_manufacturer", None, n_api, None, f"Holder of US DMF type II for {n_api} APIs", ev, "official"))
         # CDMO
         g = groups(conn)
         foreign = defaultdict(lambda: [set(), set(), set(), set()])  # mahs, products, countries, evidence
@@ -140,8 +140,8 @@ def run():
                 continue
             n_api = len(set().union(*(pa[p] for p in prods)))
             roles.append((cid, "cdmo", len(prods), n_api, len(ccs),
-                          f"Chargenfreigabe für {len(prods)} Produkte von {len(mahs)} konzernfremden Zulassungsinhabern "
-                          f"in {len(ccs)} Märkten (Konzern = Markengruppe oder GLEIF-Mutter). Lohnfertigung abgeleitet, nicht bestätigt.",
+                          f"Batch release for {len(prods)} products of {len(mahs)} marketing authorisation holders outside its group "
+                          f"in {len(ccs)} markets (group = brand group or GLEIF parent). Contract manufacturing is derived, not confirmed.",
                           sorted(ev)[:50], "derived"))
         with conn.cursor() as cur:
             cur.executemany("""INSERT INTO company_role (company_id, role, n_products, n_apis, n_markets, rationale, evidence_ids,

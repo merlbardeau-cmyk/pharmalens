@@ -16,11 +16,12 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from enrich.company_profile import groups, same_group  # noqa: E402
 from graph.export_app import d, dump  # noqa: E402
+from graph.i18n_en import en  # noqa: E402
 from models.db import connect  # noqa: E402
 
 SHARDS = 64  # artifact limit: <= 511 files per version -> companies bundled by id % 64
-ROLE_LABEL = {"mah": "Zulassungsinhaber", "fdf_manufacturer": "Hersteller Fertigarzneimittel (Chargenfreigabe)",
-              "api_manufacturer": "Wirkstoffhersteller", "cdmo": "Lohnhersteller / CDMO"}
+ROLE_LABEL = {"mah": "Marketing authorisation holder", "fdf_manufacturer": "Finished-product manufacturer (batch release)",
+              "api_manufacturer": "API manufacturer", "cdmo": "Contract manufacturer / CDMO"}
 
 
 def run(out: Path):
@@ -29,7 +30,7 @@ def run(out: Path):
     (out / "company").mkdir(parents=True, exist_ok=True)
     with connect() as c:
         g = groups(c)
-        comp = {r[0]: dict(id=r[0], name=r[1], cc=r[2], cc_basis=r[3], lei=r[4], source_url=r[5], status=r[6], aliases=[],
+        comp = {r[0]: dict(id=r[0], name=r[1], cc=r[2], cc_basis=en(r[3]), lei=r[4], source_url=r[5], status=r[6], aliases=[],
                            roles=[], group=None, parent=None, children=[])
                 for r in c.execute("""SELECT company_id, name_raw[1], country, country_basis, lei, source_url, status
                                       FROM company WHERE valid_to IS NULL AND NOT ('brand_group' = ANY(coalesce(roles,'{}')))""")}
@@ -45,7 +46,7 @@ def run(out: Path):
             if ch not in comp:
                 continue
             if rt == "brand_group_member":
-                comp[ch]["group"] = dict(name=names.get(p), status=st, basis="Markengruppe (Namensstamm)")
+                comp[ch]["group"] = dict(name=names.get(p), status=st, basis="Brand group (name stem)")
             elif rt in ("subsidiary", "ultimate_parent"):
                 lei_parent.add(ch)
                 if rt == "ultimate_parent" or not comp[ch]["parent"]:

@@ -18,17 +18,18 @@ from collections import defaultdict
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from graph.i18n_en import en  # noqa: E402
 from models.db import connect  # noqa: E402
 from models.pilot import PILOT  # noqa: E402
 
-COUNTRY_NAME = {"AT": "Österreich", "BE": "Belgien", "BG": "Bulgarien", "CH": "Schweiz", "CY": "Zypern", "CZ": "Tschechien",
-                "DE": "Deutschland", "DK": "Dänemark", "EE": "Estland", "ES": "Spanien", "EU": "EU zentral", "FI": "Finnland",
-                "FR": "Frankreich", "GB": "Vereinigtes Königreich", "GR": "Griechenland", "HR": "Kroatien", "HU": "Ungarn",
-                "IE": "Irland", "IS": "Island", "IT": "Italien", "LI": "Liechtenstein", "LT": "Litauen", "LU": "Luxemburg",
-                "LV": "Lettland", "MT": "Malta", "NL": "Niederlande", "NO": "Norwegen", "PL": "Polen", "PT": "Portugal",
-                "RO": "Rumänien", "SE": "Schweden", "SI": "Slowenien", "SK": "Slowakei", "US": "USA", "XI": "Nordirland",
-                "IN": "Indien", "CN": "China", "IL": "Israel", "TR": "Türkei", "JP": "Japan", "KR": "Südkorea", "MK": "Nordmazedonien",
-                "RS": "Serbien", "BA": "Bosnien-Herzegowina"}
+COUNTRY_NAME = {"AT": "Austria", "BE": "Belgium", "BG": "Bulgaria", "CH": "Switzerland", "CY": "Cyprus", "CZ": "Czechia",
+                "DE": "Germany", "DK": "Denmark", "EE": "Estonia", "ES": "Spain", "EU": "EU central", "FI": "Finland",
+                "FR": "France", "GB": "United Kingdom", "GR": "Greece", "HR": "Croatia", "HU": "Hungary",
+                "IE": "Ireland", "IS": "Iceland", "IT": "Italy", "LI": "Liechtenstein", "LT": "Lithuania", "LU": "Luxembourg",
+                "LV": "Latvia", "MT": "Malta", "NL": "Netherlands", "NO": "Norway", "PL": "Poland", "PT": "Portugal",
+                "RO": "Romania", "SE": "Sweden", "SI": "Slovenia", "SK": "Slovakia", "US": "USA", "XI": "Northern Ireland",
+                "IN": "India", "CN": "China", "IL": "Israel", "TR": "Türkiye", "JP": "Japan", "KR": "South Korea", "MK": "North Macedonia",
+                "RS": "Serbia", "BA": "Bosnia and Herzegovina"}
 LEAFLET_SOURCES = ("ES AEMPS CIMA REST", "FR BDPM", "NL CBG Geneesmiddeleninformatiebank", "AT BASG Arzneispezialitätenregister", "DK DKMA")
 
 
@@ -88,7 +89,7 @@ def run(out: Path):
             short = [dict(date=d(r[0]), **{k: r[1].get(k) for k in ("country", "product", "state", "active", "type", "expected_resolution")},
                           status=r[2], url=r[3]) for r in S]
             tend = [dict(id=r[0], date=d(r[1]), buyer=r[2], winner=r[3], value=float(r[4]) if r[4] is not None else None, cur=r[5], url=r[6]) for r in D]
-            gaps = [dict(area=r[0], reason=r[1], where=r[2]) for r in G]
+            gaps = [dict(area=r[0], reason=en(r[1]), where=r[2]) for r in G]
             sites = {(m["company"], m["site_cc"]) for m in mfr if m["role"] == "batch_release"}
             countries = sorted({p["cc"] for p in prods if p["cc"] != "EU"})
             # customers (derived) and supply-chain flows site -> MAH -> market (official leaflet links only)
@@ -101,11 +102,11 @@ def run(out: Path):
                     sites_of[r[0]].add(cname.get(r[11]) or r[4])
             flows = defaultdict(float)
             for r in P:
-                mah = cname.get(r[14]) or r[3] or "Inhaber unbekannt"
-                ss = sites_of.get(r[0]) or {"Werk nicht im Leaflet"}
+                mah = cname.get(r[14]) or r[3] or "Holder unknown"
+                ss = sites_of.get(r[0]) or {"Site not in leaflet"}
                 for site in ss:
                     flows[(site, mah, r[1])] += 1 / len(ss)
-            dump(dict(inn=inn, unii=unii, cas=cas, atc=atc, vet=vet, src=src, salts=salts or [], summary=summ.get(inn), group=group.get(inn),
+            dump(dict(inn=inn, unii=unii, cas=cas, atc=atc, vet=vet, src=src, salts=salts or [], summary=en(summ.get(inn)), group=group.get(inn),
                       products=prods, manufacturers=mfr, certificates=certs, patents=pats, shortages=short, tenders=tend, gaps=gaps,
                       customers=cust, flows=[[a, b, cc, round(v, 2)] for (a, b, cc), v in flows.items()]),
                  out / "api" / f"{slug(inn)}.json")
@@ -116,7 +117,7 @@ def run(out: Path):
                               sites=len(sites), leaflets=len({m["pid"] for m in mfr if m["role"] == "batch_release"}),
                               us_patent=max([p["exp"] for p in pats if p["type"] == "substance"] or [None]),
                               shortages=sum(1 for s in short if s.get("active") is not False and s.get("state") != "Resolved"),
-                              tenders=len(tend), gaps=len(gaps), summary=summ.get(inn)))
+                              tenders=len(tend), gaps=len(gaps), summary=en(summ.get(inn))))
 
         # companies (batch-release sites + API makers), keyed by resolved company
         comp = defaultdict(lambda: dict(name=None, cc=set(), roles=set(), apis=set(), products=set(), markets=set(), dmf=0, group=None, lei=None))
@@ -128,7 +129,7 @@ def run(out: Path):
             x = comp[cid]
             x["name"], x["lei"] = x["name"] or name, lei
             x["cc"].add(cc)
-            x["roles"].add("API-Hersteller (Annex IIA)" if role == "api_manufacturer" else "Batch-Release")
+            x["roles"].add("API manufacturer (Annex IIA)" if role == "api_manufacturer" else "Batch release")
             x["apis"].add(inn_of.get(aid))
             x["products"].add(pid)
             x["markets"].add(mcc)
@@ -139,7 +140,7 @@ def run(out: Path):
             x["name"], x["lei"] = x["name"] or name, x["lei"] or lei
             if cc:
                 x["cc"].add(cc)
-            x["roles"].add("API-Hersteller (US-DMF)")
+            x["roles"].add("API manufacturer (US DMF)")
             x["apis"].add(inn_of.get(aid))
             x["dmf"] += 1
         for child, gname in c.execute("""SELECT r.child_id, g.name_raw[1] FROM company_relation r JOIN company g ON g.company_id=r.parent_id
@@ -172,13 +173,13 @@ def run(out: Path):
         src_rows = c.execute("""SELECT name, category, jurisdiction, traffic_light, access_method, traffic_reason, licence_note,
                                        update_frequency, probe_url FROM source ORDER BY
                                        array_position(ARRAY['green','yellow','red'], traffic_light), category, name""").fetchall()
-        dump([dict(name=r[0], cat=r[1], jur=r[2], light=r[3], access=r[4], reason=r[5], licence=r[6], freq=r[7], url=r[8]) for r in src_rows],
+        dump([dict(name=r[0], cat=r[1], jur=r[2], light=r[3], access=r[4], reason=en(r[5]), licence=en(r[6]), freq=en(r[7]), url=r[8]) for r in src_rows],
              out / "sources.json")
 
         # gaps grouped
         g = c.execute("""SELECT area, reason, count(*), min(where_obtainable) FROM gap WHERE resolved_at IS NULL
                          GROUP BY 1,2 ORDER BY 3 DESC""").fetchall()
-        dump([dict(area=r[0], reason=r[1], n=r[2], where=r[3]) for r in g], out / "gaps.json")
+        dump([dict(area=r[0], reason=en(r[1]), n=r[2], where=r[3]) for r in g], out / "gaps.json")
 
         totals = dict(
             products=c.execute("SELECT count(*) FROM product WHERE valid_to IS NULL").fetchone()[0],
